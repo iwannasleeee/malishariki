@@ -1,6 +1,34 @@
-[gd_scene load_steps=2 format=3 uid="uid://qhcra578ush1"]
+[gd_scene load_steps=11 format=3 uid="uid://qhcra578ush1"]
 
 [ext_resource type="Texture2D" uid="uid://7w35etsntqpx" path="res://Assets/Locations/123.png" id="1_vmn41"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vmn41"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8o6hd"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sifoa"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_unuxx"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ovv7g"]
+bg_color = Color(0.70352, 0.44636172, 1, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c0g1o"]
+bg_color = Color(0.7019608, 0.44705883, 1, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gsgva"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bs5h7"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+shadow_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8qwwl"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [node name="StartScreen" type="Control"]
 layout_mode = 3
@@ -27,16 +55,108 @@ layout_mode = 2
 
 [node name="PlayButton" type="Button" parent="CenterContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_color = Color(0.14117648, 0.3764706, 0.5058824, 1)
+theme_override_colors/font_focus_color = Color(0.2, 0.49019608, 0.6509804, 1)
+theme_override_colors/font_pressed_color = Color(0.2568632, 0.57763106, 0.75797504, 1)
+theme_override_colors/font_hover_color = Color(0.2, 0.49019608, 0.6509804, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.2, 0.49019608, 0.6509804, 1)
+theme_override_colors/font_disabled_color = Color(0.14117648, 0.3764706, 0.5058824, 1)
+theme_override_colors/font_outline_color = Color(0.14117648, 0.3764706, 0.5058824, 1)
+theme_override_colors/icon_normal_color = Color(0.14117648, 0.3764706, 0.5058824, 1)
+theme_override_colors/icon_focus_color = Color(0.14117648, 0.3764706, 0.5058824, 1)
+theme_override_colors/icon_pressed_color = Color(0.14117648, 0.3764706, 0.5058824, 1)
+theme_override_colors/icon_hover_color = Color(0.20062298, 0.49060422, 0.65142787, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.2, 0.49019608, 0.6509804, 1)
+theme_override_colors/icon_disabled_color = Color(0.14117648, 0.3764706, 0.5058824, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_vmn41")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_8o6hd")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_sifoa")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_unuxx")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ovv7g")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_c0g1o")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_gsgva")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_bs5h7")
+theme_override_styles/focus = SubResource("StyleBoxFlat_8qwwl")
 text = "играть"
 
 [node name="SettingsButton" type="Button" parent="CenterContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_color = Color(0.14117648, 0.3764706, 0.5058824, 1)
+theme_override_colors/font_focus_color = Color(0.2, 0.49019608, 0.6509804, 1)
+theme_override_colors/font_pressed_color = Color(0.2568632, 0.57763106, 0.75797504, 1)
+theme_override_colors/font_hover_color = Color(0.2, 0.49019608, 0.6509804, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.2, 0.49019608, 0.6509804, 1)
+theme_override_colors/font_disabled_color = Color(0.14117648, 0.3764706, 0.5058824, 1)
+theme_override_colors/font_outline_color = Color(0.14117648, 0.3764706, 0.5058824, 1)
+theme_override_colors/icon_normal_color = Color(0.14117648, 0.3764706, 0.5058824, 1)
+theme_override_colors/icon_focus_color = Color(0.14117648, 0.3764706, 0.5058824, 1)
+theme_override_colors/icon_pressed_color = Color(0.14117648, 0.3764706, 0.5058824, 1)
+theme_override_colors/icon_hover_color = Color(0.20062298, 0.49060422, 0.65142787, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.2, 0.49019608, 0.6509804, 1)
+theme_override_colors/icon_disabled_color = Color(0.14117648, 0.3764706, 0.5058824, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_vmn41")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_8o6hd")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_sifoa")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_unuxx")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ovv7g")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_c0g1o")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_gsgva")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_bs5h7")
+theme_override_styles/focus = SubResource("StyleBoxFlat_8qwwl")
 text = "настройки"
 
 [node name="InfoButton" type="Button" parent="CenterContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_color = Color(0.14117648, 0.3764706, 0.5058824, 1)
+theme_override_colors/font_focus_color = Color(0.2, 0.49019608, 0.6509804, 1)
+theme_override_colors/font_pressed_color = Color(0.2568632, 0.57763106, 0.75797504, 1)
+theme_override_colors/font_hover_color = Color(0.2, 0.49019608, 0.6509804, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.2, 0.49019608, 0.6509804, 1)
+theme_override_colors/font_disabled_color = Color(0.14117648, 0.3764706, 0.5058824, 1)
+theme_override_colors/font_outline_color = Color(0.14117648, 0.3764706, 0.5058824, 1)
+theme_override_colors/icon_normal_color = Color(0.14117648, 0.3764706, 0.5058824, 1)
+theme_override_colors/icon_focus_color = Color(0.14117648, 0.3764706, 0.5058824, 1)
+theme_override_colors/icon_pressed_color = Color(0.14117648, 0.3764706, 0.5058824, 1)
+theme_override_colors/icon_hover_color = Color(0.20062298, 0.49060422, 0.65142787, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.2, 0.49019608, 0.6509804, 1)
+theme_override_colors/icon_disabled_color = Color(0.14117648, 0.3764706, 0.5058824, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_vmn41")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_8o6hd")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_sifoa")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_unuxx")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ovv7g")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_c0g1o")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_gsgva")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_bs5h7")
+theme_override_styles/focus = SubResource("StyleBoxFlat_8qwwl")
 text = "информация"
 
 [node name="ExitButton" type="Button" parent="CenterContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_color = Color(0.14117648, 0.3764706, 0.5058824, 1)
+theme_override_colors/font_focus_color = Color(0.2, 0.49019608, 0.6509804, 1)
+theme_override_colors/font_pressed_color = Color(0.2568632, 0.57763106, 0.75797504, 1)
+theme_override_colors/font_hover_color = Color(0.2, 0.49019608, 0.6509804, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.2, 0.49019608, 0.6509804, 1)
+theme_override_colors/font_disabled_color = Color(0.14117648, 0.3764706, 0.5058824, 1)
+theme_override_colors/font_outline_color = Color(0.14117648, 0.3764706, 0.5058824, 1)
+theme_override_colors/icon_normal_color = Color(0.14117648, 0.3764706, 0.5058824, 1)
+theme_override_colors/icon_focus_color = Color(0.14117648, 0.3764706, 0.5058824, 1)
+theme_override_colors/icon_pressed_color = Color(0.14117648, 0.3764706, 0.5058824, 1)
+theme_override_colors/icon_hover_color = Color(0.20062298, 0.49060422, 0.65142787, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.2, 0.49019608, 0.6509804, 1)
+theme_override_colors/icon_disabled_color = Color(0.14117648, 0.3764706, 0.5058824, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_vmn41")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_8o6hd")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_sifoa")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_unuxx")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ovv7g")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_c0g1o")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_gsgva")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_bs5h7")
+theme_override_styles/focus = SubResource("StyleBoxFlat_8qwwl")
 text = "выйти из игры"
