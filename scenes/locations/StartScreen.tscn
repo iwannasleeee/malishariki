@@ -1,3 +1,42 @@
-[gd_scene format=3 uid="uid://qhcra578ush1"]
+[gd_scene load_steps=2 format=3 uid="uid://qhcra578ush1"]
 
-[node name="StartScreen" type="Node2D"]
+[ext_resource type="Texture2D" uid="uid://7w35etsntqpx" path="res://Assets/Locations/123.png" id="1_vmn41"]
+
+[node name="StartScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 84.0
+offset_top = -4.0
+offset_right = 1066.8
+offset_bottom = 654.0
+texture = ExtResource("1_vmn41")
+expand_mode = 1
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 0
+offset_left = 657.0
+offset_top = 336.0
+offset_right = 840.0
+offset_bottom = 473.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+layout_mode = 2
+
+[node name="PlayButton" type="Button" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "играть"
+
+[node name="SettingsButton" type="Button" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "настройки"
+
+[node name="InfoButton" type="Button" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "информация"
+
+[node name="ExitButton" type="Button" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "выйти из игры"
