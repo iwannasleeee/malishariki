@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dxq145ukcibkn"
-path="res://.godot/imported/Rabbit_neighbour.JPG-41d5bdefe0d70e83a97e1d0f6100fbee.ctex"
+path="res://.godot/imported/Rabbit_neighbour.JPG-480863da25fbc8582a4d7cac0ae4c10e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Locations/Rabbit_neighbour.JPG"
-dest_files=["res://.godot/imported/Rabbit_neighbour.JPG-41d5bdefe0d70e83a97e1d0f6100fbee.ctex"]
+source_file="res://assets/locations/Rabbit_neighbour.JPG"
+dest_files=["res://.godot/imported/Rabbit_neighbour.JPG-480863da25fbc8582a4d7cac0ae4c10e.ctex"]
 
 [params]
 
