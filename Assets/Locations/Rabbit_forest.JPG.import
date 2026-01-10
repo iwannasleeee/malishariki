@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c8ncgguujopyi"
-path="res://.godot/imported/Rabbit_forest.JPG-29134c3c5369c86a551c44f8e1b11795.ctex"
+path="res://.godot/imported/rabbit_forest.JPG-11d2b90bb935e45a72673a4506ecce97.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/locations/Rabbit_forest.JPG"
-dest_files=["res://.godot/imported/Rabbit_forest.JPG-29134c3c5369c86a551c44f8e1b11795.ctex"]
+source_file="res://assets/locations/rabbit_forest.JPG"
+dest_files=["res://.godot/imported/rabbit_forest.JPG-11d2b90bb935e45a72673a4506ecce97.ctex"]
 
 [params]
 
