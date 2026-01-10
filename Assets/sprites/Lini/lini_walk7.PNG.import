@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c13fyy1p5fdf7"
-path="res://.godot/imported/lini_walk1.PNG-2aa4024073e94fbc1b0fe1691b449448.ctex"
+uid="uid://dv8wm5024acsu"
+path="res://.godot/imported/lini_walk7.PNG-8f224a10e09233e43a1a33a5c5116ce6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/lini_walk1.PNG"
-dest_files=["res://.godot/imported/lini_walk1.PNG-2aa4024073e94fbc1b0fe1691b449448.ctex"]
+source_file="res://assets/sprites/Lini/lini_walk7.PNG"
+dest_files=["res://.godot/imported/lini_walk7.PNG-8f224a10e09233e43a1a33a5c5116ce6.ctex"]
 
 [params]
 
