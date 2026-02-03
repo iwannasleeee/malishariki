@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c8ncgguujopyi"
-path="res://.godot/imported/Rabbit_forest.JPG-29134c3c5369c86a551c44f8e1b11795.ctex"
+uid="uid://bul0iar0frajb"
+path="res://.godot/imported/Screenshot_1.png-c7bb7ea2f57f4d2e0058aaeb227ffc7f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/locations/Rabbit_forest.JPG"
-dest_files=["res://.godot/imported/Rabbit_forest.JPG-29134c3c5369c86a551c44f8e1b11795.ctex"]
+source_file="res://assets/locations/Screenshot_1.png"
+dest_files=["res://.godot/imported/Screenshot_1.png-c7bb7ea2f57f4d2e0058aaeb227ffc7f.ctex"]
 
 [params]
 
