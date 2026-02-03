@@ -1,36 +1,85 @@
-[gd_scene load_steps=5 format=3 uid="uid://co4vbk581rk7d"]
+[gd_scene load_steps=10 format=3 uid="uid://co4vbk581rk7d"]
 
 [ext_resource type="Texture2D" uid="uid://c4hrhnmnqnfdl" path="res://assets/locations/ground4.png" id="1_h1t2k"]
+[ext_resource type="Script" uid="uid://waf7hw0iomft" path="res://scripts/parallax_background.gd" id="1_ob7jg"]
+[ext_resource type="Texture2D" uid="uid://b2nqrdp1pv3be" path="res://assets/locations/sky4.png" id="2_8711w"]
 [ext_resource type="Texture2D" uid="uid://dheefg6o0xrem" path="res://assets/locations/ground3.png" id="2_ob7jg"]
+[ext_resource type="Texture2D" uid="uid://88eatewneubs" path="res://assets/locations/sky3.png" id="3_0jj0q"]
 [ext_resource type="Texture2D" uid="uid://bt5ffpr5qa85v" path="res://assets/locations/ground2.png" id="3_kmvh4"]
+[ext_resource type="Texture2D" uid="uid://ch6j3el7teeby" path="res://assets/locations/sky2.png" id="4_kku47"]
 [ext_resource type="Texture2D" uid="uid://cbjxygqfxved5" path="res://assets/locations/ground1.png" id="4_xkq13"]
+[ext_resource type="Texture2D" uid="uid://cl5lklfabsdix" path="res://assets/locations/sky1.png" id="5_35eui"]
 
-[node name="ParallaxBackground" type="Parallax2D"]
+[node name="ParallaxBackground" type="ParallaxBackground"]
+script = ExtResource("1_ob7jg")
 
-[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+[node name="SkyLayer4" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.1, 1)
 
-[node name="Ground4" type="Sprite2D" parent="ParallaxLayer"]
+[node name="Sky4" type="Sprite2D" parent="SkyLayer4"]
+position = Vector2(-310, 0)
+scale = Vector2(0.30266666, 0.30266666)
+texture = ExtResource("2_8711w")
+centered = false
+
+[node name="SkyLayer3" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.25, 1)
+
+[node name="Sky3" type="Sprite2D" parent="SkyLayer3"]
+position = Vector2(-310, 0)
+scale = Vector2(0.32044446, 0.32044446)
+texture = ExtResource("3_0jj0q")
+centered = false
+
+[node name="SkyLayer2" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.375, 1)
+
+[node name="Sky2" type="Sprite2D" parent="SkyLayer2"]
+position = Vector2(-310, 0)
+scale = Vector2(0.33600003, 0.336)
+texture = ExtResource("4_kku47")
+centered = false
+
+[node name="SkyLayer1" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.5, 1)
+
+[node name="Sky1" type="Sprite2D" parent="SkyLayer1"]
+position = Vector2(-310, 0)
+scale = Vector2(0.3364444, 0.3364444)
+texture = ExtResource("5_35eui")
+centered = false
+
+[node name="GroundLayer4" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.2, 1)
+
+[node name="Ground4" type="Sprite2D" parent="GroundLayer4"]
+position = Vector2(-310, 0)
 scale = Vector2(0.30266666, 0.30266666)
 texture = ExtResource("1_h1t2k")
 centered = false
 
-[node name="ParallaxLayer2" type="ParallaxLayer" parent="."]
+[node name="GroundLayer3" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.5, 1)
 
-[node name="Ground4" type="Sprite2D" parent="ParallaxLayer2"]
+[node name="Ground3" type="Sprite2D" parent="GroundLayer3"]
+position = Vector2(-310, 0)
 scale = Vector2(0.32044446, 0.32044446)
 texture = ExtResource("2_ob7jg")
 centered = false
 
-[node name="ParallaxLayer3" type="ParallaxLayer" parent="."]
+[node name="GroundLayer2" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.75, 1)
 
-[node name="Ground4" type="Sprite2D" parent="ParallaxLayer3"]
+[node name="Ground2" type="Sprite2D" parent="GroundLayer2"]
+position = Vector2(-310, 0)
 scale = Vector2(0.33600003, 0.336)
 texture = ExtResource("3_kmvh4")
 centered = false
 
-[node name="ParallaxLayer4" type="ParallaxLayer" parent="."]
+[node name="GroundLayer1" type="ParallaxLayer" parent="."]
 
-[node name="Ground4" type="Sprite2D" parent="ParallaxLayer4"]
+[node name="Ground1" type="Sprite2D" parent="GroundLayer1"]
+position = Vector2(-310, 0)
 scale = Vector2(0.3364444, 0.3364444)
 texture = ExtResource("4_xkq13")
 centered = false
