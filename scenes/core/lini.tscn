@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=3 uid="uid://ci366t080ngvv"]
 
-[ext_resource type="Script" uid="uid://fq6gua4nh1i6" path="res://scenes/core/lini.gd" id="1_d4li8"]
+[ext_resource type="Script" uid="uid://fq6gua4nh1i6" path="res://scripts/lini.gd" id="1_d4li8"]
 [ext_resource type="Texture2D" uid="uid://cwi7l4j1r274t" path="res://assets/sprites/Lini/lini_idle.png" id="1_s3veh"]
 [ext_resource type="Texture2D" uid="uid://c13fyy1p5fdf7" path="res://assets/sprites/Lini/lini_walk1.PNG" id="2_hmr14"]
 [ext_resource type="Texture2D" uid="uid://4xp6j861r58j" path="res://assets/sprites/Lini/lini_walk2.PNG" id="3_fmxnf"]
@@ -55,7 +55,7 @@ animations = [{
 radius = 159.0
 height = 710.0
 
-[node name="Character" type="CharacterBody2D"]
+[node name="Lini" type="CharacterBody2D"]
 script = ExtResource("1_d4li8")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -65,3 +65,5 @@ animation = &"walk"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_naftb")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
