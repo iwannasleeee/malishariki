@@ -59,11 +59,12 @@ height = 710.0
 script = ExtResource("1_d4li8")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(-56, -9)
+position = Vector2(-60, -359.5)
 sprite_frames = SubResource("SpriteFrames_31sr1")
 animation = &"walk"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-4, -350.5)
 shape = SubResource("CapsuleShape2D_naftb")
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]

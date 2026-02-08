@@ -1,0 +1,113 @@
+[gd_scene load_steps=13 format=3 uid="uid://43f35g8xpyd5"]
+
+[ext_resource type="Script" uid="uid://uppyid0i4qk0" path="res://scripts/navigation_region_2d.gd" id="1_iregs"]
+[ext_resource type="Script" uid="uid://waf7hw0iomft" path="res://scripts/parallax_background.gd" id="1_spk3l"]
+[ext_resource type="Texture2D" uid="uid://b2nqrdp1pv3be" path="res://assets/locations/sky4.png" id="2_iregs"]
+[ext_resource type="Texture2D" uid="uid://88eatewneubs" path="res://assets/locations/sky3.png" id="3_pi80u"]
+[ext_resource type="Texture2D" uid="uid://ch6j3el7teeby" path="res://assets/locations/sky2.png" id="4_xfhef"]
+[ext_resource type="Texture2D" uid="uid://cl5lklfabsdix" path="res://assets/locations/sky1.png" id="5_mxq4t"]
+[ext_resource type="Texture2D" uid="uid://c4hrhnmnqnfdl" path="res://assets/locations/ground4.png" id="6_ynq3a"]
+[ext_resource type="Texture2D" uid="uid://dheefg6o0xrem" path="res://assets/locations/ground3.png" id="7_ohrrp"]
+[ext_resource type="Texture2D" uid="uid://bt5ffpr5qa85v" path="res://assets/locations/ground2.png" id="8_4dcv7"]
+[ext_resource type="Texture2D" uid="uid://cbjxygqfxved5" path="res://assets/locations/ground1.png" id="10_c4j6a"]
+[ext_resource type="PackedScene" uid="uid://ci366t080ngvv" path="res://scenes/core/lini.tscn" id="10_tw3xa"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_iregs"]
+vertices = PackedVector2Array(306.8672, 585.6406, 303.28906, 577.2969, 386.52344, 578.90625, 391.7422, 673.10156, 346.64844, 660.6328, 298.5703, 635.6172, 277.28906, 618.0469, 268.03906, 605.53125, 397.46094, 590.84375, 442.4297, 677, 3100.6328, 559.9922, 3369.0625, 534.96875, 3369.9297, 669.96094, 3054.9375, 669, 2852.7031, 567.96875, 2465.2734, 677.96094, 2664.0625, 585.03906, 2447.6875, 568, 2380.4922, 636.0703, 2194.4922, 571.9922, 2188.7031, 629.9219, 2103.4375, 580.7969, 2025.3828, 612.8281, 2114.3906, 668.60156, 2037.7969, 687.9922, 1445.9531, 684, 1815.0078, 631.03906, 1753.0703, 625.78906, 1729.4688, 613, 1651.1172, 624.3281, 429.21094, 591.96875, 474.29688, 596.97656, 571.85156, 678.9922, 543.0703, 599.0078, 565.6172, 598.02344, 666.6328, 610.03125, 788, 668.9922, 1207.1172, 687.9922, 755.59375, 606.02344, 795.78906, 610.9297, 836.02344, 616.96875, 881.1328, 619.0625, 910.35156, 611, 957.21875, 611, 1118.2188, 603.9922, 1260.9063, 602.0469, 1275.8906, 617.03125, 1324.8828, 629.28125, 1365.5078, 620.1328, 1455.7109, 631.4219, 1486.2734, 609, 1608.1328, 609, 1612.9375, 621.5, 1661.4297, 613)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2), PackedInt32Array(3, 4, 5, 6, 7, 0, 2, 8, 9), PackedInt32Array(10, 11, 12, 13), PackedInt32Array(14, 10, 13, 15, 16), PackedInt32Array(17, 16, 15, 18), PackedInt32Array(19, 17, 18, 20, 21), PackedInt32Array(22, 21, 20, 23, 24), PackedInt32Array(22, 24, 25, 26), PackedInt32Array(27, 26, 25), PackedInt32Array(28, 27, 25, 29), PackedInt32Array(9, 8, 30, 31, 32), PackedInt32Array(32, 31, 33), PackedInt32Array(32, 33, 34, 35, 36), PackedInt32Array(37, 36, 35, 38, 39, 40), PackedInt32Array(37, 40, 41), PackedInt32Array(37, 41, 42, 43), PackedInt32Array(37, 43, 44, 45, 46), PackedInt32Array(25, 37, 46, 47), PackedInt32Array(25, 47, 48, 49), PackedInt32Array(50, 51, 52, 25, 49), PackedInt32Array(29, 53, 28), PackedInt32Array(52, 29, 25)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(294, 581, 253, 602, 270, 625, 293, 644, 343, 670, 390, 683, 442, 687, 572, 689, 788, 679, 1207, 698, 1446, 694, 2039, 698, 2118, 678, 2191, 640, 2378, 646, 2463, 688, 3055, 679, 3380, 680, 3379, 524, 3100, 550, 2852, 558, 2664, 575, 2448, 558, 2194, 562, 2101, 571, 2023, 603, 1815, 621, 1756, 616, 1732, 603, 1657, 603, 1647, 614, 1620, 612, 1615, 599, 1483, 599, 1453, 621, 1365, 610, 1325, 619, 1281, 608, 1265, 592, 1118, 594, 957, 601, 909, 601, 880, 609, 837, 607, 797, 601, 756, 596, 667, 600, 566, 588, 543, 589, 475, 587, 430, 582, 402, 581, 391, 569, 288, 567)])
+
+[node name="ForestPath" type="Node2D"]
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+navigation_polygon = SubResource("NavigationPolygon_iregs")
+script = ExtResource("1_iregs")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+script = ExtResource("1_spk3l")
+
+[node name="SkyLayer4" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.1, 1)
+
+[node name="Sky4" type="Sprite2D" parent="ParallaxBackground/SkyLayer4"]
+z_index = -7
+position = Vector2(-310, 0)
+scale = Vector2(0.30266666, 0.30266666)
+texture = ExtResource("2_iregs")
+centered = false
+
+[node name="SkyLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.25, 1)
+
+[node name="Sky3" type="Sprite2D" parent="ParallaxBackground/SkyLayer3"]
+z_index = -6
+position = Vector2(-310, 0)
+scale = Vector2(0.32044446, 0.32044446)
+texture = ExtResource("3_pi80u")
+centered = false
+
+[node name="SkyLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.375, 1)
+
+[node name="Sky2" type="Sprite2D" parent="ParallaxBackground/SkyLayer2"]
+z_index = -5
+position = Vector2(-310, 0)
+scale = Vector2(0.33600003, 0.336)
+texture = ExtResource("4_xfhef")
+centered = false
+
+[node name="SkyLayer1" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.5, 1)
+
+[node name="Sky1" type="Sprite2D" parent="ParallaxBackground/SkyLayer1"]
+z_index = -4
+position = Vector2(-310, 0)
+scale = Vector2(0.3364444, 0.3364444)
+texture = ExtResource("5_mxq4t")
+centered = false
+
+[node name="GroundLayer4" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.2, 1)
+
+[node name="Ground4" type="Sprite2D" parent="ParallaxBackground/GroundLayer4"]
+z_index = -3
+position = Vector2(244, 59.000004)
+scale = Vector2(0.30266666, 0.30266666)
+texture = ExtResource("6_ynq3a")
+centered = false
+
+[node name="GroundLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.5, 1)
+
+[node name="Ground3" type="Sprite2D" parent="ParallaxBackground/GroundLayer3"]
+z_index = -2
+position = Vector2(-310, 0)
+scale = Vector2(0.32044446, 0.32044446)
+texture = ExtResource("7_ohrrp")
+centered = false
+
+[node name="GroundLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.75, 1)
+
+[node name="Ground2" type="Sprite2D" parent="ParallaxBackground/GroundLayer2"]
+z_index = -1
+position = Vector2(-312.00003, 0)
+scale = Vector2(0.33600003, 0.336)
+texture = ExtResource("8_4dcv7")
+centered = false
+
+[node name="NavigationObstacle2D" type="NavigationObstacle2D" parent="ParallaxBackground/GroundLayer2"]
+vertices = PackedVector2Array(1281, 599, 1294, 609, 1326, 619, 1383, 613, 1462, 616, 1486, 601, 1481, 590, 1291, 580, 1280, 590)
+
+[node name="Lini" parent="ParallaxBackground" instance=ExtResource("10_tw3xa")]
+position = Vector2(386, 578)
+scale = Vector2(0.2, 0.2)
+
+[node name="GroundLayer1" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Ground1" type="Sprite2D" parent="ParallaxBackground/GroundLayer1"]
+z_index = 1
+position = Vector2(-311, -2)
+scale = Vector2(0.3364444, 0.3364444)
+texture = ExtResource("10_c4j6a")
+centered = false
