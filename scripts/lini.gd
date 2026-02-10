@@ -47,16 +47,6 @@ func setup_camera_limits():
 	camera.limit_bottom = camera_limits_bottom
 	camera.limit_smoothed = true
 
-func _process(delta):
-	# Выводим текущие лимиты камеры
-	print("Camera limits: L=", camera.limit_left, 
-			" T=", camera.limit_top, 
-			" R=", camera.limit_right, 
-			" B=", camera.limit_bottom)
-			
-	# И текущую позицию камеры
-	print("Camera position: ", camera.global_position)
-
 func _physics_process(delta):
 	# Если путь к цели еще не построен или персонаж уже у цели - не двигаемся
 	if navigation_agent.is_navigation_finished():
