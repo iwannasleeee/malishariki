@@ -56,8 +56,8 @@ motion_scale = Vector2(0.6, 1)
 
 [node name="Ground4" type="Sprite2D" parent="GroundLayer4"]
 z_index = -3
-position = Vector2(-241.99998, 55)
-scale = Vector2(0.30266666, 0.30266666)
+position = Vector2(-213.00002, 5)
+scale = Vector2(0.31866664, 0.31866664)
 texture = ExtResource("1_h1t2k")
 centered = false
 
@@ -66,8 +66,8 @@ motion_scale = Vector2(0.8, 1)
 
 [node name="Ground3" type="Sprite2D" parent="GroundLayer3"]
 z_index = -2
-position = Vector2(-313, 22.999998)
-scale = Vector2(0.32044446, 0.32044446)
+position = Vector2(-273.00003, 2.9999998)
+scale = Vector2(0.3204444, 0.3204444)
 texture = ExtResource("2_ob7jg")
 centered = false
 
@@ -75,10 +75,11 @@ centered = false
 
 [node name="Ground2" type="Sprite2D" parent="GroundLayer2"]
 z_index = -1
-position = Vector2(-312.00003, 0)
-scale = Vector2(0.33600003, 0.336)
+position = Vector2(-269, 0)
+scale = Vector2(0.32044446, 0.3204444)
 texture = ExtResource("3_kmvh4")
 centered = false
 
 [node name="NavigationObstacle2D" type="NavigationObstacle2D" parent="GroundLayer2"]
-vertices = PackedVector2Array(1281, 599, 1294, 609, 1326, 619, 1383, 613, 1462, 616, 1486, 601, 1481, 590, 1291, 580, 1280, 590)
+position = Vector2(-36, -27)
+vertices = PackedVector2Array(1280, 606, 1297, 611, 1326, 619, 1383, 613, 1462, 616, 1483, 607, 1487, 588, 1291, 580, 1276, 587)
