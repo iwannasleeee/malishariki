@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://d1wgygv357c7i"]
+
+[node name="Menu" type="Node2D"]
+
+[node name="MainMenuButton" type="Button" parent="."]
+offset_left = 484.0
+offset_top = 83.0
+offset_right = 808.28345
+offset_bottom = 227.0
+text = "Выйти в главное меню	"
+
+[node name="ContinueButton" type="Button" parent="."]
+offset_left = 484.0
+offset_top = 300.0
+offset_right = 808.28345
+offset_bottom = 444.0
+text = "Продолжить
+"
