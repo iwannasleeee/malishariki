@@ -3,11 +3,23 @@ extends CharacterBody2D
 @export var speed: float = 200.0
 @onready var navigation_agent: NavigationAgent2D = $NavigationAgent2D
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D  # Предполагаем, что так называется нода
+@onready var camera: Camera2D = $Camera2D
+
+@export var camera_limits_left: float = 0
+@export var camera_limits_top: float = 0
+@export var camera_limits_right: float = 2000
+@export var camera_limits_bottom: float = 1000
+@export var use_camera_limits: bool = true
 
 # Переменная для отслеживания состояния движения
 var is_moving: bool = false
 
 func _ready():
+	camera.make_current()
+	
+	if use_camera_limits:
+		setup_camera_limits()
+		
 	# Эти колбэки нужны для синхронизации движения с физическим процессом
 	navigation_agent.path_desired_distance = 2.0
 	navigation_agent.target_desired_distance = 5.0
@@ -27,6 +39,23 @@ func _input(event):
 		var target_position = get_global_mouse_position()
 		# Командуем агенту вычислить путь к этой цели
 		navigation_agent.target_position = target_position
+
+func setup_camera_limits():
+	camera.limit_left = camera_limits_left
+	camera.limit_top = camera_limits_top
+	camera.limit_right = camera_limits_right
+	camera.limit_bottom = camera_limits_bottom
+	camera.limit_smoothed = true
+
+func _process(delta):
+	# Выводим текущие лимиты камеры
+	print("Camera limits: L=", camera.limit_left, 
+			" T=", camera.limit_top, 
+			" R=", camera.limit_right, 
+			" B=", camera.limit_bottom)
+			
+	# И текущую позицию камеры
+	print("Camera position: ", camera.global_position)
 
 func _physics_process(delta):
 	# Если путь к цели еще не построен или персонаж уже у цели - не двигаемся

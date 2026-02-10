@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://fwuqnogavrpc"]
+
+[ext_resource type="PackedScene" uid="uid://ci366t080ngvv" path="res://scenes/core/lini.tscn" id="1_nbygv"]
+
+[node name="Test" type="Node2D"]
+
+[node name="Lini" parent="." instance=ExtResource("1_nbygv")]
