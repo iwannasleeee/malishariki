@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dkhjhvyeta2yg"
-path="res://.godot/imported/Rabbit_house.JPG-27cb3115465ef6a595069372b08dcea7.ctex"
+path="res://.godot/imported/rabbit_house.JPG-fc4ddf7f5aeecb4f0505d19f0632b1ad.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/locations/Rabbit_house.JPG"
-dest_files=["res://.godot/imported/Rabbit_house.JPG-27cb3115465ef6a595069372b08dcea7.ctex"]
+source_file="res://assets/locations/rabbit_house.JPG"
+dest_files=["res://.godot/imported/rabbit_house.JPG-fc4ddf7f5aeecb4f0505d19f0632b1ad.ctex"]
 
 [params]
 
