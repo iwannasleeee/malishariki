@@ -62,6 +62,8 @@ func _physics_process(delta):
 			is_moving = false
 			play_idle_animation()
 			velocity = Vector2.ZERO
+			jump_time = 0.0
+			animated_sprite.position.y = sprite_base_y
 		return
 
 	# Получаем следующую точку на пути от агента
