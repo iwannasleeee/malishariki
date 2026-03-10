@@ -18,6 +18,7 @@ navigation_polygon = SubResource("NavigationPolygon_iregs")
 [node name="ParallaxBackground" parent="." unique_id=607447675 instance=ExtResource("2_va8tf")]
 
 [node name="LiniMini" parent="." unique_id=839189745 instance=ExtResource("2_dl70t")]
+position = Vector2(334, 559)
 camera_limits_right = 3325.0
 camera_limits_bottom = 725.0
 

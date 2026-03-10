@@ -11,10 +11,17 @@ extends CharacterBody2D
 @export var camera_limits_bottom: float = 1000
 @export var use_camera_limits: bool = true
 
+@export var jump_height: float = 24.0
+@export var jump_duration: float = 0.4
+
+var jump_time: float = 0.0
+var sprite_base_y: float
+
 # Переменная для отслеживания состояния движения
 var is_moving: bool = false
 
 func _ready():
+	sprite_base_y = animated_sprite.position.y
 	camera.make_current()
 	
 	if use_camera_limits:
@@ -82,6 +89,19 @@ func _physics_process(delta):
 		# Иначе просто применяем вычисленную скорость
 		velocity = intended_velocity
 
+	if is_moving:
+		jump_time += delta
+
+		if jump_time > jump_duration:
+			jump_time = 0.0
+
+		var t = jump_time / jump_duration
+		var height = 4.0 * jump_height * t * (1.0 - t)
+
+		animated_sprite.position.y = sprite_base_y - height
+	else:
+		jump_time = 0.0
+		animated_sprite.position.y = sprite_base_y
 	# Двигаем персонажа с помощью стандартного метода move_and_slide()
 	move_and_slide()
 
