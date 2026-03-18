@@ -1,7 +1,24 @@
-[gd_scene load_steps=2 format=3 uid="uid://fwuqnogavrpc"]
+[gd_scene format=3 uid="uid://fwuqnogavrpc"]
 
-[ext_resource type="PackedScene" uid="uid://ci366t080ngvv" path="res://scenes/core/lini.tscn" id="1_nbygv"]
+[ext_resource type="Script" uid="uid://uhjs3tyikosv" path="res://scripts/test.gd" id="1_nbygv"]
 
-[node name="Test" type="Node2D"]
+[sub_resource type="CanvasTexture" id="CanvasTexture_nbygv"]
 
-[node name="Lini" parent="." instance=ExtResource("1_nbygv")]
+[node name="DrawingRoot" type="Node2D" unique_id=341770996]
+script = ExtResource("1_nbygv")
+
+[node name="SaveButton" type="Button" parent="." unique_id=828482217]
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="Canvas" type="TextureRect" parent="." unique_id=1251386898]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = SubResource("CanvasTexture_nbygv")
+
+[node name="ColorPicker" type="ColorPickerButton" parent="." unique_id=1598388863]
+offset_right = 8.0
+offset_bottom = 8.0
+
+[connection signal="color_changed" from="ColorPicker" to="." method="_on_color_changed"]
+[connection signal="color_changed" from="ColorPicker" to="." method="_on_color_picker_button_color_changed"]
