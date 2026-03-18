@@ -4,21 +4,44 @@
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_nbygv"]
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_nbygv"]
+load_path = "res://.godot/imported/ysbaf76lfohu99tdiehuymajzygafjg8.jpg-8db62d108416318f94d529d1bfa31c5b.ctex"
+
 [node name="DrawingRoot" type="Node2D" unique_id=341770996]
 script = ExtResource("1_nbygv")
-
-[node name="SaveButton" type="Button" parent="." unique_id=828482217]
-offset_right = 8.0
-offset_bottom = 8.0
 
 [node name="Canvas" type="TextureRect" parent="." unique_id=1251386898]
 offset_right = 40.0
 offset_bottom = 40.0
 texture = SubResource("CanvasTexture_nbygv")
 
-[node name="ColorPicker" type="ColorPickerButton" parent="." unique_id=1598388863]
+[node name="UI" type="Node2D" parent="." unique_id=180804299]
+
+[node name="PencilRed" type="TextureButton" parent="UI" unique_id=726265210]
+offset_left = 1115.0
+offset_top = 26.0
+offset_right = 1251.0
+offset_bottom = 140.0
+texture_normal = SubResource("CompressedTexture2D_nbygv")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="PencilBlue" type="TextureButton" parent="UI" unique_id=1144789658]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="PencilGreen" type="TextureButton" parent="UI" unique_id=752546995]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Eraser" type="TextureButton" parent="UI" unique_id=2031565921]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Undo" type="Button" parent="UI" unique_id=1171960737]
 offset_right = 8.0
 offset_bottom = 8.0
 
-[connection signal="color_changed" from="ColorPicker" to="." method="_on_color_changed"]
-[connection signal="color_changed" from="ColorPicker" to="." method="_on_color_picker_button_color_changed"]
+[node name="Redo" type="Button" parent="UI" unique_id=426155102]
+offset_right = 8.0
+offset_bottom = 8.0
