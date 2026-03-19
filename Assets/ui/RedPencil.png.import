@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cbjxygqfxved5"
-path="res://.godot/imported/ground1.png-2c1a07eb41d6bd394c3758ff75c6a9af.ctex"
+uid="uid://dl4i51g5efkq8"
+path="res://.godot/imported/RedPencil.png-7f29d21e7fd62443cbb7493377c6ec27.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/locations/ground1.png"
-dest_files=["res://.godot/imported/ground1.png-2c1a07eb41d6bd394c3758ff75c6a9af.ctex"]
+source_file="res://assets/ui/RedPencil.png"
+dest_files=["res://.godot/imported/RedPencil.png-7f29d21e7fd62443cbb7493377c6ec27.ctex"]
 
 [params]
 

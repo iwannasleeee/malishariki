@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://brw4an1cw7rf2"
-path="res://.godot/imported/ysbaf76lfohu99tdiehuymajzygafjg8.jpg-8db62d108416318f94d529d1bfa31c5b.ctex"
+uid="uid://dkaeq4u7nrwnk"
+path="res://.godot/imported/OrangePencil.png-3696f285a5c57c372a61a5f8c1201901.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/ui/ysbaf76lfohu99tdiehuymajzygafjg8.jpg"
-dest_files=["res://.godot/imported/ysbaf76lfohu99tdiehuymajzygafjg8.jpg-8db62d108416318f94d529d1bfa31c5b.ctex"]
+source_file="res://assets/ui/OrangePencil.png"
+dest_files=["res://.godot/imported/OrangePencil.png-3696f285a5c57c372a61a5f8c1201901.ctex"]
 
 [params]
 

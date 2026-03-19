@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cbjxygqfxved5"
-path="res://.godot/imported/ground1.png-2c1a07eb41d6bd394c3758ff75c6a9af.ctex"
+uid="uid://l2y675m340oq"
+path="res://.godot/imported/BluePencil.png-2eb880d2befdf8cc6551a9bc8eb763cb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/locations/ground1.png"
-dest_files=["res://.godot/imported/ground1.png-2c1a07eb41d6bd394c3758ff75c6a9af.ctex"]
+source_file="res://assets/ui/BluePencil.png"
+dest_files=["res://.godot/imported/BluePencil.png-2eb880d2befdf8cc6551a9bc8eb763cb.ctex"]
 
 [params]
 

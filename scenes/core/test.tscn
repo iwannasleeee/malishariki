@@ -4,9 +4,6 @@
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_nbygv"]
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_nbygv"]
-load_path = "res://.godot/imported/ysbaf76lfohu99tdiehuymajzygafjg8.jpg-8db62d108416318f94d529d1bfa31c5b.ctex"
-
 [node name="DrawingRoot" type="Node2D" unique_id=341770996]
 script = ExtResource("1_nbygv")
 
@@ -22,7 +19,6 @@ offset_left = 1115.0
 offset_top = 26.0
 offset_right = 1251.0
 offset_bottom = 140.0
-texture_normal = SubResource("CompressedTexture2D_nbygv")
 ignore_texture_size = true
 stretch_mode = 0
 

@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://43f35g8xpyd5"]
+[gd_scene load_steps=5 format=3 uid="uid://43f35g8xpyd5"]
 
 [ext_resource type="PackedScene" uid="uid://br6ct3xo1fa8s" path="res://scenes/core/liniMini.tscn" id="2_dl70t"]
 [ext_resource type="PackedScene" uid="uid://co4vbk581rk7d" path="res://scenes/locations/ParallaxBackground.tscn" id="2_va8tf"]
@@ -9,17 +9,20 @@ vertices = PackedVector2Array(2464.6328, 677.97656, 2376.4063, 647.25, 2194.3125
 polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4, 5), PackedInt32Array(6, 7, 8), PackedInt32Array(9, 10, 11, 12), PackedInt32Array(13, 9, 12, 14, 15), PackedInt32Array(15, 14, 16, 0, 5), PackedInt32Array(2, 1, 17), PackedInt32Array(2, 17, 18, 19), PackedInt32Array(19, 18, 20, 21), PackedInt32Array(22, 21, 20), PackedInt32Array(22, 20, 23, 24), PackedInt32Array(25, 24, 23, 26), PackedInt32Array(27, 28, 29, 6, 8, 30, 31, 32), PackedInt32Array(8, 33, 30), PackedInt32Array(32, 31, 34, 35, 36), PackedInt32Array(36, 35, 37), PackedInt32Array(36, 37, 38, 39, 40), PackedInt32Array(41, 40, 39, 42, 43, 44), PackedInt32Array(41, 44, 45), PackedInt32Array(41, 45, 46), PackedInt32Array(41, 46, 47, 48), PackedInt32Array(41, 48, 49, 23), PackedInt32Array(23, 49, 50, 51, 52), PackedInt32Array(23, 52, 53, 54), PackedInt32Array(26, 55, 25), PackedInt32Array(56, 26, 23), PackedInt32Array(56, 23, 54, 57)])
 outlines = Array[PackedVector2Array]([PackedVector2Array(281, 584, 222, 599, 253, 631, 280, 673, 341, 684, 388, 688, 442, 687, 572, 689, 788, 679, 1203, 689, 1439, 681, 2039, 698, 2119, 662, 2207, 632, 2374, 657, 2463, 688, 2750, 685, 2866, 642, 3044, 639, 3258, 669, 3259, 524, 3100, 550, 2852, 547, 2651, 553, 2588, 566, 2448, 558, 2194, 562, 2031, 567, 1999, 590, 1815, 621, 1748, 620, 1693, 609, 1612, 600, 1606, 611, 1583, 610, 1574, 599, 1483, 599, 1457, 581, 1375, 574, 1334, 566, 1292, 566, 1258, 574, 1118, 594, 954, 587, 909, 601, 880, 609, 837, 607, 797, 601, 756, 596, 667, 600, 562, 581, 539, 588, 475, 587, 430, 582, 402, 581, 391, 569, 288, 567)])
 
-[node name="ForestPath" type="Node2D" unique_id=277770476]
+[node name="ForestPath" type="Node2D"]
 
-[node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=1296166015]
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
 position = Vector2(0, -26)
 navigation_polygon = SubResource("NavigationPolygon_iregs")
 
-[node name="ParallaxBackground" parent="." unique_id=607447675 instance=ExtResource("2_va8tf")]
+[node name="ParallaxBackground" parent="." instance=ExtResource("2_va8tf")]
 
-[node name="LiniMini" parent="." unique_id=839189745 instance=ExtResource("2_dl70t")]
+[node name="LiniMini" parent="." instance=ExtResource("2_dl70t")]
 position = Vector2(334, 559)
+scale = Vector2(0.7, 0.7)
 camera_limits_right = 3325.0
 camera_limits_bottom = 725.0
+jump_height = 120.0
+jump_duration = 0.3
 
-[node name="ParallaxFrountground" parent="." unique_id=1749645578 instance=ExtResource("3_dl70t")]
+[node name="ParallaxFrountground" parent="." instance=ExtResource("3_dl70t")]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cbjxygqfxved5"
-path="res://.godot/imported/ground1.png-2c1a07eb41d6bd394c3758ff75c6a9af.ctex"
+uid="uid://v4jvavh3pqyo"
+path="res://.godot/imported/YellowPencil.png-a8d1f5408f7e7607a935db3db5061749.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/locations/ground1.png"
-dest_files=["res://.godot/imported/ground1.png-2c1a07eb41d6bd394c3758ff75c6a9af.ctex"]
+source_file="res://assets/ui/YellowPencil.png"
+dest_files=["res://.godot/imported/YellowPencil.png-a8d1f5408f7e7607a935db3db5061749.ctex"]
 
 [params]
 
