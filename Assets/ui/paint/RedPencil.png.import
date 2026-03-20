@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dkaeq4u7nrwnk"
-path="res://.godot/imported/OrangePencil.png-d5338764149a145258db96277656276e.ctex"
+uid="uid://dl4i51g5efkq8"
+path="res://.godot/imported/RedPencil.png-885b49ee7cafafac77814959baa540bf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/ui/OrangePencil.png"
-dest_files=["res://.godot/imported/OrangePencil.png-d5338764149a145258db96277656276e.ctex"]
+source_file="res://Assets/ui/paint/RedPencil.png"
+dest_files=["res://.godot/imported/RedPencil.png-885b49ee7cafafac77814959baa540bf.ctex"]
 
 [params]
 

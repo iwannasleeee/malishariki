@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://wfvusilgih0m"
-path="res://.godot/imported/PinkPencil.png-6581d0f3c57c62d31ec5dc6912ab8573.ctex"
+uid="uid://d1pmahng8op1a"
+path="res://.godot/imported/Eraser.PNG-3744fea6193f89503e7d1dd346ae6182.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/ui/PinkPencil.png"
-dest_files=["res://.godot/imported/PinkPencil.png-6581d0f3c57c62d31ec5dc6912ab8573.ctex"]
+source_file="res://Assets/ui/paint/Eraser.PNG"
+dest_files=["res://.godot/imported/Eraser.PNG-3744fea6193f89503e7d1dd346ae6182.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://gci32pqvnnv4"
-path="res://.godot/imported/PaintBackroundAndZaglushka.PNG-1cc02e10ce975209eced0237751cb999.ctex"
+uid="uid://bvaisib1gsrlh"
+path="res://.godot/imported/PaintBackground.PNG-daafd09de75a41e4e9883cc861571dfd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/ui/PaintBackroundAndZaglushka.PNG"
-dest_files=["res://.godot/imported/PaintBackroundAndZaglushka.PNG-1cc02e10ce975209eced0237751cb999.ctex"]
+source_file="res://Assets/ui/paint/PaintBackground.PNG"
+dest_files=["res://.godot/imported/PaintBackground.PNG-daafd09de75a41e4e9883cc861571dfd.ctex"]
 
 [params]
 

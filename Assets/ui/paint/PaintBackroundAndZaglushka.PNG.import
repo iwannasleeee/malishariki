@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://l2y675m340oq"
-path="res://.godot/imported/BluePencil.png-fba445b7f98cae3aae1deac7c3fd8752.ctex"
+uid="uid://gci32pqvnnv4"
+path="res://.godot/imported/PaintBackroundAndZaglushka.PNG-b17911542e13fc04469b417488fd4ac3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/ui/BluePencil.png"
-dest_files=["res://.godot/imported/BluePencil.png-fba445b7f98cae3aae1deac7c3fd8752.ctex"]
+source_file="res://Assets/ui/paint/PaintBackroundAndZaglushka.PNG"
+dest_files=["res://.godot/imported/PaintBackroundAndZaglushka.PNG-b17911542e13fc04469b417488fd4ac3.ctex"]
 
 [params]
 

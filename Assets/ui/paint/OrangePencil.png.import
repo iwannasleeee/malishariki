@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d1pmahng8op1a"
-path="res://.godot/imported/Eraser.PNG-e96cc5f1da3f3ffc4d508861e4546294.ctex"
+uid="uid://dkaeq4u7nrwnk"
+path="res://.godot/imported/OrangePencil.png-f2f3f593fdbf854b23ff9809647022ed.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/ui/Eraser.PNG"
-dest_files=["res://.godot/imported/Eraser.PNG-e96cc5f1da3f3ffc4d508861e4546294.ctex"]
+source_file="res://Assets/ui/paint/OrangePencil.png"
+dest_files=["res://.godot/imported/OrangePencil.png-f2f3f593fdbf854b23ff9809647022ed.ctex"]
 
 [params]
 
