@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dou5ghu0qfqu1"
-path="res://.godot/imported/BlackPencil.png-a39a80d5395a474ef944f6e086afeca0.ctex"
+uid="uid://l2y675m340oq"
+path="res://.godot/imported/BluePencil.png-1c8c3059c3cbce1d42f0b7e2924e64fb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/ui/paint/BlackPencil.png"
-dest_files=["res://.godot/imported/BlackPencil.png-a39a80d5395a474ef944f6e086afeca0.ctex"]
+source_file="res://Assets/ui/paint/pencil/BluePencil.png"
+dest_files=["res://.godot/imported/BluePencil.png-1c8c3059c3cbce1d42f0b7e2924e64fb.ctex"]
 
 [params]
 
