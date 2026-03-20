@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d1pmahng8op1a"
-path="res://.godot/imported/Eraser.PNG-0c720957dd9725aff0e2308c3ef81164.ctex"
+path="res://.godot/imported/Eraser.PNG-e96cc5f1da3f3ffc4d508861e4546294.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui/Eraser.PNG"
-dest_files=["res://.godot/imported/Eraser.PNG-0c720957dd9725aff0e2308c3ef81164.ctex"]
+source_file="res://Assets/ui/Eraser.PNG"
+dest_files=["res://.godot/imported/Eraser.PNG-e96cc5f1da3f3ffc4d508861e4546294.ctex"]
 
 [params]
 
