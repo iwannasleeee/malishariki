@@ -21,11 +21,16 @@ var redo_stack: Array[Image] = []
 const MAX_HISTORY := 20
 
 func _ready():
-	image = Image.create(800, 600, false, Image.FORMAT_RGBA8)
-	image.fill(Color.WHITE)
+	# Берём текстуру, которую ты задал в Inspector
+	var tex: Texture2D = canvas.texture
 
+	# ВАЖНО: превращаем её в Image
+	image = tex.get_image()
+
+	# Создаём НОВУЮ texture (иначе update() не будет работать корректно)
 	texture = ImageTexture.create_from_image(image)
 	canvas.texture = texture
+
 
 	connect_ui()
 
@@ -49,6 +54,11 @@ func select_eraser():
 
 # ================= Input =================
 
+func get_image_pos(mouse_pos: Vector2) -> Vector2:
+	var img_size = Vector2(image.get_size())
+	var scale = img_size / canvas.size
+	return mouse_pos * scale
+
 func _input(event):
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT:
@@ -57,12 +67,12 @@ func _input(event):
 			if drawing:
 				save_state()  # сохраняем ДО начала рисования
 
-			last_pos = canvas.get_local_mouse_position()
+			last_pos = get_image_pos(canvas.get_local_mouse_position())
 
 	elif event is InputEventMouseMotion and drawing:
-		var current_pos = canvas.get_local_mouse_position()
+		var current_pos = get_image_pos(canvas.get_local_mouse_position())
 
-		if not Rect2(Vector2.ZERO, canvas.size).has_point(current_pos):
+		if not Rect2(Vector2.ZERO, image.get_size()).has_point(current_pos):
 			return
 
 		draw_line_on_image(last_pos, current_pos)
@@ -99,7 +109,11 @@ func draw_brush(pos: Vector2):
 				continue
 
 			if Vector2(x, y).length() <= brush_size:
-				image.set_pixelv(p, color)
+				#image.set_pixelv(p, color)
+				var base_color = image.get_pixelv(p)
+				# рисуем только если пиксель не прозрачный
+				if base_color.a > 0.1:
+					image.set_pixelv(p, color)
 
 # ================= Undo / Redo =================
 
