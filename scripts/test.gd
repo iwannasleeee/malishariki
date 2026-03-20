@@ -10,7 +10,7 @@ var drawing := false
 var last_pos: Vector2
 
 var brush_color: Color = Color.BLACK
-var brush_size: int = 6
+@export var brush_size: int = 6
 
 enum Tool { BRUSH, ERASER }
 var current_tool = Tool.BRUSH
@@ -37,9 +37,14 @@ func _ready():
 # ================= UI =================
 
 func connect_ui():
-	$UI/PencilRed.pressed.connect(func(): select_color(Color.RED))
-	$UI/PencilBlue.pressed.connect(func(): select_color(Color.BLUE))
-	$UI/PencilGreen.pressed.connect(func(): select_color(Color.GREEN))
+	$UI/RedPencil.pressed.connect(func(): select_color(Color("#d92721")))
+	$UI/OrangePencil.pressed.connect(func(): select_color(Color("#f78839")))
+	$UI/YellowPencil.pressed.connect(func(): select_color(Color("#ffed63")))
+	$UI/GreenPencil.pressed.connect(func(): select_color(Color("#44c753")))
+	$UI/BluePencil.pressed.connect(func(): select_color(Color("#4287f5")))
+	$UI/BrownPencil.pressed.connect(func(): select_color(Color("#80431b")))
+	$UI/BlackPencil.pressed.connect(func(): select_color(Color.BLACK))  # или Color("#000000")
+	$UI/PinkPencil.pressed.connect(func(): select_color(Color("#ee75e2")))
 
 	$UI/Eraser.pressed.connect(select_eraser)
 	$UI/Undo.pressed.connect(undo)

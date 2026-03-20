@@ -3,28 +3,103 @@
 [ext_resource type="Script" uid="uid://uhjs3tyikosv" path="res://scripts/test.gd" id="1_nbygv"]
 [ext_resource type="Texture2D" uid="uid://gci32pqvnnv4" path="res://Assets/ui/paint/PaintBackroundAndZaglushka.PNG" id="2_hlyje"]
 [ext_resource type="Texture2D" uid="uid://bhcg4vkk4we2h" path="res://Assets/ui/RAMA.png" id="3_jxf1c"]
+[ext_resource type="Texture2D" uid="uid://dou5ghu0qfqu1" path="res://Assets/ui/paint/pencil/BlackPencil.png" id="4_dhe1m"]
 [ext_resource type="Texture2D" uid="uid://fn06yn7jysch" path="res://Assets/ui/paint/Canvas.PNG" id="4_jxf1c"]
+[ext_resource type="Texture2D" uid="uid://dl4i51g5efkq8" path="res://Assets/ui/paint/pencil/RedPencil.png" id="4_mslnm"]
+[ext_resource type="Texture2D" uid="uid://l2y675m340oq" path="res://Assets/ui/paint/pencil/BluePencil.png" id="5_v5teb"]
+[ext_resource type="Texture2D" uid="uid://dog8yivbs73uu" path="res://Assets/ui/paint/pencil/BrownPencil.png" id="6_yswp4"]
+[ext_resource type="Texture2D" uid="uid://dgu2w3v7r173r" path="res://Assets/ui/paint/pencil/GreenPencil.png" id="7_k72e8"]
+[ext_resource type="Texture2D" uid="uid://dkaeq4u7nrwnk" path="res://Assets/ui/paint/pencil/OrangePencil.png" id="8_2g8hm"]
+[ext_resource type="Texture2D" uid="uid://wfvusilgih0m" path="res://Assets/ui/paint/pencil/PinkPencil.png" id="9_c55fc"]
+[ext_resource type="Texture2D" uid="uid://v4jvavh3pqyo" path="res://Assets/ui/paint/pencil/YellowPencil.png" id="11_ji4or"]
 
 [node name="DrawingRoot" type="Node2D" unique_id=341770996]
 script = ExtResource("1_nbygv")
 
+[node name="PaintBackroundAndZaglushka" type="Sprite2D" parent="." unique_id=1792751253]
+position = Vector2(640, 360)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_hlyje")
+
+[node name="Canvas" type="TextureRect" parent="." unique_id=1251386898]
+offset_right = 1280.0
+offset_bottom = 720.0
+texture = ExtResource("4_jxf1c")
+expand_mode = 1
+
 [node name="UI" type="Node2D" parent="." unique_id=180804299]
 
-[node name="PencilRed" type="TextureButton" parent="UI" unique_id=726265210]
-offset_left = 1115.0
-offset_top = 26.0
-offset_right = 1251.0
-offset_bottom = 140.0
+[node name="BlackPencil" type="TextureButton" parent="UI" unique_id=1789620494]
+offset_left = 1043.0
+offset_top = 195.0
+offset_right = 1241.0208
+offset_bottom = 244.0
+texture_normal = ExtResource("4_dhe1m")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="PencilBlue" type="TextureButton" parent="UI" unique_id=1144789658]
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="BluePencil" type="TextureButton" parent="UI" unique_id=726265210]
+offset_left = 1047.1959
+offset_top = 145.0
+offset_right = 1245.2166
+offset_bottom = 194.0
+texture_normal = ExtResource("5_v5teb")
+ignore_texture_size = true
+stretch_mode = 0
 
-[node name="PencilGreen" type="TextureButton" parent="UI" unique_id=752546995]
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="BrownPencil" type="TextureButton" parent="UI" unique_id=1179892545]
+offset_left = 1033.0
+offset_top = 246.0
+offset_right = 1231.0206
+offset_bottom = 295.0
+texture_normal = ExtResource("6_yswp4")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="GreenPencil" type="TextureButton" parent="UI" unique_id=1546420476]
+offset_left = 1031.0001
+offset_top = 308.0
+offset_right = 1229.0208
+offset_bottom = 357.0
+texture_normal = ExtResource("7_k72e8")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="OrangePencil" type="TextureButton" parent="UI" unique_id=596426176]
+offset_left = 1031.0
+offset_top = 373.0
+offset_right = 1229.0206
+offset_bottom = 422.0
+texture_normal = ExtResource("8_2g8hm")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="PinkPencil" type="TextureButton" parent="UI" unique_id=193532264]
+offset_left = 1029.0001
+offset_top = 431.0
+offset_right = 1227.0208
+offset_bottom = 480.0
+texture_normal = ExtResource("9_c55fc")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="RedPencil" type="TextureButton" parent="UI" unique_id=644518569]
+offset_left = 1036.0
+offset_top = 498.0
+offset_right = 1234.0206
+offset_bottom = 547.0
+texture_normal = ExtResource("4_mslnm")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="YellowPencil" type="TextureButton" parent="UI" unique_id=1825726071]
+offset_left = 2072.0
+offset_top = 996.0
+offset_right = 2270.0205
+offset_bottom = 1045.0
+texture_normal = ExtResource("11_ji4or")
+ignore_texture_size = true
+stretch_mode = 0
 
 [node name="Eraser" type="TextureButton" parent="UI" unique_id=2031565921]
 offset_right = 40.0
@@ -38,18 +113,7 @@ offset_bottom = 8.0
 offset_right = 8.0
 offset_bottom = 8.0
 
-[node name="PaintBackroundAndZaglushka" type="Sprite2D" parent="." unique_id=1792751253]
-position = Vector2(640, 360)
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("2_hlyje")
-
 [node name="Rama" type="Sprite2D" parent="." unique_id=1829412342]
 position = Vector2(642, 364)
 scale = Vector2(0.32333332, 0.32333332)
 texture = ExtResource("3_jxf1c")
-
-[node name="Canvas" type="TextureRect" parent="." unique_id=1251386898]
-offset_right = 1280.0
-offset_bottom = 720.0
-texture = ExtResource("4_jxf1c")
-expand_mode = 1
