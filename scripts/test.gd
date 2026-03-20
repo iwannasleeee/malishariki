@@ -9,8 +9,11 @@ var texture: ImageTexture
 var drawing := false
 var last_pos: Vector2
 
+# ==== Brush ====
 var brush_color: Color = Color.BLACK
 @export var brush_size: int = 6
+var brush_image: Image
+var brush_radius_sq: int
 
 enum Tool { BRUSH, ERASER }
 var current_tool = Tool.BRUSH
@@ -31,6 +34,7 @@ func _ready():
 	texture = ImageTexture.create_from_image(image)
 	canvas.texture = texture
 
+	set_brush_size(brush_size)
 
 	connect_ui()
 
@@ -54,6 +58,22 @@ func select_color(color: Color):
 	current_tool = Tool.BRUSH
 	brush_color = color
 
+func set_brush_size(size):
+	brush_size = size
+	brush_radius_sq = size * size
+	
+func generate_brush():
+	brush_image = Image.create(brush_size*2, brush_size*2, false, Image.FORMAT_RGBA8)
+	brush_image.fill(Color(0,0,0,0))
+
+	for x in range(brush_size*2):
+		for y in range(brush_size*2):
+			var dx = x - brush_size
+			var dy = y - brush_size
+
+			if dx*dx + dy*dy <= brush_radius_sq:
+				brush_image.set_pixel(x, y, Color.WHITE)
+				
 func select_eraser():
 	current_tool = Tool.ERASER
 
