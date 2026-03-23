@@ -16,6 +16,7 @@ var last_pos: Vector2
 var brush_color: Color = Color.BLACK
 @export var brush_size: int = 6
 var brush_image: Image        # готовая кисть (маска * цвет, scaled)
+var eraser_mask_image: Image  # маска формы ластика (белый круг)
 var brush_masks: Dictionary = {}   # имя → Image оригинальная маска
 var current_brush_name := ""
 
@@ -90,7 +91,7 @@ func _bake_brush_image():
 				brush_image.set_pixel(x, y, Color(0, 0, 0, 0))
 
 # Пересчитываем офсеты ластика (круглая форма фиксированная)
-func _bake_eraser_offsets():
+func _bake_eraser_mask():
 	eraser_offsets.clear()
 	var r2 = brush_size * brush_size
 	for x in range(-brush_size, brush_size + 1):
@@ -110,7 +111,7 @@ func set_brush(name: String):
 func set_brush_size(size: int):
 	brush_size = clampi(size, 1, 100)
 	_bake_brush_image()
-	_bake_eraser_offsets()
+	_bake_eraser_mask()
 
 func select_color(color: Color):
 	current_tool = Tool.BRUSH
@@ -205,13 +206,16 @@ func draw_brush(pos: Vector2):
 	else:  # ERASER
 		var img_w = image.get_width()
 		var img_h = image.get_height()
-		for offset in eraser_offsets:
-			var px = int(pos.x) + offset.x
-			var py = int(pos.y) + offset.y
-			if px < 0 or py < 0 or px >= img_w or py >= img_h:
-				continue
-			if image.get_pixel(px, py).a > 0.1:
-				image.set_pixel(px, py, original_image.get_pixel(px, py))
+		var size = brush_size * 2 + 1
+
+		# Обрезаем до границ изображения
+		var rx = clampi(x0, 0, img_w)
+		var ry = clampi(y0, 0, img_h)
+		var rw = mini(x0 + size, img_w) - rx
+		var rh = mini(y0 + size, img_h) - ry
+
+		if rw > 0 and rh > 0:
+			image.blit_rect(original_image, Rect2i(rx, ry, rw, rh), Vector2i(rx, ry))
 
 # ===================== Undo / Redo =========================
 
