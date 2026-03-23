@@ -16,7 +16,7 @@
 
 [node name="DrawingRoot" type="Node2D" unique_id=341770996]
 script = ExtResource("1_nbygv")
-brush_size = 9
+brush_size = 120
 
 [node name="PaintBackroundAndZaglushka" type="Sprite2D" parent="." unique_id=1792751253]
 position = Vector2(640, 360)
