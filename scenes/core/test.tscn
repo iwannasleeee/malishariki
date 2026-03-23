@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://dkaeq4u7nrwnk" path="res://Assets/ui/paint/pencil/OrangePencil.png" id="8_2g8hm"]
 [ext_resource type="Texture2D" uid="uid://wfvusilgih0m" path="res://Assets/ui/paint/pencil/PinkPencil.png" id="9_c55fc"]
 [ext_resource type="Texture2D" uid="uid://v4jvavh3pqyo" path="res://Assets/ui/paint/pencil/YellowPencil.png" id="11_ji4or"]
+[ext_resource type="Texture2D" uid="uid://d1pmahng8op1a" path="res://Assets/ui/paint/Eraser.PNG" id="12_v5teb"]
 
 [node name="DrawingRoot" type="Node2D" unique_id=341770996]
 script = ExtResource("1_nbygv")
@@ -103,8 +104,13 @@ ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Eraser" type="TextureButton" parent="UI" unique_id=2031565921]
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 1135.0
+offset_top = 536.0
+offset_right = 1216.0
+offset_bottom = 650.35297
+texture_normal = ExtResource("12_v5teb")
+ignore_texture_size = true
+stretch_mode = 0
 
 [node name="Undo" type="Button" parent="UI" unique_id=1171960737]
 offset_right = 8.0

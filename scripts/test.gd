@@ -5,6 +5,7 @@ extends Node2D
 # ==== Drawing ====
 var image: Image
 var texture: ImageTexture
+var original_image: Image
 
 var drawing := false
 var last_pos: Vector2
@@ -29,7 +30,7 @@ func _ready():
 
 	# ВАЖНО: превращаем её в Image
 	image = tex.get_image()
-
+	original_image = image.duplicate()  # <-- важно
 	# Создаём НОВУЮ texture (иначе update() не будет работать корректно)
 	texture = ImageTexture.create_from_image(image)
 	canvas.texture = texture
@@ -123,8 +124,7 @@ func draw_brush(pos: Vector2):
 	var y0 = int(pos.y)
 
 	var color = brush_color
-	if current_tool == Tool.ERASER:
-		color = Color.WHITE
+	var use_eraser = current_tool == Tool.ERASER
 
 	for x in range(-brush_size, brush_size):
 		for y in range(-brush_size, brush_size):
@@ -138,7 +138,11 @@ func draw_brush(pos: Vector2):
 				var base_color = image.get_pixelv(p)
 				# рисуем только если пиксель не прозрачный
 				if base_color.a > 0.1:
-					image.set_pixelv(p, color)
+					if use_eraser:
+						var original_color = original_image.get_pixelv(p)
+						image.set_pixelv(p, original_color)
+					else:
+						image.set_pixelv(p, brush_color)
 
 # ================= Undo / Redo =================
 
