@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://wfvusilgih0m"
-path="res://.godot/imported/PinkPencil.png-4dc2bb565f2b54cadd8c0ee2bda3bf21.ctex"
+path="res://.godot/imported/PinkPencil.png-50e3614e5e917c9c927355e13ea1d7e3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/ui/paint/pencil/PinkPencil.png"
-dest_files=["res://.godot/imported/PinkPencil.png-4dc2bb565f2b54cadd8c0ee2bda3bf21.ctex"]
+source_file="res://assets/ui/paint/pencil/PinkPencil.png"
+dest_files=["res://.godot/imported/PinkPencil.png-50e3614e5e917c9c927355e13ea1d7e3.ctex"]
 
 [params]
 
