@@ -203,6 +203,8 @@ func draw_brush(pos: Vector2):
 		var brush_rect = Rect2i(0, 0, brush_image.get_width(), brush_image.get_height())
 		image.blend_rect(brush_image, brush_rect, Vector2i(x0, y0))
 
+		_apply_canvas_mask(x0, y0, brush_image.get_width(), brush_image.get_height())
+
 	else:  # ERASER
 		var img_w = image.get_width()
 		var img_h = image.get_height()
@@ -217,6 +219,19 @@ func draw_brush(pos: Vector2):
 		if rw > 0 and rh > 0:
 			image.blit_rect(original_image, Rect2i(rx, ry, rw, rh), Vector2i(rx, ry))
 
+func _apply_canvas_mask(x0: int, y0: int, w: int, h: int):
+	var img_w = image.get_width()
+	var img_h = image.get_height()
+	for x in range(w):
+		for y in range(h):
+			var px = x0 + x
+			var py = y0 + y
+			if px < 0 or py < 0 or px >= img_w or py >= img_h:
+				continue
+			# Если оригинал прозрачный — стираем нарисованное
+			if original_image.get_pixel(px, py).a < 0.01:
+				image.set_pixel(px, py, Color(0, 0, 0, 0))
+				
 # ===================== Undo / Redo =========================
 
 func save_state():
