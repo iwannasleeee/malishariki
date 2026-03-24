@@ -226,19 +226,32 @@ func draw_brush(pos: Vector2):
 		var brush_rect = Rect2i(0, 0, brush_image.get_width(), brush_image.get_height())
 		image.blend_rect(brush_image, brush_rect, Vector2i(x0, y0))
 
+	#else:  # ERASER
+		#var img_w = image.get_width()
+		#var img_h = image.get_height()
+		#var size = brush_size * 2 + 1
+#
+		## Обрезаем до границ изображения
+		#var rx = clampi(x0, 0, img_w)
+		#var ry = clampi(y0, 0, img_h)
+		#var rw = mini(x0 + size, img_w) - rx
+		#var rh = mini(y0 + size, img_h) - ry
+#
+		#if rw > 0 and rh > 0:
+			#
+			#image.blit_rect(original_image, Rect2i(rx, ry, rw, rh), Vector2i(rx, ry))
+
 	else:  # ERASER
 		var img_w = image.get_width()
 		var img_h = image.get_height()
-		var size = brush_size * 2 + 1
+		var cx = int(pos.x)
+		var cy = int(pos.y)
 
-		# Обрезаем до границ изображения
-		var rx = clampi(x0, 0, img_w)
-		var ry = clampi(y0, 0, img_h)
-		var rw = mini(x0 + size, img_w) - rx
-		var rh = mini(y0 + size, img_h) - ry
-
-		if rw > 0 and rh > 0:
-			image.blit_rect(original_image, Rect2i(rx, ry, rw, rh), Vector2i(rx, ry))
+		for offset in eraser_offsets:
+			var px = cx + offset.x
+			var py = cy + offset.y
+			if px >= 0 and px < img_w and py >= 0 and py < img_h:
+				image.set_pixel(px, py, original_image.get_pixel(px, py))
 
 # ===================== Undo / Redo =========================
 
