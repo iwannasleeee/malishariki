@@ -42,8 +42,12 @@ func _ready():
 	image = tex.get_image()
 	original_image = image.duplicate()
 	texture = ImageTexture.create_from_image(image)
-	canvas.texture = texture
+	
+	# Маска формы холста — передаём оригинал в шейдер
+	var mask_tex = ImageTexture.create_from_image(original_image)
+	_apply_mask_shader(mask_tex)
 
+	canvas.texture = texture
 	_load_brushes()
 	set_brush_size(brush_size)
 	connect_ui()
@@ -52,7 +56,26 @@ func _process(_delta):
 	if texture_dirty:
 		texture.update(image)
 		texture_dirty = false
+# ===================== Шейдеры =============================
+func _apply_mask_shader(mask_tex: ImageTexture):
+	var shader_code = """
+shader_type canvas_item;
+uniform sampler2D mask_texture : hint_default_white;
 
+void fragment() {
+	vec4 draw_color = texture(TEXTURE, UV);
+	float mask_alpha = texture(mask_texture, UV).a;
+	COLOR = vec4(draw_color.rgb, draw_color.a * mask_alpha);
+}
+"""
+	var shader = Shader.new()
+	shader.code = shader_code
+
+	var mat = ShaderMaterial.new()
+	mat.shader = shader
+	mat.set_shader_parameter("mask_texture", mask_tex)
+
+	canvas.material = mat
 # ===================== Загрузка кистей =====================
 
 func _load_brushes():
@@ -203,8 +226,6 @@ func draw_brush(pos: Vector2):
 		var brush_rect = Rect2i(0, 0, brush_image.get_width(), brush_image.get_height())
 		image.blend_rect(brush_image, brush_rect, Vector2i(x0, y0))
 
-		_apply_canvas_mask(x0, y0, brush_image.get_width(), brush_image.get_height())
-
 	else:  # ERASER
 		var img_w = image.get_width()
 		var img_h = image.get_height()
@@ -219,19 +240,6 @@ func draw_brush(pos: Vector2):
 		if rw > 0 and rh > 0:
 			image.blit_rect(original_image, Rect2i(rx, ry, rw, rh), Vector2i(rx, ry))
 
-func _apply_canvas_mask(x0: int, y0: int, w: int, h: int):
-	var img_w = image.get_width()
-	var img_h = image.get_height()
-	for x in range(w):
-		for y in range(h):
-			var px = x0 + x
-			var py = y0 + y
-			if px < 0 or py < 0 or px >= img_w or py >= img_h:
-				continue
-			# Если оригинал прозрачный — стираем нарисованное
-			if original_image.get_pixel(px, py).a < 0.01:
-				image.set_pixel(px, py, Color(0, 0, 0, 0))
-				
 # ===================== Undo / Redo =========================
 
 func save_state():
