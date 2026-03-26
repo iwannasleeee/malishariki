@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bul0iar0frajb"
-path="res://.godot/imported/Screenshot_1.png-830d6d17adfed43c98af969ffaabb329.ctex"
+uid="uid://dl4i51g5efkq8"
+path="res://.godot/imported/RedPencil.png-49f934a04837a33eddd7ab9824f6f1bb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Locations/Screenshot_1.png"
-dest_files=["res://.godot/imported/Screenshot_1.png-830d6d17adfed43c98af969ffaabb329.ctex"]
+source_file="res://Assets/ui/paint/pencil/RedPencil.png"
+dest_files=["res://.godot/imported/RedPencil.png-49f934a04837a33eddd7ab9824f6f1bb.ctex"]
 
 [params]
 

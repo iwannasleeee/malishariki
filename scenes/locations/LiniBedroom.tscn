@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://cwk1f885g4leg"]
+
+[ext_resource type="Texture2D" uid="uid://dmaccjhf64mro" path="res://Assets/Locations/LiniBedroom.PNG" id="1_yrgbh"]
+[ext_resource type="PackedScene" uid="uid://ci366t080ngvv" path="res://scenes/core/Lini.tscn" id="2_1tyo2"]
+[ext_resource type="Texture2D" uid="uid://bhcg4vkk4we2h" path="res://Assets/ui/RAMA.png" id="2_mdfxg"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_4vbjv"]
+vertices = PackedVector2Array(636.0078, 603.9922, 1166.3828, 601.02344, 1233.4297, 657.3125, 1212.3906, 669, 465.39063, 661.21094, 525.59375, 625.4922, 290.3125, 647.97656, 290.3125, 647.96875, 150.82031, 671.90625, 192.92969, 641.22656)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4, 5), PackedInt32Array(6, 7, 4), PackedInt32Array(8, 9, 6, 4), PackedInt32Array(4, 3, 8)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(190, 631, 291, 638, 463, 651, 522, 616, 635, 594, 1170, 591, 1251, 659, 1215, 679, 120, 682)])
+
+[node name="LiniBedroom" type="Node2D" unique_id=762996833]
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=1667463333]
+navigation_polygon = SubResource("NavigationPolygon_4vbjv")
+
+[node name="LiniBedroom" type="Sprite2D" parent="." unique_id=1628986829]
+position = Vector2(640.99994, 360)
+scale = Vector2(0.32000002, 0.32000002)
+texture = ExtResource("1_yrgbh")
+
+[node name="Lini" parent="." unique_id=1452736418 instance=ExtResource("2_1tyo2")]
+position = Vector2(618, 672)
+
+[node name="Rama" type="Sprite2D" parent="." unique_id=1840246741]
+position = Vector2(638.33344, 360.75003)
+scale = Vector2(0.32022223, 0.32022223)
+texture = ExtResource("2_mdfxg")
