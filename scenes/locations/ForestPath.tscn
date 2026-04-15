@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://43f35g8xpyd5"]
 
-[ext_resource type="PackedScene" path="res://scenes/core/LiniMini.tscn" id="2_dl70t"]
+[ext_resource type="PackedScene" uid="uid://do2oum2xgomjk" path="res://scenes/core/LiniMini.tscn" id="2_dl70t"]
 [ext_resource type="PackedScene" uid="uid://co4vbk581rk7d" path="res://scenes/locations/ParallaxBackground.tscn" id="2_va8tf"]
 [ext_resource type="PackedScene" uid="uid://bh4pkisxjime7" path="res://scenes/locations/ParallaxFrontground.tscn" id="3_dl70t"]
 [ext_resource type="Texture2D" uid="uid://6cgl35x0556p" path="res://Assets/Locations/Trolley.png" id="4_uckft"]

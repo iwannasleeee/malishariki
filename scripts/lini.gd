@@ -62,16 +62,6 @@ func _physics_process(delta):
 			current_interactable.interact(self)
 			current_interactable = null
 
-		if jump_time < jump_duration && jump_time > 0.0:
-			jump_time += delta
-			if jump_time >= jump_duration:
-				jump_time = 0.0
-				animated_sprite.position.y = sprite_base_y
-
-			var t = jump_time / jump_duration
-			var height = 4.0 * jump_height * t * (1.0 - t)
-			animated_sprite.position.y = sprite_base_y - height
-
 		if is_moving:
 			is_moving = false
 			play_idle_animation()
@@ -102,20 +92,7 @@ func _physics_process(delta):
 	else:
 		# Иначе просто применяем вычисленную скорость
 		velocity = intended_velocity
-
-	if is_moving:
-		jump_time += delta
-
-		if jump_time > jump_duration:
-			jump_time = 0.0
-
-		var t = jump_time / jump_duration
-		var height = 4.0 * jump_height * t * (1.0 - t)
-
-		animated_sprite.position.y = sprite_base_y - height
-	else:
-		jump_time = 0.0
-		animated_sprite.position.y = sprite_base_y
+		
 	# Двигаем персонажа с помощью стандартного метода move_and_slide()
 	move_and_slide()
 
