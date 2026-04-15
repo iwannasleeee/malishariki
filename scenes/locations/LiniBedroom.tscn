@@ -1,8 +1,9 @@
 [gd_scene format=3 uid="uid://cwk1f885g4leg"]
 
 [ext_resource type="Texture2D" uid="uid://dmaccjhf64mro" path="res://Assets/Locations/LiniBedroom.PNG" id="1_yrgbh"]
-[ext_resource type="PackedScene" uid="uid://ci366t080ngvv" path="res://scenes/core/Lini.tscn" id="2_1tyo2"]
+[ext_resource type="PackedScene" uid="uid://df1frskn0se13" path="res://scenes/core/Lini.tscn" id="2_1tyo2"]
 [ext_resource type="Texture2D" uid="uid://bhcg4vkk4we2h" path="res://Assets/ui/RAMA.png" id="2_mdfxg"]
+[ext_resource type="PackedScene" uid="uid://c3qoa2qnf1vn8" path="res://scenes/core/Door.tscn" id="4_1tyo2"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_4vbjv"]
 vertices = PackedVector2Array(636.0078, 603.9922, 1166.3828, 601.02344, 1233.4297, 657.3125, 1212.3906, 669, 465.39063, 661.21094, 525.59375, 625.4922, 290.3125, 647.97656, 290.3125, 647.96875, 150.82031, 671.90625, 192.92969, 641.22656)
@@ -19,6 +20,10 @@ position = Vector2(640.99994, 360)
 scale = Vector2(0.32000002, 0.32000002)
 texture = ExtResource("1_yrgbh")
 
+[node name="Door" parent="." unique_id=1008082527 instance=ExtResource("4_1tyo2")]
+position = Vector2(1213.0001, 464.99997)
+scale = Vector2(0.35, 0.35)
+
 [node name="Lini" parent="." unique_id=1452736418 instance=ExtResource("2_1tyo2")]
 position = Vector2(618, 672)
 
@@ -26,3 +31,5 @@ position = Vector2(618, 672)
 position = Vector2(638.33344, 360.75003)
 scale = Vector2(0.32022223, 0.32022223)
 texture = ExtResource("2_mdfxg")
+
+[connection signal="clicked" from="Door" to="Lini" method="_on_clicked"]

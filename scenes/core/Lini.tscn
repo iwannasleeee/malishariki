@@ -55,10 +55,10 @@ animations = [{
 radius = 159.0
 height = 710.0
 
-[node name="Lini" type="CharacterBody2D"]
+[node name="Lini" type="CharacterBody2D" unique_id=1080354499]
 script = ExtResource("1_d4li8")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=321834555]
 position = Vector2(-9, -70)
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_31sr1")
@@ -66,14 +66,14 @@ animation = &"walk"
 frame = 2
 frame_progress = 0.30153325
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=745788490]
 position = Vector2(1, -63.500015)
 scale = Vector2(0.2, 0.2)
 shape = SubResource("CapsuleShape2D_naftb")
 
-[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=1127060794]
 target_desired_distance = 5.0
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=581624533]
 position = Vector2(0, -321)
 scale = Vector2(2, 2)

@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://dusogs63f23c"]
+
+[ext_resource type="Script" uid="uid://dfdk45kfskhlx" path="res://scripts/interactable_object.gd" id="1_2qkpw"]
+
+[node name="InteractableObject" type="Area2D" unique_id=1008082527]
+script = ExtResource("1_2qkpw")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=309976985]

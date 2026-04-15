@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://de3eip2vqi6eq"]
+[gd_scene format=3 uid="uid://dtble7av5unhg"]
 
 [ext_resource type="Script" uid="uid://fq6gua4nh1i6" path="res://scripts/lini.gd" id="1_nacmg"]
 [ext_resource type="Texture2D" uid="uid://c6t7e7ovboomt" path="res://Assets/sprites/Lini/linimini_idle1.PNG" id="2_bt3ox"]

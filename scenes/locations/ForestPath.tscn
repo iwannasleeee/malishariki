@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://43f35g8xpyd5"]
 
-[ext_resource type="PackedScene" uid="uid://br6ct3xo1fa8s" path="res://scenes/core/LiniMini.tscn" id="2_dl70t"]
+[ext_resource type="PackedScene" path="res://scenes/core/LiniMini.tscn" id="2_dl70t"]
 [ext_resource type="PackedScene" uid="uid://co4vbk581rk7d" path="res://scenes/locations/ParallaxBackground.tscn" id="2_va8tf"]
 [ext_resource type="PackedScene" uid="uid://bh4pkisxjime7" path="res://scenes/locations/ParallaxFrontground.tscn" id="3_dl70t"]
 [ext_resource type="Texture2D" uid="uid://6cgl35x0556p" path="res://Assets/Locations/Trolley.png" id="4_uckft"]
@@ -11,6 +11,7 @@ polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4, 5), PackedIn
 outlines = Array[PackedVector2Array]([PackedVector2Array(281, 584, 222, 599, 253, 631, 280, 673, 341, 684, 388, 688, 442, 687, 572, 689, 788, 679, 1203, 689, 1439, 681, 2039, 698, 2119, 662, 2207, 632, 2374, 657, 2463, 688, 2750, 685, 2866, 642, 3044, 639, 3258, 669, 3259, 524, 3100, 550, 2852, 547, 2651, 553, 2588, 566, 2448, 558, 2194, 562, 2031, 567, 1999, 590, 1815, 621, 1748, 620, 1693, 609, 1612, 600, 1606, 611, 1583, 610, 1574, 599, 1483, 599, 1457, 581, 1375, 574, 1334, 566, 1292, 566, 1258, 574, 1118, 594, 954, 587, 922.1453, 596.91034, 909, 601, 880, 609, 837, 607, 797, 601, 756, 596, 667, 600, 562, 581, 539, 588, 475, 587, 430, 582, 402, 581, 391, 569, 288, 567)])
 
 [node name="ForestPath" type="Node2D" unique_id=1384249519]
+position = Vector2(1, 0)
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=1815020498]
 position = Vector2(0, -26)

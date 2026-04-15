@@ -19,6 +19,7 @@ var sprite_base_y: float
 
 # Переменная для отслеживания состояния движения
 var is_moving: bool = false
+var current_interactable: InteractableObject = null
 
 func _ready():
 	sprite_base_y = animated_sprite.position.y
@@ -57,8 +58,10 @@ func setup_camera_limits():
 func _physics_process(delta):
 	# Если путь к цели еще не построен или персонаж уже у цели - не двигаемся
 	if navigation_agent.is_navigation_finished():
-		# Если мы двигались, но теперь остановились
-		
+		if current_interactable:
+			current_interactable.interact(self)
+			current_interactable = null
+
 		if jump_time < jump_duration && jump_time > 0.0:
 			jump_time += delta
 			if jump_time >= jump_duration:
@@ -67,9 +70,8 @@ func _physics_process(delta):
 
 			var t = jump_time / jump_duration
 			var height = 4.0 * jump_height * t * (1.0 - t)
-
 			animated_sprite.position.y = sprite_base_y - height
-		
+
 		if is_moving:
 			is_moving = false
 			play_idle_animation()
@@ -132,3 +134,7 @@ func update_sprite_direction(direction: Vector2):
 		animated_sprite.flip_h = false
 	elif direction.x < 0:
 		animated_sprite.flip_h = true 
+
+func _on_clicked(obj: InteractableObject) -> void:
+	current_interactable = obj
+	pass # Replace with function body.
