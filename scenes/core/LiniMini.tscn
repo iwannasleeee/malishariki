@@ -1,6 +1,6 @@
-[gd_scene format=3 uid="uid://dtble7av5unhg"]
+[gd_scene format=3 uid="uid://do2oum2xgomjk"]
 
-[ext_resource type="Script" uid="uid://fq6gua4nh1i6" path="res://scripts/lini.gd" id="1_nacmg"]
+[ext_resource type="Script" uid="uid://ipp2h01hx766" path="res://scripts/lini_mini.gd" id="1_hrjxn"]
 [ext_resource type="Texture2D" uid="uid://c6t7e7ovboomt" path="res://Assets/sprites/Lini/linimini_idle1.PNG" id="2_bt3ox"]
 [ext_resource type="Texture2D" uid="uid://dnh0cqjodao3" path="res://Assets/sprites/Lini/linimini_idle2.PNG" id="3_xrwl8"]
 
@@ -31,7 +31,7 @@ radius = 159.0
 height = 710.0
 
 [node name="LiniMini" type="CharacterBody2D" unique_id=839189745]
-script = ExtResource("1_nacmg")
+script = ExtResource("1_hrjxn")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=502884792]
 position = Vector2(-9, -70)
