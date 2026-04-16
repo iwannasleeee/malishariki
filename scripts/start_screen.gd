@@ -22,7 +22,7 @@ func _ready():
 func _on_play_button_pressed():
 	# Загружаем и переходим на игровую сцену
 	if game_scene_path:
-		get_tree().change_scene_to_file(game_scene_path)
+		SceneManager.change_scene(game_scene_path, "SpawnBed")
 	else:
 		print("Ошибка: путь к сцене не указан!")
 

@@ -22,6 +22,14 @@ var is_moving: bool = false
 var current_interactable: InteractableObject = null
 
 func _ready():
+	await get_tree().process_frame
+	
+	var spawn_name = SceneManager.spawn_point_name
+	if spawn_name != "":
+		var spawn = find_spawn_point(spawn_name)
+		if spawn:
+			global_position = spawn.global_position
+			
 	sprite_base_y = animated_sprite.position.y
 	camera.make_current()
 	
@@ -40,9 +48,17 @@ func _ready():
 	# Начинаем с анимации idle
 	play_idle_animation()
 
+func find_spawn_point(name: String) -> SpawnPoint:
+	for node in get_tree().get_nodes_in_group("spawn_points"):
+		if node is SpawnPoint and node.spawn_name == name:
+			return node
+	return null
+	
 func _input(event):
 	# По клику левой кнопкой мыши ставим новую цель
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
+		# Сбрасываем предыдущее намерение взаимодействия при любом новом клике
+		current_interactable = null
 		# Конвертируем позицию мыши (в экранных координатах) в глобальные координаты мира
 		var target_position = get_global_mouse_position()
 		# Командуем агенту вычислить путь к этой цели
