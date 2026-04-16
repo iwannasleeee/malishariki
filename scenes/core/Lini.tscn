@@ -48,7 +48,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"walk",
-"speed": 5.0
+"speed": 12.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_naftb"]
@@ -57,14 +57,6 @@ height = 710.0
 
 [node name="Lini" type="CharacterBody2D" unique_id=1080354499]
 script = ExtResource("1_d4li8")
-speed = null
-camera_limits_left = null
-camera_limits_top = null
-camera_limits_right = null
-camera_limits_bottom = null
-use_camera_limits = null
-jump_height = null
-jump_duration = null
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=321834555]
 position = Vector2(-9, -70)
