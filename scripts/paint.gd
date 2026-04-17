@@ -7,6 +7,9 @@ var image: Image
 var texture: ImageTexture
 var original_image: Image
 var texture_dirty := false
+# ==== Оптимизация ====
+var upload_accum := 0.0
+@export var upload_fps := 30.0
 
 # ==== Рисование ====
 var drawing := false
@@ -27,6 +30,7 @@ const BRUSH_NAMES: Array[String] = ["BrushTexture", "BrushTexture", "BrushTextur
 enum Tool { BRUSH, ERASER, TAPE }
 var current_tool = Tool.BRUSH
 
+# ==== Декоративный скотч ====
 var tape_first_point := Vector2.ZERO
 var tape_waiting_second_point := false
 
@@ -35,10 +39,6 @@ var tape_waiting_second_point := false
 @export var tape_opacity: float = 1.0
 
 var tape_texture_image: Image
-
-# ==== Ластик ====
-# Офсеты для ластика (пиксельный обход, нужно читать original_image)
-var eraser_offsets: Array[Vector2i] = []
 
 # ==== Undo / Redo ====
 var undo_stack: Array[Image] = []
@@ -62,10 +62,20 @@ func _ready():
 	set_brush_size(brush_size)
 	connect_ui()
 
-func _process(_delta):
+func _process(delta):
 	if texture_dirty:
-		texture.update(image)
-		texture_dirty = false
+		upload_accum += delta
+		if upload_accum >= 1.0 / upload_fps:
+			texture.update(image)
+			texture_dirty = false
+			upload_accum = 0.0
+
+# =============== Обновление изображения ===================
+# для оптимизации
+func flush_texture():
+	texture.update(image)
+	texture_dirty = false
+	upload_accum = 0.0
 # ===================== Шейдеры =============================
 func _apply_mask_shader(mask_tex: ImageTexture):
 	var shader_code = """
@@ -132,12 +142,19 @@ func _bake_brush_image():
 
 # Пересчитываем офсеты ластика (круглая форма фиксированная)
 func _bake_eraser_mask():
-	eraser_offsets.clear()
-	var r2 = brush_size * brush_size
-	for x in range(-brush_size, brush_size + 1):
-		for y in range(-brush_size, brush_size + 1):
-			if x * x + y * y <= r2:
-				eraser_offsets.append(Vector2i(x, y))
+	var size := brush_size * 2 + 1
+	eraser_mask_image = Image.create(size, size, false, Image.FORMAT_RGBA8)
+	eraser_mask_image.fill(Color(0, 0, 0, 0))
+
+	var r := float(brush_size)
+	var r2 := r * r
+
+	for y in range(size):
+		for x in range(size):
+			var dx := float(x) - r
+			var dy := float(y) - r
+			if dx * dx + dy * dy <= r2:
+				eraser_mask_image.set_pixel(x, y, Color(1, 1, 1, 1))
 
 # ===================== Управление кистью ===================
 
@@ -299,6 +316,7 @@ func _unhandled_input(event):
 			last_pos = p
 
 		elif event.button_index == MOUSE_BUTTON_LEFT and not event.pressed:
+			flush_texture() #Обновление последнего кадра
 			drawing = false
 
 	elif event is InputEventMouseMotion and drawing:
@@ -328,6 +346,33 @@ func draw_line_on_image(from: Vector2, to: Vector2):
 
 	texture_dirty = true
 
+func draw_eraser_stamp(pos: Vector2):
+	if eraser_mask_image == null:
+		return
+
+	var size := brush_size * 2 + 1
+	var x0 := int(pos.x) - brush_size
+	var y0 := int(pos.y) - brush_size
+
+	var src_x := maxi(x0, 0)
+	var src_y := maxi(y0, 0)
+	var src_w := mini(x0 + size, image.get_width()) - src_x
+	var src_h := mini(y0 + size, image.get_height()) - src_y
+
+	if src_w <= 0 or src_h <= 0:
+		return
+
+	var src_rect := Rect2i(src_x, src_y, src_w, src_h)
+	var dst := Vector2i(src_x, src_y)
+
+	var mask_x := src_x - x0
+	var mask_y := src_y - y0
+
+	var src_crop := original_image.get_region(src_rect)
+	var mask_crop := eraser_mask_image.get_region(Rect2i(mask_x, mask_y, src_w, src_h))
+
+	image.blit_rect_mask(src_crop, mask_crop, Rect2i(0, 0, src_w, src_h), dst)
+
 func draw_brush(pos: Vector2):
 	var x0 = int(pos.x) - brush_size
 	var y0 = int(pos.y) - brush_size
@@ -354,16 +399,7 @@ func draw_brush(pos: Vector2):
 			#image.blit_rect(original_image, Rect2i(rx, ry, rw, rh), Vector2i(rx, ry))
 
 	else:  # ERASER
-		var img_w = image.get_width()
-		var img_h = image.get_height()
-		var cx = int(pos.x)
-		var cy = int(pos.y)
-
-		for offset in eraser_offsets:
-			var px = cx + offset.x
-			var py = cy + offset.y
-			if px >= 0 and px < img_w and py >= 0 and py < img_h:
-				image.set_pixel(px, py, original_image.get_pixel(px, py))
+		draw_eraser_stamp(pos)
 
 # ===================== Undo / Redo =========================
 
