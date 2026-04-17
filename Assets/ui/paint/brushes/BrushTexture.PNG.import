@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ci4uxauoqic1m"
-path="res://.godot/imported/BrushTexture.PNG-d829389e976452919c40ddfa49296ead.ctex"
+path="res://.godot/imported/BrushTexture.PNG-9e6cd32d892b35c6f1f5ccf072fa2eec.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/ui/paint/brushes/BrushTexture.PNG"
-dest_files=["res://.godot/imported/BrushTexture.PNG-d829389e976452919c40ddfa49296ead.ctex"]
+source_file="res://assets/ui/paint/brushes/BrushTexture.PNG"
+dest_files=["res://.godot/imported/BrushTexture.PNG-9e6cd32d892b35c6f1f5ccf072fa2eec.ctex"]
 
 [params]
 
