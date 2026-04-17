@@ -24,8 +24,17 @@ var current_brush_name := ""
 # Названия файлов без расширения — они же появятся на кнопках
 const BRUSH_NAMES: Array[String] = ["BrushTexture", "BrushTexture", "BrushTexture", "BrushTexture"]
 
-enum Tool { BRUSH, ERASER }
+enum Tool { BRUSH, ERASER, TAPE }
 var current_tool = Tool.BRUSH
+
+var tape_first_point := Vector2.ZERO
+var tape_waiting_second_point := false
+
+@export var tape_width: int = 280
+@export var tape_repeat_px: float = 240.0
+@export var tape_opacity: float = 1.0
+
+var tape_texture_image: Image
 
 # ==== Ластик ====
 # Офсеты для ластика (пиксельный обход, нужно читать original_image)
@@ -49,6 +58,7 @@ func _ready():
 
 	canvas.texture = texture
 	_load_brushes()
+	_load_tape_texture()
 	set_brush_size(brush_size)
 	connect_ui()
 
@@ -90,7 +100,14 @@ func _load_brushes():
 	# Берём первую доступную кисть как дефолтную
 	if brush_masks.size() > 0:
 		set_brush(brush_masks.keys()[0])
-
+# ==================== Загрузка скотча ======================
+func _load_tape_texture():
+	var path = "res://Assets/ui/paint/bigbabytape.png"
+	if ResourceLoader.exists(path):
+		var tex = load(path) as Texture2D
+		if tex:
+			tape_texture_image = tex.get_image()
+			tape_texture_image.convert(Image.FORMAT_RGBA8)
 # Пересчитывается только при смене кисти / размера / цвета
 func _bake_brush_image():
 	if current_brush_name == "" or not brush_masks.has(current_brush_name):
@@ -141,9 +158,85 @@ func select_color(color: Color):
 	brush_color = color
 	_bake_brush_image()
 
+# ===================== Ластик ==============================
 func select_eraser():
 	current_tool = Tool.ERASER
+# ===================== Скотч ===============================
+func select_tape():
+	current_tool = Tool.TAPE
+	tape_waiting_second_point = false
 
+func draw_tape_segment(a: Vector2, b: Vector2):
+	if tape_texture_image == null:
+		print("tape_texture_image is null")
+		return
+
+	var delta = b - a
+	var length = delta.length()
+	if length < 1.0:
+		return
+
+	var dir = delta / length
+	var normal = dir.orthogonal()
+
+	var half_w = float(tape_width) * 0.5
+	var tex_w = tape_texture_image.get_width()
+	var tex_h = tape_texture_image.get_height()
+	if tex_w <= 0 or tex_h <= 0:
+		print("tex_w or tex_h is 0")
+		return
+
+	var min_x = floori(min(a.x, b.x) - half_w - 2.0)
+	var max_x = ceili(max(a.x, b.x) + half_w + 2.0)
+	var min_y = floori(min(a.y, b.y) - half_w - 2.0)
+	var max_y = ceili(max(a.y, b.y) + half_w + 2.0)
+
+	for y in range(min_y, max_y + 1):
+		for x in range(min_x, max_x + 1):
+			if x < 0 or y < 0 or x >= image.get_width() or y >= image.get_height():
+				continue
+
+			var p = Vector2(x + 0.5, y + 0.5)
+			var rel = p - a
+
+			var along = rel.dot(dir)
+			if along < 0.0 or along > length:
+				continue
+
+			var cross = rel.dot(normal)
+			var abs_cross = abs(cross)
+			if abs_cross > half_w:
+				continue
+
+			# Мягкий край
+			var edge_fade = clampf(half_w - abs_cross, 0.0, 1.0)
+
+			# Повторение текстуры вдоль линии
+			var u_px = int(fposmod(along, tape_repeat_px) / tape_repeat_px * float(tex_w))
+			var v_px = int((cross + half_w) / float(tape_width) * float(tex_h - 1))
+			u_px = clampi(u_px, 0, tex_w - 1)
+			v_px = clampi(v_px, 0, tex_h - 1)
+
+			var src = tape_texture_image.get_pixel(u_px, v_px)
+			if src.a <= 0.0:
+				continue
+
+			src.a *= edge_fade * tape_opacity
+
+			var dst = image.get_pixel(x, y)
+			image.set_pixel(x, y, alpha_over(dst, src))
+
+func alpha_over(dst: Color, src: Color) -> Color:
+	var out_a = src.a + dst.a * (1.0 - src.a)
+	if out_a <= 0.0:
+		return Color(0, 0, 0, 0)
+
+	return Color(
+		(src.r * src.a + dst.r * dst.a * (1.0 - src.a)) / out_a,
+		(src.g * src.a + dst.g * dst.a * (1.0 - src.a)) / out_a,
+		(src.b * src.a + dst.b * dst.a * (1.0 - src.a)) / out_a,
+		out_a
+	)
 # ===================== UI ==================================
 
 func connect_ui():
@@ -159,9 +252,12 @@ func connect_ui():
 
 	# Инструменты
 	$UI/Eraser.pressed.connect(select_eraser)
+	$UI/Tape.pressed.connect(select_tape)
 	$UI/Undo.pressed.connect(undo)
 	$UI/Redo.pressed.connect(redo)
-
+	for child in $UI.get_children():
+		if child is Control:
+			child.mouse_filter = Control.MOUSE_FILTER_STOP
 	# Кисти — кнопки должны называться UI/Brush_round, UI/Brush_soft и т.д.
 	for name in BRUSH_NAMES:
 		var btn_path = "UI/Brush_%s" % name
@@ -175,27 +271,43 @@ func connect_ui():
 		slider.max_value = 100
 		slider.value = brush_size
 		slider.value_changed.connect(func(v): set_brush_size(int(v)))
-
+	
 # ===================== Input ===============================
 
 func get_image_pos(mouse_pos: Vector2) -> Vector2:
 	var scale = Vector2(image.get_size()) / canvas.size
 	return mouse_pos * scale
 
-func _input(event):
+func _unhandled_input(event):
 	if event is InputEventMouseButton:
-		if event.button_index == MOUSE_BUTTON_LEFT:
-			drawing = event.pressed
-			if drawing:
-				save_state()
-			last_pos = get_image_pos(canvas.get_local_mouse_position())
+		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+			var p = get_image_pos(canvas.get_local_mouse_position())
+
+			if current_tool == Tool.TAPE:
+				if not tape_waiting_second_point:
+					tape_first_point = p
+					tape_waiting_second_point = true
+				else:
+					save_state()
+					draw_tape_segment(tape_first_point, p)
+					texture_dirty = true
+					tape_waiting_second_point = false
+				return
+
+			drawing = true
+			save_state()
+			last_pos = p
+
+		elif event.button_index == MOUSE_BUTTON_LEFT and not event.pressed:
+			drawing = false
 
 	elif event is InputEventMouseMotion and drawing:
-		var current_pos = get_image_pos(canvas.get_local_mouse_position())
-		if not Rect2(Vector2.ZERO, image.get_size()).has_point(current_pos):
-			return
-		draw_line_on_image(last_pos, current_pos)
-		last_pos = current_pos
+		if current_tool == Tool.BRUSH or current_tool == Tool.ERASER:
+			var current_pos = get_image_pos(canvas.get_local_mouse_position())
+			if not Rect2(Vector2.ZERO, image.get_size()).has_point(current_pos):
+				return
+			draw_line_on_image(last_pos, current_pos)
+			last_pos = current_pos
 
 # ===================== Drawing =============================
 
