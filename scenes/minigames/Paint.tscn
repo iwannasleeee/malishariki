@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://v4jvavh3pqyo" path="res://Assets/ui/paint/pencil/YellowPencil.png" id="11_rpgkw"]
 [ext_resource type="Texture2D" uid="uid://d1pmahng8op1a" path="res://Assets/ui/paint/Eraser.PNG" id="12_gpy8t"]
 [ext_resource type="Texture2D" uid="uid://bhcg4vkk4we2h" path="res://Assets/ui/RAMA.png" id="13_ivhyx"]
+[ext_resource type="Texture2D" uid="uid://cflnqmxkwc62r" path="res://Assets/ui/paint/redoundo.png" id="13_l4dy7"]
 
 [node name="DrawingRoot" type="Node2D" unique_id=341770996]
 script = ExtResource("1_a2n4y")
@@ -113,12 +114,18 @@ ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Undo" type="Button" parent="UI" unique_id=1171960737]
-offset_right = 8.0
-offset_bottom = 8.0
+offset_left = 91.0
+offset_top = 64.0
+offset_right = 336.0
+offset_bottom = 147.0
+icon = ExtResource("13_l4dy7")
 
 [node name="Redo" type="Button" parent="UI" unique_id=426155102]
-offset_right = 8.0
-offset_bottom = 8.0
+offset_left = 107.0
+offset_top = 279.0
+offset_right = 444.0
+offset_bottom = 394.0
+icon = ExtResource("13_l4dy7")
 
 [node name="Rama" type="Sprite2D" parent="." unique_id=1829412342]
 position = Vector2(642, 364)
