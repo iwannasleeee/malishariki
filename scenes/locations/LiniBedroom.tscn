@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://cwk1f885g4leg"]
 
-[ext_resource type="Texture2D" uid="uid://dmaccjhf64mro" path="res://Assets/Locations/LiniBedroom.PNG" id="1_yrgbh"]
+[ext_resource type="Texture2D" uid="uid://dmaccjhf64mro" path="res://assets/locations/LiniBedroom.PNG" id="1_yrgbh"]
 [ext_resource type="PackedScene" uid="uid://df1frskn0se13" path="res://scenes/core/Lini.tscn" id="2_1tyo2"]
-[ext_resource type="Texture2D" uid="uid://bhcg4vkk4we2h" path="res://Assets/ui/RAMA.png" id="2_mdfxg"]
+[ext_resource type="Texture2D" uid="uid://bhcg4vkk4we2h" path="res://assets/ui/RAMA.png" id="2_mdfxg"]
 [ext_resource type="PackedScene" uid="uid://c3qoa2qnf1vn8" path="res://scenes/core/Door.tscn" id="4_1tyo2"]
 [ext_resource type="PackedScene" uid="uid://nwqvur0td1dc" path="res://scenes/core/Spawn.tscn" id="5_4vbjv"]
 

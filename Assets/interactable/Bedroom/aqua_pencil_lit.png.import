@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cp3a8ybkd02rm"
-path="res://.godot/imported/door_unlit.png-c2d49880760b60da6b493609338021d6.ctex"
+uid="uid://bh1npt72p8p03"
+path="res://.godot/imported/aqua_pencil_lit.png-06e5d1685e4bd3328c210d2e5b4e55a4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/interactable/door_unlit.png"
-dest_files=["res://.godot/imported/door_unlit.png-c2d49880760b60da6b493609338021d6.ctex"]
+source_file="res://assets/interactable/Bedroom/aqua_pencil_lit.png"
+dest_files=["res://.godot/imported/aqua_pencil_lit.png-06e5d1685e4bd3328c210d2e5b4e55a4.ctex"]
 
 [params]
 
