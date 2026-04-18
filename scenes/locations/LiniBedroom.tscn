@@ -7,9 +7,9 @@
 [ext_resource type="PackedScene" uid="uid://nwqvur0td1dc" path="res://scenes/core/Spawn.tscn" id="5_4vbjv"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_4vbjv"]
-vertices = PackedVector2Array(636.0078, 603.9922, 1166.3828, 601.02344, 1233.4297, 657.3125, 1212.3906, 669, 465.39063, 661.21094, 525.59375, 625.4922, 290.3125, 647.97656, 290.3125, 647.96875, 150.82031, 671.90625, 192.92969, 641.22656)
-polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4, 5), PackedInt32Array(6, 7, 4), PackedInt32Array(8, 9, 6, 4), PackedInt32Array(4, 3, 8)])
-outlines = Array[PackedVector2Array]([PackedVector2Array(190, 631, 291, 638, 463, 651, 522, 616, 635, 594, 1170, 591, 1251, 659, 1215, 679, 120, 682)])
+vertices = PackedVector2Array(462.04688, 697.9922, 230.9375, 691.0078, 144.97656, 676.1719, 192.92969, 641.22656, 290.10938, 647.96094, 500.4922, 673.25, 1032.4531, 684, 574.5, 641.21875, 583.8125, 603.96094, 1166.3672, 601.0078, 1233.4297, 657.3125, 1212.0313, 669.2031)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4, 5), PackedInt32Array(6, 0, 5, 7), PackedInt32Array(8, 9, 10, 11, 6, 7)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(190, 631, 291, 638, 499, 663, 566, 634, 576, 594, 1170, 591, 1251, 659, 1215, 679, 1033, 694, 462, 708, 230, 701, 120, 682)])
 
 [node name="LiniBedroom" type="Node2D" unique_id=762996833]
 
@@ -28,6 +28,7 @@ target_scene = "uid://43f35g8xpyd5"
 
 [node name="Lini" parent="." unique_id=1452736418 instance=ExtResource("2_1tyo2")]
 position = Vector2(618, 672)
+scale = Vector2(1.4, 1.4)
 
 [node name="Rama" type="Sprite2D" parent="." unique_id=1840246741]
 position = Vector2(638.33344, 360.75003)
