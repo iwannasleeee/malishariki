@@ -131,3 +131,7 @@ func update_sprite_direction(direction: Vector2):
 func _on_clicked(obj: InteractableObject) -> void:
 	current_interactable = obj
 	pass # Replace with function body.
+
+
+func _on_pencil_base_pencil_taken(obj: PencilBase) -> void:
+	print(obj.color)

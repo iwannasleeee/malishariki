@@ -1,15 +1,26 @@
 [gd_scene format=3 uid="uid://cwk1f885g4leg"]
 
-[ext_resource type="Texture2D" uid="uid://dmaccjhf64mro" path="res://assets/locations/LiniBedroom.PNG" id="1_yrgbh"]
+[ext_resource type="Texture2D" uid="uid://dmaccjhf64mro" path="res://Assets/Locations/LiniBedroom.PNG" id="1_yrgbh"]
 [ext_resource type="PackedScene" uid="uid://df1frskn0se13" path="res://scenes/core/Lini.tscn" id="2_1tyo2"]
-[ext_resource type="Texture2D" uid="uid://bhcg4vkk4we2h" path="res://assets/ui/RAMA.png" id="2_mdfxg"]
-[ext_resource type="PackedScene" uid="uid://c3qoa2qnf1vn8" path="res://scenes/core/Door.tscn" id="4_1tyo2"]
+[ext_resource type="Texture2D" uid="uid://bhcg4vkk4we2h" path="res://Assets/ui/RAMA.png" id="2_mdfxg"]
+[ext_resource type="PackedScene" uid="uid://cvv4nm6f35q8h" path="res://scenes/interactable/Bedroom/pencil_base.tscn" id="3_ym2uc"]
+[ext_resource type="PackedScene" uid="uid://c3qoa2qnf1vn8" path="res://scenes/interactable/Bedroom/Door.tscn" id="4_1tyo2"]
+[ext_resource type="Texture2D" uid="uid://cx0awl5dyg3q2" path="res://Assets/interactable/Bedroom/aqua_pencil_inlit.png" id="4_tv6v7"]
 [ext_resource type="PackedScene" uid="uid://nwqvur0td1dc" path="res://scenes/core/Spawn.tscn" id="5_4vbjv"]
+[ext_resource type="Texture2D" uid="uid://bh1npt72p8p03" path="res://Assets/interactable/Bedroom/aqua_pencil_lit.png" id="5_exp6y"]
+[ext_resource type="Texture2D" uid="uid://bn3y2djjbp2o" path="res://Assets/interactable/Bedroom/black_pencil_unlit.png" id="6_qigii"]
+[ext_resource type="Texture2D" uid="uid://nwrgwkh5gtif" path="res://Assets/interactable/Bedroom/black_pencil_lit.png" id="7_qgybo"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_4vbjv"]
 vertices = PackedVector2Array(462.04688, 697.9922, 230.9375, 691.0078, 144.97656, 676.1719, 192.92969, 641.22656, 290.10938, 647.96094, 500.4922, 673.25, 1032.4531, 684, 574.5, 641.21875, 583.8125, 603.96094, 1166.3672, 601.0078, 1233.4297, 657.3125, 1212.0313, 669.2031)
 polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4, 5), PackedInt32Array(6, 0, 5, 7), PackedInt32Array(8, 9, 10, 11, 6, 7)])
 outlines = Array[PackedVector2Array]([PackedVector2Array(190, 631, 291, 638, 499, 663, 566, 634, 576, 594, 1170, 591, 1251, 659, 1215, 679, 1033, 694, 462, 708, 230, 701, 120, 682)])
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fcl4f"]
+size = Vector2(16, 6)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e75w4"]
+size = Vector2(29, 50)
 
 [node name="LiniBedroom" type="Node2D" unique_id=762996833]
 
@@ -25,6 +36,34 @@ texture = ExtResource("1_yrgbh")
 position = Vector2(1213.0001, 464.99997)
 scale = Vector2(0.35, 0.35)
 target_scene = "uid://43f35g8xpyd5"
+
+[node name="Node2D" type="Node2D" parent="." unique_id=1116115965]
+
+[node name="pencil_base" parent="Node2D" unique_id=530318813 instance=ExtResource("3_ym2uc")]
+position = Vector2(369, 477)
+scale = Vector2(0.5, 0.5)
+color = Color(0.29898885, 0.7095028, 0.92428803, 1)
+default_texture = ExtResource("4_tv6v7")
+hover_texture = ExtResource("5_exp6y")
+
+[node name="Sprite2D" parent="Node2D/pencil_base" index="0" unique_id=309976985]
+texture = ExtResource("4_tv6v7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/pencil_base" unique_id=1933861937]
+shape = SubResource("RectangleShape2D_fcl4f")
+
+[node name="pencil_base2" parent="Node2D" unique_id=2071874225 instance=ExtResource("3_ym2uc")]
+position = Vector2(591, 511)
+scale = Vector2(0.6, 0.6)
+color = Color(0.16797437, 0.05529956, 1.0316859e-06, 1)
+default_texture = ExtResource("6_qigii")
+hover_texture = ExtResource("7_qgybo")
+
+[node name="Sprite2D" parent="Node2D/pencil_base2" index="0" unique_id=309976985]
+texture = ExtResource("6_qigii")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/pencil_base2" unique_id=12560439]
+shape = SubResource("RectangleShape2D_e75w4")
 
 [node name="Lini" parent="." unique_id=1452736418 instance=ExtResource("2_1tyo2")]
 position = Vector2(618, 672)
@@ -44,3 +83,10 @@ position = Vector2(1171, 626)
 spawn_name = "SpawnDoor"
 
 [connection signal="clicked" from="Door" to="Lini" method="_on_clicked"]
+[connection signal="clicked" from="Node2D/pencil_base" to="Lini" method="_on_clicked"]
+[connection signal="pencil_taken" from="Node2D/pencil_base" to="Lini" method="_on_pencil_base_pencil_taken"]
+[connection signal="clicked" from="Node2D/pencil_base2" to="Lini" method="_on_clicked"]
+[connection signal="pencil_taken" from="Node2D/pencil_base2" to="Lini" method="_on_pencil_base_pencil_taken"]
+
+[editable path="Node2D/pencil_base"]
+[editable path="Node2D/pencil_base2"]

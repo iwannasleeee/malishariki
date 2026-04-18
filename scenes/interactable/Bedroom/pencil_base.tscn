@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://cvv4nm6f35q8h"]
+
+[ext_resource type="PackedScene" uid="uid://dusogs63f23c" path="res://scenes/interactable/InteractableObject.tscn" id="1_fuas5"]
+[ext_resource type="Script" uid="uid://co4b0gmkidt8t" path="res://scripts/pencil_base.gd" id="2_q1jdj"]
+
+[node name="pencil_base" unique_id=1008082527 groups=["pencils"] instance=ExtResource("1_fuas5")]
+script = ExtResource("2_q1jdj")
+color = Color(0.5058824, 0.41568628, 0.34901962, 1)

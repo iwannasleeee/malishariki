@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://fdib7vk32wnp"
-path="res://.godot/imported/brown_pencil_unlit.png-c7dab8247794048c7eb41bc7e5479c8e.ctex"
+path="res://.godot/imported/brown_pencil_unlit.png-f72d627db0ac6b15f871533722aeedef.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/interactable/Bedroom/brown_pencil_unlit.png"
-dest_files=["res://.godot/imported/brown_pencil_unlit.png-c7dab8247794048c7eb41bc7e5479c8e.ctex"]
+source_file="res://Assets/interactable/Bedroom/brown_pencil_unlit.png"
+dest_files=["res://.godot/imported/brown_pencil_unlit.png-f72d627db0ac6b15f871533722aeedef.ctex"]
 
 [params]
 
