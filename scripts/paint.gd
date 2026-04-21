@@ -40,6 +40,11 @@ var tape_waiting_second_point := false
 
 var tape_texture_image: Image
 
+var tape_viewport   : SubViewport
+var tape_blend_rect : ColorRect
+var tape_godot_tex  : ImageTexture   # tape_texture_image как Texture2D
+var tape_canvas_snap: ImageTexture   # снимок canvas перед рендером
+
 # ==== Undo / Redo ====
 var undo_stack: Array[Image] = []
 var redo_stack: Array[Image] = []
@@ -51,14 +56,14 @@ func _ready():
 	image = tex.get_image()
 	original_image = image.duplicate()
 	texture = ImageTexture.create_from_image(image)
-	
-	# Маска формы холста — передаём оригинал в шейдер
+
 	var mask_tex = ImageTexture.create_from_image(original_image)
 	_apply_mask_shader(mask_tex)
 
 	canvas.texture = texture
 	_load_brushes()
 	_load_tape_texture()
+	_setup_tape_gpu()          # ← добавь эту строку
 	set_brush_size(brush_size)
 	connect_ui()
 
@@ -96,6 +101,56 @@ void fragment() {
 	mat.set_shader_parameter("mask_texture", mask_tex)
 
 	canvas.material = mat
+
+const TAPE_SHADER_CODE = """
+shader_type canvas_item;
+
+uniform sampler2D current_canvas : hint_default_transparent;
+uniform sampler2D tape_tex       : hint_default_transparent;
+uniform vec2  point_a;
+uniform vec2  point_b;
+uniform float half_width;
+uniform float repeat_px;
+uniform float tape_opacity;
+uniform vec2  canvas_size;
+
+vec4 blend_over(vec4 dst, vec4 src) {
+	float a = src.a + dst.a * (1.0 - src.a);
+	if (a <= 0.0) return vec4(0.0);
+	return vec4(
+		(src.rgb * src.a + dst.rgb * dst.a * (1.0 - src.a)) / a, a
+	);
+}
+
+void fragment() {
+	vec4 base = texture(current_canvas, UV);
+	vec4 result = base;
+
+	vec2  d    = point_b - point_a;
+	float len  = length(d);
+
+	if (len >= 1.0) {
+		vec2  px    = UV * canvas_size;
+		vec2  dir   = d / len;
+		vec2  norm  = vec2(-dir.y, dir.x);
+		vec2  rel   = px - point_a;
+		float along = dot(rel, dir);
+		float cross_d = dot(rel, norm);
+
+		if (along >= 0.0 && along <= len && abs(cross_d) <= half_width) {
+			float fade = clamp(half_width - abs(cross_d), 0.0, 1.0);
+			float u    = mod(along, repeat_px) / repeat_px;
+			float v    = (cross_d + half_width) / (half_width * 2.0);
+
+			vec4 tape = texture(tape_tex, vec2(u, v));
+			tape.a   *= fade * tape_opacity;
+			result    = blend_over(base, tape);
+		}
+	}
+
+	COLOR = result;
+}
+"""
 # ===================== Загрузка кистей =====================
 
 func _load_brushes():
@@ -118,6 +173,7 @@ func _load_tape_texture():
 		if tex:
 			tape_texture_image = tex.get_image()
 			tape_texture_image.convert(Image.FORMAT_RGBA8)
+			tape_godot_tex = ImageTexture.create_from_image(tape_texture_image)
 # Пересчитывается только при смене кисти / размера / цвета
 func _bake_brush_image():
 	if current_brush_name == "" or not brush_masks.has(current_brush_name):
@@ -183,65 +239,34 @@ func select_tape():
 	current_tool = Tool.TAPE
 	tape_waiting_second_point = false
 
-func draw_tape_segment(a: Vector2, b: Vector2):
-	if tape_texture_image == null:
-		print("tape_texture_image is null")
+func draw_tape_segment(a: Vector2, b: Vector2) -> void:
+	if tape_godot_tex == null:
+		return
+	if (b - a).length() < 1.0:
 		return
 
-	var delta = b - a
-	var length = delta.length()
-	if length < 1.0:
-		return
+	# Снимок текущего холста — передаём в шейдер как фон
+	tape_canvas_snap = ImageTexture.create_from_image(image)
 
-	var dir = delta / length
-	var normal = dir.orthogonal()
+	var mat := tape_blend_rect.material as ShaderMaterial
+	mat.set_shader_parameter("current_canvas", tape_canvas_snap)
+	mat.set_shader_parameter("tape_tex",       tape_godot_tex)
+	mat.set_shader_parameter("point_a",        a)
+	mat.set_shader_parameter("point_b",        b)
+	mat.set_shader_parameter("half_width",     float(tape_width) * 0.5)
+	mat.set_shader_parameter("repeat_px",      tape_repeat_px)
+	mat.set_shader_parameter("tape_opacity",   tape_opacity)
+	mat.set_shader_parameter("canvas_size",
+		Vector2(image.get_width(), image.get_height()))
 
-	var half_w = float(tape_width) * 0.5
-	var tex_w = tape_texture_image.get_width()
-	var tex_h = tape_texture_image.get_height()
-	if tex_w <= 0 or tex_h <= 0:
-		print("tex_w or tex_h is 0")
-		return
+	# Запускаем один рендер-кадр
+	tape_viewport.render_target_update_mode = SubViewport.UPDATE_ONCE
+	await RenderingServer.frame_post_draw
 
-	var min_x = floori(min(a.x, b.x) - half_w - 2.0)
-	var max_x = ceili(max(a.x, b.x) + half_w + 2.0)
-	var min_y = floori(min(a.y, b.y) - half_w - 2.0)
-	var max_y = ceili(max(a.y, b.y) + half_w + 2.0)
-
-	for y in range(min_y, max_y + 1):
-		for x in range(min_x, max_x + 1):
-			if x < 0 or y < 0 or x >= image.get_width() or y >= image.get_height():
-				continue
-
-			var p = Vector2(x + 0.5, y + 0.5)
-			var rel = p - a
-
-			var along = rel.dot(dir)
-			if along < 0.0 or along > length:
-				continue
-
-			var cross = rel.dot(normal)
-			var abs_cross = abs(cross)
-			if abs_cross > half_w:
-				continue
-
-			# Мягкий край
-			var edge_fade = clampf(half_w - abs_cross, 0.0, 1.0)
-
-			# Повторение текстуры вдоль линии
-			var u_px = int(fposmod(along, tape_repeat_px) / tape_repeat_px * float(tex_w))
-			var v_px = int((cross + half_w) / float(tape_width) * float(tex_h - 1))
-			u_px = clampi(u_px, 0, tex_w - 1)
-			v_px = clampi(v_px, 0, tex_h - 1)
-
-			var src = tape_texture_image.get_pixel(u_px, v_px)
-			if src.a <= 0.0:
-				continue
-
-			src.a *= edge_fade * tape_opacity
-
-			var dst = image.get_pixel(x, y)
-			image.set_pixel(x, y, alpha_over(dst, src))
+	# Забираем результат обратно в image
+	image = tape_viewport.get_texture().get_image()
+	image.convert(Image.FORMAT_RGBA8)
+	texture_dirty = true
 
 func alpha_over(dst: Color, src: Color) -> Color:
 	var out_a = src.a + dst.a * (1.0 - src.a)
@@ -400,7 +425,26 @@ func draw_brush(pos: Vector2):
 
 	else:  # ERASER
 		draw_eraser_stamp(pos)
+# ======================== СКОТЧ ============================
+func _setup_tape_gpu():
+	tape_viewport = SubViewport.new()
+	tape_viewport.size = Vector2i(image.get_width(), image.get_height())
+	tape_viewport.render_target_update_mode = SubViewport.UPDATE_DISABLED
+	tape_viewport.transparent_bg = true
+	add_child(tape_viewport)
 
+	tape_blend_rect = ColorRect.new()
+	tape_blend_rect.size = Vector2(image.get_width(), image.get_height())
+
+	var shader = Shader.new()
+	shader.code = TAPE_SHADER_CODE
+	var mat = ShaderMaterial.new()
+	mat.shader = shader
+	tape_blend_rect.material = mat
+	tape_viewport.add_child(tape_blend_rect)
+
+	tape_canvas_snap = ImageTexture.new()
+	
 # ===================== Undo / Redo =========================
 
 func save_state():

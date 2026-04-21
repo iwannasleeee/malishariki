@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c4bug7wxhaen5"
-path="res://.godot/imported/table_lit.png-dce4403cae9a8933fe8b6dc04b53c099.ctex"
+path="res://.godot/imported/table_lit.png-df17f7e85321468ebb7f9f34db42b2a3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/interactable/Hallway/table_lit.png"
-dest_files=["res://.godot/imported/table_lit.png-dce4403cae9a8933fe8b6dc04b53c099.ctex"]
+source_file="res://Assets/interactable/Hallway/table_lit.png"
+dest_files=["res://.godot/imported/table_lit.png-df17f7e85321468ebb7f9f34db42b2a3.ctex"]
 
 [params]
 

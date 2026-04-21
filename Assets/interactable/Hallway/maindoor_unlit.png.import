@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dlo3xa7ydbj2p"
-path="res://.godot/imported/maindoor_unlit.png-4a1b9ea98fca3046afb34407ae52056e.ctex"
+path="res://.godot/imported/maindoor_unlit.png-93daf2e8325f6c0e4ff8a64a3066cb69.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/interactable/Hallway/maindoor_unlit.png"
-dest_files=["res://.godot/imported/maindoor_unlit.png-4a1b9ea98fca3046afb34407ae52056e.ctex"]
+source_file="res://Assets/interactable/Hallway/maindoor_unlit.png"
+dest_files=["res://.godot/imported/maindoor_unlit.png-93daf2e8325f6c0e4ff8a64a3066cb69.ctex"]
 
 [params]
 

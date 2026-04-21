@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://8b0prxlw507j"
-path="res://.godot/imported/table_unlit.png-9a11a5f34ac9b24c3a738595e6bde1ee.ctex"
+path="res://.godot/imported/table_unlit.png-81153c365a21361e4c041564c13bb183.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/interactable/Hallway/table_unlit.png"
-dest_files=["res://.godot/imported/table_unlit.png-9a11a5f34ac9b24c3a738595e6bde1ee.ctex"]
+source_file="res://Assets/interactable/Hallway/table_unlit.png"
+dest_files=["res://.godot/imported/table_unlit.png-81153c365a21361e4c041564c13bb183.ctex"]
 
 [params]
 
