@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://bpq6kvjqrhqf4"]
+
+[ext_resource type="PackedScene" uid="uid://df1frskn0se13" path="res://scenes/core/Lini.tscn" id="1_td7m5"]
+
+[node name="Game" type="Node2D" unique_id=1450926047]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=264961840]
+
+[node name="World" type="Node2D" parent="." unique_id=864691270]
+
+[node name="Lini" parent="." unique_id=1080354499 instance=ExtResource("1_td7m5")]
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=1562038741]
