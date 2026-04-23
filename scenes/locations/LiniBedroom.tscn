@@ -17,7 +17,7 @@ polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4, 5), PackedIn
 outlines = Array[PackedVector2Array]([PackedVector2Array(190, 631, 291, 638, 499, 663, 566, 634, 576, 594, 1170, 591, 1251, 659, 1215, 679, 1033, 694, 462, 708, 230, 701, 120, 682)])
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fcl4f"]
-size = Vector2(16, 6)
+size = Vector2(66, 24)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e75w4"]
 size = Vector2(29, 50)
@@ -50,6 +50,7 @@ hover_texture = ExtResource("5_exp6y")
 texture = ExtResource("4_tv6v7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/pencil_base" unique_id=1933861937]
+position = Vector2(-7, -4)
 shape = SubResource("RectangleShape2D_fcl4f")
 
 [node name="pencil_base2" parent="Node2D" unique_id=2071874225 instance=ExtResource("3_ym2uc")]
