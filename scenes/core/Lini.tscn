@@ -2,7 +2,9 @@
 
 [ext_resource type="Script" uid="uid://fq6gua4nh1i6" path="res://scripts/lini.gd" id="1_d4li8"]
 [ext_resource type="Texture2D" uid="uid://cwi7l4j1r274t" path="res://Assets/sprites/Lini/lini_idle.png" id="1_s3veh"]
+[ext_resource type="Resource" uid="uid://doesqoiw2mbww" path="res://resources/lini_config_resource.tres" id="2_20ixu"]
 [ext_resource type="Texture2D" uid="uid://c13fyy1p5fdf7" path="res://Assets/sprites/Lini/lini_walk1.PNG" id="2_hmr14"]
+[ext_resource type="Resource" uid="uid://caambmra2yiua" path="res://resources/lini_mini_config_resource.tres" id="3_auf18"]
 [ext_resource type="Texture2D" uid="uid://4xp6j861r58j" path="res://Assets/sprites/Lini/lini_walk2.PNG" id="3_fmxnf"]
 [ext_resource type="Texture2D" uid="uid://dd225b4xenbh5" path="res://Assets/sprites/Lini/lini_walk3.PNG" id="4_dnygm"]
 [ext_resource type="Texture2D" uid="uid://dohcxnbe1i6ys" path="res://Assets/sprites/Lini/lini_walk4.PNG" id="5_0rl6d"]
@@ -57,6 +59,8 @@ height = 710.0
 
 [node name="Lini" type="CharacterBody2D" unique_id=1080354499]
 script = ExtResource("1_d4li8")
+config_normal = ExtResource("2_20ixu")
+config_mini = ExtResource("3_auf18")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=321834555]
 position = Vector2(-9, -70)

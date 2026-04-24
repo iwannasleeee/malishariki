@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="PlayerStateConfig" format=3 uid="uid://caambmra2yiua"]
+
+[ext_resource type="Script" uid="uid://sxpylo1qn6u8" path="res://scripts/config/player_state_config.gd" id="1_mam3p"]
+
+[resource]
+script = ExtResource("1_mam3p")
+has_jump = true
+metadata/_custom_type_script = "uid://sxpylo1qn6u8"

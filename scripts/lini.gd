@@ -1,6 +1,21 @@
 extends CharacterBody2D
 
-@export var speed: float = 200.0
+enum State { NORMAL, MINI }
+
+@export var current_state: State = State.NORMAL
+
+@export var config_normal: PlayerStateConfig
+@export var config_mini: PlayerStateConfig
+
+var current_config: PlayerStateConfig
+
+# Параметры для каждого состояния
+@export var speed_normal: float = 200.0
+@export var speed_mini: float = 150.0
+
+@export var jump_height_mini: float = 24.0
+@export var jump_duration_mini: float = 0.4
+
 @onready var navigation_agent: NavigationAgent2D = $NavigationAgent2D
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D  # Предполагаем, что так называется нода
 @onready var camera: Camera2D = $Camera2D
@@ -11,8 +26,6 @@ extends CharacterBody2D
 @export var camera_limits_bottom: float = 1000
 @export var use_camera_limits: bool = true
 
-@export var jump_height: float = 24.0
-@export var jump_duration: float = 0.4
 
 var jump_time: float = 0.0
 var sprite_base_y: float
@@ -21,8 +34,13 @@ var sprite_base_y: float
 var is_moving: bool = false
 var current_interactable: InteractableObject = null
 
+func apply_state(config: PlayerStateConfig):
+	current_config = config
+	
 func _ready():
 	await get_tree().process_frame
+	
+	apply_state(config_normal if current_state == State.NORMAL else config_mini)
 	
 	var spawn_name = SceneManager.spawn_point_name
 	if spawn_name != "":
@@ -77,6 +95,18 @@ func _physics_process(delta):
 		if current_interactable:
 			current_interactable.interact(self)
 			current_interactable = null
+		if current_config and current_config.has_jump:
+			var jump_duration = current_config.jump_duration
+			var jump_height = current_config.jump_height
+			if jump_time < jump_duration && jump_time > 0.0:
+				jump_time += delta
+				if jump_time >= jump_duration:
+					jump_time = 0.0
+					animated_sprite.position.y = sprite_base_y
+
+				var t = jump_time / jump_duration
+				var height = 4.0 * jump_height * t * (1.0 - t)
+				animated_sprite.position.y = sprite_base_y - height
 
 		if is_moving:
 			is_moving = false
@@ -98,7 +128,7 @@ func _physics_process(delta):
 	update_sprite_direction(direction)
 	
 	# Задаем скорость (velocity) персонажа
-	var intended_velocity = direction * speed
+	var intended_velocity = direction * speed_normal
 
 	# Если включено избегание (Avoidance), используем эту функцию
 	if navigation_agent.avoidance_enabled:
@@ -108,7 +138,19 @@ func _physics_process(delta):
 	else:
 		# Иначе просто применяем вычисленную скорость
 		velocity = intended_velocity
-		
+	if current_config.has_jump:
+		if is_moving:
+			jump_time += delta
+			if jump_time > current_config.jump_duration:
+				jump_time = 0.0
+
+			var t = jump_time / current_config.jump_duration
+			var height = 4.0 * current_config.jump_height * t * (1.0 - t)
+
+			animated_sprite.position.y = sprite_base_y - height
+		else:
+			jump_time = 0.0
+			animated_sprite.position.y = sprite_base_y
 	# Двигаем персонажа с помощью стандартного метода move_and_slide()
 	move_and_slide()
 
@@ -126,7 +168,7 @@ func update_sprite_direction(direction: Vector2):
 	if direction.x > 0:
 		animated_sprite.flip_h = false
 	elif direction.x < 0:
-		animated_sprite.flip_h = true 
+		animated_sprite.flip_h = true
 
 func _on_clicked(obj: InteractableObject) -> void:
 	current_interactable = obj
