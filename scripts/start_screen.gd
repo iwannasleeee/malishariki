@@ -1,7 +1,7 @@
 extends Control
 
 @export_file("ForestPath.tscn") var game_scene_path: String
-
+@export var spawn_point_name: String = "SpawnBed"
 @onready var play_button: Button = $CenterContainer/VBoxContainer/PlayButton
 @onready var settings_button: Button = $CenterContainer/VBoxContainer/SettingsButton
 @onready var info_button: Button = $CenterContainer/VBoxContainer/InfoButton
@@ -22,7 +22,8 @@ func _ready():
 func _on_play_button_pressed():
 	# Загружаем и переходим на игровую сцену
 	if game_scene_path:
-		SceneManager.change_scene(game_scene_path, "SpawnBed")
+		SceneManager.change_scene(game_scene_path, spawn_point_name)
+		UIManager.hide_menu()
 	else:
 		print("Ошибка: путь к сцене не указан!")
 

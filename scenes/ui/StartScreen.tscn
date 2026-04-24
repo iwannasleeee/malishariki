@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://qhcra578ush1"]
 
-[ext_resource type="Texture2D" uid="uid://krdruinq7khq" path="res://Assets/ui/startscreen_picture.PNG" id="1_8o6hd"]
-[ext_resource type="Script" uid="uid://dbgqqa60jxpru" path="res://scripts/start_screen.gd" id="1_sifoa"]
-[ext_resource type="Texture2D" uid="uid://dk08g3x08cf4l" path="res://Assets/ui/startscreen_text.PNG" id="2_sifoa"]
+[ext_resource type="Script" uid="uid://dbgqqa60jxpru" path="res://scripts/start_screen.gd" id="1_j8j1s"]
+[ext_resource type="Texture2D" uid="uid://krdruinq7khq" path="res://Assets/ui/startscreen_picture.PNG" id="2_75o78"]
+[ext_resource type="Texture2D" uid="uid://dk08g3x08cf4l" path="res://Assets/ui/startscreen_text.PNG" id="3_w26h4"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vmn41"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -35,7 +35,7 @@ bg_color = Color(0.6, 0.6, 0.6, 0)
 [node name="StartScreen" type="Control" unique_id=905292143]
 layout_mode = 3
 anchors_preset = 0
-script = ExtResource("1_sifoa")
+script = ExtResource("1_j8j1s")
 game_scene_path = "uid://cwk1f885g4leg"
 
 [node name="StartScreen" type="TextureRect" parent="." unique_id=2142177187]
@@ -44,7 +44,7 @@ offset_left = -7.0
 offset_top = -38.0
 offset_right = 1286.4724
 offset_bottom = 828.0
-texture = ExtResource("1_8o6hd")
+texture = ExtResource("2_75o78")
 expand_mode = 1
 
 [node name="StartScreenTitle" type="TextureRect" parent="." unique_id=783436197]
@@ -53,7 +53,7 @@ offset_left = 112.0
 offset_top = 30.0
 offset_right = 1219.0
 offset_bottom = 768.0
-texture = ExtResource("2_sifoa")
+texture = ExtResource("3_w26h4")
 expand_mode = 1
 
 [node name="CenterContainer" type="CenterContainer" parent="." unique_id=2026283035]
