@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://cwk1f885g4leg"]
 
+[ext_resource type="Script" uid="uid://bikyr7geit3ny" path="res://scripts/lini_bedroom.gd" id="1_ym2uc"]
 [ext_resource type="Texture2D" uid="uid://dmaccjhf64mro" path="res://Assets/Locations/LiniBedroom.PNG" id="1_yrgbh"]
 [ext_resource type="PackedScene" uid="uid://dmiwygqpm1rxl" path="res://scenes/interactable/Bedroom/pencils/black_pencil.tscn" id="2_4vbjv"]
 [ext_resource type="Texture2D" uid="uid://bhcg4vkk4we2h" path="res://Assets/ui/RAMA.png" id="2_mdfxg"]
@@ -12,6 +13,7 @@ polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4, 5), PackedIn
 outlines = Array[PackedVector2Array]([PackedVector2Array(190, 631, 291, 638, 499, 663, 566, 634, 576, 594, 1170, 591, 1251, 659, 1215, 679, 1033, 694, 462, 708, 230, 701, 120, 682)])
 
 [node name="LiniBedroom" type="Node2D" unique_id=762996833]
+script = ExtResource("1_ym2uc")
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=1667463333]
 navigation_polygon = SubResource("NavigationPolygon_4vbjv")
@@ -29,6 +31,7 @@ position = Vector2(586, 505)
 [node name="Door" parent="." unique_id=1317846438 instance=ExtResource("7_gjw2q")]
 position = Vector2(1214, 462)
 scale = Vector2(0.33, 0.33)
+spawn_point_name = "SpawnLiniHouse"
 
 [node name="Rama" type="Sprite2D" parent="." unique_id=1840246741]
 position = Vector2(638.33344, 360.75003)

@@ -1,5 +1,5 @@
 extends CharacterBody2D
-
+class_name Lini
 enum State { NORMAL, MINI }
 
 @export var current_state: State = State.NORMAL
@@ -91,13 +91,25 @@ func setup_camera_limits():
 	camera.limit_bottom = camera_limits_bottom
 	camera.limit_smoothed = true
 
+func setup_for_location(config: Dictionary):
+	if config.has("state"):
+		match config["state"]:
+			"normal":
+				current_state = State.NORMAL
+			"mini":
+				current_state = State.MINI
+		play_idle_animation()
+	if config.has("scale"):
+		self.scale.x = config["scale"]
+		self.scale.y = config["scale"]
+
 func _physics_process(delta):
 	# Если путь к цели еще не построен или персонаж уже у цели - не двигаемся
 	if navigation_agent.is_navigation_finished():
 		if current_interactable:
 			current_interactable.interact(self)
 			current_interactable = null
-		if current_config and current_config.has_jump:
+		if current_config and current_state == State.MINI:
 			var jump_duration = current_config.jump_duration
 			var jump_height = current_config.jump_height
 			if jump_time < jump_duration && jump_time > 0.0:
@@ -140,7 +152,7 @@ func _physics_process(delta):
 	else:
 		# Иначе просто применяем вычисленную скорость
 		velocity = intended_velocity
-	if current_config.has_jump:
+	if current_config and current_state == State.MINI:
 		if is_moving:
 			jump_time += delta
 			if jump_time > current_config.jump_duration:

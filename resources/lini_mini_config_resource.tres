@@ -4,5 +4,6 @@
 
 [resource]
 script = ExtResource("1_mam3p")
-has_jump = true
+idle_animation = "idle_mini"
+walk_animation = "walk_mini"
 metadata/_custom_type_script = "uid://sxpylo1qn6u8"

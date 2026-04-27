@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cp3a8ybkd02rm" path="res://Assets/interactable/Bedroom/door_unlit.png" id="2_vlbai"]
 [ext_resource type="Texture2D" uid="uid://dxlrn1atmw7on" path="res://Assets/interactable/Bedroom/door_lit.png" id="3_vrnmb"]
 
-[node name="Door" unique_id=1008082527 instance=ExtResource("1_0qt56")]
+[node name="BedroomDoor" unique_id=1008082527 instance=ExtResource("1_0qt56")]
 target_scene = "uid://43f35g8xpyd5"
 default_texture = ExtResource("2_vlbai")
 hover_texture = ExtResource("3_vrnmb")

@@ -1,7 +1,7 @@
 extends Node
 
 var world: Node2D
-var player: CharacterBody2D
+var player: Lini
 var current_location: Node2D
 var spawn_point_name: String
 
@@ -25,7 +25,7 @@ func change_scene(scene_path: String, spawn_name: String = "") -> void:
 		var spawn := current_location.find_child(spawn_name, true, false) as Marker2D
 		if spawn:
 			player.global_position = spawn.global_position
-
+	
 	# Переключаем камеру
 	_update_camera()
 
