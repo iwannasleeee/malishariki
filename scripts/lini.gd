@@ -42,6 +42,8 @@ func _ready():
 	
 	apply_state(config_normal if current_state == State.NORMAL else config_mini)
 	
+	EventBus.interactable_interact.connect(_interactable_interact)
+	
 	var spawn_name = SceneManager.spawn_point_name
 	if spawn_name != "":
 		var spawn = find_spawn_point(spawn_name)
@@ -146,7 +148,6 @@ func _physics_process(delta):
 
 			var t = jump_time / current_config.jump_duration
 			var height = 4.0 * current_config.jump_height * t * (1.0 - t)
-
 			animated_sprite.position.y = sprite_base_y - height
 		else:
 			jump_time = 0.0
@@ -157,12 +158,16 @@ func _physics_process(delta):
 # Функции для управления анимациями
 func play_idle_animation():
 	if animated_sprite:
-		animated_sprite.play("idle")  # Предполагаем, что у вас есть анимация с именем "idle"
-
+		if current_state == State.NORMAL:
+			animated_sprite.play("idle")
+		else:
+			animated_sprite.play("idle_mini")
 func play_walk_animation():
 	if animated_sprite:
-		animated_sprite.play("walk")  # Предполагаем, что у вас есть анимация с именем "walk"
-
+		if current_state == State.NORMAL:
+			animated_sprite.play("walk")
+		else:
+			animated_sprite.play("walk_mini")
 #Функция для обновления направления спрайта
 func update_sprite_direction(direction: Vector2):
 	if direction.x > 0:
@@ -170,10 +175,10 @@ func update_sprite_direction(direction: Vector2):
 	elif direction.x < 0:
 		animated_sprite.flip_h = true
 
-func _on_clicked(obj: InteractableObject) -> void:
+func _interactable_interact(obj: InteractableObject) -> void:
 	current_interactable = obj
+	print(obj)
 	pass # Replace with function body.
-
-
-func _on_pencil_base_pencil_taken(obj: PencilBase) -> void:
-	print(obj.color)
+#
+#func _on_pencil_base_pencil_taken(obj: PencilBase) -> void:
+	#print(obj.color)

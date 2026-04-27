@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://c3qoa2qnf1vn8"]
+
+[ext_resource type="PackedScene" uid="uid://dusogs63f23c" path="res://scenes/interactable/InteractableObject.tscn" id="1_1vvux"]
+[ext_resource type="Script" uid="uid://ihe6mu4vm7vg" path="res://scripts/door.gd" id="1_ssnyd"]
+
+[node name="Door" unique_id=1008082527 instance=ExtResource("1_1vvux")]
+script = ExtResource("1_ssnyd")
+target_scene = ""
+spawn_point_name = "spawn"
+
+[connection signal="clicked" from="." to="." method="_on_clicked"]

@@ -1,14 +1,13 @@
 [gd_scene format=3 uid="uid://cwk1f885g4leg"]
 
 [ext_resource type="Texture2D" uid="uid://dmaccjhf64mro" path="res://Assets/Locations/LiniBedroom.PNG" id="1_yrgbh"]
-[ext_resource type="PackedScene" uid="uid://df1frskn0se13" path="res://scenes/core/Lini.tscn" id="2_1tyo2"]
 [ext_resource type="Texture2D" uid="uid://bhcg4vkk4we2h" path="res://Assets/ui/RAMA.png" id="2_mdfxg"]
 [ext_resource type="PackedScene" uid="uid://cvv4nm6f35q8h" path="res://scenes/interactable/Bedroom/pencil_base.tscn" id="3_ym2uc"]
-[ext_resource type="PackedScene" uid="uid://c3qoa2qnf1vn8" path="res://scenes/interactable/Bedroom/Door.tscn" id="4_1tyo2"]
 [ext_resource type="Texture2D" uid="uid://cx0awl5dyg3q2" path="res://Assets/interactable/Bedroom/aqua_pencil_inlit.png" id="4_tv6v7"]
 [ext_resource type="PackedScene" uid="uid://nwqvur0td1dc" path="res://scenes/core/Spawn.tscn" id="5_4vbjv"]
 [ext_resource type="Texture2D" uid="uid://bh1npt72p8p03" path="res://Assets/interactable/Bedroom/aqua_pencil_lit.png" id="5_exp6y"]
 [ext_resource type="Texture2D" uid="uid://bn3y2djjbp2o" path="res://Assets/interactable/Bedroom/black_pencil_unlit.png" id="6_qigii"]
+[ext_resource type="PackedScene" uid="uid://6ptbu8ddj0b3" path="res://scenes/interactable/Bedroom/BedroomDoor.tscn" id="7_gjw2q"]
 [ext_resource type="Texture2D" uid="uid://nwrgwkh5gtif" path="res://Assets/interactable/Bedroom/black_pencil_lit.png" id="7_qgybo"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_4vbjv"]
@@ -31,11 +30,6 @@ navigation_polygon = SubResource("NavigationPolygon_4vbjv")
 position = Vector2(640.99994, 360)
 scale = Vector2(0.32000002, 0.32000002)
 texture = ExtResource("1_yrgbh")
-
-[node name="Door" parent="." unique_id=1008082527 instance=ExtResource("4_1tyo2")]
-position = Vector2(1213.0001, 464.99997)
-scale = Vector2(0.35, 0.35)
-target_scene = "uid://43f35g8xpyd5"
 
 [node name="Node2D" type="Node2D" parent="." unique_id=1116115965]
 
@@ -66,9 +60,9 @@ texture = ExtResource("6_qigii")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/pencil_base2" unique_id=12560439]
 shape = SubResource("RectangleShape2D_e75w4")
 
-[node name="Lini" parent="." unique_id=1452736418 instance=ExtResource("2_1tyo2")]
-position = Vector2(618, 672)
-scale = Vector2(1.4, 1.4)
+[node name="Door" parent="." unique_id=1008082527 instance=ExtResource("7_gjw2q")]
+position = Vector2(1214, 462)
+scale = Vector2(0.33, 0.33)
 
 [node name="Rama" type="Sprite2D" parent="." unique_id=1840246741]
 position = Vector2(638.33344, 360.75003)
@@ -82,12 +76,6 @@ spawn_name = "SpawnBed"
 [node name="SpawnDoor" parent="." unique_id=1906601700 instance=ExtResource("5_4vbjv")]
 position = Vector2(1171, 626)
 spawn_name = "SpawnDoor"
-
-[connection signal="clicked" from="Door" to="Lini" method="_on_clicked"]
-[connection signal="clicked" from="Node2D/pencil_base" to="Lini" method="_on_clicked"]
-[connection signal="pencil_taken" from="Node2D/pencil_base" to="Lini" method="_on_pencil_base_pencil_taken"]
-[connection signal="clicked" from="Node2D/pencil_base2" to="Lini" method="_on_clicked"]
-[connection signal="pencil_taken" from="Node2D/pencil_base2" to="Lini" method="_on_pencil_base_pencil_taken"]
 
 [editable path="Node2D/pencil_base"]
 [editable path="Node2D/pencil_base2"]

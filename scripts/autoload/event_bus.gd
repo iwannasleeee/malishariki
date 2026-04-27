@@ -5,3 +5,5 @@ signal location_change_requested(scene: PackedScene, spawn_name: String)
 signal minigame_started(scene: PackedScene)
 signal minigame_finished()
 signal menu_open_requested()
+
+signal interactable_interact()

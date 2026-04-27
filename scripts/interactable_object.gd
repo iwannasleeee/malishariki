@@ -4,7 +4,7 @@ class_name InteractableObject
 @export var default_texture: Texture2D
 @export var hover_texture: Texture2D
 
-signal clicked(obj: InteractableObject)
+#signal clicked(obj: InteractableObject)
 var is_hovered := false
 
 func _ready():
@@ -25,7 +25,7 @@ func _on_mouse_exit():
 
 func _on_input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton and event.pressed:
-		clicked.emit(self)
+		EventBus.interactable_interact.emit(self)
 
 func interact(player: Node):
 	print("Взаимодействие с объектом")
