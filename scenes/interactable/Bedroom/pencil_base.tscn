@@ -5,4 +5,4 @@
 
 [node name="pencil_base" unique_id=1008082527 groups=["pencils"] instance=ExtResource("1_fuas5")]
 script = ExtResource("2_q1jdj")
-color = Color(0.5058824, 0.41568628, 0.34901962, 1)
+color_name = "white"

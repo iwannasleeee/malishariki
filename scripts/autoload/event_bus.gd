@@ -7,3 +7,6 @@ signal minigame_finished()
 signal menu_open_requested()
 
 signal interactable_interact()
+
+#Bedroom
+signal pencil_taken(obj: PencilBase)
