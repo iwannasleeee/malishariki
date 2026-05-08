@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://codc8srqacgcl"]
+
+[ext_resource type="Script" uid="uid://bikyr7geit3ny" path="res://scripts/lini_bedroom.gd" id="1_02jup"]
+[ext_resource type="PackedScene" uid="uid://bh4ukbeeuyykj" path="res://scenes/core/FixedCamera.tscn" id="2_flhxk"]
+[ext_resource type="Texture2D" uid="uid://cedtaslysm3tm" path="res://Assets/Locations/LiniHallway.PNG" id="3_e6xqt"]
+[ext_resource type="Texture2D" uid="uid://bhcg4vkk4we2h" path="res://Assets/ui/RAMA.png" id="6_00kxs"]
+[ext_resource type="PackedScene" uid="uid://bwa1eustysyww" path="res://scenes/interactable/LiniHallway/StreetDoor.tscn" id="6_o0hyy"]
+[ext_resource type="PackedScene" uid="uid://cn7452cm85x21" path="res://scenes/interactable/LiniHallway/hallway_chair.tscn" id="7_02jup"]
+[ext_resource type="PackedScene" uid="uid://nwqvur0td1dc" path="res://scenes/core/Spawn.tscn" id="7_plkpn"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_4vbjv"]
+vertices = PackedVector2Array(230.14844, 691, 86.38281, 691, 159.79688, 626, 335.3672, 626, 462.04688, 697.9922, 455.6875, 641.2969, 1165.25, 601.03906, 1232.9922, 684.89844, 1032.8984, 684, 620.3906, 605.96875, 570.3594, 631, 520.28906, 609.96875)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 0, 3, 5), PackedInt32Array(6, 7, 8, 9), PackedInt32Array(9, 8, 4, 10), PackedInt32Array(11, 10, 4, 5)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(156, 616, 336, 616, 454, 631, 520, 599, 570, 620, 618, 596, 1170, 591, 1254, 695, 1033, 694, 462, 708, 230, 701, 60, 701)])
+
+[node name="LiniHallway" type="Node2D" unique_id=762996833]
+script = ExtResource("1_02jup")
+
+[node name="FixedCamera" parent="." unique_id=228922617 instance=ExtResource("2_flhxk")]
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=1667463333]
+navigation_polygon = SubResource("NavigationPolygon_4vbjv")
+
+[node name="LiniHallway" type="Sprite2D" parent="." unique_id=1628986829]
+position = Vector2(640.99994, 360)
+scale = Vector2(0.32000002, 0.32000002)
+texture = ExtResource("3_e6xqt")
+
+[node name="Rama" type="Sprite2D" parent="." unique_id=1840246741]
+position = Vector2(638.33344, 360.75003)
+scale = Vector2(0.32022223, 0.32022223)
+texture = ExtResource("6_00kxs")
+
+[node name="SpawnBedroomDoor" parent="." unique_id=750554822 instance=ExtResource("7_plkpn")]
+position = Vector2(137, 642)
+spawn_name = "SpawnBedroomDoor"
+
+[node name="SpawnStreetDoor" parent="." unique_id=1906601700 instance=ExtResource("7_plkpn")]
+position = Vector2(798, 610)
+spawn_name = "SpawnDoor"
+
+[node name="StreetDoor" parent="." unique_id=1008082527 instance=ExtResource("6_o0hyy")]
+position = Vector2(776, 459)
+scale = Vector2(2, 2)
+target_scene = "uid://43f35g8xpyd5"
+spawn_point_name = "SpawnLiniHouse"
+
+[node name="HallwayChair" parent="." unique_id=1428334903 instance=ExtResource("7_02jup")]
+position = Vector2(423.00003, 505)
+scale = Vector2(0.33, 0.33)

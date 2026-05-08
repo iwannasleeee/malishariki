@@ -30,7 +30,9 @@ UIManager="*uid://d1auqw7dcc2qp"
 
 window/size/viewport_width=1280
 window/size/viewport_height=720
+window/stretch/mode="canvas_items"
 
 [global_group]
 
 spawn_points=""
+fixed_camera=""

@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bwa1eustysyww"]
+
+[ext_resource type="PackedScene" uid="uid://c3qoa2qnf1vn8" path="res://scenes/interactable/Door.tscn" id="1_ch30c"]
+[ext_resource type="Texture2D" uid="uid://dlo3xa7ydbj2p" path="res://Assets/interactable/LiniHallway/maindoor_unlit.png" id="2_k628o"]
+[ext_resource type="Texture2D" uid="uid://wurkh4wmak7n" path="res://Assets/interactable/LiniHallway/maindoor_lit.png" id="3_wkdh1"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4nxxd"]
+radius = 65.85
+
+[node name="StreetDoor" unique_id=1008082527 instance=ExtResource("1_ch30c")]
+default_texture = ExtResource("2_k628o")
+hover_texture = ExtResource("3_wkdh1")
+
+[node name="Sprite2D" parent="." index="0" unique_id=309976985]
+texture = ExtResource("2_k628o")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1" unique_id=631345606]
+shape = SubResource("CircleShape2D_4nxxd")

@@ -2,10 +2,11 @@
 
 [ext_resource type="Script" uid="uid://bikyr7geit3ny" path="res://scripts/lini_bedroom.gd" id="1_ym2uc"]
 [ext_resource type="Texture2D" uid="uid://dmaccjhf64mro" path="res://Assets/Locations/LiniBedroom.PNG" id="1_yrgbh"]
-[ext_resource type="PackedScene" uid="uid://dmiwygqpm1rxl" path="res://scenes/interactable/Bedroom/pencils/black_pencil.tscn" id="2_4vbjv"]
+[ext_resource type="PackedScene" uid="uid://dmiwygqpm1rxl" path="res://scenes/interactable/LiniBedroom/pencils/black_pencil.tscn" id="2_4vbjv"]
+[ext_resource type="PackedScene" uid="uid://bh4ukbeeuyykj" path="res://scenes/core/FixedCamera.tscn" id="2_iygw6"]
 [ext_resource type="Texture2D" uid="uid://bhcg4vkk4we2h" path="res://Assets/ui/RAMA.png" id="2_mdfxg"]
 [ext_resource type="PackedScene" uid="uid://nwqvur0td1dc" path="res://scenes/core/Spawn.tscn" id="5_4vbjv"]
-[ext_resource type="PackedScene" uid="uid://6ptbu8ddj0b3" path="res://scenes/interactable/Bedroom/BedroomDoor.tscn" id="7_gjw2q"]
+[ext_resource type="PackedScene" uid="uid://6ptbu8ddj0b3" path="res://scenes/interactable/LiniBedroom/BedroomDoor.tscn" id="7_gjw2q"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_4vbjv"]
 vertices = PackedVector2Array(462.04688, 697.9922, 230.9375, 691.0078, 144.97656, 676.1719, 192.92969, 641.22656, 290.10938, 647.96094, 500.4922, 673.25, 1032.4531, 684, 574.5, 641.21875, 583.8125, 603.96094, 1166.3672, 601.0078, 1233.4297, 657.3125, 1212.0313, 669.2031)
@@ -14,6 +15,8 @@ outlines = Array[PackedVector2Array]([PackedVector2Array(190, 631, 291, 638, 499
 
 [node name="LiniBedroom" type="Node2D" unique_id=762996833]
 script = ExtResource("1_ym2uc")
+
+[node name="FixedCamera" parent="." unique_id=228922617 instance=ExtResource("2_iygw6")]
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=1667463333]
 navigation_polygon = SubResource("NavigationPolygon_4vbjv")
@@ -31,7 +34,8 @@ position = Vector2(586, 505)
 [node name="Door" parent="." unique_id=1317846438 instance=ExtResource("7_gjw2q")]
 position = Vector2(1214, 462)
 scale = Vector2(0.33, 0.33)
-spawn_point_name = "SpawnLiniHouse"
+target_scene = "uid://codc8srqacgcl"
+spawn_point_name = "SpawnBedroomDoor"
 
 [node name="Rama" type="Sprite2D" parent="." unique_id=1840246741]
 position = Vector2(638.33344, 360.75003)
