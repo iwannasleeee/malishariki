@@ -3,14 +3,16 @@ extends Node
 
 var hud: Control
 var main_menu: Control
+var minigame: Control
 
 var current_hud_screen: Control
 var current_menu_screen: Control
+var current_minigame_screen: Control
 
-func initialize(h: Control, m: Control) -> void:
+func initialize(h: Control, m: Control, mg: Control) -> void:
 	hud = h
 	main_menu = m
-
+	minigame = mg
 # --- MainMenu ---
 
 func show_menu_screen(scene_path: String) -> void:
@@ -25,6 +27,14 @@ func show_hud_screen(scene_path: String) -> void:
 	_swap_screen(hud, scene_path, current_hud_screen)
 
 func hide_hud() -> void:
+	hud.visible = false
+
+# --- MINIGAME ---
+
+func show_minigame(scene_path: String) -> void:
+	_swap_screen(hud, scene_path, current_minigame_screen)
+
+func hide_minigame() -> void:
 	hud.visible = false
 
 # --- Внутренняя логика ---
