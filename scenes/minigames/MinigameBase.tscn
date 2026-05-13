@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://khyulkrrsf0r"]
+
+[ext_resource type="Script" uid="uid://dxtotledelxdm" path="res://scripts/minigame_base.gd" id="1_hhdiu"]
+
+[node name="MinigameBase" type="Control" unique_id=932141857]
+layout_mode = 3
+anchors_preset = 0
+mouse_filter = 2
+script = ExtResource("1_hhdiu")
