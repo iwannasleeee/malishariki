@@ -82,6 +82,7 @@ height = 710.0
 script = ExtResource("1_d4li8")
 config_normal = ExtResource("2_20ixu")
 config_mini = ExtResource("3_auf18")
+camera_limits_right = 3201.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=321834555]
 position = Vector2(-9, -70)
