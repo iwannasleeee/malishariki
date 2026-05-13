@@ -1,7 +1,7 @@
 extends Node2D
 
 @onready var canvas: TextureRect = $Canvas
-
+@export var native_size := Vector2(1200,720)
 # ==== Изображение ====
 var image: Image
 var texture: ImageTexture

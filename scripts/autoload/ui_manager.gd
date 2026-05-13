@@ -13,33 +13,59 @@ func initialize(h: Control, m: Control, mg: Control) -> void:
 	hud = h
 	main_menu = m
 	minigame = mg
+	EventBus.minigame_started.connect(show_minigame)
+	EventBus.minigame_finished.connect(hide_minigame)
 # --- MainMenu ---
-
 func show_menu_screen(scene_path: String) -> void:
-	_swap_screen(main_menu, scene_path, current_menu_screen)
+	_swap_screen(main_menu, scene_path)
 
 func hide_menu() -> void:
 	main_menu.visible = false
 
 # --- HUD ---
-
 func show_hud_screen(scene_path: String) -> void:
-	_swap_screen(hud, scene_path, current_hud_screen)
+	_swap_screen(hud, scene_path)
 
 func hide_hud() -> void:
 	hud.visible = false
 
-# --- MINIGAME ---
-
+# --- Minigame ---
 func show_minigame(scene_path: String) -> void:
-	_swap_screen(hud, scene_path, current_minigame_screen)
+	if current_minigame_screen and is_instance_valid(current_minigame_screen):
+		current_minigame_screen.queue_free()
+
+	var screen: Node = (load(scene_path) as PackedScene).instantiate()
+	minigame.add_child(screen)
+
+	# Масштабируем под размер контейнера
+	var native: Vector2 = Vector2(1280, 720)  # разрешение в котором сделана миниигра
+	var target: Vector2 = minigame.size
+	var s: float = min(target.x / native.x, target.y / native.y)
+	screen.scale = Vector2(s, s)
+	screen.pivot_offset = Vector2.ZERO
+
+	var scaled_size := native * s
+	screen.position = (target - scaled_size) / 2.0
+
+	current_minigame_screen = screen
+	minigame.visible = true
+
+	if screen.has_signal("finished"):
+		screen.finished.connect(hide_minigame)
+
+	get_tree().paused = true
 
 func hide_minigame() -> void:
-	hud.visible = false
+	get_tree().paused = false
+	if current_minigame_screen and is_instance_valid(current_minigame_screen):
+		current_minigame_screen.queue_free()
+	current_minigame_screen = null
+	minigame.visible = false
 
 # --- Внутренняя логика ---
-
-func _swap_screen(container: Control, scene_path: String, current: Control) -> void:
+func _swap_screen(container: Control, scene_path: String) -> void:
+	# Получаем ссылку на текущий экран этого контейнера
+	var current := _get_current(container)
 	if current and is_instance_valid(current):
 		current.queue_free()
 
@@ -47,13 +73,25 @@ func _swap_screen(container: Control, scene_path: String, current: Control) -> v
 		container.visible = false
 		return
 
-	var packed: PackedScene = load(scene_path)
-	var screen := packed.instantiate() as Control
+	var screen := (load(scene_path) as PackedScene).instantiate() as Control
+	screen.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	container.add_child(screen)
 	container.visible = true
-	
-	# Обновляем ссылку на текущий экран
+	_set_current(container, screen)
+
+func _get_current(container: Control) -> Control:
+	if container == main_menu:
+		return current_menu_screen
+	elif container == hud:
+		return current_hud_screen
+	elif container == minigame:
+		return current_minigame_screen
+	return null
+
+func _set_current(container: Control, screen: Control) -> void:
 	if container == main_menu:
 		current_menu_screen = screen
-	else:
+	elif container == hud:
 		current_hud_screen = screen
+	elif container == minigame:
+		current_minigame_screen = screen

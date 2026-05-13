@@ -1,4 +1,4 @@
 extends InteractableObject
 
 func interact(player: Node) -> void:
-	print("рисуем")
+	EventBus.minigame_started.emit("res://scenes/minigames/Paint.tscn")
