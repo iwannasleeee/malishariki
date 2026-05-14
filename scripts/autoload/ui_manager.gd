@@ -4,17 +4,22 @@ extends Node
 var hud: Control
 var main_menu: Control
 var minigame: Control
+var dialogue_container: Control
 
 var current_hud_screen: Control
 var current_menu_screen: Control
 var current_minigame_screen: Control
+var current_dialogue_screen: Control
 
-func initialize(h: Control, m: Control, mg: Control) -> void:
+func initialize(h: Control, m: Control, mg: Control, d: Control) -> void:
 	hud = h
 	main_menu = m
 	minigame = mg
 	EventBus.minigame_started.connect(show_minigame)
 	EventBus.minigame_finished.connect(hide_minigame)
+	
+	EventBus.dialogue_started.connect(show_dialogue)
+	EventBus.dialogue_finished.connect(hide_dialogue)
 # --- MainMenu ---
 func show_menu_screen(scene_path: String) -> void:
 	_swap_screen(main_menu, scene_path)
@@ -62,6 +67,22 @@ func hide_minigame() -> void:
 	current_minigame_screen = null
 	minigame.visible = false
 
+# --- Dialogue ---
+func show_dialogue(scene_path: String, dialogue_data: Array) -> void:
+	# Метод _swap_screen адаптирован под базовую логику
+	_swap_screen(dialogue_container, scene_path)
+	
+	# Передаем данные в созданный UI-скрипт диалога
+	if current_dialogue_screen and current_dialogue_screen.has_method("start_dialogue"):
+		current_dialogue_screen.start_dialogue(dialogue_data)
+		
+	# Для point-and-click часто нужно ставить игру на паузу во время бесед
+	get_tree().paused = true
+
+func hide_dialogue() -> void:
+	get_tree().paused = false
+	_swap_screen(dialogue_container, "") # Очистит контейнер и скроет его
+	
 # --- Внутренняя логика ---
 func _swap_screen(container: Control, scene_path: String) -> void:
 	# Получаем ссылку на текущий экран этого контейнера
