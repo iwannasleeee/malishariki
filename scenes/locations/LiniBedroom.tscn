@@ -4,7 +4,6 @@
 [ext_resource type="Texture2D" uid="uid://dmaccjhf64mro" path="res://Assets/Locations/LiniBedroom.PNG" id="1_yrgbh"]
 [ext_resource type="PackedScene" uid="uid://dmiwygqpm1rxl" path="res://scenes/interactable/LiniBedroom/pencils/black_pencil.tscn" id="2_4vbjv"]
 [ext_resource type="PackedScene" uid="uid://bh4ukbeeuyykj" path="res://scenes/core/FixedCamera.tscn" id="2_iygw6"]
-[ext_resource type="Texture2D" uid="uid://bhcg4vkk4we2h" path="res://Assets/ui/RAMA.png" id="2_mdfxg"]
 [ext_resource type="PackedScene" uid="uid://nwqvur0td1dc" path="res://scenes/core/Spawn.tscn" id="5_4vbjv"]
 [ext_resource type="PackedScene" uid="uid://6ptbu8ddj0b3" path="res://scenes/interactable/LiniBedroom/BedroomDoor.tscn" id="7_gjw2q"]
 
@@ -36,11 +35,6 @@ position = Vector2(1214, 462)
 scale = Vector2(0.33, 0.33)
 target_scene = "uid://codc8srqacgcl"
 spawn_point_name = "SpawnBedroomDoor"
-
-[node name="Rama" type="Sprite2D" parent="." unique_id=1840246741]
-position = Vector2(638.33344, 360.75003)
-scale = Vector2(0.32022223, 0.32022223)
-texture = ExtResource("2_mdfxg")
 
 [node name="SpawnBed" parent="." unique_id=750554822 instance=ExtResource("5_4vbjv")]
 position = Vector2(292, 650)

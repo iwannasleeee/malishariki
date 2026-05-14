@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://bikyr7geit3ny" path="res://scripts/lini_bedroom.gd" id="1_02jup"]
 [ext_resource type="PackedScene" uid="uid://bh4ukbeeuyykj" path="res://scenes/core/FixedCamera.tscn" id="2_flhxk"]
 [ext_resource type="Texture2D" uid="uid://cedtaslysm3tm" path="res://Assets/Locations/LiniHallway.PNG" id="3_e6xqt"]
-[ext_resource type="Texture2D" uid="uid://bhcg4vkk4we2h" path="res://Assets/ui/RAMA.png" id="6_00kxs"]
 [ext_resource type="PackedScene" uid="uid://bwa1eustysyww" path="res://scenes/interactable/LiniHallway/StreetDoor.tscn" id="6_o0hyy"]
 [ext_resource type="PackedScene" uid="uid://cn7452cm85x21" path="res://scenes/interactable/LiniHallway/hallway_chair.tscn" id="7_02jup"]
 [ext_resource type="PackedScene" uid="uid://nwqvur0td1dc" path="res://scenes/core/Spawn.tscn" id="7_plkpn"]
@@ -25,11 +24,6 @@ navigation_polygon = SubResource("NavigationPolygon_4vbjv")
 position = Vector2(640.99994, 360)
 scale = Vector2(0.32000002, 0.32000002)
 texture = ExtResource("3_e6xqt")
-
-[node name="Rama" type="Sprite2D" parent="." unique_id=1840246741]
-position = Vector2(638.33344, 360.75003)
-scale = Vector2(0.32022223, 0.32022223)
-texture = ExtResource("6_00kxs")
 
 [node name="SpawnBedroomDoor" parent="." unique_id=750554822 instance=ExtResource("7_plkpn")]
 position = Vector2(137, 642)

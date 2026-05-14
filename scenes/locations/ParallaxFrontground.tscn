@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://bh4pkisxjime7"]
 
-[ext_resource type="Texture2D" uid="uid://cbjxygqfxved5" path="res://assets/locations/ground1.png" id="1_ddgxo"]
-[ext_resource type="Texture2D" uid="uid://bhcg4vkk4we2h" path="res://assets/ui/RAMA.png" id="2_a6cm3"]
+[ext_resource type="Texture2D" uid="uid://cbjxygqfxved5" path="res://Assets/Locations/ground1.png" id="1_ddgxo"]
 
 [node name="ParallaxFrountground" type="ParallaxBackground" unique_id=333348341]
 layer = 100
@@ -14,11 +13,3 @@ position = Vector2(-273, -2)
 scale = Vector2(0.3217778, 0.3217778)
 texture = ExtResource("1_ddgxo")
 centered = false
-
-[node name="RAMALayer" type="ParallaxLayer" parent="." unique_id=1623976066]
-motion_scale = Vector2(0, 0)
-
-[node name="RAMA" type="Sprite2D" parent="RAMALayer" unique_id=1942157259]
-position = Vector2(641, 360)
-scale = Vector2(0.322, 0.322)
-texture = ExtResource("2_a6cm3")

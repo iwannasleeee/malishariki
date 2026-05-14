@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://d1hneh5j5c41x"]
+
+[ext_resource type="Texture2D" uid="uid://bhcg4vkk4we2h" path="res://Assets/ui/RAMA.png" id="1_0mwgc"]
+
+[node name="Hud" type="Control" unique_id=1099479635]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 0
+
+[node name="Rama" type="Sprite2D" parent="." unique_id=1440989873]
+position = Vector2(639, 360)
+scale = Vector2(0.32, 0.32)
+texture = ExtResource("1_0mwgc")

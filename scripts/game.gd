@@ -8,6 +8,7 @@ func _ready() -> void:
 	UIManager.initialize(hud,main_menu,minigame)
 	EventBus.menu_open_requested.connect(_on_menu_open_requested)
 	UIManager.show_menu_screen("res://scenes/ui/StartScreen.tscn")
+	UIManager.show_hud_screen("res://scenes/ui/hud.tscn")
 
 func _on_menu_open_requested() -> void:
 	hud.visible = false
