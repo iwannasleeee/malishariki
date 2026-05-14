@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://d1hneh5j5c41x"]
 
 [ext_resource type="Texture2D" uid="uid://bhcg4vkk4we2h" path="res://Assets/ui/RAMA.png" id="1_0mwgc"]
+[ext_resource type="Texture2D" uid="uid://bbrrd543sr5go" path="res://Assets/ui/ui_pause1.png" id="2_bo48s"]
+[ext_resource type="Texture2D" uid="uid://d32drqsc5qtt" path="res://Assets/ui/ui_pause2.png" id="3_8qguk"]
 
 [node name="Hud" type="Control" unique_id=1099479635]
 process_mode = 3
@@ -11,3 +13,15 @@ anchors_preset = 0
 position = Vector2(639, 360)
 scale = Vector2(0.32, 0.32)
 texture = ExtResource("1_0mwgc")
+
+[node name="TextureButton" type="TextureButton" parent="." unique_id=1927907405]
+layout_mode = 0
+offset_left = 1188.0
+offset_top = 11.0
+offset_right = 1265.0
+offset_bottom = 88.0
+toggle_mode = true
+texture_normal = ExtResource("2_bo48s")
+texture_pressed = ExtResource("3_8qguk")
+ignore_texture_size = true
+stretch_mode = 6
