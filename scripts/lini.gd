@@ -74,7 +74,7 @@ func find_spawn_point(name: String) -> SpawnPoint:
 			return node
 	return null
 	
-func _input(event):
+func _unhandled_input(event: InputEvent) -> void:
 	# По клику левой кнопкой мыши ставим новую цель
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 		# Сбрасываем предыдущее намерение взаимодействия при любом новом клике
