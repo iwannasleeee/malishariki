@@ -15,6 +15,8 @@ func initialize(h: Control, m: Control, mg: Control, d: Control) -> void:
 	hud = h
 	main_menu = m
 	minigame = mg
+	dialogue_container = d
+	
 	EventBus.minigame_started.connect(show_minigame)
 	EventBus.minigame_finished.connect(hide_minigame)
 	
@@ -100,19 +102,18 @@ func _swap_screen(container: Control, scene_path: String) -> void:
 	container.visible = true
 	_set_current(container, screen)
 
+# Исправляем _get_current (добавляем ветку диалога)
 func _get_current(container: Control) -> Control:
-	if container == main_menu:
-		return current_menu_screen
-	elif container == hud:
-		return current_hud_screen
-	elif container == minigame:
-		return current_minigame_screen
+	if container == main_menu: return current_menu_screen
+	if container == hud: return current_hud_screen
+	if container == minigame: return current_minigame_screen
+	if container == dialogue_container: return current_dialogue_screen
 	return null
 
+
+# Исправляем _set_current (добавляем ветку диалога)
 func _set_current(container: Control, screen: Control) -> void:
-	if container == main_menu:
-		current_menu_screen = screen
-	elif container == hud:
-		current_hud_screen = screen
-	elif container == minigame:
-		current_minigame_screen = screen
+	if container == main_menu: current_menu_screen = screen
+	elif container == hud: current_hud_screen = screen
+	elif container == minigame: current_minigame_screen = screen
+	elif container == dialogue_container: current_dialogue_screen = screen

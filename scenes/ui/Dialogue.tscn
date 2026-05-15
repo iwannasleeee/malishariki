@@ -1,11 +1,46 @@
 [gd_scene format=3 uid="uid://ceolb7wgf60t8"]
 
+[ext_resource type="Script" uid="uid://dlshn3h2vxjwf" path="res://scripts/dialogue.gd" id="1_1kdtj"]
+
 [node name="Dialogue" type="Control" unique_id=108227513]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = -1280.0
-offset_bottom = -720.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_1kdtj")
+
+[node name="Panel" type="PanelContainer" parent="." unique_id=428770414]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 135.0
+grow_horizontal = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel" unique_id=1064209834]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer" unique_id=1431569759]
+layout_mode = 2
+
+[node name="NameLabel" type="Label" parent="Panel/MarginContainer/VBoxContainer" unique_id=258299366]
+layout_mode = 2
+text = "ASDASDASD"
+
+[node name="DialogueText" type="RichTextLabel" parent="Panel/MarginContainer/VBoxContainer" unique_id=1491357210]
+layout_mode = 2
+size_flags_vertical = 3
+text = "asaSAsASDASD"
+
+[node name="ContinueButton" type="Button" parent="." unique_id=335581947]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 8.0
+offset_bottom = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[connection signal="pressed" from="ContinueButton" to="." method="_on_continue_button_pressed"]
