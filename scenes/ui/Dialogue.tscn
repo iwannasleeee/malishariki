@@ -13,27 +13,38 @@ script = ExtResource("1_1kdtj")
 
 [node name="Panel" type="PanelContainer" parent="." unique_id=428770414]
 layout_mode = 1
-anchors_preset = 10
+anchors_preset = 12
+anchor_top = 1.0
 anchor_right = 1.0
-offset_bottom = 135.0
+anchor_bottom = 1.0
+offset_top = -27.0
 grow_horizontal = 2
+grow_vertical = 0
 
 [node name="MarginContainer" type="MarginContainer" parent="Panel" unique_id=1064209834]
 layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer" unique_id=1431569759]
 layout_mode = 2
 
 [node name="NameLabel" type="Label" parent="Panel/MarginContainer/VBoxContainer" unique_id=258299366]
 layout_mode = 2
+size_flags_horizontal = 4
 text = "ASDASDASD"
 
 [node name="DialogueText" type="RichTextLabel" parent="Panel/MarginContainer/VBoxContainer" unique_id=1491357210]
+custom_minimum_size = Vector2(500, 200)
 layout_mode = 2
-size_flags_vertical = 3
+size_flags_horizontal = 4
+size_flags_vertical = 4
 text = "asaSAsASDASD"
 
 [node name="ContinueButton" type="Button" parent="." unique_id=335581947]
+modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
