@@ -166,7 +166,7 @@ func _load_brushes():
 		set_brush(brush_masks.keys()[0])
 # ==================== Загрузка скотча ======================
 func _load_tape_texture():
-	var path = "res://Assets/ui/paint/bigbabytape.png"
+	var path = "res://assets/ui/paint/Lini _Workplace/tapes/BlueTexture.png"
 	if ResourceLoader.exists(path):
 		var tex = load(path) as Texture2D
 		if tex:
@@ -290,11 +290,13 @@ func connect_ui():
 	$UI/BrownPencil.pressed.connect(func(): select_color(Color("#80431b")))
 	$UI/BlackPencil.pressed.connect(func(): select_color(Color.BLACK))
 	$UI/PinkPencil.pressed.connect(func(): select_color(Color("#ee75e2")))
-
+	$UI/AquaPencil.pressed.connect(func(): select_color(Color("#58d4e1")))
+	$UI/LilacPencil.pressed.connect(func(): select_color(Color("#903dd8")))
+	
 	# Инструменты
 	$UI/Eraser.pressed.connect(select_eraser)
 	$UI/Tape.pressed.connect(select_tape)
-	$UI/Undo.pressed.connect(undo)
+	$UI/Back.pressed.connect(undo)
 	$UI/Redo.pressed.connect(redo)
 	for child in $UI.get_children():
 		if child is Control:
