@@ -1,11 +1,20 @@
 [gd_scene format=3 uid="uid://cwk1f885g4leg"]
 
 [ext_resource type="Script" uid="uid://bikyr7geit3ny" path="res://scripts/lini_bedroom.gd" id="1_ym2uc"]
-[ext_resource type="Texture2D" uid="uid://dmaccjhf64mro" path="res://Assets/Locations/LiniBedroom.PNG" id="1_yrgbh"]
+[ext_resource type="Texture2D" uid="uid://dmaccjhf64mro" path="res://assets/locations/LiniBedroom.PNG" id="1_yrgbh"]
 [ext_resource type="PackedScene" uid="uid://dmiwygqpm1rxl" path="res://scenes/interactable/LiniBedroom/pencils/black_pencil.tscn" id="2_4vbjv"]
 [ext_resource type="PackedScene" uid="uid://bh4ukbeeuyykj" path="res://scenes/core/FixedCamera.tscn" id="2_iygw6"]
+[ext_resource type="PackedScene" uid="uid://bndms4igx4mim" path="res://scenes/interactable/LiniBedroom/pencils/red_pencil.tscn" id="5_0itj3"]
 [ext_resource type="PackedScene" uid="uid://nwqvur0td1dc" path="res://scenes/core/Spawn.tscn" id="5_4vbjv"]
+[ext_resource type="PackedScene" uid="uid://ceu3yxdxer72j" path="res://scenes/interactable/LiniBedroom/pencils/yellow_pencil.tscn" id="5_e75w4"]
+[ext_resource type="PackedScene" uid="uid://cn68vb4yoo801" path="res://scenes/interactable/LiniBedroom/pencils/aqua_pencil.tscn" id="6_gjw2q"]
 [ext_resource type="PackedScene" uid="uid://6ptbu8ddj0b3" path="res://scenes/interactable/LiniBedroom/BedroomDoor.tscn" id="7_gjw2q"]
+[ext_resource type="PackedScene" uid="uid://byq1lb6sunma5" path="res://scenes/interactable/LiniBedroom/pencils/blue_pencil.tscn" id="8_gqgl3"]
+[ext_resource type="PackedScene" uid="uid://dqlmsg2nc4x5p" path="res://scenes/interactable/LiniBedroom/pencils/brown_pencil.tscn" id="9_k8rxl"]
+[ext_resource type="PackedScene" uid="uid://clh6bf5g4bset" path="res://scenes/interactable/LiniBedroom/pencils/green_pencil.tscn" id="10_2082c"]
+[ext_resource type="PackedScene" uid="uid://cr7lt0vk35dm1" path="res://scenes/interactable/LiniBedroom/pencils/orange_pencil.tscn" id="11_47prq"]
+[ext_resource type="PackedScene" uid="uid://xyrlk8js0n1y" path="res://scenes/interactable/LiniBedroom/pencils/pink_pencil.tscn" id="12_ehd4l"]
+[ext_resource type="PackedScene" uid="uid://coph1k5bfkyqe" path="res://scenes/interactable/LiniBedroom/pencils/purple_pencil.tscn" id="13_8cfen"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_4vbjv"]
 vertices = PackedVector2Array(462.04688, 697.9922, 230.9375, 691.0078, 144.97656, 676.1719, 192.92969, 641.22656, 290.10938, 647.96094, 500.4922, 673.25, 1032.4531, 684, 574.5, 641.21875, 583.8125, 603.96094, 1166.3672, 601.0078, 1233.4297, 657.3125, 1212.0313, 669.2031)
@@ -28,7 +37,44 @@ texture = ExtResource("1_yrgbh")
 [node name="Pencils" type="Node2D" parent="." unique_id=1116115965]
 
 [node name="black_pencil" parent="Pencils" unique_id=1008082527 instance=ExtResource("2_4vbjv")]
-position = Vector2(586, 505)
+position = Vector2(598, 525)
+scale = Vector2(0.32, 0.32)
+
+[node name="yellow_pencil" parent="Pencils" unique_id=207460350 instance=ExtResource("5_e75w4")]
+position = Vector2(124, 516)
+scale = Vector2(0.32, 0.32)
+
+[node name="red_pencil" parent="Pencils" unique_id=1258747577 instance=ExtResource("5_0itj3")]
+position = Vector2(127, 524)
+scale = Vector2(0.32, 0.32)
+
+[node name="aqua_pencil" parent="Pencils" unique_id=875254583 instance=ExtResource("6_gjw2q")]
+position = Vector2(363, 478)
+scale = Vector2(0.32, 0.32)
+
+[node name="blue_pencil" parent="Pencils" unique_id=486129434 instance=ExtResource("8_gqgl3")]
+position = Vector2(752, 590)
+scale = Vector2(0.32, 0.32)
+
+[node name="brown_pencil" parent="Pencils" unique_id=1632671876 instance=ExtResource("9_k8rxl")]
+position = Vector2(587, 229)
+scale = Vector2(0.32, 0.32)
+
+[node name="green_pencil" parent="Pencils" unique_id=1270960941 instance=ExtResource("10_2082c")]
+position = Vector2(120, 570)
+scale = Vector2(0.32, 0.32)
+
+[node name="orange_pencil" parent="Pencils" unique_id=1120809296 instance=ExtResource("11_47prq")]
+position = Vector2(508, 459)
+scale = Vector2(0.32, 0.32)
+
+[node name="pink_pencil" parent="Pencils" unique_id=17040793 instance=ExtResource("12_ehd4l")]
+position = Vector2(1125, 376)
+scale = Vector2(0.32, 0.32)
+
+[node name="purple_pencil" parent="Pencils" unique_id=1241896261 instance=ExtResource("13_8cfen")]
+position = Vector2(960, 491)
+scale = Vector2(0.32, 0.32)
 
 [node name="Door" parent="." unique_id=1317846438 instance=ExtResource("7_gjw2q")]
 position = Vector2(1214, 462)

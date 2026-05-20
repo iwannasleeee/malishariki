@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://coph1k5bfkyqe"]
+
+[ext_resource type="PackedScene" uid="uid://cvv4nm6f35q8h" path="res://scenes/interactable/LiniBedroom/pencil_base.tscn" id="1_82d3n"]
+[ext_resource type="Texture2D" uid="uid://bad6eobu52ujv" path="res://assets/interactable/LiniBedroom/purple_pencil_unlit.png" id="2_51ig3"]
+[ext_resource type="Texture2D" uid="uid://csvxlwngwhwxn" path="res://assets/interactable/LiniBedroom/purple_pencil_lit.png" id="3_n3n72"]
+
+[node name="purple_pencil" unique_id=1008082527 instance=ExtResource("1_82d3n")]
+color_name = "purple"
+default_texture = ExtResource("2_51ig3")
+hover_texture = ExtResource("3_n3n72")
+
+[node name="Sprite2D" parent="." index="0" unique_id=309976985]
+texture = ExtResource("2_51ig3")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="1" unique_id=160046889]
+polygon = PackedVector2Array(17, -22.6, 16.900002, -24.1, 13, -23.9, 13, -21.9, -10.7, -1, -12.4, -1, -17, 12.799999, -17, 25, -5.3999996, 25, 0.6000004, 21, 6.799999, 21, 16.8, 11)

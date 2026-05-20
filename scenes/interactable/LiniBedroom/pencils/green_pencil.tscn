@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://clh6bf5g4bset"]
+
+[ext_resource type="PackedScene" uid="uid://cvv4nm6f35q8h" path="res://scenes/interactable/LiniBedroom/pencil_base.tscn" id="1_1q47j"]
+[ext_resource type="Texture2D" uid="uid://bgi4nfh3ljins" path="res://assets/interactable/LiniBedroom/green_pencil_unlit.png" id="2_rj2vn"]
+[ext_resource type="Texture2D" uid="uid://btj2ouc1nwsvp" path="res://assets/interactable/LiniBedroom/green_pencil_lit.png" id="3_dxf18"]
+
+[node name="green_pencil" unique_id=1008082527 instance=ExtResource("1_1q47j")]
+color_name = "green"
+default_texture = ExtResource("2_rj2vn")
+hover_texture = ExtResource("3_dxf18")
+
+[node name="Sprite2D" parent="." index="0" unique_id=309976985]
+texture = ExtResource("2_rj2vn")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="1" unique_id=1377518169]
+polygon = PackedVector2Array(78.5, -19.4, 76.7, -19.5, 29.800003, -19.5, 28.300003, -16.5, 26.5, -16.5, 26.5, 12.799999, 35.800003, 11.5, 50, 11.5, 82, -4.5, 82.5, -10.4, 78.5, -17)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="." index="2" unique_id=1189475834]
+polygon = PackedVector2Array(-30.5, -11.5, -47.5, -11.5, -47.5, -10.3, -58.8, -8.5, -69.1, -8.5, -79.8, -2.1000004, -81.2, -2.5, -82.5, -2.5, -82.5, 17.7, -81.1, 19.5, -30, 19.5, -26, 17.5, -23.2, 17.5, -24.5, 7.299999, -24.5, -1.2000008, -30.5, -9.2)

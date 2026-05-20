@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://cn68vb4yoo801"]
+
+[ext_resource type="PackedScene" uid="uid://cvv4nm6f35q8h" path="res://scenes/interactable/LiniBedroom/pencil_base.tscn" id="1_b6kep"]
+[ext_resource type="Texture2D" uid="uid://cx0awl5dyg3q2" path="res://assets/interactable/LiniBedroom/aqua_pencil_inlit.png" id="2_b1igq"]
+[ext_resource type="Texture2D" uid="uid://bh1npt72p8p03" path="res://assets/interactable/LiniBedroom/aqua_pencil_lit.png" id="3_hgtqc"]
+
+[node name="aqua_pencil" unique_id=1008082527 instance=ExtResource("1_b6kep")]
+color_name = "aqua"
+default_texture = ExtResource("2_b1igq")
+hover_texture = ExtResource("3_hgtqc")
+
+[node name="Sprite2D" parent="." index="0" unique_id=309976985]
+texture = ExtResource("2_b1igq")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="1" unique_id=928525390]
+polygon = PackedVector2Array(12.200001, -10, -22, -10, -28, 0.8000002, -28, 10, 19.8, 10, 26.400002, 7, 28, 7, 28, -4.8)
