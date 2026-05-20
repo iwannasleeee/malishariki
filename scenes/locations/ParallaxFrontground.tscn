@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://bh4pkisxjime7"]
 
-[ext_resource type="Texture2D" uid="uid://cbjxygqfxved5" path="res://Assets/Locations/ground1.png" id="1_ddgxo"]
+[ext_resource type="Texture2D" uid="uid://c0fxakmpsp35u" path="res://assets/locations/FlowerAndTree.png" id="1_ddgxo"]
 
 [node name="ParallaxFrountground" type="ParallaxBackground" unique_id=333348341]
 layer = 100
 
 [node name="GroundLayer" type="ParallaxLayer" parent="." unique_id=1795464570]
-motion_scale = Vector2(1.1, 1)
+motion_scale = Vector2(1.009, 1)
 
 [node name="Ground" type="Sprite2D" parent="GroundLayer" unique_id=1652855850]
 position = Vector2(-273, -2)

@@ -4,8 +4,8 @@
 [ext_resource type="Script" uid="uid://uhjs3tyikosv" path="res://scripts/paint.gd" id="2_g73lj"]
 [ext_resource type="Texture2D" uid="uid://rdfq3eteqnr4" path="res://assets/ui/paint/Lini _Workplace/Lini_Paint.png" id="3_muvl1"]
 [ext_resource type="Texture2D" uid="uid://oaikkoyrbdud" path="res://assets/ui/paint/Lini _Workplace/Table.png" id="4_i2xn7"]
-[ext_resource type="Texture2D" uid="uid://fn06yn7jysch" path="res://assets/ui/paint/Canvas.PNG" id="4_nif8p"]
 [ext_resource type="Texture2D" uid="uid://das4sp3aob31h" path="res://assets/ui/paint/Lini _Workplace/pencils/BlackPencil.png" id="5_brarm"]
+[ext_resource type="Texture2D" uid="uid://3ktcywnhw52v" path="res://assets/ui/paint/Lini _Workplace/NewCanvas.png" id="5_gb6ka"]
 [ext_resource type="Texture2D" uid="uid://dl6rqddbwf8yc" path="res://assets/ui/paint/Lini _Workplace/pencils/BlackPencil_chosen.png" id="6_a2n4y"]
 [ext_resource type="Texture2D" uid="uid://cu188j1j5d5fj" path="res://assets/ui/paint/Lini _Workplace/Eraser.png" id="7_nbkl8"]
 [ext_resource type="Texture2D" uid="uid://h8x62mxmgv63" path="res://assets/ui/paint/Lini _Workplace/Back_Button.png" id="8_hv1bc"]
@@ -82,9 +82,12 @@ scale = Vector2(0.25, 0.25)
 texture = ExtResource("4_i2xn7")
 
 [node name="Canvas" type="TextureRect" parent="DrawingRoot" index="2" unique_id=1833118587]
-offset_right = 1280.0
-offset_bottom = 720.0
-texture = ExtResource("4_nif8p")
+offset_left = 276.0
+offset_top = 148.0
+offset_right = 3229.0
+offset_bottom = 1869.0
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("5_gb6ka")
 expand_mode = 1
 metadata/_edit_use_anchors_ = true
 

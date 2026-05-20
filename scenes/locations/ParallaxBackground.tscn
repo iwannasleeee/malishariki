@@ -5,9 +5,9 @@
 [ext_resource type="Texture2D" uid="uid://b2nqrdp1pv3be" path="res://assets/locations/sky4.png" id="2_8711w"]
 [ext_resource type="Texture2D" uid="uid://dheefg6o0xrem" path="res://assets/locations/ground3.png" id="2_ob7jg"]
 [ext_resource type="Texture2D" uid="uid://88eatewneubs" path="res://assets/locations/sky3.png" id="3_0jj0q"]
-[ext_resource type="Texture2D" uid="uid://bt5ffpr5qa85v" path="res://assets/locations/ground2.png" id="3_kmvh4"]
 [ext_resource type="Texture2D" uid="uid://ch6j3el7teeby" path="res://assets/locations/sky2.png" id="4_kku47"]
 [ext_resource type="Texture2D" uid="uid://cl5lklfabsdix" path="res://assets/locations/sky1.png" id="5_35eui"]
+[ext_resource type="Texture2D" uid="uid://k58e7vcq8fpb" path="res://assets/locations/allPath.png" id="8_l3nyy"]
 
 [node name="ParallaxBackground" type="ParallaxBackground" unique_id=87852714]
 script = ExtResource("1_l3nyy")
@@ -83,7 +83,7 @@ centered = false
 z_index = -1
 position = Vector2(-269, 0)
 scale = Vector2(0.32044446, 0.3204444)
-texture = ExtResource("3_kmvh4")
+texture = ExtResource("8_l3nyy")
 centered = false
 
 [node name="NavigationObstacle2D" type="NavigationObstacle2D" parent="GroundLayer2" unique_id=1151690742]

@@ -295,7 +295,7 @@ func connect_ui():
 	
 	# Инструменты
 	$UI/Eraser.pressed.connect(select_eraser)
-	$UI/Tape.pressed.connect(select_tape)
+	$UI/BlueTape.pressed.connect(select_tape)
 	$UI/Back.pressed.connect(undo)
 	$UI/Redo.pressed.connect(redo)
 	for child in $UI.get_children():
