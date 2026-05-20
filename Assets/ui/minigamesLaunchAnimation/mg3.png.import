@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cwi7l4j1r274t"
-path="res://.godot/imported/lini_idle.png-9350e4a55c1c094b9c7a3e3b80ecb211.ctex"
+uid="uid://b7k5g0u05ws1f"
+path="res://.godot/imported/mg3.png-a9a7d8fa2bc3370f9e2678b6248290f4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/Lini/lini_idle.png"
-dest_files=["res://.godot/imported/lini_idle.png-9350e4a55c1c094b9c7a3e3b80ecb211.ctex"]
+source_file="res://assets/ui/minigamesLaunchAnimation/mg3.png"
+dest_files=["res://.godot/imported/mg3.png-a9a7d8fa2bc3370f9e2678b6248290f4.ctex"]
 
 [params]
 

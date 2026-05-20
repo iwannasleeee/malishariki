@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://df1frskn0se13"]
 
 [ext_resource type="Script" uid="uid://fq6gua4nh1i6" path="res://scripts/lini.gd" id="1_d4li8"]
-[ext_resource type="Texture2D" uid="uid://cwi7l4j1r274t" path="res://assets/sprites/Lini/lini_idle.png" id="1_s3veh"]
+[ext_resource type="Texture2D" uid="uid://cwi7l4j1r274t" path="res://assets/sprites/Lini/lini_idle1.png" id="1_s3veh"]
 [ext_resource type="Resource" uid="uid://doesqoiw2mbww" path="res://resources/lini_config_resource.tres" id="2_20ixu"]
 [ext_resource type="Texture2D" uid="uid://c13fyy1p5fdf7" path="res://assets/sprites/Lini/lini_walk1.PNG" id="2_hmr14"]
 [ext_resource type="Resource" uid="uid://caambmra2yiua" path="res://resources/lini_mini_config_resource.tres" id="3_auf18"]
