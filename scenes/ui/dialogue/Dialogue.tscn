@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://ceolb7wgf60t8"]
 
-[ext_resource type="Script" uid="uid://dlshn3h2vxjwf" path="res://scripts/dialogue.gd" id="1_1kdtj"]
+[ext_resource type="Script" uid="uid://dlshn3h2vxjwf" path="res://scripts/dialogue.gd" id="1_gpble"]
 
 [node name="Dialogue" type="Control" unique_id=108227513]
 layout_mode = 3
@@ -9,7 +9,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_1kdtj")
+script = ExtResource("1_gpble")
 
 [node name="Panel" type="PanelContainer" parent="." unique_id=428770414]
 layout_mode = 1
@@ -53,5 +53,8 @@ offset_right = 8.0
 offset_bottom = 8.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="PortraitAnchor" type="Control" parent="." unique_id=588159081]
+anchors_preset = 0
 
 [connection signal="pressed" from="ContinueButton" to="." method="_on_continue_button_pressed"]

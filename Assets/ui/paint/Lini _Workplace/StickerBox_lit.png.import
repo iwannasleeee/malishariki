@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://1vyye1uevw72"
-path="res://.godot/imported/StickerBox_lit.png-70f59e49492271031e92686dea0f2663.ctex"
+path="res://.godot/imported/StickerBox_lit.png-a2e16428ad6b96ce71542ba5fc0d0025.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui/paint/Lini _Workplace/StickerBox_lit.png"
-dest_files=["res://.godot/imported/StickerBox_lit.png-70f59e49492271031e92686dea0f2663.ctex"]
+source_file="res://Assets/ui/paint/Lini _Workplace/StickerBox_lit.png"
+dest_files=["res://.godot/imported/StickerBox_lit.png-a2e16428ad6b96ce71542ba5fc0d0025.ctex"]
 
 [params]
 

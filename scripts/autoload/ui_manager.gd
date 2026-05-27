@@ -96,7 +96,12 @@ func _swap_screen(container: Control, scene_path: String) -> void:
 		container.visible = false
 		return
 
-	var screen := (load(scene_path) as PackedScene).instantiate() as Control
+	var packed := load(scene_path)
+	if packed == null:
+		push_error("UIManager: не удалось загрузить сцену: " + scene_path)
+		return
+	var screen := (packed as PackedScene).instantiate() as Control
+	
 	screen.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	container.add_child(screen)
 	container.visible = true
