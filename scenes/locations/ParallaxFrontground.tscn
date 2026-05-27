@@ -1,7 +1,5 @@
 [gd_scene format=3 uid="uid://bh4pkisxjime7"]
 
-[ext_resource type="Texture2D" uid="uid://c0fxakmpsp35u" path="res://assets/locations/FlowerAndTree.png" id="1_ddgxo"]
-
 [node name="ParallaxFrountground" type="ParallaxBackground" unique_id=333348341]
 layer = 100
 
@@ -11,5 +9,4 @@ motion_scale = Vector2(1.009, 1)
 [node name="Ground" type="Sprite2D" parent="GroundLayer" unique_id=1652855850]
 position = Vector2(-273, -2)
 scale = Vector2(0.3217778, 0.3217778)
-texture = ExtResource("1_ddgxo")
 centered = false
