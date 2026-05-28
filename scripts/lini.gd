@@ -4,11 +4,6 @@ enum State { NORMAL, MINI }
 
 @export var current_state: State = State.NORMAL
 
-@export var config_normal: PlayerStateConfig
-@export var config_mini: PlayerStateConfig
-
-var current_config: PlayerStateConfig
-
 # Параметры для каждого состояния
 @export var speed_normal: float = 200.0
 @export var speed_mini: float = 150.0
@@ -33,14 +28,9 @@ var sprite_base_y: float
 # Переменная для отслеживания состояния движения
 var is_moving: bool = false
 var current_interactable: InteractableObject = null
-
-func apply_state(config: PlayerStateConfig):
-	current_config = config
 	
 func _ready():
 	await get_tree().process_frame
-	
-	apply_state(config_normal if current_state == State.NORMAL else config_mini)
 	
 	EventBus.interactable_interact.connect(_interactable_interact)
 	
@@ -109,17 +99,15 @@ func _physics_process(delta):
 		if current_interactable:
 			current_interactable.interact(self)
 			current_interactable = null
-		if current_config and current_state == State.MINI:
-			var jump_duration = current_config.jump_duration
-			var jump_height = current_config.jump_height
-			if jump_time < jump_duration && jump_time > 0.0:
+		if current_state == State.MINI:
+			if jump_time < jump_duration_mini && jump_time > 0.0:
 				jump_time += delta
-				if jump_time >= jump_duration:
+				if jump_time >= jump_duration_mini:
 					jump_time = 0.0
 					animated_sprite.position.y = sprite_base_y
 
-				var t = jump_time / jump_duration
-				var height = 4.0 * jump_height * t * (1.0 - t)
+				var t = jump_time / jump_duration_mini
+				var height = 4.0 * jump_height_mini * t * (1.0 - t)
 				animated_sprite.position.y = sprite_base_y - height
 
 		if is_moving:
@@ -152,14 +140,14 @@ func _physics_process(delta):
 	else:
 		# Иначе просто применяем вычисленную скорость
 		velocity = intended_velocity
-	if current_config and current_state == State.MINI:
+	if current_state == State.MINI:
 		if is_moving:
 			jump_time += delta
-			if jump_time > current_config.jump_duration:
+			if jump_time > jump_duration_mini:
 				jump_time = 0.0
 
-			var t = jump_time / current_config.jump_duration
-			var height = 4.0 * current_config.jump_height * t * (1.0 - t)
+			var t = jump_time / jump_duration_mini
+			var height = 4.0 * jump_height_mini * t * (1.0 - t)
 			animated_sprite.position.y = sprite_base_y - height
 		else:
 			jump_time = 0.0
