@@ -16,7 +16,12 @@ var last_pos: Vector2
 
 # ==== Кисть ====
 var brush_color: Color = Color.BLACK
-@export var brush_size: int = 6
+
+@export var brush_big_size: int = 350
+@export var brush_middle_size: int = 250 
+@export var brush_small_size: int = 150
+
+var brush_size: int = brush_middle_size
 @export var eraser_size: int = 6
 var brush_image: Image        # готовая кисть (маска * цвет, scaled)
 var eraser_mask_image: Image  # маска формы ластика (белый круг)
@@ -492,3 +497,17 @@ func redo():
 	undo_stack.append(image.duplicate())
 	image = redo_stack.pop_back()
 	texture_dirty = true
+
+# ===================== Change Size =========================
+
+func _on_big_size_pressed() -> void:
+	brush_size = brush_big_size
+	_bake_brush_image()
+
+func _on_middle_size_pressed() -> void:
+	brush_size = brush_middle_size
+	_bake_brush_image()
+
+func _on_small_size_pressed() -> void:
+	brush_size = brush_small_size
+	_bake_brush_image()

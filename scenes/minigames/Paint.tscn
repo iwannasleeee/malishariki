@@ -63,7 +63,6 @@
 
 [node name="DrawingRoot" type="Node2D" parent="." index="0" unique_id=288447002]
 script = ExtResource("2_g73lj")
-brush_size = 250
 eraser_size = 60
 tape_width = 125
 tape_repeat_px = 493.0
@@ -389,3 +388,6 @@ texture = ExtResource("56_4y3tc")
 centered = false
 
 [connection signal="pressed" from="DrawingRoot/UI/Close" to="." method="_on_close_pressed"]
+[connection signal="pressed" from="DrawingRoot/UI/BigSize" to="DrawingRoot" method="_on_big_size_pressed"]
+[connection signal="pressed" from="DrawingRoot/UI/MiddleSize" to="DrawingRoot" method="_on_middle_size_pressed"]
+[connection signal="pressed" from="DrawingRoot/UI/SmallSize" to="DrawingRoot" method="_on_small_size_pressed"]
