@@ -65,7 +65,8 @@
 
 [node name="DrawingRoot" type="Node2D" parent="." index="0" unique_id=288447002]
 script = ExtResource("2_g73lj")
-brush_size = 120
+brush_size = 250
+eraser_size = 60
 
 [node name="PaintBackroundAndZaglushka" type="Sprite2D" parent="DrawingRoot" index="0" unique_id=1523315224]
 position = Vector2(640, 360)

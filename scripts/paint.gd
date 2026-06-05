@@ -17,6 +17,7 @@ var last_pos: Vector2
 # ==== Кисть ====
 var brush_color: Color = Color.BLACK
 @export var brush_size: int = 6
+@export var eraser_size: int = 6
 var brush_image: Image        # готовая кисть (маска * цвет, scaled)
 var eraser_mask_image: Image  # маска формы ластика (белый круг)
 var brush_masks: Dictionary = {}   # имя → Image оригинальная маска
@@ -197,15 +198,14 @@ func _bake_brush_image():
 
 # Пересчитываем офсеты ластика (круглая форма фиксированная)
 func _bake_eraser_mask():
-	var size := brush_size * 2 + 1
-	eraser_mask_image = Image.create(size, size, false, Image.FORMAT_RGBA8)
+	eraser_mask_image = Image.create(eraser_size, eraser_size, false, Image.FORMAT_RGBA8)
 	eraser_mask_image.fill(Color(0, 0, 0, 0))
 
-	var r := float(brush_size)
+	var r := float(eraser_size/2)
 	var r2 := r * r
 
-	for y in range(size):
-		for x in range(size):
+	for y in range(eraser_size):
+		for x in range(eraser_size):
 			var dx := float(x) - r
 			var dy := float(y) - r
 			if dx * dx + dy * dy <= r2:
@@ -296,6 +296,7 @@ func connect_ui():
 	# Инструменты
 	$UI/Eraser.pressed.connect(select_eraser)
 	$UI/BlueTape.pressed.connect(select_tape)
+	$UI/PinkTape.pressed
 	$UI/Back.pressed.connect(undo)
 	$UI/Redo.pressed.connect(redo)
 	for child in $UI.get_children():
@@ -376,14 +377,13 @@ func draw_eraser_stamp(pos: Vector2):
 	if eraser_mask_image == null:
 		return
 
-	var size := brush_size * 2 + 1
-	var x0 := int(pos.x) - brush_size
-	var y0 := int(pos.y) - brush_size
+	var x0 := int(pos.x) - eraser_size / 2
+	var y0 := int(pos.y) - eraser_size / 2
 
 	var src_x := maxi(x0, 0)
 	var src_y := maxi(y0, 0)
-	var src_w := mini(x0 + size, image.get_width()) - src_x
-	var src_h := mini(y0 + size, image.get_height()) - src_y
+	var src_w := mini(x0 + eraser_size, image.get_width()) - src_x
+	var src_h := mini(y0 + eraser_size, image.get_height()) - src_y
 
 	if src_w <= 0 or src_h <= 0:
 		return
