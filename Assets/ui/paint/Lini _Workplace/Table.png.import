@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://oaikkoyrbdud"
-path="res://.godot/imported/Table.png-d54e8206a33b4c8f120fe303a918328d.ctex"
+path="res://.godot/imported/Table.png-42fcfa64a0173ddb720e36495a98e454.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui/paint/Lini _Workplace/Table.png"
-dest_files=["res://.godot/imported/Table.png-d54e8206a33b4c8f120fe303a918328d.ctex"]
+source_file="res://Assets/ui/paint/Lini _Workplace/Table.png"
+dest_files=["res://.godot/imported/Table.png-42fcfa64a0173ddb720e36495a98e454.ctex"]
 
 [params]
 
