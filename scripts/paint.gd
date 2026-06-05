@@ -38,11 +38,11 @@ var tape_waiting_second_point := false
 @export var tape_repeat_px: float = 240.0
 @export var tape_opacity: float = 1.0
 
-var tape_texture_image: Image
+var tape_textures: Dictionary = {}   # имя → ImageTexture
+var tape_godot_tex: ImageTexture 
 
 var tape_viewport   : SubViewport
 var tape_blend_rect : ColorRect
-var tape_godot_tex  : ImageTexture   # tape_texture_image как Texture2D
 var tape_canvas_snap: ImageTexture   # снимок canvas перед рендером
 
 # ==== Undo / Redo ====
@@ -167,13 +167,30 @@ func _load_brushes():
 		set_brush(brush_masks.keys()[0])
 # ==================== Загрузка скотча ======================
 func _load_tape_texture():
-	var path = "res://assets/ui/paint/Lini _Workplace/tapes/BlueTexture.png"
-	if ResourceLoader.exists(path):
-		var tex = load(path) as Texture2D
-		if tex:
-			tape_texture_image = tex.get_image()
-			tape_texture_image.convert(Image.FORMAT_RGBA8)
-			tape_godot_tex = ImageTexture.create_from_image(tape_texture_image)
+	var tape_files = {
+		"BlueTape":   "res://assets/ui/paint/Lini _Workplace/tapes/BlueTexture.png",
+		"GreenTape":  "res://assets/ui/paint/Lini _Workplace/tapes/GreenTexture.png",
+		"LilacTape":  "res://assets/ui/paint/Lini _Workplace/tapes/LilacTexture.png",
+		"OrangeTape": "res://assets/ui/paint/Lini _Workplace/tapes/OrangeTexture.png",
+		"PinkTape":   "res://assets/ui/paint/Lini _Workplace/tapes/PinkTexture.png",
+		"WhiteTape":  "res://assets/ui/paint/Lini _Workplace/tapes/WhiteTexture.png",
+		"YellowTape": "res://assets/ui/paint/Lini _Workplace/tapes/YellowTexture.png",
+	}
+
+	for tape_name in tape_files:
+		var path = tape_files[tape_name]
+		if ResourceLoader.exists(path):
+			var tex = load(path) as Texture2D
+			if tex:
+				var img = tex.get_image()
+				img.convert(Image.FORMAT_RGBA8)
+				tape_textures[tape_name] = ImageTexture.create_from_image(img)
+		else:
+			push_warning("Tape texture not found: %s" % path)
+
+	# Дефолтная текстура — первая доступная
+	if tape_textures.size() > 0:
+		tape_godot_tex = tape_textures.values()[0]
 # Пересчитывается только при смене кисти / размера / цвета
 func _bake_brush_image():
 	if current_brush_name == "" or not brush_masks.has(current_brush_name):
@@ -195,6 +212,14 @@ func _bake_brush_image():
 				brush_image.set_pixel(x, y, c)
 			else:
 				brush_image.set_pixel(x, y, Color(0, 0, 0, 0))
+
+func select_tape(tape_name: String):
+	current_tool = Tool.TAPE
+	tape_waiting_second_point = false
+	if tape_textures.has(tape_name):
+		tape_godot_tex = tape_textures[tape_name]
+	else:
+		push_warning("Unknown tape: %s" % tape_name)
 
 # Пересчитываем офсеты ластика (круглая форма фиксированная)
 func _bake_eraser_mask():
@@ -234,9 +259,6 @@ func select_color(color: Color):
 func select_eraser():
 	current_tool = Tool.ERASER
 # ===================== Скотч ===============================
-func select_tape():
-	current_tool = Tool.TAPE
-	tape_waiting_second_point = false
 
 func draw_tape_segment(a: Vector2, b: Vector2) -> void:
 	if tape_godot_tex == null:
@@ -295,8 +317,13 @@ func connect_ui():
 	
 	# Инструменты
 	$UI/Eraser.pressed.connect(select_eraser)
-	$UI/BlueTape.pressed.connect(select_tape)
-	$UI/PinkTape.pressed
+	$UI/BlueTape.pressed.connect(func(): select_tape("BlueTape"))
+	$UI/GreenTape.pressed.connect(func(): select_tape("GreenTape"))
+	$UI/LilacTape.pressed.connect(func(): select_tape("LilacTape"))
+	$UI/OrangeTape.pressed.connect(func(): select_tape("OrangeTape"))
+	$UI/PinkTape.pressed.connect(func(): select_tape("PinkTape"))
+	$UI/WhiteTape.pressed.connect(func(): select_tape("WhiteTape"))
+	$UI/YellowTape.pressed.connect(func(): select_tape("YellowTape"))
 	$UI/Back.pressed.connect(undo)
 	$UI/Redo.pressed.connect(redo)
 	for child in $UI.get_children():
