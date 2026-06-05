@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://fn06yn7jysch"
-path="res://.godot/imported/Canvas.PNG-20bd741eada59239ba91510313481548.ctex"
+path="res://.godot/imported/Canvas.PNG-a987a54e5646d59aded8b7984184c7cd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui/paint/Canvas.PNG"
-dest_files=["res://.godot/imported/Canvas.PNG-20bd741eada59239ba91510313481548.ctex"]
+source_file="res://Assets/ui/paint/Canvas.PNG"
+dest_files=["res://.godot/imported/Canvas.PNG-a987a54e5646d59aded8b7984184c7cd.ctex"]
 
 [params]
 

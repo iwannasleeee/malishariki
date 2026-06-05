@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dmaccjhf64mro"
-path="res://.godot/imported/LiniBedroom.PNG-83867d0f30c89d9c3089e0338b62411a.ctex"
+path="res://.godot/imported/LiniBedroom.PNG-bdc511558ae73e61ce4107645affed5e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/locations/LiniBedroom.PNG"
-dest_files=["res://.godot/imported/LiniBedroom.PNG-83867d0f30c89d9c3089e0338b62411a.ctex"]
+source_file="res://Assets/Locations/LiniBedroom.PNG"
+dest_files=["res://.godot/imported/LiniBedroom.PNG-bdc511558ae73e61ce4107645affed5e.ctex"]
 
 [params]
 

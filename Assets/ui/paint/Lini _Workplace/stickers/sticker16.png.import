@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://l6yky7565f81"
-path="res://.godot/imported/sticker16.png-4c513d59718a493e6262a545f2e6aff5.ctex"
+path="res://.godot/imported/sticker16.png-ad96132da9e61d715652809b91ab2a45.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui/paint/Lini _Workplace/stickers/sticker16.png"
-dest_files=["res://.godot/imported/sticker16.png-4c513d59718a493e6262a545f2e6aff5.ctex"]
+source_file="res://Assets/ui/paint/Lini _Workplace/stickers/sticker16.png"
+dest_files=["res://.godot/imported/sticker16.png-ad96132da9e61d715652809b91ab2a45.ctex"]
 
 [params]
 
