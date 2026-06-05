@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c8ncgguujopyi"
-path="res://.godot/imported/rabbit_forest.JPG-11d2b90bb935e45a72673a4506ecce97.ctex"
+uid="uid://xle667608sgt"
+path="res://.godot/imported/Tumba_TapePink.png-7dbf87087ff283a9c3d59e4c2ed614a0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/locations/rabbit_forest.JPG"
-dest_files=["res://.godot/imported/rabbit_forest.JPG-11d2b90bb935e45a72673a4506ecce97.ctex"]
+source_file="res://assets/ui/minigames/Tumba/Tumba_TapePink.png"
+dest_files=["res://.godot/imported/Tumba_TapePink.png-7dbf87087ff283a9c3d59e4c2ed614a0.ctex"]
 
 [params]
 
