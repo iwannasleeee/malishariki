@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bblrs277shk3w"
-path="res://.godot/imported/Finish_Button_lit.png-f05521ee1d227cd153e4c7cf2aa3333f.ctex"
+path="res://.godot/imported/Finish_Button_lit.png-2c5232432a0d1a349201534f48b5b474.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/ui/paint/Lini _Workplace/Finish_Button_lit.png"
-dest_files=["res://.godot/imported/Finish_Button_lit.png-f05521ee1d227cd153e4c7cf2aa3333f.ctex"]
+source_file="res://assets/ui/paint/Lini _Workplace/Finish_Button_lit.png"
+dest_files=["res://.godot/imported/Finish_Button_lit.png-2c5232432a0d1a349201534f48b5b474.ctex"]
 
 [params]
 

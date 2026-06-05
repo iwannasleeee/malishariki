@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://j8o20vvl2kpo"
-path="res://.godot/imported/Pause_WindowZglushka.png-c81e22e963d9d264eff684aa7e802ac9.ctex"
+path="res://.godot/imported/Pause_WindowZglushka.png-e7a3676d9bd7a7166e9aa64d40d8aa9b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/ui/Pause_WindowZglushka.png"
-dest_files=["res://.godot/imported/Pause_WindowZglushka.png-c81e22e963d9d264eff684aa7e802ac9.ctex"]
+source_file="res://assets/ui/Pause_WindowZglushka.png"
+dest_files=["res://.godot/imported/Pause_WindowZglushka.png-e7a3676d9bd7a7166e9aa64d40d8aa9b.ctex"]
 
 [params]
 
