@@ -511,3 +511,8 @@ func _on_middle_size_pressed() -> void:
 func _on_small_size_pressed() -> void:
 	brush_size = brush_small_size
 	_bake_brush_image()
+
+
+func _on_exit_pressed() -> void:
+	EventBus.paint_finished.emit({})
+	UIManager.hide_paint()

@@ -5,23 +5,29 @@ var hud: Control
 var main_menu: Control
 var minigame: Control
 var dialogue_container: Control
+var paint: Control
 
 var current_hud_screen: Control
 var current_menu_screen: Control
 var current_minigame_screen: Control
 var current_dialogue_screen: Control
+var current_paint_screen: Control
 
-func initialize(h: Control, m: Control, mg: Control, d: Control) -> void:
+func initialize(h: Control, m: Control, mg: Control, d: Control, p: Control) -> void:
 	hud = h
 	main_menu = m
 	minigame = mg
 	dialogue_container = d
+	paint = p
 	
 	EventBus.minigame_started.connect(show_minigame)
 	EventBus.minigame_finished.connect(hide_minigame)
 	
 	EventBus.dialogue_started.connect(show_dialogue)
 	EventBus.dialogue_finished.connect(hide_dialogue)
+	
+	EventBus.paint_started.connect(show_paint)
+	EventBus.paint_finished.connect(hide_paint)
 # --- MainMenu ---
 func show_menu_screen(scene_path: String) -> void:
 	_swap_screen(main_menu, scene_path)
@@ -85,6 +91,28 @@ func hide_dialogue() -> void:
 	get_tree().paused = false
 	_swap_screen(dialogue_container, "") # Очистит контейнер и скроет его
 	
+func show_paint(scene_path: String) -> void:
+	if current_paint_screen and is_instance_valid(current_paint_screen):
+		current_paint_screen.queue_free()
+
+	var screen: Node = (load(scene_path) as PackedScene).instantiate()
+	paint.add_child(screen)
+
+	current_paint_screen = screen
+	paint.visible = true
+
+	if screen.has_signal("finished"):
+		screen.finished.connect(hide_paint)
+
+	get_tree().paused = true
+	
+func hide_paint() -> void:
+	get_tree().paused = false
+	if current_paint_screen and is_instance_valid(current_paint_screen):
+		current_paint_screen.queue_free()
+	current_paint_screen = null
+	paint.visible = false
+	print("paint finish")
 # --- Внутренняя логика ---
 func _swap_screen(container: Control, scene_path: String) -> void:
 	# Получаем ссылку на текущий экран этого контейнера
