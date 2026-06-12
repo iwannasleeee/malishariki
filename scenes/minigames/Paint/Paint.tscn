@@ -1,0 +1,456 @@
+[gd_scene format=3 uid="uid://c2p5q1mbmp2fu"]
+
+[ext_resource type="PackedScene" uid="uid://khyulkrrsf0r" path="res://scenes/minigames/MinigameBase.tscn" id="1_3f1yg"]
+[ext_resource type="Script" uid="uid://uhjs3tyikosv" path="res://scripts/paint.gd" id="2_6xco5"]
+[ext_resource type="Texture2D" uid="uid://rdfq3eteqnr4" path="res://Assets/ui/paint/Lini _Workplace/Lini_Paint.png" id="3_k6xn3"]
+[ext_resource type="Texture2D" uid="uid://oaikkoyrbdud" path="res://Assets/ui/paint/Lini _Workplace/Table.png" id="4_6ma6h"]
+[ext_resource type="Texture2D" uid="uid://3ktcywnhw52v" path="res://Assets/ui/paint/Lini _Workplace/NewCanvas.png" id="5_qujv6"]
+[ext_resource type="Texture2D" uid="uid://das4sp3aob31h" path="res://Assets/ui/paint/Lini _Workplace/pencils/BlackPencil.png" id="6_250ui"]
+[ext_resource type="Texture2D" uid="uid://dl6rqddbwf8yc" path="res://Assets/ui/paint/Lini _Workplace/pencils/BlackPencil_chosen.png" id="7_c758y"]
+[ext_resource type="Texture2D" uid="uid://cu188j1j5d5fj" path="res://Assets/ui/paint/Lini _Workplace/Eraser.png" id="8_tyhnh"]
+[ext_resource type="Texture2D" uid="uid://xh2ncgeyh2p8" path="res://Assets/ui/paint/Lini _Workplace/Eraser_lit.png" id="9_j32xw"]
+[ext_resource type="Texture2D" uid="uid://h8x62mxmgv63" path="res://Assets/ui/paint/Lini _Workplace/Back_Button.png" id="10_abuk1"]
+[ext_resource type="Texture2D" uid="uid://c2mlxhm36gutq" path="res://Assets/ui/paint/Lini _Workplace/Redo_Button.png" id="11_m05yj"]
+[ext_resource type="Texture2D" uid="uid://ckyyqx3wfvmw8" path="res://Assets/ui/paint/Lini _Workplace/Exit_Button.png" id="12_bseie"]
+[ext_resource type="Texture2D" uid="uid://cvfwg60121x0w" path="res://Assets/ui/paint/Lini _Workplace/pencils/RedPencil.png" id="13_4cim5"]
+[ext_resource type="Texture2D" uid="uid://de0gx26llif1q" path="res://Assets/ui/paint/Lini _Workplace/pencils/RedPencil_chosen.png" id="14_mkig3"]
+[ext_resource type="Texture2D" uid="uid://dp6ryvo58w8ax" path="res://Assets/ui/paint/Lini _Workplace/pencils/OrangePencil.png" id="15_aw002"]
+[ext_resource type="Texture2D" uid="uid://bld53iaucfef7" path="res://Assets/ui/paint/Lini _Workplace/pencils/OrangePencil_chosen.png" id="16_foatp"]
+[ext_resource type="Texture2D" uid="uid://bdv7k3d5cahoh" path="res://Assets/ui/paint/Lini _Workplace/pencils/GreenPencil.png" id="17_tn4iw"]
+[ext_resource type="Texture2D" uid="uid://d3bxxw2q4d6ec" path="res://Assets/ui/paint/Lini _Workplace/pencils/GreenPencil_chosen.png" id="18_tot66"]
+[ext_resource type="Texture2D" uid="uid://cxmtc17ux84kp" path="res://Assets/ui/paint/Lini _Workplace/pencils/BluePencil.png" id="19_0lvt6"]
+[ext_resource type="Texture2D" uid="uid://bx8wqix62yg2w" path="res://Assets/ui/paint/Lini _Workplace/pencils/BluePencil_chosen.png" id="20_hv4ym"]
+[ext_resource type="Texture2D" uid="uid://d2plk24f8ob4r" path="res://Assets/ui/paint/Lini _Workplace/pencils/PinkPencil.png" id="21_syg24"]
+[ext_resource type="Texture2D" uid="uid://bcg4buyfir13r" path="res://Assets/ui/paint/Lini _Workplace/pencils/PinkPencil_chosen.png" id="22_86py0"]
+[ext_resource type="Texture2D" uid="uid://c2ojx8j1gu3mh" path="res://Assets/ui/paint/Lini _Workplace/pencils/YellowPencil.png" id="23_xqi4a"]
+[ext_resource type="Texture2D" uid="uid://cp2v153l2adtr" path="res://Assets/ui/paint/Lini _Workplace/pencils/YellowPencil_chosen.png" id="24_un7cl"]
+[ext_resource type="Texture2D" uid="uid://bc4aack8sptml" path="res://Assets/ui/paint/Lini _Workplace/pencils/BrownPencil.png" id="25_po1ur"]
+[ext_resource type="Texture2D" uid="uid://dy0o85c37ovqn" path="res://Assets/ui/paint/Lini _Workplace/pencils/BrownPencil_chosen.png" id="26_nrdmp"]
+[ext_resource type="Texture2D" uid="uid://b2djkoqo8e5g2" path="res://Assets/ui/paint/Lini _Workplace/pencils/AquaPencil.png" id="27_gx0yg"]
+[ext_resource type="Texture2D" uid="uid://d2s0cqgr60cso" path="res://Assets/ui/paint/Lini _Workplace/pencils/AquaPencil_chosen.png" id="28_x1lt4"]
+[ext_resource type="Texture2D" uid="uid://btptfqidmkl3s" path="res://Assets/ui/paint/Lini _Workplace/pencils/LilacPencil.png" id="29_xukxr"]
+[ext_resource type="Texture2D" uid="uid://dmdqkaxfnabd2" path="res://Assets/ui/paint/Lini _Workplace/pencils/LilacPencil_chosen.png" id="30_uy0gm"]
+[ext_resource type="Texture2D" uid="uid://4q6kh5dkxut6" path="res://Assets/ui/paint/Lini _Workplace/Back_Button_lit.png" id="31_hfn5u"]
+[ext_resource type="Texture2D" uid="uid://b5h8wcnr2mmex" path="res://Assets/ui/paint/Lini _Workplace/Redo_Button_lit.png" id="32_4ur8a"]
+[ext_resource type="Texture2D" uid="uid://c38kjb48rncpk" path="res://Assets/ui/paint/Lini _Workplace/BigSize.png" id="33_qgaic"]
+[ext_resource type="Texture2D" uid="uid://vcem7885juhc" path="res://Assets/ui/paint/Lini _Workplace/BigSize_lit.png" id="34_03aqd"]
+[ext_resource type="Texture2D" uid="uid://dgjt20nmajtt1" path="res://Assets/ui/paint/Lini _Workplace/MiddleSize.png" id="35_gve37"]
+[ext_resource type="Texture2D" uid="uid://cifovkwlxqwc3" path="res://Assets/ui/paint/Lini _Workplace/MiddleSize_lit.png" id="36_23ktp"]
+[ext_resource type="Texture2D" uid="uid://103b4rrbao55" path="res://Assets/ui/paint/Lini _Workplace/SmallSize.png" id="37_88s0u"]
+[ext_resource type="Texture2D" uid="uid://d2gq1eam5kf38" path="res://Assets/ui/paint/Lini _Workplace/SmallSize_lit.png" id="38_c5l2g"]
+[ext_resource type="Texture2D" uid="uid://vbtd7r8uvtbi" path="res://Assets/ui/paint/Lini _Workplace/StickerBox.png" id="39_xf6m4"]
+[ext_resource type="Texture2D" uid="uid://1vyye1uevw72" path="res://Assets/ui/paint/Lini _Workplace/StickerBox_lit.png" id="40_4b3ur"]
+[ext_resource type="Texture2D" uid="uid://w5p44jbd7ubc" path="res://Assets/ui/paint/Lini _Workplace/tapes/OrangeTape.png" id="41_q86r5"]
+[ext_resource type="Texture2D" uid="uid://cf2iswxr1mamp" path="res://Assets/ui/paint/Lini _Workplace/tapes/OrangeTape_lit.png" id="42_5ic75"]
+[ext_resource type="Texture2D" uid="uid://cwfcb3lmo8oor" path="res://Assets/ui/paint/Lini _Workplace/tapes/PinkTape.png" id="43_ec6pa"]
+[ext_resource type="Texture2D" uid="uid://cw6yj1ah76hm5" path="res://Assets/ui/paint/Lini _Workplace/tapes/PinkTape_lit.png" id="44_1tkdj"]
+[ext_resource type="Texture2D" uid="uid://ct64dav5jfb" path="res://Assets/ui/paint/Lini _Workplace/tapes/YellowTape.png" id="45_grgoj"]
+[ext_resource type="Texture2D" uid="uid://exibebb42rsd" path="res://Assets/ui/paint/Lini _Workplace/tapes/YellowTape_lit.png" id="46_sgebv"]
+[ext_resource type="Texture2D" uid="uid://bcua4owuoe23x" path="res://Assets/ui/paint/Lini _Workplace/tapes/WhiteTape.png" id="47_s55bs"]
+[ext_resource type="Texture2D" uid="uid://cb1o1w2v0q0u0" path="res://Assets/ui/paint/Lini _Workplace/tapes/WhiteTape_lit.png" id="48_n6l8r"]
+[ext_resource type="Texture2D" uid="uid://cwluwhhaexmjr" path="res://Assets/ui/paint/Lini _Workplace/tapes/LilacTape.png" id="49_g6cwc"]
+[ext_resource type="Texture2D" uid="uid://bycqk5ejx7kr2" path="res://Assets/ui/paint/Lini _Workplace/tapes/LilacTape_lit.png" id="50_4c7v2"]
+[ext_resource type="Texture2D" uid="uid://bgwbyknln8rve" path="res://Assets/ui/paint/Lini _Workplace/tapes/GreenTape.png" id="51_v86jb"]
+[ext_resource type="Texture2D" uid="uid://c0wwgm7628pan" path="res://Assets/ui/paint/Lini _Workplace/tapes/GreenTape_lit.png" id="52_lyrh0"]
+[ext_resource type="Texture2D" uid="uid://bu44ip21bbqxg" path="res://Assets/ui/paint/Lini _Workplace/tapes/BlueTape.png" id="53_dchhx"]
+[ext_resource type="Texture2D" uid="uid://7pnys0rt2p1l" path="res://Assets/ui/paint/Lini _Workplace/tapes/BlueTape_lit.png" id="54_m6son"]
+[ext_resource type="Texture2D" uid="uid://5ccxk4nmdhtn" path="res://Assets/ui/paint/Lini _Workplace/Exit_Button_lit.png" id="55_ufdkh"]
+[ext_resource type="Texture2D" uid="uid://dbsvjumuym31n" path="res://Assets/ui/paint/Lini _Workplace/Finish_Button.png" id="56_7cqja"]
+[ext_resource type="Texture2D" uid="uid://bblrs277shk3w" path="res://Assets/ui/paint/Lini _Workplace/Finish_Button_lit.png" id="57_1iiav"]
+[ext_resource type="Texture2D" uid="uid://bvllsdtnuhyfk" path="res://Assets/ui/paint/Lini _Workplace/StickersPaper.png" id="58_2pta2"]
+[ext_resource type="PackedScene" uid="uid://bl41504nqwejw" path="res://scenes/minigames/Paint/StickerButton.tscn" id="59_l1hxj"]
+[ext_resource type="Texture2D" uid="uid://cdxjww818lna4" path="res://Assets/ui/paint/Lini _Workplace/stickers/sticker1.png" id="60_d7s2u"]
+[ext_resource type="Texture2D" uid="uid://k3hl0dvyng0p" path="res://Assets/ui/paint/Lini _Workplace/stickers/sticker2.png" id="61_qbdlm"]
+[ext_resource type="Texture2D" uid="uid://deyqwns7cof4u" path="res://Assets/ui/RAMA2.png" id="62_km2fh"]
+
+[node name="Paint" unique_id=932141857 instance=ExtResource("1_3f1yg")]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = null
+
+[node name="DrawingRoot" type="Node2D" parent="." index="0" unique_id=288447002]
+script = ExtResource("2_6xco5")
+eraser_size = 60
+tape_width = 125
+tape_repeat_px = 493.0
+
+[node name="PaintBackroundAndZaglushka" type="Sprite2D" parent="DrawingRoot" index="0" unique_id=1523315224]
+position = Vector2(640, 360)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("3_k6xn3")
+
+[node name="PaintBackroundAndZaglushka2" type="Sprite2D" parent="DrawingRoot" index="1" unique_id=26781811]
+position = Vector2(640, 360)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("4_6ma6h")
+
+[node name="Canvas" type="TextureRect" parent="DrawingRoot" index="2" unique_id=1833118587]
+offset_left = 276.0
+offset_top = 148.0
+offset_right = 3229.0
+offset_bottom = 1869.0
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("5_qujv6")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="UI" type="Node2D" parent="DrawingRoot" index="3" unique_id=1554483066]
+
+[node name="BlackPencil" type="TextureButton" parent="DrawingRoot/UI" index="0" unique_id=1904607152]
+offset_left = 1031.0
+offset_top = 162.0
+offset_right = 2071.0
+offset_bottom = 307.0
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("6_250ui")
+texture_pressed = ExtResource("7_c758y")
+texture_hover = ExtResource("7_c758y")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Eraser" type="TextureButton" parent="DrawingRoot/UI" index="1" unique_id=794760707]
+offset_left = 1041.0
+offset_top = 536.0
+offset_right = 1459.0
+offset_bottom = 1017.0
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("8_tyhnh")
+texture_hover = ExtResource("9_j32xw")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="UndoOld" type="Button" parent="DrawingRoot/UI" index="2" unique_id=1576387311]
+visible = false
+offset_left = 317.0
+offset_top = 48.0
+offset_right = 754.0
+offset_bottom = 362.0
+scale = Vector2(0.25, 0.25)
+icon = ExtResource("10_abuk1")
+
+[node name="RedoOld" type="Button" parent="DrawingRoot/UI" index="3" unique_id=736292915]
+visible = false
+offset_left = 406.0
+offset_top = 59.0
+offset_right = 869.0
+offset_bottom = 342.0
+scale = Vector2(0.25, 0.25)
+icon = ExtResource("11_m05yj")
+
+[node name="Close" type="Button" parent="DrawingRoot/UI" index="4" unique_id=672554115]
+visible = false
+offset_left = 831.0
+offset_top = 621.0
+offset_right = 1077.0
+offset_bottom = 856.0
+scale = Vector2(0.25, 0.25)
+icon = ExtResource("12_bseie")
+
+[node name="RedPencil" type="TextureButton" parent="DrawingRoot/UI" index="5" unique_id=1093945484]
+offset_left = 1018.0
+offset_top = 198.0
+offset_right = 2058.0
+offset_bottom = 343.0
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("13_4cim5")
+texture_pressed = ExtResource("14_mkig3")
+texture_hover = ExtResource("14_mkig3")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="OrangePencil" type="TextureButton" parent="DrawingRoot/UI" index="6" unique_id=420924518]
+offset_left = 1018.0
+offset_top = 230.0
+offset_right = 2058.0
+offset_bottom = 375.0
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("15_aw002")
+texture_pressed = ExtResource("16_foatp")
+texture_hover = ExtResource("16_foatp")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="GreenPencil" type="TextureButton" parent="DrawingRoot/UI" index="7" unique_id=291782953]
+offset_left = 1018.0
+offset_top = 272.0
+offset_right = 2058.0
+offset_bottom = 417.0
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("17_tn4iw")
+texture_pressed = ExtResource("18_tot66")
+texture_hover = ExtResource("18_tot66")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="BluePencil" type="TextureButton" parent="DrawingRoot/UI" index="8" unique_id=1837584968]
+offset_left = 1018.0
+offset_top = 304.0
+offset_right = 2058.0
+offset_bottom = 449.0
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("19_0lvt6")
+texture_pressed = ExtResource("20_hv4ym")
+texture_hover = ExtResource("20_hv4ym")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="PinkPencil" type="TextureButton" parent="DrawingRoot/UI" index="9" unique_id=2096796178]
+offset_left = 1018.0
+offset_top = 334.0
+offset_right = 2058.0
+offset_bottom = 479.0
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("21_syg24")
+texture_pressed = ExtResource("22_86py0")
+texture_hover = ExtResource("22_86py0")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="YellowPencil" type="TextureButton" parent="DrawingRoot/UI" index="10" unique_id=1589274441]
+offset_left = 1018.0
+offset_top = 362.0
+offset_right = 2058.0
+offset_bottom = 507.0
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("23_xqi4a")
+texture_pressed = ExtResource("24_un7cl")
+texture_hover = ExtResource("24_un7cl")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="BrownPencil" type="TextureButton" parent="DrawingRoot/UI" index="11" unique_id=1361732755]
+offset_left = 1018.0
+offset_top = 397.0
+offset_right = 2058.0
+offset_bottom = 542.0
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("25_po1ur")
+texture_pressed = ExtResource("26_nrdmp")
+texture_hover = ExtResource("26_nrdmp")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="AquaPencil" type="TextureButton" parent="DrawingRoot/UI" index="12" unique_id=800805452]
+offset_left = 1022.0
+offset_top = 438.0
+offset_right = 2062.0
+offset_bottom = 583.0
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("27_gx0yg")
+texture_pressed = ExtResource("28_x1lt4")
+texture_hover = ExtResource("28_x1lt4")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="LilacPencil" type="TextureButton" parent="DrawingRoot/UI" index="13" unique_id=1256308188]
+offset_left = 1023.0
+offset_top = 474.0
+offset_right = 2063.0
+offset_bottom = 619.0
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("29_xukxr")
+texture_pressed = ExtResource("30_uy0gm")
+texture_hover = ExtResource("30_uy0gm")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Back" type="TextureButton" parent="DrawingRoot/UI" index="14" unique_id=168399462]
+offset_left = 320.0
+offset_top = 49.0
+offset_right = 749.0
+offset_bottom = 355.0
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("10_abuk1")
+texture_hover = ExtResource("31_hfn5u")
+
+[node name="Redo" type="TextureButton" parent="DrawingRoot/UI" index="15" unique_id=1621950081]
+offset_left = 406.0
+offset_top = 62.0
+offset_right = 861.0
+offset_bottom = 337.0
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("11_m05yj")
+texture_hover = ExtResource("32_4ur8a")
+
+[node name="BigSize" type="TextureButton" parent="DrawingRoot/UI" index="16" unique_id=1117112983]
+offset_left = 734.0
+offset_top = 81.0
+offset_right = 922.0
+offset_bottom = 290.0
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("33_qgaic")
+texture_hover = ExtResource("34_03aqd")
+
+[node name="MiddleSize" type="TextureButton" parent="DrawingRoot/UI" index="17" unique_id=1126896262]
+offset_left = 784.0
+offset_top = 91.0
+offset_right = 972.0
+offset_bottom = 300.0
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("35_gve37")
+texture_hover = ExtResource("36_23ktp")
+
+[node name="SmallSize" type="TextureButton" parent="DrawingRoot/UI" index="18" unique_id=968164093]
+offset_left = 833.0
+offset_top = 94.0
+offset_right = 1021.0
+offset_bottom = 303.0
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("37_88s0u")
+texture_hover = ExtResource("38_c5l2g")
+
+[node name="StickerBox" type="TextureButton" parent="DrawingRoot/UI" index="19" unique_id=828868621]
+offset_left = 3.0
+offset_top = 1.0
+offset_right = 1036.0
+offset_bottom = 1685.0
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("39_xf6m4")
+texture_hover = ExtResource("40_4b3ur")
+
+[node name="OrangeTape" type="TextureButton" parent="DrawingRoot/UI" index="20" unique_id=947977986]
+offset_left = 16.0
+offset_top = 407.0
+offset_right = 401.0
+offset_bottom = 793.0
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("41_q86r5")
+texture_hover = ExtResource("42_5ic75")
+
+[node name="PinkTape" type="TextureButton" parent="DrawingRoot/UI" index="21" unique_id=1083685756]
+offset_left = 97.0
+offset_top = 414.0
+offset_right = 482.0
+offset_bottom = 800.0
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("43_ec6pa")
+texture_hover = ExtResource("44_1tkdj")
+
+[node name="YellowTape" type="TextureButton" parent="DrawingRoot/UI" index="22" unique_id=1446785128]
+offset_left = 104.0
+offset_top = 479.0
+offset_right = 489.0
+offset_bottom = 865.0
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("45_grgoj")
+texture_hover = ExtResource("46_sgebv")
+
+[node name="WhiteTape" type="TextureButton" parent="DrawingRoot/UI" index="23" unique_id=1086793278]
+offset_left = 93.0
+offset_top = 536.0
+offset_right = 478.0
+offset_bottom = 922.0
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("47_s55bs")
+texture_hover = ExtResource("48_n6l8r")
+
+[node name="LilacTape" type="TextureButton" parent="DrawingRoot/UI" index="24" unique_id=942491241]
+offset_left = 9.0
+offset_top = 563.0
+offset_right = 395.0
+offset_bottom = 949.0
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("49_g6cwc")
+texture_hover = ExtResource("50_4c7v2")
+
+[node name="GreenTape" type="TextureButton" parent="DrawingRoot/UI" index="25" unique_id=74790873]
+offset_left = 30.0
+offset_top = 464.0
+offset_right = 415.0
+offset_bottom = 850.0
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("51_v86jb")
+texture_hover = ExtResource("52_lyrh0")
+
+[node name="BlueTape" type="TextureButton" parent="DrawingRoot/UI" index="26" unique_id=647995138]
+offset_left = 23.0
+offset_top = 512.0
+offset_right = 408.0
+offset_bottom = 898.0
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("53_dchhx")
+texture_hover = ExtResource("54_m6son")
+
+[node name="Exit" type="TextureButton" parent="DrawingRoot/UI" index="27" unique_id=230065760]
+offset_left = 832.0
+offset_top = 623.0
+offset_right = 1070.0
+offset_bottom = 850.0
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("12_bseie")
+texture_hover = ExtResource("55_ufdkh")
+
+[node name="Finish" type="TextureButton" parent="DrawingRoot/UI" index="28" unique_id=990812591]
+offset_left = 910.0
+offset_top = 591.0
+offset_right = 1346.0
+offset_bottom = 894.0
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("56_7cqja")
+texture_hover = ExtResource("57_1iiav")
+
+[node name="StickerMenu" type="Control" parent="DrawingRoot/UI" index="29" unique_id=91616774]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Background" type="Panel" parent="DrawingRoot/UI/StickerMenu" index="0" unique_id=1207887724]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BackgroundTexture" type="TextureRect" parent="DrawingRoot/UI/StickerMenu/Background" index="0" unique_id=226297518]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -482.0
+offset_top = -274.0
+offset_right = 2495.0
+offset_bottom = 1548.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.32, 0.32)
+texture = ExtResource("58_2pta2")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="StickerButton" parent="DrawingRoot/UI/StickerMenu/Background" index="1" unique_id=1213818777 instance=ExtResource("59_l1hxj")]
+layout_mode = 0
+offset_left = 697.99994
+offset_top = 440.0
+offset_right = 837.4445
+offset_bottom = 582.1001
+rotation = 2.459169
+texture_normal = ExtResource("60_d7s2u")
+sticker_index = 1
+
+[node name="StickerButton2" parent="DrawingRoot/UI/StickerMenu/Background" index="2" unique_id=1913826050 instance=ExtResource("59_l1hxj")]
+layout_mode = 0
+offset_left = 917.0
+offset_top = 326.0
+offset_right = 1072.0
+offset_bottom = 447.0
+texture_normal = ExtResource("61_qbdlm")
+sticker_index = 2
+
+[node name="Rama" type="Sprite2D" parent="DrawingRoot" index="4" unique_id=361144163]
+scale = Vector2(0.32, 0.32)
+texture = ExtResource("62_km2fh")
+centered = false
+
+[connection signal="pressed" from="DrawingRoot/UI/Close" to="." method="_on_close_pressed"]
+[connection signal="pressed" from="DrawingRoot/UI/BigSize" to="DrawingRoot" method="_on_big_size_pressed"]
+[connection signal="pressed" from="DrawingRoot/UI/MiddleSize" to="DrawingRoot" method="_on_middle_size_pressed"]
+[connection signal="pressed" from="DrawingRoot/UI/SmallSize" to="DrawingRoot" method="_on_small_size_pressed"]
+[connection signal="pressed" from="DrawingRoot/UI/Exit" to="DrawingRoot" method="_on_exit_pressed"]
