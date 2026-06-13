@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://f3scv5vbuk1r"
-path="res://.godot/imported/shelf_unlit.png-ff019b370c533d9298920b30daa167dd.ctex"
+path="res://.godot/imported/shelf_unlit.png-e7961380a43d4ec46f49d7022cecb3bc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/interactable/LiniBedroom/shelf_unlit.png"
-dest_files=["res://.godot/imported/shelf_unlit.png-ff019b370c533d9298920b30daa167dd.ctex"]
+source_file="res://Assets/interactable/LiniBedroom/shelf_unlit.png"
+dest_files=["res://.godot/imported/shelf_unlit.png-e7961380a43d4ec46f49d7022cecb3bc.ctex"]
 
 [params]
 

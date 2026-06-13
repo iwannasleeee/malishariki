@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dohcxnbe1i6ys"
-path="res://.godot/imported/lini_walk4.PNG-72b35b6db48f0ce9448d6a60dce7d7e2.ctex"
+path="res://.godot/imported/lini_walk4.PNG-035d5985a96f765907c65a63ed78a536.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/Lini/lini_walk4.PNG"
-dest_files=["res://.godot/imported/lini_walk4.PNG-72b35b6db48f0ce9448d6a60dce7d7e2.ctex"]
+source_file="res://Assets/sprites/Lini/lini_walk4.PNG"
+dest_files=["res://.godot/imported/lini_walk4.PNG-035d5985a96f765907c65a63ed78a536.ctex"]
 
 [params]
 
