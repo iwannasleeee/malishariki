@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://748hin3onq5"
-path="res://.godot/imported/Tumba_Background.png-ae89d68ab8b6d23c89b5b30cfe1964f0.ctex"
+path="res://.godot/imported/Tumba_Background.png-61c2d44eb4f583bc71fb08450a0c3e9e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/ui/minigames/Tumba/Tumba_Background.png"
-dest_files=["res://.godot/imported/Tumba_Background.png-ae89d68ab8b6d23c89b5b30cfe1964f0.ctex"]
+source_file="res://assets/ui/minigames/Tumba/Tumba_Background.png"
+dest_files=["res://.godot/imported/Tumba_Background.png-61c2d44eb4f583bc71fb08450a0c3e9e.ctex"]
 
 [params]
 

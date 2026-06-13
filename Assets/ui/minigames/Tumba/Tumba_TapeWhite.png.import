@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dhhohn2p7s3rp"
-path="res://.godot/imported/Tumba_TapeWhite.png-8c087f2e38697aaa9efc55a442fd38df.ctex"
+path="res://.godot/imported/Tumba_TapeWhite.png-7234d9e4cec6f7e22d682ddb9a797c8d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/ui/minigames/Tumba/Tumba_TapeWhite.png"
-dest_files=["res://.godot/imported/Tumba_TapeWhite.png-8c087f2e38697aaa9efc55a442fd38df.ctex"]
+source_file="res://assets/ui/minigames/Tumba/Tumba_TapeWhite.png"
+dest_files=["res://.godot/imported/Tumba_TapeWhite.png-7234d9e4cec6f7e22d682ddb9a797c8d.ctex"]
 
 [params]
 

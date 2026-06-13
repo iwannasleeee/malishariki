@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cwi7l4j1r274t"
-path="res://.godot/imported/lini_idle1.png-b7da4498b3a0a78debb5ef36d840a612.ctex"
+path="res://.godot/imported/lini_idle1.png-537e28e00044fc38a4c93d5674d0ac92.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/sprites/Lini/lini_idle1.png"
-dest_files=["res://.godot/imported/lini_idle1.png-b7da4498b3a0a78debb5ef36d840a612.ctex"]
+source_file="res://assets/sprites/Lini/lini_idle1.png"
+dest_files=["res://.godot/imported/lini_idle1.png-537e28e00044fc38a4c93d5674d0ac92.ctex"]
 
 [params]
 
