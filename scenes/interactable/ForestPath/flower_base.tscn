@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://bd8be77hpwj5v"]
+
+[ext_resource type="PackedScene" uid="uid://dusogs63f23c" path="res://scenes/interactable/InteractableObject.tscn" id="1_fokfk"]
+[ext_resource type="Script" uid="uid://btm7k8t8hfyu3" path="res://scripts/flower_base.gd" id="2_fvum8"]
+
+[node name="flower_base" unique_id=1008082527 groups=["flowers"] instance=ExtResource("1_fokfk")]
+script = ExtResource("2_fvum8")
+flower_name = "white"

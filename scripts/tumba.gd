@@ -291,7 +291,8 @@ func _collect_item(item: Node2D) -> void:
 	if collected_count >= total_items:
 		maze_completed.emit()
 		win_label.visible = true
-
+		EventBus.minigame_finished.emit({})
+		UIManager.hide_minigame()
 
 func _update_status_label() -> void:
 	status_label.text = "Собрано: %d / %d" % [collected_count, total_items]

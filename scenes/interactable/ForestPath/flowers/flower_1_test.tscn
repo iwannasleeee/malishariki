@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://cedlq61i5g2u7"]
+
+[ext_resource type="PackedScene" uid="uid://bd8be77hpwj5v" path="res://scenes/interactable/ForestPath/flower_base.tscn" id="1_jkwsq"]
+[ext_resource type="Texture2D" uid="uid://bxjpsluy5rf84" path="res://Assets/ui/dialogue/portraits/lini/talk2.png" id="2_5hyvi"]
+[ext_resource type="Texture2D" uid="uid://0aeg85xq6de8" path="res://Assets/ui/dialogue/portraits/lini/talk1.png" id="3_y6y1b"]
+
+[node name="flower1test" unique_id=1008082527 instance=ExtResource("1_jkwsq")]
+flower_name = "1test"
+default_texture = ExtResource("2_5hyvi")
+hover_texture = ExtResource("3_y6y1b")
+
+[node name="Sprite2D" parent="." index="0" unique_id=309976985]
+texture = ExtResource("3_y6y1b")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="1" unique_id=1833766606]
+polygon = PackedVector2Array(21, -31, 0, -31, 0, -30.4, -5, -19.4, -5, -16.7, -15, -26, -15, -27.2, -18.5, -29, -21, -29, -24, -25, -26.7, -25, -18.8, 0, -22, 6.5, -22, 19.3, -13.4, 23, -12.1, 23, -7.299999, 31, 33, 31, 30, 8.700001, 30, 3.4000015, 23, -7.700001, 23, -10, 14.799999, -10, 21, -28.7)
