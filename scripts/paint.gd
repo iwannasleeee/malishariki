@@ -13,6 +13,16 @@ var upload_accum := 0.0
 # ==== Рисование ====
 var drawing := false
 var last_pos: Vector2
+# ==== Стикер ====
+@export var sticker_size: float = 400.0  # максимальная сторона наклейки в px холста
+
+const STICKER_COUNT := 50
+var sticker_textures: Array[Texture2D] = []
+var current_sticker_index: int = -1
+
+var sticker_viewport   : SubViewport
+var sticker_blend_rect : ColorRect
+var sticker_canvas_snap: ImageTexture
 
 # ==== Кисть ====
 var brush_color: Color = Color.BLACK
@@ -32,7 +42,7 @@ var current_brush_name := ""
 # Названия файлов без расширения — они же появятся на кнопках
 const BRUSH_NAMES: Array[String] = ["BrushTexture", "BrushTexture", "BrushTexture", "BrushTexture"]
 
-enum Tool { BRUSH, ERASER, TAPE }
+enum Tool { BRUSH, ERASER, TAPE, STICKER }
 var current_tool = Tool.BRUSH
 
 # ==== Декоративный скотч ====
@@ -68,9 +78,12 @@ func _ready():
 	canvas.texture = texture
 	_load_brushes()
 	_load_tape_texture()
-	_setup_tape_gpu()          # ← добавь эту строку
+	_load_stickers()
+	_setup_tape_gpu()
+	_setup_sticker_gpu()
 	set_brush_size(brush_size)
 	connect_ui()
+	_connect_sticker_buttons()
 
 func _process(delta):
 	if texture_dirty:
@@ -156,6 +169,41 @@ void fragment() {
 	COLOR = result;
 }
 """
+
+const STICKER_SHADER_CODE = """
+shader_type canvas_item;
+
+uniform sampler2D current_canvas : hint_default_transparent;
+uniform sampler2D sticker_tex    : hint_default_transparent;
+uniform vec2  sticker_pos;
+uniform vec2  sticker_size;
+uniform vec2  canvas_size;
+
+vec4 blend_over(vec4 dst, vec4 src) {
+	float a = src.a + dst.a * (1.0 - src.a);
+	if (a <= 0.0) return vec4(0.0);
+	return vec4(
+		(src.rgb * src.a + dst.rgb * dst.a * (1.0 - src.a)) / a, a
+	);
+}
+
+void fragment() {
+	vec4 base = texture(current_canvas, UV);
+	vec4 result = base;
+
+	vec2 px = UV * canvas_size;
+	vec2 half_size = sticker_size * 0.5;
+	vec2 rel = px - sticker_pos;
+
+	if (abs(rel.x) <= half_size.x && abs(rel.y) <= half_size.y) {
+		vec2 sticker_uv = (rel + half_size) / sticker_size;
+		vec4 sticker = texture(sticker_tex, sticker_uv);
+		result = blend_over(base, sticker);
+	}
+
+	COLOR = result;
+}
+"""
 # ===================== Загрузка кистей =====================
 
 func _load_brushes():
@@ -171,6 +219,17 @@ func _load_brushes():
 	if brush_masks.size() > 0:
 		set_brush(brush_masks.keys()[0])
 # ==================== Загрузка скотча ======================
+# =================== Загрузка стикеров =====================
+func _load_stickers():
+	for i in range(1, STICKER_COUNT + 1):
+		var path = "res://Assets/ui/paint/Lini _Workplace/stickers/sticker%d.png" % i
+		if ResourceLoader.exists(path):
+			var tex = load(path) as Texture2D
+			if tex:
+				sticker_textures.append(tex)
+		else:
+			push_warning("Sticker not found: %s" % path)
+			
 func _load_tape_texture():
 	var tape_files = {
 		"BlueTape":   "res://assets/ui/paint/Lini _Workplace/tapes/BlueTexture.png",
@@ -322,6 +381,7 @@ func connect_ui():
 	
 	# Инструменты
 	$UI/Eraser.pressed.connect(select_eraser)
+	
 	$UI/BlueTape.pressed.connect(func(): select_tape("BlueTape"))
 	$UI/GreenTape.pressed.connect(func(): select_tape("GreenTape"))
 	$UI/LilacTape.pressed.connect(func(): select_tape("LilacTape"))
@@ -329,8 +389,13 @@ func connect_ui():
 	$UI/PinkTape.pressed.connect(func(): select_tape("PinkTape"))
 	$UI/WhiteTape.pressed.connect(func(): select_tape("WhiteTape"))
 	$UI/YellowTape.pressed.connect(func(): select_tape("YellowTape"))
+	
 	$UI/Back.pressed.connect(undo)
 	$UI/Redo.pressed.connect(redo)
+	
+	$UI/StickerBox.pressed.connect(func(): $UI/StickerMenu.visible = not $UI/StickerMenu.visible)
+	$UI/StickerMenu.gui_input.connect(_on_sticker_menu_gui_input)
+	
 	for child in $UI.get_children():
 		if child is Control:
 			child.mouse_filter = Control.MOUSE_FILTER_STOP
@@ -358,7 +423,10 @@ func _unhandled_input(event):
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 			var p = get_image_pos(canvas.get_local_mouse_position())
-
+			if current_tool == Tool.STICKER:
+				save_state()
+				draw_sticker_stamp(p)
+				return
 			if current_tool == Tool.TAPE:
 				if not tape_waiting_second_point:
 					tape_first_point = p
@@ -477,7 +545,76 @@ func _setup_tape_gpu():
 	tape_viewport.add_child(tape_blend_rect)
 
 	tape_canvas_snap = ImageTexture.new()
-	
+
+# ======================= СТИКЕРЫ ===========================
+func _setup_sticker_gpu():
+	sticker_viewport = SubViewport.new()
+	sticker_viewport.size = Vector2i(image.get_width(), image.get_height())
+	sticker_viewport.render_target_update_mode = SubViewport.UPDATE_DISABLED
+	sticker_viewport.transparent_bg = true
+	add_child(sticker_viewport)
+
+	sticker_blend_rect = ColorRect.new()
+	sticker_blend_rect.size = Vector2(image.get_width(), image.get_height())
+
+	var shader = Shader.new()
+	shader.code = STICKER_SHADER_CODE
+	var mat = ShaderMaterial.new()
+	mat.shader = shader
+	sticker_blend_rect.material = mat
+	sticker_viewport.add_child(sticker_blend_rect)
+
+	sticker_canvas_snap = ImageTexture.new()
+
+func draw_sticker_stamp(pos: Vector2) -> void:
+	if current_sticker_index < 0 or current_sticker_index >= sticker_textures.size():
+		return
+
+	var tex: Texture2D = sticker_textures[current_sticker_index]
+	if tex == null:
+		return
+
+	var tex_size := Vector2(tex.get_size())
+	if tex_size.x <= 0 or tex_size.y <= 0:
+		return
+
+	var aspect := tex_size.x / tex_size.y
+	var size_vec: Vector2
+	if aspect >= 1.0:
+		size_vec = Vector2(sticker_size, sticker_size / aspect)
+	else:
+		size_vec = Vector2(sticker_size * aspect, sticker_size)
+
+	sticker_canvas_snap = ImageTexture.create_from_image(image)
+
+	var mat := sticker_blend_rect.material as ShaderMaterial
+	mat.set_shader_parameter("current_canvas", sticker_canvas_snap)
+	mat.set_shader_parameter("sticker_tex",     tex)
+	mat.set_shader_parameter("sticker_pos",     pos)
+	mat.set_shader_parameter("sticker_size",    size_vec)
+	mat.set_shader_parameter("canvas_size",
+		Vector2(image.get_width(), image.get_height()))
+
+	sticker_viewport.render_target_update_mode = SubViewport.UPDATE_ONCE
+	await RenderingServer.frame_post_draw
+
+	image = sticker_viewport.get_texture().get_image()
+	image.convert(Image.FORMAT_RGBA8)
+	texture_dirty = true
+func _connect_sticker_buttons():
+	for btn in get_tree().get_nodes_in_group("sticker_buttons"):
+		var index: int = btn.sticker_index - 1
+		btn.pressed.connect(func(): _on_sticker_selected(index))
+
+func _on_sticker_selected(index: int):
+	current_sticker_index = index
+	current_tool = Tool.STICKER
+	$UI/StickerMenu.visible = false
+
+func _on_sticker_menu_gui_input(event: InputEvent):
+	if event is InputEventMouseButton and event.pressed:
+		$UI/StickerMenu.visible = false
+		get_viewport().set_input_as_handled()
 # ===================== Undo / Redo =========================
 
 func save_state():
