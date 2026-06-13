@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://j3atr8mlfdvf"
-path="res://.godot/imported/Tumba_Labirinth.png-9d6a088924948a8dd7916b69762cdf74.ctex"
+path="res://.godot/imported/Tumba_Labirinth.png-f613e127e9e725916ce05a531c7d05a3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/ui/minigames/Tumba/Tumba_Labirinth.png"
-dest_files=["res://.godot/imported/Tumba_Labirinth.png-9d6a088924948a8dd7916b69762cdf74.ctex"]
+source_file="res://assets/ui/minigames/Tumba/Tumba_Labirinth.png"
+dest_files=["res://.godot/imported/Tumba_Labirinth.png-f613e127e9e725916ce05a531c7d05a3.ctex"]
 
 [params]
 

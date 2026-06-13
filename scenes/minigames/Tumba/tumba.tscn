@@ -2,16 +2,18 @@
 
 [ext_resource type="PackedScene" uid="uid://khyulkrrsf0r" path="res://scenes/minigames/MinigameBase.tscn" id="1_1qlt7"]
 [ext_resource type="Script" uid="uid://caqq63av3aeei" path="res://scripts/tumba.gd" id="2_4s460"]
-[ext_resource type="Texture2D" uid="uid://748hin3onq5" path="res://Assets/ui/minigames/Tumba/Tumba_Background.png" id="3_g66l1"]
-[ext_resource type="Texture2D" uid="uid://j3atr8mlfdvf" path="res://Assets/ui/minigames/Tumba/Tumba_Labirinth.png" id="4_gvvl4"]
-[ext_resource type="Texture2D" uid="uid://drhbxucwkcv0w" path="res://Assets/ui/minigames/Tumba/Tumba_TapeBlue.png" id="5_o4045"]
-[ext_resource type="Texture2D" uid="uid://c4mc65cy5blwq" path="res://Assets/ui/minigames/Tumba/Tumba_Lapa.png" id="6_jlgos"]
-[ext_resource type="Texture2D" uid="uid://c10iob6pacfh0" path="res://Assets/ui/minigames/Tumba/Tumba_TapeGreen.png" id="6_mxbkl"]
-[ext_resource type="Texture2D" uid="uid://dtl4hm43uxieq" path="res://Assets/ui/minigames/Tumba/Tumba_TapeLilac.png" id="7_om2i6"]
-[ext_resource type="Texture2D" uid="uid://bxskyg4hj6tbf" path="res://Assets/ui/minigames/Tumba/Tumba_TapeOrange.png" id="8_ttnlm"]
-[ext_resource type="Texture2D" uid="uid://xle667608sgt" path="res://Assets/ui/minigames/Tumba/Tumba_TapePink.png" id="9_7yv1k"]
-[ext_resource type="Texture2D" uid="uid://dhhohn2p7s3rp" path="res://Assets/ui/minigames/Tumba/Tumba_TapeWhite.png" id="10_htbk1"]
-[ext_resource type="Texture2D" uid="uid://0nf7riivxxen" path="res://Assets/ui/minigames/Tumba/Tumba_TapeYellow.png" id="11_5xc7x"]
+[ext_resource type="Texture2D" uid="uid://748hin3onq5" path="res://assets/ui/minigames/Tumba/Tumba_Background.png" id="3_g66l1"]
+[ext_resource type="Texture2D" uid="uid://j3atr8mlfdvf" path="res://assets/ui/minigames/Tumba/Tumba_Labirinth.png" id="4_gvvl4"]
+[ext_resource type="Texture2D" uid="uid://drhbxucwkcv0w" path="res://assets/ui/minigames/Tumba/Tumba_TapeBlue.png" id="5_o4045"]
+[ext_resource type="Texture2D" uid="uid://c4mc65cy5blwq" path="res://assets/ui/minigames/Tumba/Tumba_Lapa.png" id="6_jlgos"]
+[ext_resource type="Texture2D" uid="uid://c10iob6pacfh0" path="res://assets/ui/minigames/Tumba/Tumba_TapeGreen.png" id="6_mxbkl"]
+[ext_resource type="Texture2D" uid="uid://dtl4hm43uxieq" path="res://assets/ui/minigames/Tumba/Tumba_TapeLilac.png" id="7_om2i6"]
+[ext_resource type="Texture2D" uid="uid://bxskyg4hj6tbf" path="res://assets/ui/minigames/Tumba/Tumba_TapeOrange.png" id="8_ttnlm"]
+[ext_resource type="Texture2D" uid="uid://xle667608sgt" path="res://assets/ui/minigames/Tumba/Tumba_TapePink.png" id="9_7yv1k"]
+[ext_resource type="Texture2D" uid="uid://dhhohn2p7s3rp" path="res://assets/ui/minigames/Tumba/Tumba_TapeWhite.png" id="10_htbk1"]
+[ext_resource type="Texture2D" uid="uid://0nf7riivxxen" path="res://assets/ui/minigames/Tumba/Tumba_TapeYellow.png" id="11_5xc7x"]
+[ext_resource type="Texture2D" uid="uid://bysux7abta2ci" path="res://assets/ui/minigames/Tumba/Tumba.PNG" id="13_ttnlm"]
+[ext_resource type="Texture2D" uid="uid://rglxnr4krk4u" path="res://assets/ui/minigames/Tumba/Tumba_OverAllSprites.png" id="14_7yv1k"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_gvvl4"]
 radius = 6.3362145
@@ -23,6 +25,7 @@ anchors_preset = 0
 offset_right = 1280.0
 offset_bottom = 720.0
 script = ExtResource("2_4s460")
+grab_radius = 30.0
 rope_width = 30.0
 
 [node name="Background" type="Sprite2D" parent="Game" index="0" unique_id=2145749733]
@@ -30,7 +33,56 @@ position = Vector2(606.00006, 344)
 scale = Vector2(1.3, 1.3)
 texture = ExtResource("3_g66l1")
 
-[node name="MazeContainer" type="Node2D" parent="Game" index="1" unique_id=838859012]
+[node name="Anchor" type="Marker2D" parent="Game" index="1" unique_id=1889835936]
+position = Vector2(607, 571)
+
+[node name="Rope" type="Line2D" parent="Game" index="2" unique_id=791404047]
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+
+[node name="Palm" type="CharacterBody2D" parent="Game" index="3" unique_id=600109582]
+position = Vector2(644, 568)
+
+[node name="Sprite" type="Sprite2D" parent="Game/Palm" index="0" unique_id=1791230697]
+texture = ExtResource("6_jlgos")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Game/Palm" index="1" unique_id=1267249321]
+position = Vector2(-4, 7)
+scale = Vector2(0.9599976, 0.9599976)
+shape = SubResource("CircleShape2D_gvvl4")
+
+[node name="ItemsContainer" type="Node2D" parent="Game" index="4" unique_id=276435296]
+
+[node name="TumbaTapeBlue" type="Sprite2D" parent="Game/ItemsContainer" index="0" unique_id=1476507835]
+position = Vector2(184, 233)
+texture = ExtResource("5_o4045")
+
+[node name="TumbaTapeGreen" type="Sprite2D" parent="Game/ItemsContainer" index="1" unique_id=985907310]
+position = Vector2(821, 31)
+texture = ExtResource("6_mxbkl")
+
+[node name="TumbaTapeLilac" type="Sprite2D" parent="Game/ItemsContainer" index="2" unique_id=350963327]
+position = Vector2(186, 19)
+texture = ExtResource("7_om2i6")
+
+[node name="TumbaTapeOrange" type="Sprite2D" parent="Game/ItemsContainer" index="3" unique_id=1024643215]
+position = Vector2(471, 314)
+texture = ExtResource("8_ttnlm")
+
+[node name="TumbaTapePink" type="Sprite2D" parent="Game/ItemsContainer" index="4" unique_id=1050410656]
+position = Vector2(173, 546)
+texture = ExtResource("9_7yv1k")
+
+[node name="TumbaTapeWhite" type="Sprite2D" parent="Game/ItemsContainer" index="5" unique_id=1917916382]
+position = Vector2(511, 15)
+texture = ExtResource("10_htbk1")
+
+[node name="TumbaTapeYellow" type="Sprite2D" parent="Game/ItemsContainer" index="6" unique_id=2007405452]
+position = Vector2(717, 27)
+texture = ExtResource("11_5xc7x")
+
+[node name="MazeContainer" type="Node2D" parent="Game" index="5" unique_id=838859012]
 
 [node name="MazeSprite" type="Sprite2D" parent="Game/MazeContainer" index="0" unique_id=1032481218]
 position = Vector2(588, 278)
@@ -79,54 +131,9 @@ polygon = PackedVector2Array(-100, 12, -106, -11, -90, -31, -22, -42, -4, -32, 8
 position = Vector2(243, 147)
 polygon = PackedVector2Array(-58, 24, -105, 13, -97, -23, -34, -29, 6, -33, 65, -15, 90, 0, 83, 22, 30, 28)
 
-[node name="ItemsContainer" type="Node2D" parent="Game" index="2" unique_id=276435296]
-
-[node name="TumbaTapeBlue" type="Sprite2D" parent="Game/ItemsContainer" index="0" unique_id=1476507835]
-position = Vector2(184, 233)
-texture = ExtResource("5_o4045")
-
-[node name="TumbaTapeGreen" type="Sprite2D" parent="Game/ItemsContainer" index="1" unique_id=985907310]
-position = Vector2(814, 21)
-texture = ExtResource("6_mxbkl")
-
-[node name="TumbaTapeLilac" type="Sprite2D" parent="Game/ItemsContainer" index="2" unique_id=350963327]
-position = Vector2(186, 19)
-texture = ExtResource("7_om2i6")
-
-[node name="TumbaTapeOrange" type="Sprite2D" parent="Game/ItemsContainer" index="3" unique_id=1024643215]
-position = Vector2(471, 314)
-texture = ExtResource("8_ttnlm")
-
-[node name="TumbaTapePink" type="Sprite2D" parent="Game/ItemsContainer" index="4" unique_id=1050410656]
-position = Vector2(173, 546)
-texture = ExtResource("9_7yv1k")
-
-[node name="TumbaTapeWhite" type="Sprite2D" parent="Game/ItemsContainer" index="5" unique_id=1917916382]
-position = Vector2(511, 15)
-texture = ExtResource("10_htbk1")
-
-[node name="TumbaTapeYellow" type="Sprite2D" parent="Game/ItemsContainer" index="6" unique_id=2007405452]
-position = Vector2(717, 27)
-texture = ExtResource("11_5xc7x")
-
-[node name="Anchor" type="Marker2D" parent="Game" index="3" unique_id=1889835936]
-position = Vector2(607, 571)
-
-[node name="Rope" type="Line2D" parent="Game" index="4" unique_id=791404047]
-joint_mode = 2
-begin_cap_mode = 2
-end_cap_mode = 2
-
-[node name="Palm" type="CharacterBody2D" parent="Game" index="5" unique_id=600109582]
-position = Vector2(644, 568)
-
-[node name="Sprite" type="Sprite2D" parent="Game/Palm" index="0" unique_id=1791230697]
-texture = ExtResource("6_jlgos")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Game/Palm" index="1" unique_id=1267249321]
-position = Vector2(-4, 7)
-scale = Vector2(0.9599976, 0.9599976)
-shape = SubResource("CircleShape2D_gvvl4")
+[node name="CollisionPolygon2D10" type="CollisionPolygon2D" parent="Game/MazeContainer/MazeWalls" index="9" unique_id=1725604660]
+position = Vector2(639, 638)
+polygon = PackedVector2Array(-64, -44, -125, -63, -485, -58, -486, -664, 410, -649, 418, -51, -52, -42, -93, 30, -58, 118, 693, 105, 685, -731, -755, -726, -759, 111, -29, 125)
 
 [node name="UI" type="CanvasLayer" parent="Game" index="6" unique_id=549040992]
 
@@ -141,3 +148,13 @@ offset_left = 8.0
 offset_top = 56.0
 offset_right = 48.0
 offset_bottom = 79.0
+
+[node name="Sprite2D" type="Sprite2D" parent="Game" index="7" unique_id=159520146]
+position = Vector2(602.99994, 336.99997)
+scale = Vector2(1.3203332, 1.3203332)
+texture = ExtResource("13_ttnlm")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Game" index="8" unique_id=1039988959]
+position = Vector2(610, 325)
+scale = Vector2(1.1981944, 1.1981944)
+texture = ExtResource("14_7yv1k")

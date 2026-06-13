@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://rglxnr4krk4u"
-path="res://.godot/imported/Tumba_OverAllSprites.png-1270f1b864df2f8f31e5b8179e4a18e7.ctex"
+path="res://.godot/imported/Tumba_OverAllSprites.png-efcfc3f91a476e9de87ba98c32095f15.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/ui/minigames/Tumba/Tumba_OverAllSprites.png"
-dest_files=["res://.godot/imported/Tumba_OverAllSprites.png-1270f1b864df2f8f31e5b8179e4a18e7.ctex"]
+source_file="res://assets/ui/minigames/Tumba/Tumba_OverAllSprites.png"
+dest_files=["res://.godot/imported/Tumba_OverAllSprites.png-efcfc3f91a476e9de87ba98c32095f15.ctex"]
 
 [params]
 

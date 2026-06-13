@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://5ccxk4nmdhtn"
-path="res://.godot/imported/Exit_Button_lit.png-3a17fc0913eadace17d4bd4072089371.ctex"
+path="res://.godot/imported/Exit_Button_lit.png-48787ceccc282bebb4c4796610cd1f67.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/ui/paint/Lini _Workplace/Exit_Button_lit.png"
-dest_files=["res://.godot/imported/Exit_Button_lit.png-3a17fc0913eadace17d4bd4072089371.ctex"]
+source_file="res://assets/ui/paint/Lini _Workplace/Exit_Button_lit.png"
+dest_files=["res://.godot/imported/Exit_Button_lit.png-48787ceccc282bebb4c4796610cd1f67.ctex"]
 
 [params]
 

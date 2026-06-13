@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ccqs3fsrqasxx"
-path="res://.godot/imported/BedroomZaglushka.PNG-ccf80e941c5b71f2dad7f46bc3282054.ctex"
+path="res://.godot/imported/BedroomZaglushka.PNG-7c923842907a8644b7e87fc186c847d3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Locations/BedroomZaglushka.PNG"
-dest_files=["res://.godot/imported/BedroomZaglushka.PNG-ccf80e941c5b71f2dad7f46bc3282054.ctex"]
+source_file="res://assets/locations/BedroomZaglushka.PNG"
+dest_files=["res://.godot/imported/BedroomZaglushka.PNG-7c923842907a8644b7e87fc186c847d3.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://h8x62mxmgv63"
-path="res://.godot/imported/Back_Button.png-e401c9ac28ca051e1ade6786d3803c64.ctex"
+path="res://.godot/imported/Back_Button.png-63cca2a402a08be6ef3a11349ee9c207.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/ui/paint/Lini _Workplace/Back_Button.png"
-dest_files=["res://.godot/imported/Back_Button.png-e401c9ac28ca051e1ade6786d3803c64.ctex"]
+source_file="res://assets/ui/paint/Lini _Workplace/Back_Button.png"
+dest_files=["res://.godot/imported/Back_Button.png-63cca2a402a08be6ef3a11349ee9c207.ctex"]
 
 [params]
 

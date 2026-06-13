@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bn3y2djjbp2o"
-path="res://.godot/imported/black_pencil_unlit.png-2ed8d0a42003bcd5d32c884acba4d646.ctex"
+uid="uid://bysux7abta2ci"
+path="res://.godot/imported/Tumba.PNG-924fb128bd087cace458c3e37e8bc8bc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/interactable/LiniBedroom/black_pencil_unlit.png"
-dest_files=["res://.godot/imported/black_pencil_unlit.png-2ed8d0a42003bcd5d32c884acba4d646.ctex"]
+source_file="res://assets/ui/minigames/Tumba/Tumba.PNG"
+dest_files=["res://.godot/imported/Tumba.PNG-924fb128bd087cace458c3e37e8bc8bc.ctex"]
 
 [params]
 
