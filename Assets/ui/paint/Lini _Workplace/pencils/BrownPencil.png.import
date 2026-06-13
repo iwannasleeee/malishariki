@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bc4aack8sptml"
-path="res://.godot/imported/BrownPencil.png-394d41ad75fcaac4a98cd605874c220e.ctex"
+path="res://.godot/imported/BrownPencil.png-20f985d6d8278e89f3b42285975d3cfd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/ui/paint/Lini _Workplace/pencils/BrownPencil.png"
-dest_files=["res://.godot/imported/BrownPencil.png-394d41ad75fcaac4a98cd605874c220e.ctex"]
+source_file="res://assets/ui/paint/Lini _Workplace/pencils/BrownPencil.png"
+dest_files=["res://.godot/imported/BrownPencil.png-20f985d6d8278e89f3b42285975d3cfd.ctex"]
 
 [params]
 
