@@ -133,7 +133,10 @@ func _process(_delta: float) -> void:
 		target.y = clamp(target.y, 0.0, size.y)
 
 		var motion: Vector2 = target - palm.global_position
-
+		
+		if motion.length() > 0.01:
+			palm.rotation = motion.angle()+ PI/2
+		
 		# Двигаемся к курсору, скользя вдоль стен через физику
 		var remaining := motion
 		for i in range(4): # несколько итераций для скольжения по углам
