@@ -26,7 +26,7 @@ offset_right = 1280.0
 offset_bottom = 720.0
 script = ExtResource("2_4s460")
 grab_radius = 30.0
-rope_width = 30.0
+rope_width = 28.0
 
 [node name="Background" type="Sprite2D" parent="Game" index="0" unique_id=2145749733]
 position = Vector2(606.00006, 344)
@@ -45,6 +45,8 @@ end_cap_mode = 2
 position = Vector2(644, 568)
 
 [node name="Sprite" type="Sprite2D" parent="Game/Palm" index="0" unique_id=1791230697]
+position = Vector2(2.4999795, 1.5)
+scale = Vector2(1.0657889, 0.9444444)
 texture = ExtResource("6_jlgos")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Game/Palm" index="1" unique_id=1267249321]
@@ -59,11 +61,11 @@ position = Vector2(184, 233)
 texture = ExtResource("5_o4045")
 
 [node name="TumbaTapeGreen" type="Sprite2D" parent="Game/ItemsContainer" index="1" unique_id=985907310]
-position = Vector2(821, 31)
+position = Vector2(828, 71)
 texture = ExtResource("6_mxbkl")
 
 [node name="TumbaTapeLilac" type="Sprite2D" parent="Game/ItemsContainer" index="2" unique_id=350963327]
-position = Vector2(186, 19)
+position = Vector2(188, 50)
 texture = ExtResource("7_om2i6")
 
 [node name="TumbaTapeOrange" type="Sprite2D" parent="Game/ItemsContainer" index="3" unique_id=1024643215]
@@ -75,11 +77,11 @@ position = Vector2(173, 546)
 texture = ExtResource("9_7yv1k")
 
 [node name="TumbaTapeWhite" type="Sprite2D" parent="Game/ItemsContainer" index="5" unique_id=1917916382]
-position = Vector2(511, 15)
+position = Vector2(502, 45)
 texture = ExtResource("10_htbk1")
 
 [node name="TumbaTapeYellow" type="Sprite2D" parent="Game/ItemsContainer" index="6" unique_id=2007405452]
-position = Vector2(717, 27)
+position = Vector2(711, 63)
 texture = ExtResource("11_5xc7x")
 
 [node name="MazeContainer" type="Node2D" parent="Game" index="5" unique_id=838859012]
@@ -133,7 +135,7 @@ polygon = PackedVector2Array(-58, 24, -105, 13, -97, -23, -34, -29, 6, -33, 65, 
 
 [node name="CollisionPolygon2D10" type="CollisionPolygon2D" parent="Game/MazeContainer/MazeWalls" index="9" unique_id=1725604660]
 position = Vector2(639, 638)
-polygon = PackedVector2Array(-64, -44, -125, -63, -485, -58, -486, -664, 410, -649, 418, -51, -52, -42, -93, 30, -58, 118, 693, 105, 685, -731, -755, -726, -759, 111, -29, 125)
+polygon = PackedVector2Array(-30, -7, -125, -63, -485, -58, -486, -664, 410, -649, 418, -51, 103, -58, -93, 30, -58, 118, 693, 105, 685, -731, -755, -726, -759, 111, -29, 125)
 
 [node name="UI" type="CanvasLayer" parent="Game" index="6" unique_id=549040992]
 
@@ -155,6 +157,6 @@ scale = Vector2(1.3203332, 1.3203332)
 texture = ExtResource("13_ttnlm")
 
 [node name="Sprite2D2" type="Sprite2D" parent="Game" index="8" unique_id=1039988959]
-position = Vector2(610, 325)
+position = Vector2(612, 351)
 scale = Vector2(1.1981944, 1.1981944)
 texture = ExtResource("14_7yv1k")
