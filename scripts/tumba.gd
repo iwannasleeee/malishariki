@@ -33,6 +33,9 @@ extends Control
 ## Это зависит от порядка точек (winding) в ваших CollisionPolygon2D.
 @export var flip_wrap_direction: bool = false
 
+## Расстояние, через которое фиксируется новая точка следа.
+@export var trail_step_distance: float = 30.0
+
 ## ----------------------- УЗЛЫ -------------------------------
 
 @onready var palm: CharacterBody2D = $Palm
@@ -60,6 +63,7 @@ var dragging: bool = false
 # Здесь храним всё, КРОМЕ последней точки (позиции ладони) —
 # она добавляется динамически в _update_rope().
 var rope_points: Array = []
+var last_fixed_pos: Vector2
 
 # Все рёбра стен лабиринта в глобальных координатах: [[A,B], [A,B], ...]
 var wall_segments: Array = []
@@ -156,6 +160,7 @@ func _start_drag() -> void:
 		return_tween.kill()
 
 	rope_points = [anchor.global_position]
+	last_fixed_pos = anchor.global_position
 	_update_rope(palm.global_position)
 	_check_items()
 
@@ -166,7 +171,8 @@ func _end_drag() -> void:
 	# След руки мгновенно исчезает
 	rope_points.clear()
 	rope.points = PackedVector2Array()
-
+	last_fixed_pos = anchor.global_position
+	
 	# Ладонь анимированно возвращается на старт
 	if return_tween and return_tween.is_running():
 		return_tween.kill()
@@ -180,41 +186,23 @@ func _end_drag() -> void:
 
 ## Пересчитывает точки изгиба "руки" так, чтобы линия Anchor -> ... -> target
 ## всегда была натянутой нитью, огибающей углы стен лабиринта.
+## Обновляет след "руки": фиксирует новые точки через каждые
+## trail_step_distance пикселей пути ладони и перерисовывает Line2D
+## как прямую Anchor -> ...фикс.точки... -> target.
 func _update_rope(target: Vector2) -> void:
-	# --- "Размотка": убираем точки изгиба, которые больше не нужны ---
-	# Если прямая от предпоследней точки до ладони больше не пересекает
-	# стену, последняя точка изгиба больше не нужна.
-	while rope_points.size() > 1:
-		var a: Vector2 = rope_points[rope_points.size() - 2]
-		if not _segment_blocked(a, target):
-			rope_points.pop_back()
-		else:
-			break
-
-	# --- "Намотка": добавляем точки изгиба там, где путь к ладони
-	# пересекает стену ---
-	var safety := 0
-	while safety < 16:
-		safety += 1
-		var a: Vector2 = rope_points[rope_points.size() - 1]
-		var hit = _find_closest_intersection(a, target)
-		if hit == null:
-			break
-
-		var edge: Array = hit["edge"]
-		var pivot: Vector2 = _choose_pivot(a, target, edge[0], edge[1])
-
-		if pivot.distance_to(a) < 0.5:
-			break
-
-		rope_points.append(pivot)
+	# Фиксируем новые точки, пока расстояние от последней зафиксированной
+	# до текущей позиции ладони превышает шаг.
+	while last_fixed_pos.distance_to(target) >= trail_step_distance:
+		var dir: Vector2 = (target - last_fixed_pos).normalized()
+		var new_point: Vector2 = last_fixed_pos + dir * trail_step_distance
+		rope_points.append(new_point)
+		last_fixed_pos = new_point
 
 	var pts := PackedVector2Array()
 	for p in rope_points:
 		pts.append(rope.to_local(p))
 	pts.append(rope.to_local(target))
 	rope.points = pts
-
 
 ## Проверяет, пересекает ли отрезок a-b хотя бы одну стену
 ## (не считая пересечений почти точно в концах отрезка).

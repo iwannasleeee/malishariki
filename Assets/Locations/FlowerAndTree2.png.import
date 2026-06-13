@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c5bonnbq4llj"
-path="res://.godot/imported/FlowerAndTree2.png-f1c15ec997e1a738e1f3d75a71e61ba3.ctex"
+path="res://.godot/imported/FlowerAndTree2.png-e9ca3a2a3f4e832dd91880c4e9858151.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/locations/FlowerAndTree2.png"
-dest_files=["res://.godot/imported/FlowerAndTree2.png-f1c15ec997e1a738e1f3d75a71e61ba3.ctex"]
+source_file="res://Assets/Locations/FlowerAndTree2.png"
+dest_files=["res://.godot/imported/FlowerAndTree2.png-e9ca3a2a3f4e832dd91880c4e9858151.ctex"]
 
 [params]
 

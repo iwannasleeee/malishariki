@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cedtaslysm3tm"
-path="res://.godot/imported/LiniHallway.PNG-123b12d92614651af7803b4e7339568a.ctex"
+path="res://.godot/imported/LiniHallway.PNG-c772a6f5843e3c1666954bb0dbf8a3e5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/locations/LiniHallway.PNG"
-dest_files=["res://.godot/imported/LiniHallway.PNG-123b12d92614651af7803b4e7339568a.ctex"]
+source_file="res://Assets/Locations/LiniHallway.PNG"
+dest_files=["res://.godot/imported/LiniHallway.PNG-c772a6f5843e3c1666954bb0dbf8a3e5.ctex"]
 
 [params]
 
