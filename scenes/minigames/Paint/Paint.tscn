@@ -393,6 +393,7 @@ texture_normal = ExtResource("56_7cqja")
 texture_hover = ExtResource("57_1iiav")
 
 [node name="StickerMenu" type="Control" parent="DrawingRoot/UI" index="29" unique_id=91616774]
+visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_right = 1280.0
