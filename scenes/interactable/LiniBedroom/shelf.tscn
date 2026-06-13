@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://dopd45d3ekhkd"]
+
+[ext_resource type="PackedScene" uid="uid://dusogs63f23c" path="res://scenes/interactable/InteractableObject.tscn" id="1_eg5ww"]
+[ext_resource type="Script" uid="uid://diff0b0ehw4gd" path="res://scripts/shelf.gd" id="2_iqd8b"]
+[ext_resource type="Texture2D" uid="uid://f3scv5vbuk1r" path="res://Assets/interactable/LiniBedroom/shelf_unlit.png" id="3_3ln43"]
+
+[node name="shelf" unique_id=1008082527 instance=ExtResource("1_eg5ww")]
+script = ExtResource("2_iqd8b")
+
+[node name="Sprite2D" parent="." index="0" unique_id=309976985]
+texture = ExtResource("3_3ln43")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="1" unique_id=1893949571]
+polygon = PackedVector2Array(80.899994, -59, -142.1, -51, -169.2, -51, -182.3, -49, -185.1, -49, -193, -37.2, -193, 40.1, -191, 47, -191, 51.199997, -185, 54.199997, -185, 55.699997, -167.1, 59, -47.199997, 59, 136.1, 51, 152, 51, 152, 50, 160.6, 50, 185.5, 35, 188.4, 35, 193, 21.199997, 193, -25.8, 188.79999, -30, 183, -42.4, 183, -44.7, 171, -58.8)

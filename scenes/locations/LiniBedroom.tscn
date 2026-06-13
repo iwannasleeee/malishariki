@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cwk1f885g4leg"]
 
 [ext_resource type="Script" uid="uid://bikyr7geit3ny" path="res://scripts/lini_bedroom.gd" id="1_ym2uc"]
-[ext_resource type="Texture2D" uid="uid://dmaccjhf64mro" path="res://assets/locations/LiniBedroom.PNG" id="1_yrgbh"]
+[ext_resource type="Texture2D" uid="uid://dmaccjhf64mro" path="res://Assets/Locations/LiniBedroom.PNG" id="1_yrgbh"]
 [ext_resource type="PackedScene" uid="uid://dmiwygqpm1rxl" path="res://scenes/interactable/LiniBedroom/pencils/black_pencil.tscn" id="2_4vbjv"]
 [ext_resource type="PackedScene" uid="uid://bh4ukbeeuyykj" path="res://scenes/core/FixedCamera.tscn" id="2_iygw6"]
 [ext_resource type="PackedScene" uid="uid://bndms4igx4mim" path="res://scenes/interactable/LiniBedroom/pencils/red_pencil.tscn" id="5_0itj3"]
@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://cr7lt0vk35dm1" path="res://scenes/interactable/LiniBedroom/pencils/orange_pencil.tscn" id="11_47prq"]
 [ext_resource type="PackedScene" uid="uid://xyrlk8js0n1y" path="res://scenes/interactable/LiniBedroom/pencils/pink_pencil.tscn" id="12_ehd4l"]
 [ext_resource type="PackedScene" uid="uid://coph1k5bfkyqe" path="res://scenes/interactable/LiniBedroom/pencils/purple_pencil.tscn" id="13_8cfen"]
+[ext_resource type="PackedScene" uid="uid://dopd45d3ekhkd" path="res://scenes/interactable/LiniBedroom/shelf.tscn" id="16_e75w4"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_4vbjv"]
 vertices = PackedVector2Array(462.04688, 697.9922, 230.9375, 691.0078, 144.97656, 676.1719, 192.92969, 641.22656, 290.10938, 647.96094, 500.4922, 673.25, 1032.4531, 684, 574.5, 641.21875, 583.8125, 603.96094, 1166.3672, 601.0078, 1233.4297, 657.3125, 1212.0313, 669.2031)
@@ -89,3 +90,7 @@ spawn_name = "SpawnBed"
 [node name="SpawnDoor" parent="." unique_id=1906601700 instance=ExtResource("5_4vbjv")]
 position = Vector2(1171, 626)
 spawn_name = "SpawnDoor"
+
+[node name="shelf" parent="." unique_id=2082713571 instance=ExtResource("16_e75w4")]
+position = Vector2(719, 492.00003)
+scale = Vector2(0.33, 0.33)

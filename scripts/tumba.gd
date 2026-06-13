@@ -209,8 +209,10 @@ func _update_rope(target: Vector2) -> void:
 
 		rope_points.append(pivot)
 
-	var pts := PackedVector2Array(rope_points)
-	pts.append(target)
+	var pts := PackedVector2Array()
+	for p in rope_points:
+		pts.append(rope.to_local(p))
+	pts.append(rope.to_local(target))
 	rope.points = pts
 
 
