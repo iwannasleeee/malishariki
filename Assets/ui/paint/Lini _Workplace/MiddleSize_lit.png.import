@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cifovkwlxqwc3"
-path="res://.godot/imported/MiddleSize_lit.png-713f1255012f9daf167b0673687bc2ea.ctex"
+path="res://.godot/imported/MiddleSize_lit.png-56e3161326cacf9d0c1e5f1a9903dcca.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui/paint/Lini _Workplace/MiddleSize_lit.png"
-dest_files=["res://.godot/imported/MiddleSize_lit.png-713f1255012f9daf167b0673687bc2ea.ctex"]
+source_file="res://Assets/ui/paint/Lini _Workplace/MiddleSize_lit.png"
+dest_files=["res://.godot/imported/MiddleSize_lit.png-56e3161326cacf9d0c1e5f1a9903dcca.ctex"]
 
 [params]
 

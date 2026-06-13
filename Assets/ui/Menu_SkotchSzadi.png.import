@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://csiq57ptd6w5j"
-path="res://.godot/imported/Menu_SkotchSzadi.png-19109d257e7922df5d6081dd0e665e08.ctex"
+path="res://.godot/imported/Menu_SkotchSzadi.png-8fc3e9914a8867919fc948bc3a983fa7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui/Menu_SkotchSzadi.png"
-dest_files=["res://.godot/imported/Menu_SkotchSzadi.png-19109d257e7922df5d6081dd0e665e08.ctex"]
+source_file="res://Assets/ui/Menu_SkotchSzadi.png"
+dest_files=["res://.godot/imported/Menu_SkotchSzadi.png-8fc3e9914a8867919fc948bc3a983fa7.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c4mc65cy5blwq"
-path="res://.godot/imported/Tumba_Lapa.png-00e5351f458daf938d2afe65851f6872.ctex"
+path="res://.godot/imported/Tumba_Lapa.png-3d19f2ad522c100a629bbe74b2aaf438.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui/minigames/Tumba/Tumba_Lapa.png"
-dest_files=["res://.godot/imported/Tumba_Lapa.png-00e5351f458daf938d2afe65851f6872.ctex"]
+source_file="res://Assets/ui/minigames/Tumba/Tumba_Lapa.png"
+dest_files=["res://.godot/imported/Tumba_Lapa.png-3d19f2ad522c100a629bbe74b2aaf438.ctex"]
 
 [params]
 
