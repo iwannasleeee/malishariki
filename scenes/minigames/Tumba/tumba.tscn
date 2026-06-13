@@ -1,0 +1,78 @@
+[gd_scene format=3 uid="uid://lji82p8qcfw3"]
+
+[ext_resource type="PackedScene" uid="uid://khyulkrrsf0r" path="res://scenes/minigames/MinigameBase.tscn" id="1_1qlt7"]
+[ext_resource type="Script" uid="uid://caqq63av3aeei" path="res://scripts/tumba.gd" id="2_4s460"]
+[ext_resource type="Texture2D" uid="uid://748hin3onq5" path="res://Assets/ui/minigames/Tumba/Tumba_Background.png" id="3_g66l1"]
+[ext_resource type="Texture2D" uid="uid://j3atr8mlfdvf" path="res://Assets/ui/minigames/Tumba/Tumba_Labirinth.png" id="4_gvvl4"]
+[ext_resource type="Texture2D" uid="uid://drhbxucwkcv0w" path="res://Assets/ui/minigames/Tumba/Tumba_TapeBlue.png" id="5_o4045"]
+[ext_resource type="Texture2D" uid="uid://c4mc65cy5blwq" path="res://Assets/ui/minigames/Tumba/Tumba_Lapa.png" id="6_jlgos"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gvvl4"]
+
+[node name="Tumba" unique_id=932141857 instance=ExtResource("1_1qlt7")]
+
+[node name="Game" type="Control" parent="." index="0" unique_id=338858375]
+anchors_preset = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+script = ExtResource("2_4s460")
+
+[node name="Background" type="Sprite2D" parent="Game" index="0" unique_id=2145749733]
+position = Vector2(640.00006, 377.00003)
+scale = Vector2(1.1935556, 1.1935556)
+texture = ExtResource("3_g66l1")
+
+[node name="MazeContainer" type="Node2D" parent="Game" index="1" unique_id=838859012]
+
+[node name="MazeSprite" type="Sprite2D" parent="Game/MazeContainer" index="0" unique_id=1032481218]
+position = Vector2(631.14386, 319.75)
+scale = Vector2(1.0754527, 1.0754527)
+texture = ExtResource("4_gvvl4")
+
+[node name="MazeWalls" type="StaticBody2D" parent="Game/MazeContainer" index="1" unique_id=67683788]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Game/MazeContainer/MazeWalls" index="0" unique_id=467403152]
+position = Vector2(371, 581)
+polygon = PackedVector2Array(6, -18, 13, -29, 92, -40, 97, -32, 187, -37, 198, -1, 3, 1)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Game/MazeContainer/MazeWalls" index="1" unique_id=387103685]
+position = Vector2(558, 505)
+polygon = PackedVector2Array(375, 12, 386, -38, 182, -43, 187, -196, 47, -207, 31, -40, -12, -13, -10, 6, -1, -1)
+
+[node name="ItemsContainer" type="Node2D" parent="Game" index="2" unique_id=276435296]
+
+[node name="Item1" type="Sprite2D" parent="Game/ItemsContainer" index="0" unique_id=119389016]
+position = Vector2(260, 97)
+texture = ExtResource("5_o4045")
+
+[node name="Anchor" type="Marker2D" parent="Game" index="3" unique_id=1889835936]
+position = Vector2(607, 571)
+
+[node name="Rope" type="Line2D" parent="Game" index="4" unique_id=791404047]
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+
+[node name="Palm" type="CharacterBody2D" parent="Game" index="5" unique_id=600109582]
+position = Vector2(644, 568)
+
+[node name="Sprite" type="Sprite2D" parent="Game/Palm" index="0" unique_id=1791230697]
+texture = ExtResource("6_jlgos")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Game/Palm" index="1" unique_id=1267249321]
+scale = Vector2(1.6800001, 1.6800001)
+shape = SubResource("CircleShape2D_gvvl4")
+
+[node name="UI" type="CanvasLayer" parent="Game" index="6" unique_id=549040992]
+
+[node name="StatusLabel" type="Label" parent="Game/UI" index="0" unique_id=274562685]
+offset_left = 23.0
+offset_top = 21.0
+offset_right = 63.0
+offset_bottom = 44.0
+
+[node name="WinLabel" type="Label" parent="Game/UI" index="1" unique_id=2064632090]
+offset_left = 8.0
+offset_top = 56.0
+offset_right = 48.0
+offset_bottom = 79.0
