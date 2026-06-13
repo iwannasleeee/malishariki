@@ -70,6 +70,15 @@ func _ready():
 	var tex: Texture2D = canvas.texture
 	image = tex.get_image()
 	original_image = image.duplicate()
+
+	# --- Восстановление сохранённого рисунка ---
+	if GameManager.has_paint_drawing():
+		var saved: Image = GameManager.get_paint_drawing()
+		if saved.get_size() == image.get_size():
+			image = saved.duplicate()
+		else:
+			push_warning("Saved paint image size mismatch, ignoring")
+
 	texture = ImageTexture.create_from_image(image)
 
 	var mask_tex = ImageTexture.create_from_image(original_image)
@@ -651,5 +660,12 @@ func _on_small_size_pressed() -> void:
 
 
 func _on_exit_pressed() -> void:
+	EventBus.paint_finished.emit({})
+	UIManager.hide_paint()
+
+
+func _on_finish_pressed() -> void:
+	flush_texture()
+	GameManager.save_paint_drawing(image)
 	EventBus.paint_finished.emit({})
 	UIManager.hide_paint()

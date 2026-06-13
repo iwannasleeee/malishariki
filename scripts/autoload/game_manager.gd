@@ -1,3 +1,4 @@
+#game_manager.gd
 extends Node
 
 # Прогресс
@@ -23,3 +24,15 @@ func has_item(item: String) -> bool:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
+
+# ==== Сохранённый рисунок (Paint) ====
+var paint_drawing: Image = null
+
+func save_paint_drawing(img: Image) -> void:
+	paint_drawing = img.duplicate()
+
+func has_paint_drawing() -> bool:
+	return paint_drawing != null
+
+func get_paint_drawing() -> Image:
+	return paint_drawing
