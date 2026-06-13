@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d2s0cqgr60cso"
-path="res://.godot/imported/AquaPencil_chosen.png-532fb8ff81484e58d12bef3bd716f668.ctex"
+path="res://.godot/imported/AquaPencil_chosen.png-05dcb3d43b8167d617b8c5e7f13484a6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/ui/paint/Lini _Workplace/pencils/AquaPencil_chosen.png"
-dest_files=["res://.godot/imported/AquaPencil_chosen.png-532fb8ff81484e58d12bef3bd716f668.ctex"]
+source_file="res://assets/ui/paint/Lini _Workplace/pencils/AquaPencil_chosen.png"
+dest_files=["res://.godot/imported/AquaPencil_chosen.png-05dcb3d43b8167d617b8c5e7f13484a6.ctex"]
 
 [params]
 
