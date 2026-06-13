@@ -36,6 +36,8 @@ extends Control
 ## Расстояние, через которое фиксируется новая точка следа.
 @export var trail_step_distance: float = 30.0
 
+## Скорость поворота ладони (выше = быстрее).
+@export var rotation_speed: float = 10.0
 ## ----------------------- УЗЛЫ -------------------------------
 
 @onready var palm: CharacterBody2D = $Palm
@@ -133,9 +135,10 @@ func _process(_delta: float) -> void:
 		target.y = clamp(target.y, 0.0, size.y)
 
 		var motion: Vector2 = target - palm.global_position
-		
+
 		if motion.length() > 0.01:
-			palm.rotation = motion.angle()+ PI/2
+			var target_rotation := motion.angle() + PI/2
+			palm.rotation = lerp_angle(palm.rotation, target_rotation, rotation_speed * _delta)
 		
 		# Двигаемся к курсору, скользя вдоль стен через физику
 		var remaining := motion
