@@ -1,0 +1,87 @@
+[gd_scene format=3 uid="uid://bmrc45fu0ikd6"]
+
+[ext_resource type="PackedScene" uid="uid://khyulkrrsf0r" path="res://scenes/minigames/MinigameBase.tscn" id="1_22xpy"]
+[ext_resource type="Script" uid="uid://dgymksgewkpux" path="res://scripts/tiger_up.gd" id="2_l1x7x"]
+[ext_resource type="Texture2D" uid="uid://cuo71ht6qwcgy" path="res://Assets/ui/minigames/TigerUp/Tiger_Background.PNG" id="3_hqlw5"]
+[ext_resource type="Texture2D" uid="uid://bsl1oykwvhwst" path="res://Assets/ui/minigames/TigerUp/TigerLapa.PNG" id="4_6n3go"]
+[ext_resource type="Texture2D" uid="uid://0aeg85xq6de8" path="res://Assets/ui/dialogue/portraits/lini/talk1.png" id="4_m5qvp"]
+[ext_resource type="Texture2D" uid="uid://bxjpsluy5rf84" path="res://Assets/ui/dialogue/portraits/lini/talk2.png" id="5_6n3go"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6n3go"]
+radius = 15.859567
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_l1x7x"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_m5qvp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_6n3go")
+}],
+"loop": true,
+"name": &"death",
+"speed": 5.0
+}]
+
+[node name="TigerUp" unique_id=932141857 instance=ExtResource("1_22xpy")]
+
+[node name="Game" type="Control" parent="." index="0" unique_id=614577814]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_l1x7x")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="Game" index="0" unique_id=599004852]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="Game/ParallaxBackground" index="0" unique_id=1297013545]
+position = Vector2(-1, 0)
+motion_mirroring = Vector2(0, 1500)
+
+[node name="Sprite2D" type="Sprite2D" parent="Game/ParallaxBackground/ParallaxLayer" index="0" unique_id=922070766]
+position = Vector2(641, 161)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_hqlw5")
+
+[node name="World" type="Node2D" parent="Game" index="1" unique_id=1685023479]
+
+[node name="Platform" type="Sprite2D" parent="Game/World" index="0" unique_id=16657184]
+position = Vector2(474, 706)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("4_6n3go")
+
+[node name="Player" type="Area2D" parent="Game/World" index="1" unique_id=898062079]
+position = Vector2(755, 652)
+
+[node name="Sprite2D" type="Sprite2D" parent="Game/World/Player" index="0" unique_id=1178585293]
+scale = Vector2(3.4400048, 3.4400048)
+texture = ExtResource("4_m5qvp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Game/World/Player" index="1" unique_id=22043778]
+scale = Vector2(7.135076, 7.135076)
+shape = SubResource("CircleShape2D_6n3go")
+
+[node name="AnimationPlayer" type="AnimatedSprite2D" parent="Game/World/Player" index="2" unique_id=27855180]
+scale = Vector2(2.159995, 2.159995)
+sprite_frames = SubResource("SpriteFrames_l1x7x")
+animation = &"death"
+
+[node name="Branches" type="Node2D" parent="Game/World" index="2" unique_id=1221797406]
+
+[node name="UI" type="Control" parent="Game" index="2" unique_id=1042214349]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TimerLabel" type="Label" parent="Game/UI" index="0" unique_id=354825295]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="GameOverLabel" type="Label" parent="Game/UI" index="1" unique_id=1577360860]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="BranchSpawnTimer" type="Timer" parent="Game" index="3" unique_id=1743812271]
+autostart = true

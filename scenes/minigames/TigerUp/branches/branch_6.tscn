@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://ct6mwut0g2mgt"]
+
+[ext_resource type="PackedScene" uid="uid://n3j5jnkmsmox" path="res://scenes/minigames/TigerUp/branch.tscn" id="1_tb0sh"]
+[ext_resource type="Texture2D" uid="uid://c5mmqhxj18omh" path="res://Assets/ui/minigames/TigerUp/Tiger_Branch6.png" id="2_38juv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d43ns"]
+size = Vector2(982, 55)
+
+[node name="Branch6" unique_id=24776640 instance=ExtResource("1_tb0sh")]
+
+[node name="Sprite2D" parent="." index="0" unique_id=1255238891]
+texture = ExtResource("2_38juv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1" unique_id=297443373]
+position = Vector2(-764, 123.5)
+shape = SubResource("RectangleShape2D_d43ns")
