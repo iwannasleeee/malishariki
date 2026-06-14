@@ -12,6 +12,7 @@ var current_menu_screen: Control
 var current_minigame_screen: Control
 var current_dialogue_screen: Control
 var current_paint_screen: Control
+const MINIGAME_TRANSITION = "res://scenes/minigames/MinigameTransition.tscn"
 
 func initialize(h: Control, m: Control, mg: Control, d: Control, p: Control) -> void:
 	hud = h
@@ -47,6 +48,17 @@ func show_minigame(scene_path: String) -> void:
 	if current_minigame_screen and is_instance_valid(current_minigame_screen):
 		current_minigame_screen.queue_free()
 
+	minigame.visible = true
+	get_tree().paused = true
+	
+	var transition: Control = (load(MINIGAME_TRANSITION) as PackedScene).instantiate()
+	transition.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	minigame.add_child(transition)
+
+	await transition.transition_finished  # ждём конца анимации
+
+	transition.queue_free()
+	
 	var screen: Node = (load(scene_path) as PackedScene).instantiate()
 	minigame.add_child(screen)
 

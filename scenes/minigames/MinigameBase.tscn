@@ -1,9 +1,19 @@
 [gd_scene format=3 uid="uid://khyulkrrsf0r"]
 
 [ext_resource type="Script" uid="uid://dxtotledelxdm" path="res://scripts/minigame_base.gd" id="1_hhdiu"]
+[ext_resource type="Texture2D" uid="uid://0h8gdeol6j0d" path="res://Assets/ui/minigamesLaunchAnimation/RAMAminigames.png" id="2_u20di"]
 
 [node name="MinigameBase" type="Control" unique_id=932141857]
 layout_mode = 3
-anchors_preset = 0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("1_hhdiu")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=247808933]
+position = Vector2(639, 377.99997)
+scale = Vector2(0.59, 0.59)
+texture = ExtResource("2_u20di")

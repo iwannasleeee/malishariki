@@ -1,0 +1,71 @@
+[gd_scene format=3 uid="uid://bs4a6d8ulxbxb"]
+
+[ext_resource type="Script" uid="uid://l57wme32wcbx" path="res://scripts/minigame_transition.gd" id="1_6x6i3"]
+[ext_resource type="Texture2D" uid="uid://bhniclm1ykhop" path="res://Assets/ui/minigamesLaunchAnimation/mg1.png" id="1_mrqsx"]
+[ext_resource type="Texture2D" uid="uid://dikckn0ue8pjv" path="res://Assets/ui/minigamesLaunchAnimation/mg2.png" id="2_6x6i3"]
+[ext_resource type="Texture2D" uid="uid://b7k5g0u05ws1f" path="res://Assets/ui/minigamesLaunchAnimation/mg3.png" id="3_50bon"]
+[ext_resource type="Texture2D" uid="uid://bkrcpo3gd5ovq" path="res://Assets/ui/minigamesLaunchAnimation/mg4.png" id="4_q5mre"]
+[ext_resource type="Texture2D" uid="uid://dd73wc0hj1fv4" path="res://Assets/ui/minigamesLaunchAnimation/mg5.png" id="5_2h053"]
+[ext_resource type="Texture2D" uid="uid://cj31yuhk67st7" path="res://Assets/ui/minigamesLaunchAnimation/mg6.png" id="6_1jd3y"]
+[ext_resource type="Texture2D" uid="uid://dtpy0vlnft7p2" path="res://Assets/ui/minigamesLaunchAnimation/mg7.png" id="7_yr44s"]
+[ext_resource type="Texture2D" uid="uid://dch28uck0libv" path="res://Assets/ui/minigamesLaunchAnimation/mg8.png" id="8_cmb52"]
+[ext_resource type="Texture2D" uid="uid://u6oho0y87in6" path="res://Assets/ui/minigamesLaunchAnimation/MinigamesWindow.png" id="9_qs0e5"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8l1jj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_mrqsx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_6x6i3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_50bon")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_q5mre")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_2h053")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_1jd3y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_yr44s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_cmb52")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_qs0e5")
+}],
+"loop": false,
+"name": &"MinigameTransition",
+"speed": 5.0
+}]
+
+[node name="MinigameTransition" type="Control" unique_id=1113199476]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6x6i3")
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=2035256382]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CenterContainer" unique_id=971648468]
+position = Vector2(336, 237)
+scale = Vector2(0.32, 0.32)
+sprite_frames = SubResource("SpriteFrames_8l1jj")
+animation = &"MinigameTransition"
