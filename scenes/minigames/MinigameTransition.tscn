@@ -9,7 +9,6 @@
 [ext_resource type="Texture2D" uid="uid://cj31yuhk67st7" path="res://Assets/ui/minigamesLaunchAnimation/mg6.png" id="6_1jd3y"]
 [ext_resource type="Texture2D" uid="uid://dtpy0vlnft7p2" path="res://Assets/ui/minigamesLaunchAnimation/mg7.png" id="7_yr44s"]
 [ext_resource type="Texture2D" uid="uid://dch28uck0libv" path="res://Assets/ui/minigamesLaunchAnimation/mg8.png" id="8_cmb52"]
-[ext_resource type="Texture2D" uid="uid://u6oho0y87in6" path="res://Assets/ui/minigamesLaunchAnimation/MinigamesWindow.png" id="9_qs0e5"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_8l1jj"]
 animations = [{
@@ -37,13 +36,10 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("8_cmb52")
-}, {
-"duration": 1.0,
-"texture": ExtResource("9_qs0e5")
 }],
 "loop": false,
 "name": &"MinigameTransition",
-"speed": 5.0
+"speed": 8.0
 }]
 
 [node name="MinigameTransition" type="Control" unique_id=1113199476]
