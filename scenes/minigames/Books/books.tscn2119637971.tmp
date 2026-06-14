@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://b13notj7vrkum"]
+
+[ext_resource type="PackedScene" uid="uid://khyulkrrsf0r" path="res://scenes/minigames/MinigameBase.tscn" id="1_jua0m"]
+[ext_resource type="Script" uid="uid://dhx4cjato5824" path="res://scripts/books.gd" id="2_14l3x"]
+[ext_resource type="Texture2D" uid="uid://dlc4rm6cl5qfc" path="res://Assets/ui/minigames/Books/BookShelf.png" id="3_82oue"]
+
+[node name="Books" unique_id=932141857 instance=ExtResource("1_jua0m")]
+
+[node name="Game" parent="." index="0" unique_id=407440309]
+script = ExtResource("2_14l3x")
+
+[node name="BooksContainer" type="Control" parent="Game" index="0" unique_id=1748290560]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Background" type="TextureRect" parent="Game" index="1" unique_id=190043648]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("3_82oue")
+
+[node name="CompletionTimer" type="Timer" parent="Game" index="2" unique_id=1971587773]

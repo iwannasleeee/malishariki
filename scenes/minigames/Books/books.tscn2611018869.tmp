@@ -1,0 +1,324 @@
+[gd_scene format=3 uid="uid://b13notj7vrkum"]
+
+[ext_resource type="PackedScene" uid="uid://khyulkrrsf0r" path="res://scenes/minigames/MinigameBase.tscn" id="1_jua0m"]
+[ext_resource type="Script" uid="uid://dhx4cjato5824" path="res://scripts/books.gd" id="2_14l3x"]
+[ext_resource type="Texture2D" uid="uid://bs12nil8qctj8" path="res://Assets/ui/minigames/Books/BookDown1.png" id="3_54bgk"]
+[ext_resource type="Texture2D" uid="uid://dlc4rm6cl5qfc" path="res://Assets/ui/minigames/Books/BookShelf.png" id="3_82oue"]
+[ext_resource type="Texture2D" uid="uid://risl0ssqbcbl" path="res://Assets/ui/minigames/Books/BookDown2.png" id="4_kwj18"]
+[ext_resource type="Texture2D" uid="uid://dbkx7laryhppc" path="res://Assets/ui/minigames/Books/BookUp1.png" id="5_7nj57"]
+[ext_resource type="Texture2D" uid="uid://deb8mncmw6jf0" path="res://Assets/ui/minigames/Books/BookDown3.png" id="5_qrvqx"]
+[ext_resource type="Texture2D" uid="uid://b0gba0lw5svib" path="res://Assets/ui/minigames/Books/BookUp2.png" id="6_nwgjd"]
+[ext_resource type="Texture2D" uid="uid://cvt2taifi5yp2" path="res://Assets/ui/minigames/Books/BookDown4.png" id="6_uelyj"]
+[ext_resource type="Texture2D" uid="uid://b44k8igoadaiv" path="res://Assets/ui/minigames/Books/BookUp3.png" id="7_1rctr"]
+[ext_resource type="Texture2D" uid="uid://gupejpdbtt6b" path="res://Assets/ui/minigames/Books/BookDown5.png" id="7_mxovw"]
+[ext_resource type="Texture2D" uid="uid://batltlvcmcsxc" path="res://Assets/ui/minigames/Books/BookUp4.png" id="8_5utja"]
+[ext_resource type="Texture2D" uid="uid://cnw1a7kns4n0w" path="res://Assets/ui/minigames/Books/BookDown6.png" id="8_tdnoc"]
+[ext_resource type="Texture2D" uid="uid://f6l2fms1nxbv" path="res://Assets/ui/minigames/Books/BookDown7.png" id="9_66pbc"]
+[ext_resource type="Texture2D" uid="uid://cp3q1wn4bsg5m" path="res://Assets/ui/minigames/Books/BookUp5.png" id="9_batf0"]
+[ext_resource type="Texture2D" uid="uid://cr1y5hdoplkuh" path="res://Assets/ui/minigames/Books/BookUp6.png" id="10_30j1w"]
+[ext_resource type="Texture2D" uid="uid://bsm61pigebi7q" path="res://Assets/ui/minigames/Books/BookDown8.png" id="10_653io"]
+[ext_resource type="Texture2D" uid="uid://p00bdc6bfvjg" path="res://Assets/ui/minigames/Books/BookUp7.png" id="11_3w2h6"]
+[ext_resource type="Texture2D" uid="uid://b7ulajn1b1wd8" path="res://Assets/ui/minigames/Books/BookDown9.png" id="11_c0hv8"]
+[ext_resource type="Texture2D" uid="uid://pa5mmsau76c4" path="res://Assets/ui/minigames/Books/BookDown10.png" id="12_46d6q"]
+[ext_resource type="Texture2D" uid="uid://7ccadkc70ig0" path="res://Assets/ui/minigames/Books/BookUp8.png" id="12_eapok"]
+[ext_resource type="Texture2D" uid="uid://diaaihq4nqf0e" path="res://Assets/ui/minigames/Books/BookUp9.png" id="13_4h4ly"]
+[ext_resource type="Texture2D" uid="uid://j1ca0erjcyib" path="res://Assets/ui/minigames/Books/BookMiddle1.png" id="13_6y1w7"]
+[ext_resource type="Texture2D" uid="uid://ciolhul3raq7k" path="res://Assets/ui/minigames/Books/BookMiddle2.png" id="14_7nj57"]
+[ext_resource type="Texture2D" uid="uid://darhibxoiohgf" path="res://Assets/ui/minigames/Books/BookUp10.png" id="14_t3maf"]
+[ext_resource type="Texture2D" uid="uid://ds2mgc78l2r51" path="res://Assets/ui/minigames/Books/BookMiddle3.png" id="15_nwgjd"]
+[ext_resource type="Texture2D" uid="uid://dtux1e80uvd1q" path="res://Assets/ui/minigames/Books/BookMiddle4.png" id="16_1rctr"]
+[ext_resource type="Texture2D" uid="uid://5g7bx16ao2bs" path="res://Assets/ui/minigames/Books/BookMiddle5.png" id="17_5utja"]
+[ext_resource type="Texture2D" uid="uid://cvd10ur71ye2j" path="res://Assets/ui/minigames/Books/BookMiddle6.png" id="18_batf0"]
+[ext_resource type="Texture2D" uid="uid://74iqsk0nkepj" path="res://Assets/ui/minigames/Books/BookMiddle7.png" id="19_30j1w"]
+[ext_resource type="Texture2D" uid="uid://bcvdfc8jjvovf" path="res://Assets/ui/minigames/Books/BookMiddle8.png" id="20_3w2h6"]
+[ext_resource type="Texture2D" uid="uid://cb3sfqoln2mg0" path="res://Assets/ui/minigames/Books/BookMiddle9.png" id="21_eapok"]
+[ext_resource type="Texture2D" uid="uid://bvcyj6a40lxpy" path="res://Assets/ui/minigames/Books/BookMiddle10.png" id="22_4h4ly"]
+[ext_resource type="Texture2D" uid="uid://idope0hqpn7c" path="res://Assets/ui/minigames/Books/StickerBox.png" id="23_kwj18"]
+
+[node name="Books" unique_id=932141857 instance=ExtResource("1_jua0m")]
+
+[node name="Game" parent="." index="0" unique_id=407440309]
+script = ExtResource("2_14l3x")
+
+[node name="Background" type="TextureRect" parent="Game" index="0" unique_id=190043648]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("3_82oue")
+
+[node name="Box" type="Control" parent="Game" index="1" unique_id=1699239134]
+anchors_preset = 0
+offset_left = 615.0
+offset_top = -7.0
+offset_right = 655.0
+offset_bottom = 33.0
+
+[node name="Art" type="TextureRect" parent="Game/Box" index="0" unique_id=501069806]
+layout_mode = 0
+offset_right = 230.0
+offset_bottom = 122.0
+texture = ExtResource("23_kwj18")
+
+[node name="Row1" type="Control" parent="Game" index="2" unique_id=2030117791]
+anchors_preset = 0
+offset_top = 101.0
+offset_right = 1268.0
+offset_bottom = 141.0
+
+[node name="BookUp1" type="TextureRect" parent="Game/Row1" index="0" unique_id=8004027]
+layout_mode = 0
+offset_left = 63.0
+offset_top = 78.0
+offset_right = 100.0
+offset_bottom = 206.0
+texture = ExtResource("5_7nj57")
+
+[node name="BookUp2" type="TextureRect" parent="Game/Row1" index="1" unique_id=1258517873]
+layout_mode = 0
+offset_left = 233.0
+offset_top = 78.0
+offset_right = 364.0
+offset_bottom = 232.0
+texture = ExtResource("6_nwgjd")
+
+[node name="BookUp3" type="TextureRect" parent="Game/Row1" index="2" unique_id=262724304]
+layout_mode = 0
+offset_left = 362.0
+offset_top = 78.0
+offset_right = 434.0
+offset_bottom = 237.0
+texture = ExtResource("7_1rctr")
+
+[node name="BookUp4" type="TextureRect" parent="Game/Row1" index="3" unique_id=1045807487]
+layout_mode = 0
+offset_left = 466.0
+offset_top = 78.0
+offset_right = 537.0
+offset_bottom = 237.0
+texture = ExtResource("8_5utja")
+
+[node name="BookUp5" type="TextureRect" parent="Game/Row1" index="4" unique_id=1926455734]
+layout_mode = 0
+offset_left = 594.0
+offset_top = 78.0
+offset_right = 708.0
+offset_bottom = 237.0
+texture = ExtResource("9_batf0")
+
+[node name="BookUp6" type="TextureRect" parent="Game/Row1" index="5" unique_id=1439011521]
+layout_mode = 0
+offset_left = 722.0
+offset_top = 78.0
+offset_right = 789.0
+offset_bottom = 237.0
+texture = ExtResource("10_30j1w")
+
+[node name="BookUp7" type="TextureRect" parent="Game/Row1" index="6" unique_id=1424326336]
+layout_mode = 0
+offset_left = 802.0
+offset_top = 78.0
+offset_right = 870.0
+offset_bottom = 228.0
+texture = ExtResource("11_3w2h6")
+
+[node name="BookUp8" type="TextureRect" parent="Game/Row1" index="7" unique_id=673954217]
+layout_mode = 0
+offset_left = 898.0
+offset_top = 78.0
+offset_right = 965.0
+offset_bottom = 237.0
+texture = ExtResource("12_eapok")
+
+[node name="BookUp9" type="TextureRect" parent="Game/Row1" index="8" unique_id=2039387163]
+layout_mode = 0
+offset_left = 986.0
+offset_top = 78.0
+offset_right = 1100.0
+offset_bottom = 236.0
+texture = ExtResource("13_4h4ly")
+
+[node name="BookUp10" type="TextureRect" parent="Game/Row1" index="9" unique_id=807506594]
+layout_mode = 0
+offset_left = 1170.0
+offset_top = 78.0
+offset_right = 1206.0
+offset_bottom = 206.0
+texture = ExtResource("14_t3maf")
+
+[node name="Row2" type="Control" parent="Game" index="3" unique_id=119596256]
+anchors_preset = 0
+offset_top = 251.0
+offset_right = 1268.0
+offset_bottom = 291.0
+
+[node name="BookMiddle1" type="TextureRect" parent="Game/Row2" index="0" unique_id=666266891]
+layout_mode = 0
+offset_left = 71.0
+offset_top = 79.0
+offset_right = 156.0
+offset_bottom = 238.0
+texture = ExtResource("13_6y1w7")
+
+[node name="BookMiddle2" type="TextureRect" parent="Game/Row2" index="1" unique_id=1792816969]
+layout_mode = 0
+offset_left = 167.0
+offset_top = 79.0
+offset_right = 196.0
+offset_bottom = 238.0
+texture = ExtResource("14_7nj57")
+
+[node name="BookMiddle3" type="TextureRect" parent="Game/Row2" index="2" unique_id=1884410672]
+layout_mode = 0
+offset_left = 239.0
+offset_top = 79.0
+offset_right = 348.0
+offset_bottom = 238.0
+texture = ExtResource("15_nwgjd")
+
+[node name="BookMiddle4" type="TextureRect" parent="Game/Row2" index="3" unique_id=1121852342]
+layout_mode = 0
+offset_left = 471.0
+offset_top = 79.0
+offset_right = 538.0
+offset_bottom = 238.0
+texture = ExtResource("16_1rctr")
+
+[node name="BookMiddle5" type="TextureRect" parent="Game/Row2" index="4" unique_id=2127827038]
+layout_mode = 0
+offset_left = 559.0
+offset_top = 79.0
+offset_right = 627.0
+offset_bottom = 229.0
+texture = ExtResource("17_5utja")
+
+[node name="BookMiddle6" type="TextureRect" parent="Game/Row2" index="5" unique_id=1314083135]
+layout_mode = 0
+offset_left = 647.0
+offset_top = 79.0
+offset_right = 676.0
+offset_bottom = 237.0
+texture = ExtResource("18_batf0")
+
+[node name="BookMiddle7" type="TextureRect" parent="Game/Row2" index="6" unique_id=740103256]
+layout_mode = 0
+offset_left = 767.0
+offset_top = 79.0
+offset_right = 847.0
+offset_bottom = 229.0
+texture = ExtResource("19_30j1w")
+
+[node name="BookMiddle8" type="TextureRect" parent="Game/Row2" index="7" unique_id=827345462]
+layout_mode = 0
+offset_left = 879.0
+offset_top = 79.0
+offset_right = 993.0
+offset_bottom = 238.0
+texture = ExtResource("20_3w2h6")
+
+[node name="BookMiddle9" type="TextureRect" parent="Game/Row2" index="8" unique_id=174165507]
+layout_mode = 0
+offset_left = 1023.0
+offset_top = 79.0
+offset_right = 1167.0
+offset_bottom = 239.0
+texture = ExtResource("21_eapok")
+
+[node name="BookMiddle10" type="TextureRect" parent="Game/Row2" index="9" unique_id=1469788156]
+layout_mode = 0
+offset_left = 1175.0
+offset_top = 79.0
+offset_right = 1212.0
+offset_bottom = 207.0
+texture = ExtResource("22_4h4ly")
+
+[node name="Row3" type="Control" parent="Game" index="4" unique_id=1094536062]
+anchors_preset = 0
+offset_top = 401.0
+offset_right = 1268.0
+offset_bottom = 441.0
+
+[node name="BookDown1" type="TextureRect" parent="Game/Row3" index="0" unique_id=1612228113]
+layout_mode = 0
+offset_left = 44.0
+offset_top = 128.0
+offset_right = 80.0
+offset_bottom = 256.0
+texture = ExtResource("3_54bgk")
+
+[node name="BookDown2" type="TextureRect" parent="Game/Row3" index="1" unique_id=1246167115]
+layout_mode = 0
+offset_left = 92.0
+offset_top = 128.0
+offset_right = 194.0
+offset_bottom = 291.0
+texture = ExtResource("4_kwj18")
+
+[node name="BookDown3" type="TextureRect" parent="Game/Row3" index="2" unique_id=796276130]
+layout_mode = 0
+offset_left = 260.0
+offset_top = 128.0
+offset_right = 371.0
+offset_bottom = 287.0
+texture = ExtResource("5_qrvqx")
+
+[node name="BookDown4" type="TextureRect" parent="Game/Row3" index="3" unique_id=1354222695]
+layout_mode = 0
+offset_left = 380.0
+offset_top = 128.0
+offset_right = 448.0
+offset_bottom = 278.0
+texture = ExtResource("6_uelyj")
+
+[node name="BookDown5" type="TextureRect" parent="Game/Row3" index="4" unique_id=216675903]
+layout_mode = 0
+offset_left = 492.0
+offset_top = 128.0
+offset_right = 603.0
+offset_bottom = 287.0
+texture = ExtResource("7_mxovw")
+
+[node name="BookDown6" type="TextureRect" parent="Game/Row3" index="5" unique_id=47454581]
+layout_mode = 0
+offset_left = 612.0
+offset_top = 128.0
+offset_right = 653.0
+offset_bottom = 257.0
+texture = ExtResource("8_tdnoc")
+
+[node name="BookDown7" type="TextureRect" parent="Game/Row3" index="6" unique_id=50218815]
+layout_mode = 0
+offset_left = 716.0
+offset_top = 128.0
+offset_right = 830.0
+offset_bottom = 287.0
+texture = ExtResource("9_66pbc")
+
+[node name="BookDown8" type="TextureRect" parent="Game/Row3" index="7" unique_id=849237188]
+layout_mode = 0
+offset_left = 868.0
+offset_top = 128.0
+offset_right = 935.0
+offset_bottom = 288.0
+texture = ExtResource("10_653io")
+
+[node name="BookDown9" type="TextureRect" parent="Game/Row3" index="8" unique_id=539043011]
+layout_mode = 0
+offset_left = 956.0
+offset_top = 128.0
+offset_right = 1024.0
+offset_bottom = 278.0
+texture = ExtResource("11_c0hv8")
+
+[node name="BookDown10" type="TextureRect" parent="Game/Row3" index="9" unique_id=437167911]
+layout_mode = 0
+offset_left = 1180.0
+offset_top = 128.0
+offset_right = 1217.0
+offset_bottom = 256.0
+texture = ExtResource("12_46d6q")
+
+[node name="CompletionTimer" type="Timer" parent="Game" index="5" unique_id=1971587773]

@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://b13notj7vrkum"]
+
+[ext_resource type="PackedScene" uid="uid://khyulkrrsf0r" path="res://scenes/minigames/MinigameBase.tscn" id="1_jua0m"]
+[ext_resource type="Script" uid="uid://dhx4cjato5824" path="res://scripts/books.gd" id="2_14l3x"]
+[ext_resource type="Texture2D" uid="uid://dlc4rm6cl5qfc" path="res://Assets/ui/minigames/Books/BookShelf.png" id="3_82oue"]
+[ext_resource type="Texture2D" uid="uid://idope0hqpn7c" path="res://Assets/ui/minigames/Books/StickerBox.png" id="23_kwj18"]
+
+[node name="Books" unique_id=932141857 instance=ExtResource("1_jua0m")]
+
+[node name="Game" parent="." index="0" unique_id=407440309]
+script = ExtResource("2_14l3x")
+
+[node name="Background" type="TextureRect" parent="Game" index="0" unique_id=190043648]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("3_82oue")
+
+[node name="Box" type="Control" parent="Game" index="1" unique_id=1699239134]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Art" type="TextureRect" parent="Game/Box" index="0" unique_id=501069806]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 551.0
+offset_top = 27.0
+offset_right = 741.0
+offset_bottom = 109.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("23_kwj18")
+
+[node name="Row1" type="Control" parent="Game" index="2" unique_id=2030117791]
+anchors_preset = 0
+offset_top = 220.0
+offset_right = 1268.0
+offset_bottom = 260.0
+
+[node name="Row2" type="Control" parent="Game" index="3" unique_id=119596256]
+anchors_preset = 0
+offset_top = 370.0
+offset_right = 1268.0
+offset_bottom = 410.0
+
+[node name="Row3" type="Control" parent="Game" index="4" unique_id=1094536062]
+anchors_preset = 0
+offset_top = 520.0
+offset_right = 1268.0
+offset_bottom = 560.0
+
+[node name="CompletionTimer" type="Timer" parent="Game" index="5" unique_id=1971587773]
