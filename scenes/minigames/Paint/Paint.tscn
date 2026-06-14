@@ -148,11 +148,13 @@ offset_top = 162.0
 offset_right = 2071.0
 offset_bottom = 307.0
 scale = Vector2(0.25, 0.25)
+mouse_default_cursor_shape = 2
 texture_normal = ExtResource("6_250ui")
 texture_pressed = ExtResource("7_c758y")
 texture_hover = ExtResource("7_c758y")
 ignore_texture_size = true
 stretch_mode = 0
+metadata/_edit_use_anchors_ = true
 
 [node name="Eraser" type="TextureButton" parent="DrawingRoot/UI" index="1" unique_id=794760707]
 offset_left = 1041.0
@@ -160,10 +162,12 @@ offset_top = 536.0
 offset_right = 1459.0
 offset_bottom = 1017.0
 scale = Vector2(0.25, 0.25)
+mouse_default_cursor_shape = 2
 texture_normal = ExtResource("8_tyhnh")
 texture_hover = ExtResource("9_j32xw")
 ignore_texture_size = true
 stretch_mode = 0
+metadata/_edit_use_anchors_ = true
 
 [node name="UndoOld" type="Button" parent="DrawingRoot/UI" index="2" unique_id=1576387311]
 visible = false
@@ -172,6 +176,7 @@ offset_top = 48.0
 offset_right = 754.0
 offset_bottom = 362.0
 scale = Vector2(0.25, 0.25)
+mouse_default_cursor_shape = 2
 icon = ExtResource("10_abuk1")
 
 [node name="RedoOld" type="Button" parent="DrawingRoot/UI" index="3" unique_id=736292915]
@@ -181,6 +186,7 @@ offset_top = 59.0
 offset_right = 869.0
 offset_bottom = 342.0
 scale = Vector2(0.25, 0.25)
+mouse_default_cursor_shape = 2
 icon = ExtResource("11_m05yj")
 
 [node name="Close" type="Button" parent="DrawingRoot/UI" index="4" unique_id=672554115]
@@ -190,6 +196,7 @@ offset_top = 621.0
 offset_right = 1077.0
 offset_bottom = 856.0
 scale = Vector2(0.25, 0.25)
+mouse_default_cursor_shape = 2
 icon = ExtResource("12_bseie")
 
 [node name="RedPencil" type="TextureButton" parent="DrawingRoot/UI" index="5" unique_id=1093945484]
@@ -198,6 +205,7 @@ offset_top = 198.0
 offset_right = 2058.0
 offset_bottom = 343.0
 scale = Vector2(0.25, 0.25)
+mouse_default_cursor_shape = 2
 texture_normal = ExtResource("13_4cim5")
 texture_pressed = ExtResource("14_mkig3")
 texture_hover = ExtResource("14_mkig3")
@@ -210,6 +218,7 @@ offset_top = 230.0
 offset_right = 2058.0
 offset_bottom = 375.0
 scale = Vector2(0.25, 0.25)
+mouse_default_cursor_shape = 2
 texture_normal = ExtResource("15_aw002")
 texture_pressed = ExtResource("16_foatp")
 texture_hover = ExtResource("16_foatp")
@@ -222,6 +231,7 @@ offset_top = 272.0
 offset_right = 2058.0
 offset_bottom = 417.0
 scale = Vector2(0.25, 0.25)
+mouse_default_cursor_shape = 2
 texture_normal = ExtResource("17_tn4iw")
 texture_pressed = ExtResource("18_tot66")
 texture_hover = ExtResource("18_tot66")
@@ -234,6 +244,7 @@ offset_top = 304.0
 offset_right = 2058.0
 offset_bottom = 449.0
 scale = Vector2(0.25, 0.25)
+mouse_default_cursor_shape = 2
 texture_normal = ExtResource("19_0lvt6")
 texture_pressed = ExtResource("20_hv4ym")
 texture_hover = ExtResource("20_hv4ym")
@@ -246,6 +257,7 @@ offset_top = 334.0
 offset_right = 2058.0
 offset_bottom = 479.0
 scale = Vector2(0.25, 0.25)
+mouse_default_cursor_shape = 2
 texture_normal = ExtResource("21_syg24")
 texture_pressed = ExtResource("22_86py0")
 texture_hover = ExtResource("22_86py0")
@@ -258,6 +270,7 @@ offset_top = 362.0
 offset_right = 2058.0
 offset_bottom = 507.0
 scale = Vector2(0.25, 0.25)
+mouse_default_cursor_shape = 2
 texture_normal = ExtResource("23_xqi4a")
 texture_pressed = ExtResource("24_un7cl")
 texture_hover = ExtResource("24_un7cl")
@@ -270,6 +283,7 @@ offset_top = 397.0
 offset_right = 2058.0
 offset_bottom = 542.0
 scale = Vector2(0.25, 0.25)
+mouse_default_cursor_shape = 2
 texture_normal = ExtResource("25_po1ur")
 texture_pressed = ExtResource("26_nrdmp")
 texture_hover = ExtResource("26_nrdmp")
@@ -282,6 +296,7 @@ offset_top = 438.0
 offset_right = 2062.0
 offset_bottom = 583.0
 scale = Vector2(0.25, 0.25)
+mouse_default_cursor_shape = 2
 texture_normal = ExtResource("27_gx0yg")
 texture_pressed = ExtResource("28_x1lt4")
 texture_hover = ExtResource("28_x1lt4")
@@ -294,6 +309,7 @@ offset_top = 474.0
 offset_right = 2063.0
 offset_bottom = 619.0
 scale = Vector2(0.25, 0.25)
+mouse_default_cursor_shape = 2
 texture_normal = ExtResource("29_xukxr")
 texture_pressed = ExtResource("30_uy0gm")
 texture_hover = ExtResource("30_uy0gm")
@@ -306,6 +322,7 @@ offset_top = 49.0
 offset_right = 749.0
 offset_bottom = 355.0
 scale = Vector2(0.25, 0.25)
+mouse_default_cursor_shape = 2
 texture_normal = ExtResource("10_abuk1")
 texture_hover = ExtResource("31_hfn5u")
 
@@ -315,6 +332,7 @@ offset_top = 62.0
 offset_right = 861.0
 offset_bottom = 337.0
 scale = Vector2(0.25, 0.25)
+mouse_default_cursor_shape = 2
 texture_normal = ExtResource("11_m05yj")
 texture_hover = ExtResource("32_4ur8a")
 
@@ -324,6 +342,7 @@ offset_top = 81.0
 offset_right = 922.0
 offset_bottom = 290.0
 scale = Vector2(0.25, 0.25)
+mouse_default_cursor_shape = 2
 texture_normal = ExtResource("33_qgaic")
 texture_hover = ExtResource("34_03aqd")
 
@@ -333,6 +352,7 @@ offset_top = 91.0
 offset_right = 972.0
 offset_bottom = 300.0
 scale = Vector2(0.25, 0.25)
+mouse_default_cursor_shape = 2
 texture_normal = ExtResource("35_gve37")
 texture_hover = ExtResource("36_23ktp")
 
@@ -342,6 +362,7 @@ offset_top = 94.0
 offset_right = 1021.0
 offset_bottom = 303.0
 scale = Vector2(0.25, 0.25)
+mouse_default_cursor_shape = 2
 texture_normal = ExtResource("37_88s0u")
 texture_hover = ExtResource("38_c5l2g")
 
@@ -351,6 +372,7 @@ offset_top = 1.0
 offset_right = 1036.0
 offset_bottom = 1685.0
 scale = Vector2(0.25, 0.25)
+mouse_default_cursor_shape = 2
 texture_normal = ExtResource("39_xf6m4")
 texture_hover = ExtResource("40_4b3ur")
 
@@ -360,6 +382,7 @@ offset_top = 407.0
 offset_right = 401.0
 offset_bottom = 793.0
 scale = Vector2(0.25, 0.25)
+mouse_default_cursor_shape = 2
 texture_normal = ExtResource("41_q86r5")
 texture_hover = ExtResource("42_5ic75")
 
@@ -369,6 +392,7 @@ offset_top = 414.0
 offset_right = 482.0
 offset_bottom = 800.0
 scale = Vector2(0.25, 0.25)
+mouse_default_cursor_shape = 2
 texture_normal = ExtResource("43_ec6pa")
 texture_hover = ExtResource("44_1tkdj")
 
@@ -378,6 +402,7 @@ offset_top = 479.0
 offset_right = 489.0
 offset_bottom = 865.0
 scale = Vector2(0.25, 0.25)
+mouse_default_cursor_shape = 2
 texture_normal = ExtResource("45_grgoj")
 texture_hover = ExtResource("46_sgebv")
 
@@ -387,6 +412,7 @@ offset_top = 536.0
 offset_right = 478.0
 offset_bottom = 922.0
 scale = Vector2(0.25, 0.25)
+mouse_default_cursor_shape = 2
 texture_normal = ExtResource("47_s55bs")
 texture_hover = ExtResource("48_n6l8r")
 
@@ -396,6 +422,7 @@ offset_top = 563.0
 offset_right = 395.0
 offset_bottom = 949.0
 scale = Vector2(0.25, 0.25)
+mouse_default_cursor_shape = 2
 texture_normal = ExtResource("49_g6cwc")
 texture_hover = ExtResource("50_4c7v2")
 
@@ -405,6 +432,7 @@ offset_top = 464.0
 offset_right = 415.0
 offset_bottom = 850.0
 scale = Vector2(0.25, 0.25)
+mouse_default_cursor_shape = 2
 texture_normal = ExtResource("51_v86jb")
 texture_hover = ExtResource("52_lyrh0")
 
@@ -414,6 +442,7 @@ offset_top = 512.0
 offset_right = 408.0
 offset_bottom = 898.0
 scale = Vector2(0.25, 0.25)
+mouse_default_cursor_shape = 2
 texture_normal = ExtResource("53_dchhx")
 texture_hover = ExtResource("54_m6son")
 
@@ -423,6 +452,7 @@ offset_top = 623.0
 offset_right = 1070.0
 offset_bottom = 850.0
 scale = Vector2(0.25, 0.25)
+mouse_default_cursor_shape = 2
 texture_normal = ExtResource("12_bseie")
 texture_hover = ExtResource("55_ufdkh")
 
@@ -432,10 +462,12 @@ offset_top = 591.0
 offset_right = 1346.0
 offset_bottom = 894.0
 scale = Vector2(0.25, 0.25)
+mouse_default_cursor_shape = 2
 texture_normal = ExtResource("56_7cqja")
 texture_hover = ExtResource("57_1iiav")
 
 [node name="StickerMenu" type="Control" parent="DrawingRoot/UI" index="29" unique_id=91616774]
+visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_right = 1280.0
