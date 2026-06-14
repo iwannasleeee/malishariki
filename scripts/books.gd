@@ -94,12 +94,15 @@ func _do_drag(mouse_x: float) -> void:
 # Туннель открыт, если ни одна книга во всех 3 рядах не перекрывает центр коробки по X
 
 func _is_tunnel_open() -> bool:
-	var tunnel_x : float = box_node.position.x + box_node.size.x * 0.5
+	var tunnel_lx : float = box_node.position.x + box_node.size.x * 0.05
+	var tunnel_rx : float = box_node.position.x + box_node.size.x * 0.95
 	for r in 3:
 		var row_ox : float = rows[r].position.x   # обычно 0
 		for book : TextureRect in row_books[r]:
+			#book.scale = Vector2(1,1)
 			var bx := row_ox + book.position.x
-			if bx < tunnel_x and tunnel_x < bx + book.size.x:
+			if bx + book.size.x * 0.5 > box_node.position.x + box_node.size.x  * 0.5 and bx < tunnel_rx or bx + book.size.x > tunnel_lx and bx + book.size.x * 0.5 <= box_node.position.x + box_node.size.x  * 0.5 :
+				#book.scale = Vector2(0.95, 0.95)
 				return false   # в этом ряду книга перекрывает туннель
 	return true
 
@@ -112,7 +115,11 @@ func _on_box_input(event: InputEvent) -> void:
 			if _is_tunnel_open():
 				box_node.hide()
 				fin_timer.start()
-
+#func _process(delta: float) -> void:
+	#if _is_tunnel_open():
+		#print("yes")
+	#else:
+		#print("no")
 func _on_complete() -> void:
 	EventBus.minigame_finished.emit({})
 	UIManager.hide_minigame()

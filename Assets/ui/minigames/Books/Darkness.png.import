@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://betj2qq5cunsu"
-path="res://.godot/imported/Darkness.png-cd1bf0ff3b2a6a5183984bc2f1e92a2b.ctex"
+path="res://.godot/imported/Darkness.png-e9e41b9fa50d6b0e508fbd4deecb4d77.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui/minigames/Books/Darkness.png"
-dest_files=["res://.godot/imported/Darkness.png-cd1bf0ff3b2a6a5183984bc2f1e92a2b.ctex"]
+source_file="res://Assets/ui/minigames/Books/Darkness.png"
+dest_files=["res://.godot/imported/Darkness.png-e9e41b9fa50d6b0e508fbd4deecb4d77.ctex"]
 
 [params]
 

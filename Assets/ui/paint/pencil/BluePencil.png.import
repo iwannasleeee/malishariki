@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://l2y675m340oq"
-path="res://.godot/imported/BluePencil.png-c0451301f167fd3fb5e347a75b4b51f0.ctex"
+path="res://.godot/imported/BluePencil.png-1c8c3059c3cbce1d42f0b7e2924e64fb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui/paint/pencil/BluePencil.png"
-dest_files=["res://.godot/imported/BluePencil.png-c0451301f167fd3fb5e347a75b4b51f0.ctex"]
+source_file="res://Assets/ui/paint/pencil/BluePencil.png"
+dest_files=["res://.godot/imported/BluePencil.png-1c8c3059c3cbce1d42f0b7e2924e64fb.ctex"]
 
 [params]
 

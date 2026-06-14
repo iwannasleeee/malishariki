@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ddypridujldg4"
-path="res://.godot/imported/Zaplatka2.png-ec269e4514c379f29144ad25a511f816.ctex"
+path="res://.godot/imported/Zaplatka2.png-7e2dc273175c0c664aefd82189897aa1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui/minigames/Plakat/Zaplatka2.png"
-dest_files=["res://.godot/imported/Zaplatka2.png-ec269e4514c379f29144ad25a511f816.ctex"]
+source_file="res://Assets/ui/minigames/Plakat/Zaplatka2.png"
+dest_files=["res://.godot/imported/Zaplatka2.png-7e2dc273175c0c664aefd82189897aa1.ctex"]
 
 [params]
 

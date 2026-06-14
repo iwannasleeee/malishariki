@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cuo71ht6qwcgy"
-path="res://.godot/imported/Tiger_Background.PNG-2fd7fe098fac17857cde8898c1ff91a2.ctex"
+path="res://.godot/imported/Tiger_Background.PNG-4a741b280b0e21f2769323aaac93eb95.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui/minigames/TigerUp/Tiger_Background.PNG"
-dest_files=["res://.godot/imported/Tiger_Background.PNG-2fd7fe098fac17857cde8898c1ff91a2.ctex"]
+source_file="res://Assets/ui/minigames/TigerUp/Tiger_Background.PNG"
+dest_files=["res://.godot/imported/Tiger_Background.PNG-4a741b280b0e21f2769323aaac93eb95.ctex"]
 
 [params]
 

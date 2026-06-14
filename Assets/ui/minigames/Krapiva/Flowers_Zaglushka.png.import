@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bp2dpgpw5n6p3"
-path="res://.godot/imported/Flowers_Zaglushka.png-dad261d74062f9b2de9aede91b8323b8.ctex"
+path="res://.godot/imported/Flowers_Zaglushka.png-224835a0e38747c693f6fe286fbefcf5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui/minigames/Krapiva/Flowers_Zaglushka.png"
-dest_files=["res://.godot/imported/Flowers_Zaglushka.png-dad261d74062f9b2de9aede91b8323b8.ctex"]
+source_file="res://Assets/ui/minigames/Krapiva/Flowers_Zaglushka.png"
+dest_files=["res://.godot/imported/Flowers_Zaglushka.png-224835a0e38747c693f6fe286fbefcf5.ctex"]
 
 [params]
 
