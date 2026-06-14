@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://blrq6ugoto5pn"
-path="res://.godot/imported/Anemone4.png-88ee72a4823020c655f7b918134d19f7.ctex"
+path="res://.godot/imported/Anemone4.png-db9acb8b5aa0d34993e5df4c9a4fd631.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui/minigames/Krapiva/Anemone4.png"
-dest_files=["res://.godot/imported/Anemone4.png-88ee72a4823020c655f7b918134d19f7.ctex"]
+source_file="res://Assets/ui/minigames/Krapiva/Anemone4.png"
+dest_files=["res://.godot/imported/Anemone4.png-db9acb8b5aa0d34993e5df4c9a4fd631.ctex"]
 
 [params]
 

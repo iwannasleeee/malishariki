@@ -109,11 +109,6 @@
 [ext_resource type="Texture2D" uid="uid://bjuqh3yne0p14" path="res://Assets/ui/paint/Lini _Workplace/stickers/sticker46.png" id="106_3t8a2"]
 
 [node name="Paint" unique_id=932141857 instance=ExtResource("1_3f1yg")]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
 script = null
 
 [node name="DrawingRoot" type="Node2D" parent="." index="0" unique_id=288447002]

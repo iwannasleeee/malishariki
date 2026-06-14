@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c5mmqhxj18omh"
-path="res://.godot/imported/Tiger_Branch6.png-8b5fa118dd3d064fdd73af4f3bc8cf7c.ctex"
+path="res://.godot/imported/Tiger_Branch6.png-4a879be6a4bfa12691cc66cc33736840.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui/minigames/TigerUp/Tiger_Branch6.png"
-dest_files=["res://.godot/imported/Tiger_Branch6.png-8b5fa118dd3d064fdd73af4f3bc8cf7c.ctex"]
+source_file="res://Assets/ui/minigames/TigerUp/Tiger_Branch6.png"
+dest_files=["res://.godot/imported/Tiger_Branch6.png-4a879be6a4bfa12691cc66cc33736840.ctex"]
 
 [params]
 

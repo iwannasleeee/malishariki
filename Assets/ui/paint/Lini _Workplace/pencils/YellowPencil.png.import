@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c2ojx8j1gu3mh"
-path="res://.godot/imported/YellowPencil.png-343e59dd55e2973e9224f123d799ff87.ctex"
+path="res://.godot/imported/YellowPencil.png-852647c44743e8b208bbaa4869d02266.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui/paint/Lini _Workplace/pencils/YellowPencil.png"
-dest_files=["res://.godot/imported/YellowPencil.png-343e59dd55e2973e9224f123d799ff87.ctex"]
+source_file="res://Assets/ui/paint/Lini _Workplace/pencils/YellowPencil.png"
+dest_files=["res://.godot/imported/YellowPencil.png-852647c44743e8b208bbaa4869d02266.ctex"]
 
 [params]
 

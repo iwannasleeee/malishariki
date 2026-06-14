@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://bvqob3qdfy5hu" path="res://scripts/sticker_button.gd" id="1_4mfmp"]
 
 [node name="StickerButton" type="TextureButton" unique_id=1213818777 groups=["sticker_buttons"]]
+mouse_default_cursor_shape = 2
 ignore_texture_size = true
 stretch_mode = 5
 script = ExtResource("1_4mfmp")

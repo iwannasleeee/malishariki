@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ba0flbit6n30t"
-path="res://.godot/imported/tigi_idle1.PNG-1f82a37942a0939071218e14051f3988.ctex"
+path="res://.godot/imported/tigi_idle1.PNG-8ab51759c1e944bb0313fb96dc7e0c54.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/Tigi/tigi_idle1.PNG"
-dest_files=["res://.godot/imported/tigi_idle1.PNG-1f82a37942a0939071218e14051f3988.ctex"]
+source_file="res://Assets/sprites/Tigi/tigi_idle1.PNG"
+dest_files=["res://.godot/imported/tigi_idle1.PNG-8ab51759c1e944bb0313fb96dc7e0c54.ctex"]
 
 [params]
 

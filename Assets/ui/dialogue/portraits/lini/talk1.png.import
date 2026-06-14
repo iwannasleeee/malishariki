@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://0aeg85xq6de8"
-path="res://.godot/imported/talk1.png-ecfdcd2e4b2469eb44afe9a84373edb4.ctex"
+path="res://.godot/imported/talk1.png-a4685c68c9a6213151d685b688765001.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui/dialogue/portraits/lini/talk1.png"
-dest_files=["res://.godot/imported/talk1.png-ecfdcd2e4b2469eb44afe9a84373edb4.ctex"]
+source_file="res://Assets/ui/dialogue/portraits/lini/talk1.png"
+dest_files=["res://.godot/imported/talk1.png-a4685c68c9a6213151d685b688765001.ctex"]
 
 [params]
 
