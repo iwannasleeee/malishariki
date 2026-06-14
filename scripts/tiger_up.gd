@@ -89,7 +89,7 @@ func _on_spawn_timer_timeout() -> void:
 	branch.speed = branch_speed
 
 	var screen_w: float = get_viewport_rect().size.x
-	branch.position = Vector2(randf_range(50, screen_w - 50), -50)
+	branch.position.y = -100
 
 	branches_container.add_child(branch)
 

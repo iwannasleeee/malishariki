@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ciolhul3raq7k"
-path="res://.godot/imported/BookMiddle2.png-9a062222ea3a61ddc52dfb273215cdf0.ctex"
+path="res://.godot/imported/BookMiddle2.png-768c8ab3b1725c871e9f1ac47c2f27d1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui/minigames/Books/BookMiddle2.png"
-dest_files=["res://.godot/imported/BookMiddle2.png-9a062222ea3a61ddc52dfb273215cdf0.ctex"]
+source_file="res://Assets/ui/minigames/Books/BookMiddle2.png"
+dest_files=["res://.godot/imported/BookMiddle2.png-768c8ab3b1725c871e9f1ac47c2f27d1.ctex"]
 
 [params]
 

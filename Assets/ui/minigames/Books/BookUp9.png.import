@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://diaaihq4nqf0e"
-path="res://.godot/imported/BookUp9.png-1ffdbc3bd2b6c64f933750fca89685e0.ctex"
+path="res://.godot/imported/BookUp9.png-d77ac9ac294ee7f818f293abacbdc71a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui/minigames/Books/BookUp9.png"
-dest_files=["res://.godot/imported/BookUp9.png-1ffdbc3bd2b6c64f933750fca89685e0.ctex"]
+source_file="res://Assets/ui/minigames/Books/BookUp9.png"
+dest_files=["res://.godot/imported/BookUp9.png-d77ac9ac294ee7f818f293abacbdc71a.ctex"]
 
 [params]
 

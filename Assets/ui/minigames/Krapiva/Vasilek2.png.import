@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://budwal4dburum"
-path="res://.godot/imported/Vasilek2.png-0829ddf93f557e2b8e2470026d66555e.ctex"
+path="res://.godot/imported/Vasilek2.png-e552f3ef4b886647bb72983e573e0173.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui/minigames/Krapiva/Vasilek2.png"
-dest_files=["res://.godot/imported/Vasilek2.png-0829ddf93f557e2b8e2470026d66555e.ctex"]
+source_file="res://Assets/ui/minigames/Krapiva/Vasilek2.png"
+dest_files=["res://.godot/imported/Vasilek2.png-e552f3ef4b886647bb72983e573e0173.ctex"]
 
 [params]
 

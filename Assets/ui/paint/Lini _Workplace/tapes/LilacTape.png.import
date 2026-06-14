@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cwluwhhaexmjr"
-path="res://.godot/imported/LilacTape.png-0ebadc9b14bb0fd0cb7fa692c982a111.ctex"
+path="res://.godot/imported/LilacTape.png-98ea7c9b4c027defc7d72803fb1fab3a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui/paint/Lini _Workplace/tapes/LilacTape.png"
-dest_files=["res://.godot/imported/LilacTape.png-0ebadc9b14bb0fd0cb7fa692c982a111.ctex"]
+source_file="res://Assets/ui/paint/Lini _Workplace/tapes/LilacTape.png"
+dest_files=["res://.godot/imported/LilacTape.png-98ea7c9b4c027defc7d72803fb1fab3a.ctex"]
 
 [params]
 

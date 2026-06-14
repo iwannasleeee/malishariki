@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://85xr8y1kuosn"
-path="res://.godot/imported/Plakat_Table.png-e86666d24bd4b7c2ca24cab9277a903b.ctex"
+path="res://.godot/imported/Plakat_Table.png-d8e402852145bfa8cf0deb7e7c4610d7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui/minigames/Plakat/Plakat_Table.png"
-dest_files=["res://.godot/imported/Plakat_Table.png-e86666d24bd4b7c2ca24cab9277a903b.ctex"]
+source_file="res://Assets/ui/minigames/Plakat/Plakat_Table.png"
+dest_files=["res://.godot/imported/Plakat_Table.png-d8e402852145bfa8cf0deb7e7c4610d7.ctex"]
 
 [params]
 

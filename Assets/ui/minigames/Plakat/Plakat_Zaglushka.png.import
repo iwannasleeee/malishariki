@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cegg1xww1ioe1"
-path="res://.godot/imported/Plakat_Zaglushka.png-494bf3434102e080c2b9b7dddd211609.ctex"
+path="res://.godot/imported/Plakat_Zaglushka.png-678b6d6ba307978f129ec882d9a8d2f1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui/minigames/Plakat/Plakat_Zaglushka.png"
-dest_files=["res://.godot/imported/Plakat_Zaglushka.png-494bf3434102e080c2b9b7dddd211609.ctex"]
+source_file="res://Assets/ui/minigames/Plakat/Plakat_Zaglushka.png"
+dest_files=["res://.godot/imported/Plakat_Zaglushka.png-678b6d6ba307978f129ec882d9a8d2f1.ctex"]
 
 [params]
 
