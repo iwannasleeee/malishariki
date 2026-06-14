@@ -14,11 +14,14 @@
 [ext_resource type="Texture2D" uid="uid://0nf7riivxxen" path="res://assets/ui/minigames/Tumba/Tumba_TapeYellow.png" id="11_5xc7x"]
 [ext_resource type="Texture2D" uid="uid://bysux7abta2ci" path="res://assets/ui/minigames/Tumba/Tumba.PNG" id="13_ttnlm"]
 [ext_resource type="Texture2D" uid="uid://rglxnr4krk4u" path="res://assets/ui/minigames/Tumba/Tumba_OverAllSprites.png" id="14_7yv1k"]
+[ext_resource type="Texture2D" uid="uid://bdg1j2ksut4iv" path="res://assets/ui/minigames/Tumba/Tumba_Wrist.png" id="14_htbk1"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_gvvl4"]
 radius = 6.3362145
 
 [node name="Tumba" unique_id=932141857 instance=ExtResource("1_1qlt7")]
+offset_left = 3.0
+offset_right = 3.0
 
 [node name="Game" type="Control" parent="." index="0" unique_id=338858375]
 anchors_preset = 0
@@ -26,137 +29,124 @@ offset_right = 1280.0
 offset_bottom = 720.0
 script = ExtResource("2_4s460")
 grab_radius = 30.0
-rope_width = 28.0
+rope_width = 24.0
 
 [node name="Background" type="Sprite2D" parent="Game" index="0" unique_id=2145749733]
-position = Vector2(606.00006, 344)
-scale = Vector2(1.3, 1.3)
+position = Vector2(636.0001, 367.75003)
+scale = Vector2(1.18, 1.18)
 texture = ExtResource("3_g66l1")
 
 [node name="Anchor" type="Marker2D" parent="Game" index="1" unique_id=1889835936]
-position = Vector2(607, 571)
+position = Vector2(637.00006, 594.75006)
+scale = Vector2(1.18, 1.18)
 
 [node name="Rope" type="Line2D" parent="Game" index="2" unique_id=791404047]
+position = Vector2(30.000061, 23.75003)
+scale = Vector2(1.18, 1.18)
 joint_mode = 2
 begin_cap_mode = 2
 end_cap_mode = 2
 
 [node name="Palm" type="CharacterBody2D" parent="Game" index="3" unique_id=600109582]
-position = Vector2(644, 568)
+position = Vector2(672.99994, 526)
+scale = Vector2(1.18, 1.18)
 
 [node name="Sprite" type="Sprite2D" parent="Game/Palm" index="0" unique_id=1791230697]
 position = Vector2(2.4999795, 1.5)
-scale = Vector2(1.0657889, 0.9444444)
+scale = Vector2(1.18, 1.18)
 texture = ExtResource("6_jlgos")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Game/Palm" index="1" unique_id=1267249321]
 position = Vector2(-4, 7)
-scale = Vector2(0.9599976, 0.9599976)
+scale = Vector2(1.18, 1.18)
 shape = SubResource("CircleShape2D_gvvl4")
 
 [node name="ItemsContainer" type="Node2D" parent="Game" index="4" unique_id=276435296]
+position = Vector2(30.000061, 23.75003)
+scale = Vector2(1.18, 1.18)
 
 [node name="TumbaTapeBlue" type="Sprite2D" parent="Game/ItemsContainer" index="0" unique_id=1476507835]
-position = Vector2(184, 233)
+position = Vector2(177.96605, 211.22879)
 texture = ExtResource("5_o4045")
 
 [node name="TumbaTapeGreen" type="Sprite2D" parent="Game/ItemsContainer" index="1" unique_id=985907310]
-position = Vector2(828, 71)
+position = Vector2(717.79663, 55.296593)
 texture = ExtResource("6_mxbkl")
 
 [node name="TumbaTapeLilac" type="Sprite2D" parent="Game/ItemsContainer" index="2" unique_id=350963327]
-position = Vector2(188, 50)
+position = Vector2(183.0508, 37.499973)
 texture = ExtResource("7_om2i6")
 
 [node name="TumbaTapeOrange" type="Sprite2D" parent="Game/ItemsContainer" index="3" unique_id=1024643215]
-position = Vector2(471, 314)
+position = Vector2(409.32202, 265.4661)
 texture = ExtResource("8_ttnlm")
 
 [node name="TumbaTapePink" type="Sprite2D" parent="Game/ItemsContainer" index="4" unique_id=1050410656]
-position = Vector2(173, 546)
+position = Vector2(181.3559, 438.3474)
 texture = ExtResource("9_7yv1k")
 
 [node name="TumbaTapeWhite" type="Sprite2D" parent="Game/ItemsContainer" index="5" unique_id=1917916382]
-position = Vector2(502, 45)
+position = Vector2(416.9491, 34.957603)
 texture = ExtResource("10_htbk1")
 
 [node name="TumbaTapeYellow" type="Sprite2D" parent="Game/ItemsContainer" index="6" unique_id=2007405452]
-position = Vector2(711, 63)
+position = Vector2(601.6949, 49.364384)
 texture = ExtResource("11_5xc7x")
 
 [node name="MazeContainer" type="Node2D" parent="Game" index="5" unique_id=838859012]
+position = Vector2(53, 25)
 
 [node name="MazeSprite" type="Sprite2D" parent="Game/MazeContainer" index="0" unique_id=1032481218]
 position = Vector2(588, 278)
-scale = Vector2(1.2092555, 1.2092555)
+scale = Vector2(1.18, 1.18)
 texture = ExtResource("4_gvvl4")
 
 [node name="MazeWalls" type="StaticBody2D" parent="Game/MazeContainer" index="1" unique_id=67683788]
+position = Vector2(51, 11)
+scale = Vector2(0.85, 0.85)
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Game/MazeContainer/MazeWalls" index="0" unique_id=488438497]
-position = Vector2(587, 279)
-scale = Vector2(1.2092555, 1.2092555)
-polygon = PackedVector2Array(282.59998, -243.5, 260, -234.8, 249.79999, -233.5, 199.90002, -194.5, 210.59998, -172.9, 222.29999, -142.4, 212.59998, -117.5, 207.29999, -98.5, 211.7005, -90.96506, 249.79999, -97.5, 261.2, -77.2, 265, -71.899994, 276.7, -71.5, 310.10815, -94.27287, 321.68555, -81.868546, 336.57074, -89.31114, 346.4942, -105.02329, 363.86023, -123.2163, 357.24463, -144.71713, 367.995, -195.16139, 366.34113, -215.83527, 355.5907, -230.72046, 310, -246.5)
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Game/MazeContainer/MazeWalls" index="0" unique_id=199080377]
+polygon = PackedVector2Array(0, 0, 145.88235, 18.823528, 211.76471, 20, 215.29413, 61.176476, 337.64706, 70.588234, 345.8824, 85.88236, 396.4706, 89.411766, 403.52945, 109.411766, 397.64706, 138.82355, 404.7059, 152.9412, 414.11765, 311.76474, 392.9412, 324.7059, 392.9412, 400.00003, 372.9412, 421.17648, 392.9412, 437.6471, 389.41177, 500.00003, 407.05887, 508.23532, 410.58823, 436.4706, 435.29416, 435.29413, 444.7059, 492.9412, 465.88235, 495.29416, 472.9412, 463.52945, 478.82358, 434.11768, 504.7059, 425.8824, 492.9412, 410.58826, 464.7059, 409.41177, 451.76474, 344.7059, 461.17648, 323.52942, 495.29416, 300.00003, 518.8236, 278.82355, 500.00003, 247.05884, 475.29416, 268.23532, 456.4706, 242.35297, 456.4706, 128.23529, 456.4706, 104.70588, 437.64706, 83.52941, 457.64706, 56.47059, 460.00003, 4.705883, 608.23535, 11.764706, 628.23535, 78.82353, 598.8236, 104.70588, 595.2942, 152.9412, 558.8236, 144.7059, 544.70593, 160, 551.7648, 177.64706, 576.4706, 184.7059, 584.70593, 212.9412, 605.8823, 212.9412, 615.2942, 190.58826, 652.94116, 202.35294, 672.94116, 171.76471, 629.41174, 154.11765, 640, 90.588234, 736.4706, 62.352943, 748.23535, 12.941177, 820, 18.823528, 823.5294, 43.52941, 809.41174, 78.82353, 809.41174, 136.47058, 787.05884, 123.52941, 751.7648, 145.88235, 723.5294, 155.29413, 731.7648, 208.23529, 827.05884, 185.88235, 830.58826, 200, 842.353, 329.41177, 874.1177, 367.05884, 902.353, 325.8824, 935.2942, 324.7059, 954.1177, 304.7059, 958.8236, 338.82355, 952.9413, 360.00003, 971.7648, 388.23532, 992.9413, 397.6471, 1004.70593, 361.17648, 1014.1177, 327.05884, 1034.1177, 271.7647, 1008.23535, 278.82355, 963.52954, 264.7059, 952.9413, 251.76471, 940.0001, 265.8824, 889.41187, 238.82355, 861.1765, 256.4706, 851.7648, 131.76471, 856.4706, 44.705887, 845.88245, 15.294117, 954.1177, 17.64706, 935.2942, 43.52941, 949.41187, 107.05883, 938.8236, 155.29413, 929.41187, 180, 980.0001, 165.88235, 1007.05896, 200, 1075.2942, 168.23529, 1109.4119, 171.76471, 1114.1177, 641.17645, 856.4706, 636.4706, 760, 702.35297, 592.94116, 700, 548.23535, 636.4706, 544.70593, 611.7647, 520, 605.8824, 425.88235, 615.2941, 410.58823, 603.5294, 328.23532, 612.94116, 314.11768, 621.17645, 312.9412, 640, 114.11766, 635.2941, 108.235306, 558.82355, 169.41177, 567.05884, 249.41177, 565.8823, 270.58826, 578.82355, 285.88235, 557.64703, 290.58826, 457.6471, 269.41177, 445.8824, 263.52942, 289.41177, 249.41177, 271.7647, 235.29413, 311.76474, 145.88235, 311.76474, 116.4706, 347.05884, 114.11766, 24.70588, 22.352951, 20, 23.529419, 757.6471, 1245.8824, 762.35297, 1262.353, -84.70589, -16.470589, -84.70589)
 
-[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="Game/MazeContainer/MazeWalls" index="1" unique_id=565027400]
-position = Vector2(588, 278)
-scale = Vector2(1.2092555, 1.2092555)
-polygon = PackedVector2Array(135.62067, -238.99002, 134.29999, -215.5, 125.697205, -190.19966, 128.17804, -133.13977, 114.11981, -135.62064, 97.58069, -122.38935, 66.9834, -115.773705, 73.599, -77.73378, 143.8902, -93.44592, 146.3711, -62.848587, 152.9867, 11.577377, 172.00665, 22.32779, 198.46924, 7.4425964, 215.00836, 14.885193, 230.72046, 19.019974, 240.64392, 50.44426, 259.66388, 59.540756, 266.27954, 42.174698, 272.8952, 12.404327, 289.43427, -26.462555, 270.4143, -26.462555, 237.33612, -41.347748, 216.66223, -39.693848, 190.1997, -51.27121, 166.21796, -57.05989, 161.25623, -125.69717, 163.73712, -139.7554, 161.25623, -175.31447, 161.25623, -202.60399, 160.42932, -238.99002)
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Game/MazeContainer/MazeWalls" index="1" unique_id=1441557478]
+position = Vector2(911.7648, 548.2353)
+polygon = PackedVector2Array(10.588135, 16.470581, 43.529297, 12.941162, 112.94104, 11.764709, 127.058716, -34.117676, 42.352783, -49.411743, 22.352783, -37.647034, -128.23541, -44.70587, -155.29425, -54.117676, -138.82367, -232.9412, -289.41187, -256.47058, -311.76483, -184.7059, -331.76483, -57.647034, -321.17657, -37.647034, -389.41187, -7.058838, -302.3531, 7.058838, -43.52954, 11.764709)
 
-[node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="Game/MazeContainer/MazeWalls" index="2" unique_id=1794566860]
-position = Vector2(588, 278)
-scale = Vector2(1.2092555, 1.2092555)
-polygon = PackedVector2Array(17.100006, -147.8, 14, -147.1, 14, -144.9, 13, -139.7, 13, -135.5, 23.200012, -135.5)
-
-[node name="CollisionPolygon2D9" type="CollisionPolygon2D" parent="Game/MazeContainer/MazeWalls" index="3" unique_id=1443310104]
-position = Vector2(588, 278)
-scale = Vector2(1.2092555, 1.2092555)
-polygon = PackedVector2Array(4.961731, -20.673874, -19.019958, -11.577362, -36.386017, 104.196335, -38.039917, 134.79369, -59.54074, 160.42928, -24.808624, 174.48753, 14.058258, 176.14143, 184.41101, 176.14143, 219.9701, 176.14143, 238.16309, 178.6223, 253.87524, 174.48753, 281.16473, 184.411, 290.26123, 143.06322, 263.7987, 138.92845, 234.85529, 133.96672, 219.9701, 141.40932, 138.92847, 140.58238, 95.09985, 133.13979, 99.23462, -2.4808655, 57.88684, -9.923462)
-
-[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Game/MazeContainer/MazeWalls" index="4" unique_id=1291183610]
-position = Vector2(319, 20)
-polygon = PackedVector2Array(24, 59, 14, 45, -74, 45, -91, 37, -97, 7, -103, -45, 127, -41, 128, 2, 126, 35, 117, 52, 128, 75, 124, 118, 119, 188, 129, 196, 138, 213, 155, 198, 163, 203, 172, 224, 169, 233, 147, 254, 124, 281, 128, 342, 150, 341, 162, 349, 159, 361, 138, 371, 136, 407, 130, 423, 120, 427, 87, 414, 82, 432, 66, 438, 52, 422, 53, 370, 34, 357, 58, 333, 60, 296, 58, 259, 80, 256, 71, 105, 66, 93, 68, 59)
-
-[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Game/MazeContainer/MazeWalls" index="5" unique_id=1407069687]
-position = Vector2(208, 377)
-polygon = PackedVector2Array(-51, -99, 36, -100, 40, -127, 49, -138, 55, -116, 66, 15, 81, 44, 81, 116, 65, 138, 44, 119, -39, 120, -66, 100)
-
-[node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="Game/MazeContainer/MazeWalls" index="6" unique_id=107432084]
-position = Vector2(627, 30)
-polygon = PackedVector2Array(-65, -59, -54, 5, -45, 51, -66, 65, -74, 100, -107, 98, -116, 120, -102, 138, -86, 136, -75, 158, -45, 144, -22, 156, -1, 136, -8, 117, -36, 110, -32, 75, -23, 49, 39, 36, 61, 19, 56, -56)
-
-[node name="CollisionPolygon2D7" type="CollisionPolygon2D" parent="Game/MazeContainer/MazeWalls" index="7" unique_id=501954154]
-position = Vector2(410, 575)
-polygon = PackedVector2Array(-100, 12, -106, -11, -90, -31, -22, -42, -4, -32, 85, -39, 99, -33, 107, 10)
-
-[node name="CollisionPolygon2D8" type="CollisionPolygon2D" parent="Game/MazeContainer/MazeWalls" index="8" unique_id=127995595]
-position = Vector2(243, 147)
-polygon = PackedVector2Array(-58, 24, -105, 13, -97, -23, -34, -29, 6, -33, 65, -15, 90, 0, 83, 22, 30, 28)
-
-[node name="CollisionPolygon2D10" type="CollisionPolygon2D" parent="Game/MazeContainer/MazeWalls" index="9" unique_id=1725604660]
-position = Vector2(639, 638)
-polygon = PackedVector2Array(-30, -7, -125, -63, -485, -58, -486, -664, 410, -649, 418, -51, 103, -58, -93, 30, -58, 118, 693, 105, 685, -731, -755, -726, -759, 111, -29, 125)
-
-[node name="UI" type="CanvasLayer" parent="Game" index="6" unique_id=549040992]
-
-[node name="StatusLabel" type="Label" parent="Game/UI" index="0" unique_id=274562685]
-offset_left = 23.0
-offset_top = 21.0
-offset_right = 63.0
-offset_bottom = 44.0
-
-[node name="WinLabel" type="Label" parent="Game/UI" index="1" unique_id=2064632090]
-offset_left = 8.0
-offset_top = 56.0
-offset_right = 48.0
-offset_bottom = 79.0
-
-[node name="Sprite2D" type="Sprite2D" parent="Game" index="7" unique_id=159520146]
-position = Vector2(602.99994, 336.99997)
-scale = Vector2(1.3203332, 1.3203332)
+[node name="Sprite2D" type="Sprite2D" parent="Game" index="6" unique_id=159520146]
+position = Vector2(633, 360.75)
+scale = Vector2(1.18, 1.18)
 texture = ExtResource("13_ttnlm")
 
+[node name="Sprite2D3" type="Sprite2D" parent="Game" index="7" unique_id=1113836307]
+position = Vector2(450.65732, 634.57104)
+rotation = 0.31806535
+scale = Vector2(1.0219241, 1.1587887)
+texture = ExtResource("14_htbk1")
+
 [node name="Sprite2D2" type="Sprite2D" parent="Game" index="8" unique_id=1039988959]
-position = Vector2(612, 351)
-scale = Vector2(1.1981944, 1.1981944)
+position = Vector2(642.00006, 374.75003)
+scale = Vector2(1.18, 1.18)
 texture = ExtResource("14_7yv1k")
+
+[node name="UI" type="Control" parent="Game" index="9" unique_id=337469813]
+anchors_preset = 0
+offset_left = 547.0
+offset_top = 15.000015
+offset_right = 547.0
+offset_bottom = 15.000015
+scale = Vector2(1.18, 1.18)
+
+[node name="StatusLabel" type="Label" parent="Game/UI" index="0" unique_id=274562685]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+scale = Vector2(1.18, 1.18)
+metadata/_edit_use_anchors_ = true
+
+[node name="WinLabel" type="Label" parent="Game/UI" index="1" unique_id=2064632090]
+layout_mode = 0
+offset_left = 10.0
+offset_right = 50.0
+offset_bottom = 23.0
+scale = Vector2(1.18, 1.18)
+metadata/_edit_use_anchors_ = true

@@ -14,6 +14,6 @@ mouse_filter = 2
 script = ExtResource("1_hhdiu")
 
 [node name="MinigameRAMA" type="Sprite2D" parent="." unique_id=247808933]
-position = Vector2(622, 354.00003)
-scale = Vector2(0.615, 0.615)
+position = Vector2(639, 370)
+scale = Vector2(0.58, 0.58)
 texture = ExtResource("2_u20di")
