@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cwijqq413kncw"
-path="res://.godot/imported/Book_Zaglushka.png-0d9eb1214a7001708ce600ddfc0d0398.ctex"
+path="res://.godot/imported/Book_Zaglushka.png-f807ab1b3170467c13df07e05efc2cdf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/ui/minigames/Books/Book_Zaglushka.png"
-dest_files=["res://.godot/imported/Book_Zaglushka.png-0d9eb1214a7001708ce600ddfc0d0398.ctex"]
+source_file="res://assets/ui/minigames/Books/Book_Zaglushka.png"
+dest_files=["res://.godot/imported/Book_Zaglushka.png-f807ab1b3170467c13df07e05efc2cdf.ctex"]
 
 [params]
 

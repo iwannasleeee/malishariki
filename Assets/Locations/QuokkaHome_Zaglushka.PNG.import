@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d0odfhbic1bea"
-path="res://.godot/imported/QuokkaHome_Zaglushka.PNG-304c137c0a96f1e66712730b09e4bbe8.ctex"
+path="res://.godot/imported/QuokkaHome_Zaglushka.PNG-6560fe04b6e02e8152bc65ca59cbc83e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Locations/QuokkaHome_Zaglushka.PNG"
-dest_files=["res://.godot/imported/QuokkaHome_Zaglushka.PNG-304c137c0a96f1e66712730b09e4bbe8.ctex"]
+source_file="res://assets/locations/QuokkaHome_Zaglushka.PNG"
+dest_files=["res://.godot/imported/QuokkaHome_Zaglushka.PNG-6560fe04b6e02e8152bc65ca59cbc83e.ctex"]
 
 [params]
 
