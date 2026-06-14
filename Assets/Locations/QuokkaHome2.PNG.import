@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bc5ilb260nlo3"
-path="res://.godot/imported/QuokkaHome2.PNG-9be7b38f25e42e1d248cb4a9031d4c30.ctex"
+path="res://.godot/imported/QuokkaHome2.PNG-e47e5e4bee064c061235bd92fed68d17.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Locations/QuokkaHome2.PNG"
-dest_files=["res://.godot/imported/QuokkaHome2.PNG-9be7b38f25e42e1d248cb4a9031d4c30.ctex"]
+source_file="res://assets/locations/QuokkaHome2.PNG"
+dest_files=["res://.godot/imported/QuokkaHome2.PNG-e47e5e4bee064c061235bd92fed68d17.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b5aky0nqydjbl"
-path="res://.godot/imported/Сandle1.PNG-4eb645a9707850619aeabb85d88fbd99.ctex"
+path="res://.godot/imported/Сandle1.PNG-3b8f9084a091cda063557d4acfbcabe7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/ui/minigames/Cake/Сandle1.PNG"
-dest_files=["res://.godot/imported/Сandle1.PNG-4eb645a9707850619aeabb85d88fbd99.ctex"]
+source_file="res://assets/ui/minigames/Cake/Сandle1.PNG"
+dest_files=["res://.godot/imported/Сandle1.PNG-3b8f9084a091cda063557d4acfbcabe7.ctex"]
 
 [params]
 

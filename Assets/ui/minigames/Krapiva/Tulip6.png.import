@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bwpumlr0dneq7"
-path="res://.godot/imported/Tulip6.png-99d6b316f8bfab76a0bf444653f0415c.ctex"
+path="res://.godot/imported/Tulip6.png-3bda838d2459182c710ec2b1a11e2406.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/ui/minigames/Krapiva/Tulip6.png"
-dest_files=["res://.godot/imported/Tulip6.png-99d6b316f8bfab76a0bf444653f0415c.ctex"]
+source_file="res://assets/ui/minigames/Krapiva/Tulip6.png"
+dest_files=["res://.godot/imported/Tulip6.png-3bda838d2459182c710ec2b1a11e2406.ctex"]
 
 [params]
 

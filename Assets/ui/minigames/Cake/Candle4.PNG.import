@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dh0fwmm5a5mt8"
-path="res://.godot/imported/Candle4.PNG-cdf641669e1778746f686673c3afef0f.ctex"
+path="res://.godot/imported/Candle4.PNG-3fc0c2606375328a14e92780f287792e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/ui/minigames/Cake/Candle4.PNG"
-dest_files=["res://.godot/imported/Candle4.PNG-cdf641669e1778746f686673c3afef0f.ctex"]
+source_file="res://assets/ui/minigames/Cake/Candle4.PNG"
+dest_files=["res://.godot/imported/Candle4.PNG-3fc0c2606375328a14e92780f287792e.ctex"]
 
 [params]
 

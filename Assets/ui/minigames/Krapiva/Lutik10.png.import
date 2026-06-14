@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cicmljlfhsi77"
-path="res://.godot/imported/Lutik10.png-b0dfe8dc800bdb0cdfc9f66cb1bf6682.ctex"
+path="res://.godot/imported/Lutik10.png-374915a82833fc8140475b426c83a7b4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/ui/minigames/Krapiva/Lutik10.png"
-dest_files=["res://.godot/imported/Lutik10.png-b0dfe8dc800bdb0cdfc9f66cb1bf6682.ctex"]
+source_file="res://assets/ui/minigames/Krapiva/Lutik10.png"
+dest_files=["res://.godot/imported/Lutik10.png-374915a82833fc8140475b426c83a7b4.ctex"]
 
 [params]
 

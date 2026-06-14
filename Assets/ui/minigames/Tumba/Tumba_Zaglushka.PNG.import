@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bfjx8fnwcmhq2"
-path="res://.godot/imported/Tumba_Zaglushka.PNG-3d35562ea04b5f0be12526c6700ab9a4.ctex"
+path="res://.godot/imported/Tumba_Zaglushka.PNG-961eb00e4337fac8107c2b368d293481.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/ui/minigames/Tumba/Tumba_Zaglushka.PNG"
-dest_files=["res://.godot/imported/Tumba_Zaglushka.PNG-3d35562ea04b5f0be12526c6700ab9a4.ctex"]
+source_file="res://assets/ui/minigames/Tumba/Tumba_Zaglushka.PNG"
+dest_files=["res://.godot/imported/Tumba_Zaglushka.PNG-961eb00e4337fac8107c2b368d293481.ctex"]
 
 [params]
 
