@@ -3,7 +3,7 @@ extends Control
 @onready var rows      : Array[Control] = [$Row1, $Row2, $Row3]
 @onready var box_node  : Control        = $Box
 @onready var fin_timer : Timer          = $CompletionTimer
-
+@onready var darkness  : Sprite2D       = $Darkness
 # row_books[r] — книги ряда r, отсортированные по X слева направо
 var row_books : Array = [[], [], []]
 
@@ -115,11 +115,22 @@ func _on_box_input(event: InputEvent) -> void:
 			if _is_tunnel_open():
 				box_node.hide()
 				fin_timer.start()
-#func _process(delta: float) -> void:
+func _process(delta: float) -> void:
+	#darkness.global_position = get_global_mouse_position()
+	var mouse_pos = get_local_mouse_position()
+	var root = $"."
+	var middle_root_x = root.size.x * 0.5
+	var middle_root_y = root.size.y * 0.5
+	var darkness_size = darkness.texture.get_size() * darkness.scale
+	
+	var k = 0.25
+	darkness.position.x = clamp(mouse_pos.x, middle_root_x - darkness_size.x * k, middle_root_x + darkness_size.x * k)
+	darkness.position.y = clamp(mouse_pos.y, middle_root_y - darkness_size.y * k, middle_root_y + darkness_size.y * k)
+	
 	#if _is_tunnel_open():
-		#print("yes")
+		#print("yes")y		#print("yes"y
 	#else:
-		#print("no")
+		#print("ny")
 func _on_complete() -> void:
 	EventBus.minigame_finished.emit({})
 	UIManager.hide_minigame()
