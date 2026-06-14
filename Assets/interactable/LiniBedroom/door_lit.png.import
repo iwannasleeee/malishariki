@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dxlrn1atmw7on"
-path="res://.godot/imported/door_lit.png-8a6a568acff0a931d741a8003fb8104f.ctex"
+path="res://.godot/imported/door_lit.png-2405680384f31a518982b833773f0f20.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/interactable/LiniBedroom/door_lit.png"
-dest_files=["res://.godot/imported/door_lit.png-8a6a568acff0a931d741a8003fb8104f.ctex"]
+source_file="res://assets/interactable/LiniBedroom/door_lit.png"
+dest_files=["res://.godot/imported/door_lit.png-2405680384f31a518982b833773f0f20.ctex"]
 
 [params]
 

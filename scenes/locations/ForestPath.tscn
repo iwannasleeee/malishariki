@@ -4,7 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://co4vbk581rk7d" path="res://scenes/locations/ParallaxBackground.tscn" id="2_va8tf"]
 [ext_resource type="PackedScene" uid="uid://bh4pkisxjime7" path="res://scenes/locations/ParallaxFrontground.tscn" id="3_dl70t"]
 [ext_resource type="PackedScene" uid="uid://nwqvur0td1dc" path="res://scenes/core/Spawn.tscn" id="4_m7vo0"]
-[ext_resource type="Texture2D" uid="uid://6cgl35x0556p" path="res://Assets/Locations/Trolley.png" id="4_uckft"]
+[ext_resource type="Texture2D" uid="uid://6cgl35x0556p" path="res://assets/locations/Trolley.png" id="4_uckft"]
+[ext_resource type="PackedScene" uid="uid://bwknacds4jgdw" path="res://scenes/interactable/ForestPath/flowers/flower_1.tscn" id="6_dmnvg"]
 [ext_resource type="PackedScene" uid="uid://cedlq61i5g2u7" path="res://scenes/interactable/ForestPath/flowers/flower_1_test.tscn" id="6_jcwjh"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_iregs"]
@@ -34,5 +35,9 @@ spawn_name = "SpawnLiniHouse"
 
 [node name="flowers" type="Node2D" parent="." unique_id=2071817935]
 
-[node name="flower1test" parent="flowers" unique_id=1008082527 instance=ExtResource("6_jcwjh")]
+[node name="flower1" parent="flowers" unique_id=1008082527 instance=ExtResource("6_dmnvg")]
+position = Vector2(764, 465)
+scale = Vector2(-0.21093866, 0.23602282)
+
+[node name="flower1test" parent="flowers" unique_id=1613250209 instance=ExtResource("6_jcwjh")]
 position = Vector2(520, 559)

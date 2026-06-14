@@ -1,16 +1,19 @@
 [gd_scene format=3 uid="uid://cor3i4co23erq"]
 
 [ext_resource type="PackedScene" uid="uid://n3j5jnkmsmox" path="res://scenes/minigames/TigerUp/branch.tscn" id="1_4fp5e"]
-[ext_resource type="Texture2D" uid="uid://dbt22urxormxm" path="res://Assets/ui/minigames/TigerUp/Tiger_Branch7.png" id="2_h3g46"]
+[ext_resource type="Texture2D" uid="uid://dbt22urxormxm" path="res://assets/ui/minigames/TigerUp/Tiger_Branch7.png" id="2_h3g46"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pd0m7"]
-size = Vector2(977, 58)
+size = Vector2(431.5, 65)
 
 [node name="Branch7" unique_id=24776640 instance=ExtResource("1_4fp5e")]
+position = Vector2(31, 648)
 
 [node name="Sprite2D" parent="." index="0" unique_id=1255238891]
+position = Vector2(700, -820.3125)
+scale = Vector2(0.453125, 0.453125)
 texture = ExtResource("2_h3g46")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1" unique_id=1019169793]
-position = Vector2(770.5, 911)
+position = Vector2(1050, -369)
 shape = SubResource("RectangleShape2D_pd0m7")

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://103b4rrbao55"
-path="res://.godot/imported/SmallSize.png-e8c5c51bb2e859204e6fc00c2541b94a.ctex"
+path="res://.godot/imported/SmallSize.png-d477832b179a6444a6b2071b22f41ad9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/ui/paint/Lini _Workplace/SmallSize.png"
-dest_files=["res://.godot/imported/SmallSize.png-e8c5c51bb2e859204e6fc00c2541b94a.ctex"]
+source_file="res://assets/ui/paint/Lini _Workplace/SmallSize.png"
+dest_files=["res://.godot/imported/SmallSize.png-d477832b179a6444a6b2071b22f41ad9.ctex"]
 
 [params]
 

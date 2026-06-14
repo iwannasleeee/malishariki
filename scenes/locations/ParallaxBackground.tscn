@@ -1,12 +1,13 @@
 [gd_scene format=3 uid="uid://co4vbk581rk7d"]
 
-[ext_resource type="Texture2D" uid="uid://c4hrhnmnqnfdl" path="res://Assets/Locations/ground4.png" id="1_h1t2k"]
+[ext_resource type="Texture2D" uid="uid://c4hrhnmnqnfdl" path="res://assets/locations/ground4.png" id="1_h1t2k"]
 [ext_resource type="Script" uid="uid://waf7hw0iomft" path="res://scripts/parallax_background.gd" id="1_l3nyy"]
-[ext_resource type="Texture2D" uid="uid://b2nqrdp1pv3be" path="res://Assets/Locations/sky4.png" id="2_8711w"]
-[ext_resource type="Texture2D" uid="uid://dheefg6o0xrem" path="res://Assets/Locations/ground3.png" id="2_ob7jg"]
-[ext_resource type="Texture2D" uid="uid://88eatewneubs" path="res://Assets/Locations/sky3.png" id="3_0jj0q"]
-[ext_resource type="Texture2D" uid="uid://ch6j3el7teeby" path="res://Assets/Locations/sky2.png" id="4_kku47"]
-[ext_resource type="Texture2D" uid="uid://cl5lklfabsdix" path="res://Assets/Locations/sky1.png" id="5_35eui"]
+[ext_resource type="Texture2D" uid="uid://b2nqrdp1pv3be" path="res://assets/locations/sky4.png" id="2_8711w"]
+[ext_resource type="Texture2D" uid="uid://dheefg6o0xrem" path="res://assets/locations/ground3.png" id="2_ob7jg"]
+[ext_resource type="Texture2D" uid="uid://88eatewneubs" path="res://assets/locations/sky3.png" id="3_0jj0q"]
+[ext_resource type="Texture2D" uid="uid://ch6j3el7teeby" path="res://assets/locations/sky2.png" id="4_kku47"]
+[ext_resource type="Texture2D" uid="uid://cl5lklfabsdix" path="res://assets/locations/sky1.png" id="5_35eui"]
+[ext_resource type="Texture2D" uid="uid://k58e7vcq8fpb" path="res://assets/locations/allPath.png" id="8_l3nyy"]
 
 [node name="ParallaxBackground" type="ParallaxBackground" unique_id=87852714]
 script = ExtResource("1_l3nyy")
@@ -82,6 +83,7 @@ centered = false
 z_index = -1
 position = Vector2(-269, 0)
 scale = Vector2(0.32044446, 0.3204444)
+texture = ExtResource("8_l3nyy")
 centered = false
 
 [node name="NavigationObstacle2D" type="NavigationObstacle2D" parent="GroundLayer2" unique_id=1151690742]

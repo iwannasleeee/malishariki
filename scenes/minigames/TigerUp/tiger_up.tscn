@@ -2,10 +2,10 @@
 
 [ext_resource type="PackedScene" uid="uid://khyulkrrsf0r" path="res://scenes/minigames/MinigameBase.tscn" id="1_22xpy"]
 [ext_resource type="Script" uid="uid://dgymksgewkpux" path="res://scripts/tiger_up.gd" id="2_l1x7x"]
-[ext_resource type="Texture2D" uid="uid://cuo71ht6qwcgy" path="res://Assets/ui/minigames/TigerUp/Tiger_Background.PNG" id="3_hqlw5"]
-[ext_resource type="Texture2D" uid="uid://bsl1oykwvhwst" path="res://Assets/ui/minigames/TigerUp/TigerLapa.PNG" id="4_6n3go"]
-[ext_resource type="Texture2D" uid="uid://0aeg85xq6de8" path="res://Assets/ui/dialogue/portraits/lini/talk1.png" id="4_m5qvp"]
-[ext_resource type="Texture2D" uid="uid://bxjpsluy5rf84" path="res://Assets/ui/dialogue/portraits/lini/talk2.png" id="5_6n3go"]
+[ext_resource type="Texture2D" uid="uid://cuo71ht6qwcgy" path="res://assets/ui/minigames/TigerUp/Tiger_Background.PNG" id="3_hqlw5"]
+[ext_resource type="Texture2D" uid="uid://bsl1oykwvhwst" path="res://assets/ui/minigames/TigerUp/TigerLapa.PNG" id="4_6n3go"]
+[ext_resource type="Texture2D" uid="uid://0aeg85xq6de8" path="res://assets/ui/dialogue/portraits/lini/talk1.png" id="4_m5qvp"]
+[ext_resource type="Texture2D" uid="uid://bxjpsluy5rf84" path="res://assets/ui/dialogue/portraits/lini/talk2.png" id="5_6n3go"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_6n3go"]
 radius = 15.859567
@@ -46,12 +46,12 @@ texture = ExtResource("3_hqlw5")
 [node name="World" type="Node2D" parent="Game" index="1" unique_id=1685023479]
 
 [node name="Platform" type="Sprite2D" parent="Game/World" index="0" unique_id=16657184]
-position = Vector2(474, 706)
-scale = Vector2(0.35, 0.35)
+position = Vector2(283.65, 536)
+scale = Vector2(0.33461913, 0.163)
 texture = ExtResource("4_6n3go")
 
 [node name="Player" type="Area2D" parent="Game/World" index="1" unique_id=898062079]
-position = Vector2(755, 652)
+position = Vector2(526, 429)
 
 [node name="Sprite2D" type="Sprite2D" parent="Game/World/Player" index="0" unique_id=1178585293]
 scale = Vector2(3.4400048, 3.4400048)

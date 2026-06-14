@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://0nf7riivxxen" path="res://assets/ui/minigames/Tumba/Tumba_TapeYellow.png" id="11_5xc7x"]
 [ext_resource type="Texture2D" uid="uid://bysux7abta2ci" path="res://assets/ui/minigames/Tumba/Tumba.PNG" id="13_ttnlm"]
 [ext_resource type="Texture2D" uid="uid://rglxnr4krk4u" path="res://assets/ui/minigames/Tumba/Tumba_OverAllSprites.png" id="14_7yv1k"]
+[ext_resource type="Texture2D" uid="uid://0h8gdeol6j0d" path="res://assets/ui/minigamesLaunchAnimation/RAMAminigames.png" id="15_7yv1k"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_gvvl4"]
 radius = 6.3362145
@@ -160,3 +161,8 @@ texture = ExtResource("13_ttnlm")
 position = Vector2(612, 351)
 scale = Vector2(1.1981944, 1.1981944)
 texture = ExtResource("14_7yv1k")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Game" index="9" unique_id=979735507]
+position = Vector2(616, 356)
+scale = Vector2(0.6140069, 0.61400694)
+texture = ExtResource("15_7yv1k")
