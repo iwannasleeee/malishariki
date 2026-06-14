@@ -16,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://xyrlk8js0n1y" path="res://scenes/interactable/LiniBedroom/pencils/pink_pencil.tscn" id="12_ehd4l"]
 [ext_resource type="PackedScene" uid="uid://coph1k5bfkyqe" path="res://scenes/interactable/LiniBedroom/pencils/purple_pencil.tscn" id="13_8cfen"]
 [ext_resource type="PackedScene" uid="uid://dopd45d3ekhkd" path="res://scenes/interactable/LiniBedroom/shelf.tscn" id="16_e75w4"]
+[ext_resource type="PackedScene" uid="uid://b3dywi0q54qqt" path="res://scenes/interactable/LiniBedroom/box.tscn" id="17_gqgl3"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_4vbjv"]
 vertices = PackedVector2Array(462.04688, 697.9922, 230.9375, 691.0078, 144.97656, 676.1719, 192.92969, 641.22656, 290.10938, 647.96094, 500.4922, 673.25, 1032.4531, 684, 574.5, 641.21875, 583.8125, 603.96094, 1166.3672, 601.0078, 1233.4297, 657.3125, 1212.0313, 669.2031)
@@ -93,4 +94,8 @@ spawn_name = "SpawnDoor"
 
 [node name="shelf" parent="." unique_id=2082713571 instance=ExtResource("16_e75w4")]
 position = Vector2(719, 492.00003)
+scale = Vector2(0.33, 0.33)
+
+[node name="box" parent="." unique_id=2061403920 instance=ExtResource("17_gqgl3")]
+position = Vector2(1051.0001, 465)
 scale = Vector2(0.33, 0.33)

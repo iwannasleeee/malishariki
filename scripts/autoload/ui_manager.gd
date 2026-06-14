@@ -62,15 +62,18 @@ func show_minigame(scene_path: String) -> void:
 	var screen: Node = (load(scene_path) as PackedScene).instantiate()
 	minigame.add_child(screen)
 
-	# Масштабируем под размер контейнера
-	var native: Vector2 = Vector2(1280, 720)  # разрешение в котором сделана миниигра
+	var native: Vector2 = Vector2(1280, 720)
 	var target: Vector2 = minigame.size
 	var s: float = min(target.x / native.x, target.y / native.y)
+
 	screen.scale = Vector2(s, s)
 	screen.pivot_offset = Vector2.ZERO
+	screen.position = (target - native * s) / 2.0
 
-	var scaled_size := native * s
-	screen.position = (target - scaled_size) / 2.0
+	# Сбрасываем anchors у самого screen, чтобы он не тянулся
+	screen.set_anchors_and_offsets_preset(Control.PRESET_TOP_LEFT)
+	screen.custom_minimum_size = native
+	screen.size = native
 
 	current_minigame_screen = screen
 	minigame.visible = true
