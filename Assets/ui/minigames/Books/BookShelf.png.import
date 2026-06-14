@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dlc4rm6cl5qfc"
-path="res://.godot/imported/BookShelf.png-e8aedbac22b63fb5c3e77699d3c1a3d3.ctex"
+path="res://.godot/imported/BookShelf.png-03fcf56dec818a41145ef86b0fd73882.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/ui/minigames/Books/BookShelf.png"
-dest_files=["res://.godot/imported/BookShelf.png-e8aedbac22b63fb5c3e77699d3c1a3d3.ctex"]
+source_file="res://assets/ui/minigames/Books/BookShelf.png"
+dest_files=["res://.godot/imported/BookShelf.png-03fcf56dec818a41145ef86b0fd73882.ctex"]
 
 [params]
 

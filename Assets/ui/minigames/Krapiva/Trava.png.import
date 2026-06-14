@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://wnr162mdhc44"
-path="res://.godot/imported/Trava.png-fede52d63b1577c16b577bf35ef7d9d9.ctex"
+path="res://.godot/imported/Trava.png-20518b55150f6449cb8bac63819101e1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/ui/minigames/Krapiva/Trava.png"
-dest_files=["res://.godot/imported/Trava.png-fede52d63b1577c16b577bf35ef7d9d9.ctex"]
+source_file="res://assets/ui/minigames/Krapiva/Trava.png"
+dest_files=["res://.godot/imported/Trava.png-20518b55150f6449cb8bac63819101e1.ctex"]
 
 [params]
 

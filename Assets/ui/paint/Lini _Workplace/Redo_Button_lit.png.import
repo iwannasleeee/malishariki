@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b5h8wcnr2mmex"
-path="res://.godot/imported/Redo_Button_lit.png-fe3d87b4cf5ff11ad98dbbd9e9c94cd5.ctex"
+path="res://.godot/imported/Redo_Button_lit.png-237b6506ac6855d9978f2e9c1f089ec5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/ui/paint/Lini _Workplace/Redo_Button_lit.png"
-dest_files=["res://.godot/imported/Redo_Button_lit.png-fe3d87b4cf5ff11ad98dbbd9e9c94cd5.ctex"]
+source_file="res://assets/ui/paint/Lini _Workplace/Redo_Button_lit.png"
+dest_files=["res://.godot/imported/Redo_Button_lit.png-237b6506ac6855d9978f2e9c1f089ec5.ctex"]
 
 [params]
 

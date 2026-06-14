@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bcua4owuoe23x"
-path="res://.godot/imported/WhiteTape.png-3f7def1f501c53f2229c167832877bf5.ctex"
+path="res://.godot/imported/WhiteTape.png-7557b37ee4932a471001f4f3ef173dfd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/ui/paint/Lini _Workplace/tapes/WhiteTape.png"
-dest_files=["res://.godot/imported/WhiteTape.png-3f7def1f501c53f2229c167832877bf5.ctex"]
+source_file="res://assets/ui/paint/Lini _Workplace/tapes/WhiteTape.png"
+dest_files=["res://.godot/imported/WhiteTape.png-7557b37ee4932a471001f4f3ef173dfd.ctex"]
 
 [params]
 

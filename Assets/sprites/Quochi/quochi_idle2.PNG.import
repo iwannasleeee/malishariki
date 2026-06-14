@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c8b2dxannt733"
-path="res://.godot/imported/quochi_idle2.PNG-734e2dfd231e794b6ee7f9aafb89721c.ctex"
+path="res://.godot/imported/quochi_idle2.PNG-4af81268d14404644f88ae2f32e16960.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/sprites/Quochi/quochi_idle2.PNG"
-dest_files=["res://.godot/imported/quochi_idle2.PNG-734e2dfd231e794b6ee7f9aafb89721c.ctex"]
+source_file="res://assets/sprites/Quochi/quochi_idle2.PNG"
+dest_files=["res://.godot/imported/quochi_idle2.PNG-4af81268d14404644f88ae2f32e16960.ctex"]
 
 [params]
 
