@@ -1,0 +1,81 @@
+[gd_scene format=3 uid="uid://uexl5ma1m7py"]
+
+[ext_resource type="Script" uid="uid://bujxbiyxa3bky" path="res://scripts/birthday_scene.gd" id="1_cgbcl"]
+[ext_resource type="Texture2D" uid="uid://beoayvh8ci2x6" path="res://Assets/ui/minigames/Cake/Candle2.PNG" id="2_r66ni"]
+[ext_resource type="Texture2D" uid="uid://c7123phb33abj" path="res://Assets/ui/minigames/Cake/Candle3.PNG" id="3_y1osx"]
+[ext_resource type="Texture2D" uid="uid://dh0fwmm5a5mt8" path="res://Assets/ui/minigames/Cake/Candle4.PNG" id="4_d0kbh"]
+[ext_resource type="Texture2D" uid="uid://b5aky0nqydjbl" path="res://Assets/ui/minigames/Cake/Сandle1.PNG" id="5_2oyb1"]
+[ext_resource type="Texture2D" uid="uid://cbju41rb0ia0h" path="res://Assets/ui/minigames/Cake/CandleOff.PNG" id="6_ym8na"]
+[ext_resource type="Script" uid="uid://lg57f8107yq6" path="res://scripts/trail_path.gd" id="7_r66ni"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5j12y"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_r66ni")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_y1osx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_d0kbh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_2oyb1")
+}],
+"loop": true,
+"name": &"burning",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_ym8na")
+}],
+"loop": true,
+"name": &"off",
+"speed": 5.0
+}]
+
+[node name="BirthdayScene" type="Control" unique_id=1426520513]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_cgbcl")
+
+[node name="CandleSprite" type="AnimatedSprite2D" parent="." unique_id=544531846]
+sprite_frames = SubResource("SpriteFrames_5j12y")
+animation = &"off"
+centered = false
+
+[node name="TrailPath" type="Node2D" parent="." unique_id=465804240]
+script = ExtResource("7_r66ni")
+
+[node name="DottedLine" type="Line2D" parent="TrailPath" unique_id=1624078149]
+
+[node name="Checkpoints" type="Node2D" parent="TrailPath" unique_id=1131793861]
+
+[node name="OverlayRect" type="ColorRect" parent="." unique_id=749815863]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="BirthdayLabel" type="Label" parent="." unique_id=812403336]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "	"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SceneTimer" type="Timer" parent="." unique_id=1757776522]
