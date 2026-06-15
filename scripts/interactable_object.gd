@@ -12,6 +12,13 @@ func _ready():
 	mouse_entered.connect(_on_mouse_enter)
 	mouse_exited.connect(_on_mouse_exit)
 	input_event.connect(_on_input_event)
+	EventBus.location_change_requested.connect(_on_location_load)
+
+func _on_location_load():
+	$Sprite2D.texture = default_texture
+	mouse_entered.connect(_on_mouse_enter)
+	mouse_exited.connect(_on_mouse_exit)
+	input_event.connect(_on_input_event)
 
 func _on_mouse_enter():
 	is_hovered = true
