@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dh0fwmm5a5mt8"
-path="res://.godot/imported/Candle4.PNG-cdf641669e1778746f686673c3afef0f.ctex"
+uid="uid://cyydh8lc5aji5"
+path="res://.godot/imported/Cake3.png-73b44c043f4a6fc8a2e84d5d5b93be74.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/ui/minigames/Cake/Candle4.PNG"
-dest_files=["res://.godot/imported/Candle4.PNG-cdf641669e1778746f686673c3afef0f.ctex"]
+source_file="res://Assets/ui/minigames/Cake/Cake3.png"
+dest_files=["res://.godot/imported/Cake3.png-73b44c043f4a6fc8a2e84d5d5b93be74.ctex"]
 
 [params]
 
