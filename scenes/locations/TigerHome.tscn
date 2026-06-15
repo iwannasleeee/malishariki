@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://bh4ukbeeuyykj" path="res://scenes/core/FixedCamera.tscn" id="1_4urkp"]
 [ext_resource type="Texture2D" uid="uid://o8nnhtkniyhu" path="res://Assets/Locations/TigerHome.PNG" id="2_mejkl"]
 [ext_resource type="PackedScene" uid="uid://nwqvur0td1dc" path="res://scenes/core/Spawn.tscn" id="3_u6n2r"]
+[ext_resource type="PackedScene" uid="uid://dbipac1yt2oil" path="res://scenes/interactable/TigerHome/tigi.tscn" id="4_mejkl"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_cjmmn"]
 vertices = PackedVector2Array(582.4922, 609, 511.71094, 552.71875, 560.6719, 510.85938, 740.60156, 551.9375, 672.0078, 609, 1058.9375, 609.97656, 1055.0938, 569.2422, 1127.7813, 542.8672, 1100.0625, 521.4531)
@@ -24,3 +25,6 @@ spawn_name = "TigerEdgeSpawn"
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=2110561564]
 navigation_polygon = SubResource("NavigationPolygon_cjmmn")
+
+[node name="Tigi" parent="." unique_id=1008082527 instance=ExtResource("4_mejkl")]
+position = Vector2(1045, 202)
