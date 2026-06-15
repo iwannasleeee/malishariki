@@ -24,10 +24,8 @@ position = Vector2(0, -26)
 navigation_polygon = SubResource("NavigationPolygon_iregs")
 
 [node name="ParallaxBackground" parent="." unique_id=1892395260 instance=ExtResource("2_va8tf")]
-visible = false
 
 [node name="ParallaxFrountground" parent="." unique_id=333348341 instance=ExtResource("3_dl70t")]
-visible = false
 
 [node name="Trolley" type="Sprite2D" parent="." unique_id=2102250415]
 position = Vector2(1345, 551)
