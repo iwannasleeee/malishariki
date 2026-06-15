@@ -3,9 +3,9 @@
 [ext_resource type="PackedScene" uid="uid://khyulkrrsf0r" path="res://scenes/minigames/MinigameBase.tscn" id="1_22xpy"]
 [ext_resource type="Script" uid="uid://dgymksgewkpux" path="res://scripts/tiger_up.gd" id="2_l1x7x"]
 [ext_resource type="Texture2D" uid="uid://cuo71ht6qwcgy" path="res://Assets/ui/minigames/TigerUp/Tiger_Background.PNG" id="3_hqlw5"]
-[ext_resource type="Texture2D" uid="uid://bsl1oykwvhwst" path="res://Assets/ui/minigames/TigerUp/TigerLapa.PNG" id="4_6n3go"]
-[ext_resource type="Texture2D" uid="uid://0aeg85xq6de8" path="res://Assets/ui/dialogue/portraits/lini/talk1.png" id="4_m5qvp"]
-[ext_resource type="Texture2D" uid="uid://bxjpsluy5rf84" path="res://Assets/ui/dialogue/portraits/lini/talk2.png" id="5_6n3go"]
+[ext_resource type="Texture2D" uid="uid://b5rwh4vo6vhp4" path="res://Assets/ui/minigames/TigerUp/Tiger_Lini1.png" id="4_6n3go"]
+[ext_resource type="Texture2D" uid="uid://dokgdsavsl7bt" path="res://Assets/ui/minigames/TigerUp/Tiger_Lini2.png" id="5_r0cr7"]
+[ext_resource type="Texture2D" uid="uid://gaetpbug11m8" path="res://Assets/ui/minigames/TigerUp/TigerArm.png" id="6_1eyee"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_6n3go"]
 radius = 15.859567
@@ -14,10 +14,7 @@ radius = 15.859567
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("4_m5qvp")
-}, {
-"duration": 1.0,
-"texture": ExtResource("5_6n3go")
+"texture": ExtResource("5_r0cr7")
 }],
 "loop": true,
 "name": &"death",
@@ -42,26 +39,27 @@ texture = ExtResource("3_hqlw5")
 
 [node name="World" type="Node2D" parent="Game" index="1" unique_id=1685023479]
 
-[node name="Platform" type="Sprite2D" parent="Game/World" index="0" unique_id=16657184]
-position = Vector2(283.65, 536)
-scale = Vector2(0.33461913, 0.163)
-texture = ExtResource("4_6n3go")
-
-[node name="Player" type="Area2D" parent="Game/World" index="1" unique_id=898062079]
-position = Vector2(526, 429)
+[node name="Player" type="Area2D" parent="Game/World" index="0" unique_id=898062079]
+position = Vector2(603, 384)
 
 [node name="Sprite2D" type="Sprite2D" parent="Game/World/Player" index="0" unique_id=1178585293]
-scale = Vector2(3.4400048, 3.4400048)
-texture = ExtResource("4_m5qvp")
+position = Vector2(32.999977, 4)
+scale = Vector2(0.9297685, 0.9297685)
+texture = ExtResource("4_6n3go")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Game/World/Player" index="1" unique_id=22043778]
 scale = Vector2(7.135076, 7.135076)
 shape = SubResource("CircleShape2D_6n3go")
 
 [node name="AnimationPlayer" type="AnimatedSprite2D" parent="Game/World/Player" index="2" unique_id=27855180]
-scale = Vector2(2.159995, 2.159995)
+position = Vector2(41, 11)
+scale = Vector2(0.93, 0.93)
 sprite_frames = SubResource("SpriteFrames_l1x7x")
 animation = &"death"
+
+[node name="Platform" type="Sprite2D" parent="Game/World" index="1" unique_id=16657184]
+position = Vector2(71, 251)
+texture = ExtResource("6_1eyee")
 
 [node name="Branches" type="Node2D" parent="Game/World" index="2" unique_id=1221797406]
 
