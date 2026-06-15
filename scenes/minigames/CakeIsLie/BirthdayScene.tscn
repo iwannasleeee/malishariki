@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dh0fwmm5a5mt8" path="res://Assets/ui/minigames/Cake/Candle4.PNG" id="4_d0kbh"]
 [ext_resource type="Texture2D" uid="uid://b5aky0nqydjbl" path="res://Assets/ui/minigames/Cake/Сandle1.PNG" id="5_2oyb1"]
 [ext_resource type="Texture2D" uid="uid://cbju41rb0ia0h" path="res://Assets/ui/minigames/Cake/CandleOff.PNG" id="6_ym8na"]
+[ext_resource type="Script" uid="uid://lg57f8107yq6" path="res://scripts/trail_path.gd" id="7_r66ni"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_5j12y"]
 animations = [{
@@ -50,6 +51,7 @@ animation = &"off"
 centered = false
 
 [node name="TrailPath" type="Node2D" parent="." unique_id=465804240]
+script = ExtResource("7_r66ni")
 
 [node name="DottedLine" type="Line2D" parent="TrailPath" unique_id=1624078149]
 
@@ -72,5 +74,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+text = "	"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="SceneTimer" type="Timer" parent="." unique_id=1757776522]
