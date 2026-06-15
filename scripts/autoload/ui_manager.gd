@@ -5,21 +5,21 @@ var hud: Control
 var main_menu: Control
 var minigame: Control
 var dialogue_container: Control
-var paint: Control
+var fullscreen_layer: Control
 
 var current_hud_screen: Control
 var current_menu_screen: Control
 var current_minigame_screen: Control
 var current_dialogue_screen: Control
-var current_paint_screen: Control
+var current_fullscreen: Control
 const MINIGAME_TRANSITION = "res://scenes/minigames/MinigameTransition.tscn"
 
-func initialize(h: Control, m: Control, mg: Control, d: Control, p: Control) -> void:
+func initialize(h: Control, m: Control, mg: Control, d: Control, fsl: Control) -> void:
 	hud = h
 	main_menu = m
 	minigame = mg
 	dialogue_container = d
-	paint = p
+	fullscreen_layer = fsl
 	
 	EventBus.minigame_started.connect(show_minigame)
 	EventBus.minigame_finished.connect(hide_minigame)
@@ -107,14 +107,14 @@ func hide_dialogue() -> void:
 	_swap_screen(dialogue_container, "") # Очистит контейнер и скроет его
 	
 func show_paint(scene_path: String) -> void:
-	if current_paint_screen and is_instance_valid(current_paint_screen):
-		current_paint_screen.queue_free()
+	if current_fullscreen and is_instance_valid(current_fullscreen):
+		current_fullscreen.queue_free()
 
 	var screen: Node = (load(scene_path) as PackedScene).instantiate()
-	paint.add_child(screen)
+	fullscreen_layer.add_child(screen)
 
-	current_paint_screen = screen
-	paint.visible = true
+	current_fullscreen = screen
+	fullscreen_layer.visible = true
 
 	if screen.has_signal("finished"):
 		screen.finished.connect(hide_paint)
@@ -123,11 +123,11 @@ func show_paint(scene_path: String) -> void:
 	
 func hide_paint() -> void:
 	get_tree().paused = false
-	if current_paint_screen and is_instance_valid(current_paint_screen):
-		current_paint_screen.queue_free()
-	current_paint_screen = null
-	paint.visible = false
-	print("paint finish")
+	if current_fullscreen and is_instance_valid(current_fullscreen):
+		current_fullscreen.queue_free()
+	current_fullscreen = null
+	fullscreen_layer.visible = false
+	
 # --- Внутренняя логика ---
 func _swap_screen(container: Control, scene_path: String) -> void:
 	# Получаем ссылку на текущий экран этого контейнера

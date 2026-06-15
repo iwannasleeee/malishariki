@@ -4,7 +4,7 @@ extends Node2D
 @onready var hud = $UI/HUD
 @onready var minigame = $UI/Minigame
 @onready var dialogue = $UI/Dialogue
-@onready var paint = $UI/Paint
+@onready var paint = $UI/FullscreenLayer
 
 func _ready() -> void:
 	SceneManager.initialize($World, $Lini)

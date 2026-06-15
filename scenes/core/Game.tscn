@@ -52,7 +52,7 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Paint" type="Control" parent="UI" unique_id=1642672744]
+[node name="FullscreenLayer" type="Control" parent="UI" unique_id=1642672744]
 process_mode = 3
 layout_mode = 3
 anchors_preset = 0
