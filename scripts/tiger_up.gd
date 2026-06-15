@@ -56,12 +56,13 @@ func _process(delta: float) -> void:
 		return
 
 	# --- движение платформы за курсором, ограниченное границами игрока ---
-	var mouse_x: float = get_global_mouse_position().x
-
+		
+	var mouse_x: float = $World.get_local_mouse_position().x
 	# половина ширины спрайта игрока (с учётом масштаба)
 	var half_w: float = (player_sprite.texture.get_width() * 0.5) * player_sprite.scale.x * player.scale.x
 
-	var screen_w: float = get_viewport_rect().size.x
+	
+	var screen_w: float = 1280.0  # нативное разрешение миниигры
 	var target_x: float = clamp(mouse_x, half_w, screen_w - half_w)
 
 	platform.position.x = lerp(platform.position.x, target_x - platform_size.x * 0.5 + 120, platform_follow_speed * delta)

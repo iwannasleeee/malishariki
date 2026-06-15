@@ -37,6 +37,7 @@ initial_branch_speed = 250.0
 branch_speed_increase = 10.0
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="Game" index="0" unique_id=599004852]
+layer = 999
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="Game/ParallaxBackground" index="0" unique_id=1297013545]
 position = Vector2(-1, 0)
