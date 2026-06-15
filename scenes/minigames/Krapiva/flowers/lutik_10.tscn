@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://ph84mm1o5pon"]
+
+[ext_resource type="PackedScene" uid="uid://ckpubaj112duj" path="res://scenes/minigames/Krapiva/kr_flower.tscn" id="1_pbfa6"]
+[ext_resource type="Texture2D" uid="uid://cicmljlfhsi77" path="res://Assets/ui/minigames/Krapiva/Lutik10.png" id="2_hh2rg"]
+
+[node name="Lutik10" unique_id=1508303210 instance=ExtResource("1_pbfa6")]
+flower_name = 1
+
+[node name="Sprite2D" parent="." index="0" unique_id=494669230]
+texture = ExtResource("2_hh2rg")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="1" unique_id=55267962]
+polygon = PackedVector2Array(10.5, -8.5, -7.5, -8.5, -10.5, -4.5, -10.5, 7.2, -7.3, 8.5, 10.5, 8.5)

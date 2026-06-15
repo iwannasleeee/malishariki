@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://cbag01aaxmyr6"]
+
+[ext_resource type="PackedScene" uid="uid://ckpubaj112duj" path="res://scenes/minigames/Krapiva/kr_flower.tscn" id="1_ecpvo"]
+[ext_resource type="Texture2D" uid="uid://cquwh2tgoblas" path="res://Assets/ui/minigames/Krapiva/Vasilek7.png" id="2_45m3r"]
+
+[node name="Vasilek7" unique_id=1508303210 instance=ExtResource("1_ecpvo")]
+flower_name = 3
+
+[node name="Sprite2D" parent="." index="0" unique_id=494669230]
+texture = ExtResource("2_45m3r")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="1" unique_id=1754541592]
+polygon = PackedVector2Array(8.5, -20.5, -1.5, -20.5, -5.7, -14.4, -10, -16.5, -11.5, -16.5, -11.5, 8, -6.7, 20.5, 6.6000004, 20.5, 11.5, 7.299999, 11.5, -15.8, 9.799999, -14.9, 8.5, -18.8)

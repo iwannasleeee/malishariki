@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://cwk2bh3mqj4fp"]
+
+[ext_resource type="PackedScene" uid="uid://ckpubaj112duj" path="res://scenes/minigames/Krapiva/kr_flower.tscn" id="1_6228g"]
+[ext_resource type="Texture2D" uid="uid://cjylia12v7xgf" path="res://Assets/ui/minigames/Krapiva/Anemone2.png" id="2_vfbkn"]
+
+[node name="Anemone2" unique_id=1508303210 instance=ExtResource("1_6228g")]
+
+[node name="Sprite2D" parent="." index="0" unique_id=494669230]
+texture = ExtResource("2_vfbkn")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="1" unique_id=266421070]
+polygon = PackedVector2Array(47.5, -46, 15.300003, -46, 13, -44.5, 9.5, -45.5, 0.20000076, -46, -6.799999, -45, -9.400002, -45, -20.5, -32.8, -20.5, -25, -26.3, -25, -35.5, -16.9, -35.5, -9.900002, -46.7, -9, -52.1, -9, -58.1, -5, -58.5, 22.699997, -53.5, 26.900002, -53.5, 28.5, -40.8, 32, -33.6, 32, -32.5, 33.6, -32.5, 36, -20.5, 45, -20.5, 46, 21.300003, 46, 27.900002, 43, 30.199997, 43, 44.199997, 31, 45.6, 31, 52.6, 20, 54, 20, 58, 6, 58.5, 0.5999985, 55.5, -8.400002, 55.5, -14.1, 58.5, -16.5, 58.5, -36.6, 47.5, -45)

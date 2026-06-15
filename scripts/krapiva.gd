@@ -52,7 +52,7 @@ func _is_win_condition():
 func _touch_nettle():
 	nettle_count += 1
 	_show_ai()
-	if nettle_count >= 3:
+	if nettle_count >= 4:
 		EventBus.minigame_finished.emit({})
 		UIManager.hide_minigame()
 func _show_ai():

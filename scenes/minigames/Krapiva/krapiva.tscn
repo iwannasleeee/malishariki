@@ -3,9 +3,50 @@
 [ext_resource type="PackedScene" uid="uid://khyulkrrsf0r" path="res://scenes/minigames/MinigameBase.tscn" id="1_brsb5"]
 [ext_resource type="Script" uid="uid://cr61qg4qkva31" path="res://scripts/krapiva.gd" id="2_igfs3"]
 [ext_resource type="Texture2D" uid="uid://wnr162mdhc44" path="res://Assets/ui/minigames/Krapiva/Trava.png" id="2_ucc1x"]
-[ext_resource type="Texture2D" uid="uid://bp2dpgpw5n6p3" path="res://Assets/ui/minigames/Krapiva/Flowers_Zaglushka.png" id="3_xpbt1"]
+[ext_resource type="Texture2D" uid="uid://o2oc1buf1f0l" path="res://Assets/ui/minigames/Krapiva/Krapiva_Zaglushka.png" id="4_x7b0i"]
 [ext_resource type="PackedScene" uid="uid://bio0j02fgqu2o" path="res://scenes/minigames/Krapiva/flowers/anemone_1.tscn" id="5_i6nwi"]
+[ext_resource type="PackedScene" uid="uid://cwk2bh3mqj4fp" path="res://scenes/minigames/Krapiva/flowers/anemone_2.tscn" id="6_1ffjy"]
 [ext_resource type="PackedScene" uid="uid://co0g5eq7h0r3g" path="res://scenes/minigames/Krapiva/krapiva/kr_nettle_1.tscn" id="6_4ks1l"]
+[ext_resource type="PackedScene" uid="uid://b6kkiqa5c2vc1" path="res://scenes/minigames/Krapiva/flowers/anemone_3.tscn" id="7_6k0cb"]
+[ext_resource type="PackedScene" uid="uid://blymncfu2m04p" path="res://scenes/minigames/Krapiva/flowers/anemone_4.tscn" id="8_u0mk3"]
+[ext_resource type="PackedScene" uid="uid://rrsi6fxfpwxk" path="res://scenes/minigames/Krapiva/flowers/lutik_1.tscn" id="9_hyxav"]
+[ext_resource type="PackedScene" uid="uid://by3xp74ln8nbm" path="res://scenes/minigames/Krapiva/flowers/lutik_2.tscn" id="10_lqnth"]
+[ext_resource type="PackedScene" uid="uid://datlrwtjdug0h" path="res://scenes/minigames/Krapiva/flowers/lutik_3.tscn" id="11_x7b0i"]
+[ext_resource type="PackedScene" uid="uid://cqdfoqytujcbh" path="res://scenes/minigames/Krapiva/flowers/lutik_4.tscn" id="12_u7ugr"]
+[ext_resource type="PackedScene" uid="uid://c2ermu0ynkgmk" path="res://scenes/minigames/Krapiva/flowers/lutik_5.tscn" id="13_6gqyb"]
+[ext_resource type="PackedScene" uid="uid://c3n4llda4k2qp" path="res://scenes/minigames/Krapiva/flowers/lutik_6.tscn" id="14_mcr3h"]
+[ext_resource type="PackedScene" uid="uid://bniv1t80rfw5h" path="res://scenes/minigames/Krapiva/flowers/lutik_7.tscn" id="15_06gld"]
+[ext_resource type="PackedScene" uid="uid://mls8tbkabspe" path="res://scenes/minigames/Krapiva/flowers/lutik_8.tscn" id="16_exj3l"]
+[ext_resource type="PackedScene" uid="uid://cggu5lpvhcx4y" path="res://scenes/minigames/Krapiva/flowers/lutik_9.tscn" id="17_4tudq"]
+[ext_resource type="PackedScene" uid="uid://ph84mm1o5pon" path="res://scenes/minigames/Krapiva/flowers/lutik_10.tscn" id="18_dho1o"]
+[ext_resource type="PackedScene" uid="uid://dxqh7cqty7oyo" path="res://scenes/minigames/Krapiva/flowers/lutik_11.tscn" id="19_beoao"]
+[ext_resource type="PackedScene" uid="uid://dkhgf70j3lidf" path="res://scenes/minigames/Krapiva/flowers/lutik_12.tscn" id="20_0fura"]
+[ext_resource type="PackedScene" uid="uid://bjnrvnv1n35w2" path="res://scenes/minigames/Krapiva/flowers/lutik_13.tscn" id="21_26tkr"]
+[ext_resource type="PackedScene" uid="uid://5hxbxl1mnwef" path="res://scenes/minigames/Krapiva/flowers/lutik_14.tscn" id="22_ct5qs"]
+[ext_resource type="PackedScene" uid="uid://d1h8qlt8yib1m" path="res://scenes/minigames/Krapiva/flowers/lutik_15.tscn" id="23_rc2dk"]
+[ext_resource type="PackedScene" uid="uid://ndmhkgpbnl0r" path="res://scenes/minigames/Krapiva/flowers/tulip_1.tscn" id="24_iowsv"]
+[ext_resource type="PackedScene" uid="uid://bc5cbiuxibkxj" path="res://scenes/minigames/Krapiva/flowers/tulip_2.tscn" id="25_mx2pc"]
+[ext_resource type="PackedScene" uid="uid://dt7c1r0tfkq05" path="res://scenes/minigames/Krapiva/flowers/tulip_3.tscn" id="26_1annn"]
+[ext_resource type="PackedScene" uid="uid://dsit2tpfu1clm" path="res://scenes/minigames/Krapiva/flowers/tulip_4.tscn" id="27_nd56h"]
+[ext_resource type="PackedScene" uid="uid://jolw83bpkoop" path="res://scenes/minigames/Krapiva/flowers/tulip_5.tscn" id="28_e8d6x"]
+[ext_resource type="PackedScene" uid="uid://bqaswcq5654k" path="res://scenes/minigames/Krapiva/flowers/tulip_6.tscn" id="29_e8vj2"]
+[ext_resource type="PackedScene" uid="uid://d2g44beyybs2m" path="res://scenes/minigames/Krapiva/flowers/tulip_7.tscn" id="30_n3sih"]
+[ext_resource type="PackedScene" uid="uid://ctvc1arhrephh" path="res://scenes/minigames/Krapiva/flowers/tulip_8.tscn" id="31_2hd8o"]
+[ext_resource type="PackedScene" uid="uid://dle2i2l0irl4v" path="res://scenes/minigames/Krapiva/flowers/vasilek_1.tscn" id="32_1gc7j"]
+[ext_resource type="PackedScene" uid="uid://llbml088pi3k" path="res://scenes/minigames/Krapiva/flowers/vasilek_2.tscn" id="33_4djxa"]
+[ext_resource type="PackedScene" uid="uid://b6uljtvip33yj" path="res://scenes/minigames/Krapiva/flowers/vasilek_3.tscn" id="34_m75e8"]
+[ext_resource type="PackedScene" uid="uid://cygakg6qevryi" path="res://scenes/minigames/Krapiva/flowers/vasilek_4.tscn" id="35_1rp1j"]
+[ext_resource type="PackedScene" uid="uid://bp0kf36vmukld" path="res://scenes/minigames/Krapiva/flowers/vasilek_5.tscn" id="36_jihdi"]
+[ext_resource type="PackedScene" uid="uid://c5sdlvlb5ewpn" path="res://scenes/minigames/Krapiva/flowers/vasilek_6.tscn" id="37_h1l8b"]
+[ext_resource type="PackedScene" uid="uid://cbag01aaxmyr6" path="res://scenes/minigames/Krapiva/flowers/vasilek_7.tscn" id="38_mnkjo"]
+[ext_resource type="PackedScene" uid="uid://dq02guf87vcos" path="res://scenes/minigames/Krapiva/flowers/vasilek_8.tscn" id="39_d0udp"]
+[ext_resource type="PackedScene" uid="uid://bat7tmts6orxy" path="res://scenes/minigames/Krapiva/flowers/vasilek_9.tscn" id="40_2157o"]
+[ext_resource type="PackedScene" uid="uid://dm2ggrpfuf67r" path="res://scenes/minigames/Krapiva/flowers/vasilek_10.tscn" id="41_jhh10"]
+[ext_resource type="PackedScene" uid="uid://bpt0ip31cmcmw" path="res://scenes/minigames/Krapiva/flowers/vasilek_11.tscn" id="42_5m53k"]
+[ext_resource type="PackedScene" uid="uid://dfds87ur1a7pd" path="res://scenes/minigames/Krapiva/flowers/vasilek_12.tscn" id="43_l3lc0"]
+[ext_resource type="PackedScene" uid="uid://cwyv10bn00eq5" path="res://scenes/minigames/Krapiva/krapiva/kr_nettle_2.tscn" id="45_u7ugr"]
+[ext_resource type="PackedScene" uid="uid://bdynsoduc4w30" path="res://scenes/minigames/Krapiva/krapiva/kr_nettle_3.tscn" id="46_6gqyb"]
+[ext_resource type="PackedScene" uid="uid://8gvkeieuiocp" path="res://scenes/minigames/Krapiva/krapiva/kr_nettle_4.tscn" id="47_mcr3h"]
 
 [node name="Krapiva" unique_id=932141857 instance=ExtResource("1_brsb5")]
 
@@ -18,16 +59,144 @@ texture = ExtResource("2_ucc1x")
 centered = false
 
 [node name="FlowersZaglushka" type="Sprite2D" parent="Game" index="1" unique_id=2010237256]
+visible = false
+position = Vector2(-540, -367)
 scale = Vector2(1.18, 1.18)
-texture = ExtResource("3_xpbt1")
+texture = ExtResource("4_x7b0i")
 centered = false
 
 [node name="Flowers" type="Node2D" parent="Game" index="2" unique_id=1970192010]
 
 [node name="anemone1" parent="Game/Flowers" index="0" unique_id=1508303210 instance=ExtResource("5_i6nwi")]
-position = Vector2(336, 280)
+position = Vector2(209, 481)
+
+[node name="Anemone2" parent="Game/Flowers" index="1" unique_id=977300021 instance=ExtResource("6_1ffjy")]
+position = Vector2(475, 424)
+
+[node name="Anemone3" parent="Game/Flowers" index="2" unique_id=400856373 instance=ExtResource("7_6k0cb")]
+position = Vector2(719, 486)
+
+[node name="Anemone4" parent="Game/Flowers" index="3" unique_id=384155678 instance=ExtResource("8_u0mk3")]
+position = Vector2(974, 434)
+
+[node name="Lutik1" parent="Game/Flowers" index="4" unique_id=2007186763 instance=ExtResource("9_hyxav")]
+position = Vector2(55, 634)
+
+[node name="Lutik2" parent="Game/Flowers" index="5" unique_id=1054867417 instance=ExtResource("10_lqnth")]
+position = Vector2(192, 616)
+
+[node name="Lutik3" parent="Game/Flowers" index="6" unique_id=417727769 instance=ExtResource("11_x7b0i")]
+position = Vector2(259, 582)
+
+[node name="Lutik4" parent="Game/Flowers" index="7" unique_id=150680356 instance=ExtResource("12_u7ugr")]
+position = Vector2(335, 535)
+
+[node name="Lutik5" parent="Game/Flowers" index="8" unique_id=718225602 instance=ExtResource("13_6gqyb")]
+position = Vector2(289, 557)
+
+[node name="Lutik6" parent="Game/Flowers" index="9" unique_id=1388689089 instance=ExtResource("14_mcr3h")]
+position = Vector2(343, 595)
+
+[node name="Lutik7" parent="Game/Flowers" index="10" unique_id=978055997 instance=ExtResource("15_06gld")]
+position = Vector2(376, 569)
+
+[node name="Lutik8" parent="Game/Flowers" index="11" unique_id=1257662165 instance=ExtResource("16_exj3l")]
+position = Vector2(562, 563)
+
+[node name="Lutik9" parent="Game/Flowers" index="12" unique_id=687293753 instance=ExtResource("17_4tudq")]
+position = Vector2(575, 528)
+
+[node name="Lutik10" parent="Game/Flowers" index="13" unique_id=1639757214 instance=ExtResource("18_dho1o")]
+position = Vector2(608, 562)
+
+[node name="Lutik11" parent="Game/Flowers" index="14" unique_id=165647905 instance=ExtResource("19_beoao")]
+position = Vector2(608, 612)
+
+[node name="Lutik12" parent="Game/Flowers" index="15" unique_id=936228751 instance=ExtResource("20_0fura")]
+position = Vector2(947, 592)
+
+[node name="Lutik13" parent="Game/Flowers" index="16" unique_id=1227459421 instance=ExtResource("21_26tkr")]
+position = Vector2(931, 562)
+
+[node name="Lutik14" parent="Game/Flowers" index="17" unique_id=1065031367 instance=ExtResource("22_ct5qs")]
+position = Vector2(977, 570)
+
+[node name="Lutik15" parent="Game/Flowers" index="18" unique_id=970689650 instance=ExtResource("23_rc2dk")]
+position = Vector2(1104, 656)
+
+[node name="Tulip1" parent="Game/Flowers" index="19" unique_id=1700817961 instance=ExtResource("24_iowsv")]
+position = Vector2(83, 467)
+
+[node name="Tulip2" parent="Game/Flowers" index="20" unique_id=1499915860 instance=ExtResource("25_mx2pc")]
+position = Vector2(84, 539)
+
+[node name="Tulip3" parent="Game/Flowers" index="21" unique_id=784429462 instance=ExtResource("26_1annn")]
+position = Vector2(374, 480)
+
+[node name="Tulip4" parent="Game/Flowers" index="22" unique_id=429389594 instance=ExtResource("27_nd56h")]
+position = Vector2(438, 530)
+
+[node name="Tulip5" parent="Game/Flowers" index="23" unique_id=1483265105 instance=ExtResource("28_e8d6x")]
+position = Vector2(757, 588)
+
+[node name="Tulip6" parent="Game/Flowers" index="24" unique_id=332282107 instance=ExtResource("29_e8vj2")]
+position = Vector2(725, 662)
+
+[node name="Tulip7" parent="Game/Flowers" index="25" unique_id=231214710 instance=ExtResource("30_n3sih")]
+position = Vector2(1145, 542)
+
+[node name="Tulip8" parent="Game/Flowers" index="26" unique_id=1396425518 instance=ExtResource("31_2hd8o")]
+position = Vector2(1147, 594)
+
+[node name="Vasilek1" parent="Game/Flowers" index="27" unique_id=1521517915 instance=ExtResource("32_1gc7j")]
+position = Vector2(156, 574)
+
+[node name="Vasilek2" parent="Game/Flowers" index="28" unique_id=115285234 instance=ExtResource("33_4djxa")]
+position = Vector2(157, 615)
+
+[node name="Vasilek3" parent="Game/Flowers" index="29" unique_id=402673578 instance=ExtResource("34_m75e8")]
+position = Vector2(229, 639)
+
+[node name="Vasilek4" parent="Game/Flowers" index="30" unique_id=398833142 instance=ExtResource("35_1rp1j")]
+position = Vector2(482, 610)
+
+[node name="Vasilek5" parent="Game/Flowers" index="31" unique_id=556621005 instance=ExtResource("36_jihdi")]
+position = Vector2(504, 579)
+
+[node name="Vasilek6" parent="Game/Flowers" index="32" unique_id=878689762 instance=ExtResource("37_h1l8b")]
+position = Vector2(524, 628)
+
+[node name="Vasilek7" parent="Game/Flowers" index="33" unique_id=999155222 instance=ExtResource("38_mnkjo")]
+position = Vector2(879, 520)
+
+[node name="Vasilek8" parent="Game/Flowers" index="34" unique_id=1790640382 instance=ExtResource("39_d0udp")]
+position = Vector2(881, 577)
+
+[node name="Vasilek9" parent="Game/Flowers" index="35" unique_id=1599203956 instance=ExtResource("40_2157o")]
+position = Vector2(910, 522)
+
+[node name="Vasilek10" parent="Game/Flowers" index="36" unique_id=1703751783 instance=ExtResource("41_jhh10")]
+position = Vector2(1087, 576)
+
+[node name="Vasilek11" parent="Game/Flowers" index="37" unique_id=1719485203 instance=ExtResource("42_5m53k")]
+position = Vector2(1088, 623)
+
+[node name="Vasilek12" parent="Game/Flowers" index="38" unique_id=611517557 instance=ExtResource("43_l3lc0")]
+position = Vector2(1155, 650)
 
 [node name="Nettles" type="Node2D" parent="Game" index="3" unique_id=1122051565]
 
 [node name="KrNettle1" parent="Game/Nettles" index="0" unique_id=345565621 instance=ExtResource("6_4ks1l")]
-position = Vector2(1114, 720)
+position = Vector2(799, 860)
+rotation_speed = 1.2
+
+[node name="KrNettle2" parent="Game/Nettles" index="1" unique_id=1091934372 instance=ExtResource("45_u7ugr")]
+position = Vector2(1040, 820)
+
+[node name="KrNettle3" parent="Game/Nettles" index="2" unique_id=1725553 instance=ExtResource("46_6gqyb")]
+position = Vector2(523, 842)
+rotation_speed = 1.4
+
+[node name="KrNettle4" parent="Game/Nettles" index="3" unique_id=469610427 instance=ExtResource("47_mcr3h")]
+position = Vector2(292, 897)
+rotation_speed = 1.2
