@@ -33,6 +33,8 @@ animations = [{
 
 [node name="Game" parent="." index="0" unique_id=407440309]
 script = ExtResource("2_l1x7x")
+initial_branch_speed = 250.0
+branch_speed_increase = 10.0
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="Game" index="0" unique_id=599004852]
 
@@ -74,16 +76,19 @@ texture = ExtResource("6_1eyee")
 [node name="Branches" type="Node2D" parent="Game/World" index="2" unique_id=1221797406]
 
 [node name="UI" type="Control" parent="Game" index="2" unique_id=1042214349]
+visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="TimerLabel" type="Label" parent="Game/UI" index="0" unique_id=354825295]
+visible = false
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
 
 [node name="GameOverLabel" type="Label" parent="Game/UI" index="1" unique_id=1577360860]
+visible = false
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
