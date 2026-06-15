@@ -25,6 +25,7 @@ func _ready() -> void:
 	krapiva_connect()
 
 func flowers_connect():
+	print("yes")
 	for child in flowers.get_children():
 		if child.has_signal("pick_me"):
 			child.pick_me.connect(_collect_flower)

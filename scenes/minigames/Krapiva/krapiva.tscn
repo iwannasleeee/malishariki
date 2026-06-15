@@ -5,32 +5,8 @@
 [ext_resource type="Texture2D" uid="uid://wnr162mdhc44" path="res://Assets/ui/minigames/Krapiva/Trava.png" id="2_ucc1x"]
 [ext_resource type="Texture2D" uid="uid://bp2dpgpw5n6p3" path="res://Assets/ui/minigames/Krapiva/Flowers_Zaglushka.png" id="3_xpbt1"]
 [ext_resource type="PackedScene" uid="uid://bio0j02fgqu2o" path="res://scenes/minigames/Krapiva/flowers/anemone_1.tscn" id="5_i6nwi"]
+[ext_resource type="PackedScene" uid="uid://cwk2bh3mqj4fp" path="res://scenes/minigames/Krapiva/flowers/anemone_2.tscn" id="6_1ffjy"]
 [ext_resource type="PackedScene" uid="uid://ip5tc8httvh1" path="res://scenes/minigames/Krapiva/krapiva/krapiva_krapiva_1.tscn" id="6_4ks1l"]
-
-[sub_resource type="GDScript" id="GDScript_i6nwi"]
-script/source = "extends Area2D
-
-enum FLOWERS_NAME {ANEMONE, LUTIK, TULIP, VASILEK}
-@export var flower_name: FLOWERS_NAME 
-var is_taken = false 
-signal pick_me(flower: FLOWERS_NAME)
-
-func _ready() -> void:
-	# Подключаем сигнал input_event к функции внутри этого же скрипта
-	input_event.connect(_on_input_event)
-
-func _on_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:
-	# Проверяем, что событие — это нажатие кнопки мыши
-	if event is InputEventMouseButton:
-		# Проверяем, что нажата именно ЛЕВАЯ кнопка мыши и она НАЖАТА (а не отпущена)
-		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
-			_on_object_clicked()
-
-func _on_object_clicked() -> void:
-	is_taken = true
-	pick_me.emit(flower_name)
-	visible = false
-"
 
 [node name="Krapiva" unique_id=932141857 instance=ExtResource("1_brsb5")]
 
@@ -50,9 +26,10 @@ centered = false
 [node name="Flowers" type="Node2D" parent="Game" index="2" unique_id=1970192010]
 
 [node name="anemone1" parent="Game/Flowers" index="0" unique_id=654378833 instance=ExtResource("5_i6nwi")]
-position = Vector2(391, 242)
-script = SubResource("GDScript_i6nwi")
-flower_name = 0
+position = Vector2(145, 252)
+
+[node name="anemone2" parent="Game/Flowers" index="1" unique_id=627042135 instance=ExtResource("6_1ffjy")]
+position = Vector2(384, 193)
 
 [node name="Nettles" type="Node2D" parent="Game" index="3" unique_id=1122051565]
 
