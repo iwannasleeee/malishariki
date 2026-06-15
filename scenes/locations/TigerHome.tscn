@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://dadhljshy0bdy"]
+
+[ext_resource type="PackedScene" uid="uid://bh4ukbeeuyykj" path="res://scenes/core/FixedCamera.tscn" id="1_4urkp"]
+[ext_resource type="Texture2D" uid="uid://o8nnhtkniyhu" path="res://Assets/Locations/TigerHome.PNG" id="2_mejkl"]
+[ext_resource type="PackedScene" uid="uid://nwqvur0td1dc" path="res://scenes/core/Spawn.tscn" id="3_u6n2r"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_cjmmn"]
+vertices = PackedVector2Array(582.4922, 609, 511.71094, 552.71875, 560.6719, 510.85938, 740.60156, 551.9375, 672.0078, 609, 1058.9375, 609.97656, 1055.0938, 569.2422, 1127.7813, 542.8672, 1100.0625, 521.4531)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4), PackedInt32Array(5, 4, 3, 6), PackedInt32Array(7, 5, 6, 8)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(496, 553, 579, 619, 672, 619, 1063, 620, 1143, 542, 1099, 508, 1051, 559, 742, 542, 558, 500)])
+
+[node name="TigerHome" type="Node2D" unique_id=654133843]
+
+[node name="FixedCamera" parent="." unique_id=228922617 instance=ExtResource("1_4urkp")]
+
+[node name="TigerHome" type="Sprite2D" parent="." unique_id=79095386]
+scale = Vector2(0.32, 0.32)
+texture = ExtResource("2_mejkl")
+centered = false
+
+[node name="TigerEdgeSpawn" parent="." unique_id=750554822 instance=ExtResource("3_u6n2r")]
+position = Vector2(545, 553)
+spawn_name = "TigerEdgeSpawn"
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=2110561564]
+navigation_polygon = SubResource("NavigationPolygon_cjmmn")
