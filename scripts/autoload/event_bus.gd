@@ -16,3 +16,6 @@ signal interactable_interact()
 
 #Bedroom
 signal pencil_taken(obj: PencilBase)
+
+signal comic_cutscene_started(scene: PackedScene)
+signal comic_cutscene_finished()

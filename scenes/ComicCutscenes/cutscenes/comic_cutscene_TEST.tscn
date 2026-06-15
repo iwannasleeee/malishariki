@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cp7r2kqdhrvbv"]
+
+[ext_resource type="PackedScene" uid="uid://gcn4lsye28q8" path="res://scenes/ComicCutscenes/ComicCutscene.tscn" id="1_gpb8e"]
+[ext_resource type="Texture2D" uid="uid://cx0awl5dyg3q2" path="res://Assets/interactable/LiniBedroom/aqua_pencil_inlit.png" id="2_dv0h6"]
+[ext_resource type="Texture2D" uid="uid://bh1npt72p8p03" path="res://Assets/interactable/LiniBedroom/aqua_pencil_lit.png" id="3_qgl7w"]
+[ext_resource type="Texture2D" uid="uid://nwrgwkh5gtif" path="res://Assets/interactable/LiniBedroom/black_pencil_lit.png" id="4_q7mej"]
+[ext_resource type="Texture2D" uid="uid://bn3y2djjbp2o" path="res://Assets/interactable/LiniBedroom/black_pencil_unlit.png" id="5_d44k3"]
+[ext_resource type="Texture2D" uid="uid://cog7t6vsbw82" path="res://Assets/interactable/LiniBedroom/blue_pencil_lit.png" id="6_h4i8q"]
+[ext_resource type="Texture2D" uid="uid://dvwqc04c4p20i" path="res://Assets/interactable/LiniBedroom/blue_pencil_unlit.png" id="7_i4k5r"]
+[ext_resource type="Texture2D" uid="uid://ckngl133mmafb" path="res://Assets/interactable/LiniBedroom/box_lit.png" id="8_jfvxc"]
+[ext_resource type="Texture2D" uid="uid://bnoeo7wxtcsa3" path="res://Assets/interactable/LiniBedroom/box_unlit.png" id="9_7biym"]
+[ext_resource type="Texture2D" uid="uid://bt6kp6whbhxqk" path="res://Assets/interactable/LiniBedroom/brown_pencil_lit.png" id="10_k57xk"]
+[ext_resource type="Texture2D" uid="uid://fdib7vk32wnp" path="res://Assets/interactable/LiniBedroom/brown_pencil_unlit.png" id="11_7spsh"]
+[ext_resource type="Texture2D" uid="uid://dxlrn1atmw7on" path="res://Assets/interactable/LiniBedroom/door_lit.png" id="12_un5hf"]
+
+[node name="ComicCutscene" unique_id=963341159 instance=ExtResource("1_gpb8e")]
+panels = Array[Texture2D]([ExtResource("2_dv0h6"), ExtResource("3_qgl7w"), ExtResource("4_q7mej"), ExtResource("5_d44k3"), ExtResource("6_h4i8q"), ExtResource("7_i4k5r"), ExtResource("8_jfvxc"), ExtResource("9_7biym"), ExtResource("10_k57xk"), ExtResource("11_7spsh"), ExtResource("12_un5hf")])

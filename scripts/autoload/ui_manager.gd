@@ -27,8 +27,12 @@ func initialize(h: Control, m: Control, mg: Control, d: Control, fsl: Control) -
 	EventBus.dialogue_started.connect(show_dialogue)
 	EventBus.dialogue_finished.connect(hide_dialogue)
 	
-	EventBus.paint_started.connect(show_paint)
-	EventBus.paint_finished.connect(hide_paint)
+	EventBus.paint_started.connect(show_fullscreen)
+	EventBus.paint_finished.connect(hide_fullscreen)
+	
+	EventBus.comic_cutscene_started.connect(show_fullscreen)
+	EventBus.comic_cutscene_finished.connect(hide_fullscreen)
+
 # --- MainMenu ---
 func show_menu_screen(scene_path: String) -> void:
 	_swap_screen(main_menu, scene_path)
@@ -106,7 +110,7 @@ func hide_dialogue() -> void:
 	get_tree().paused = false
 	_swap_screen(dialogue_container, "") # Очистит контейнер и скроет его
 	
-func show_paint(scene_path: String) -> void:
+func show_fullscreen(scene_path: String) -> void:
 	if current_fullscreen and is_instance_valid(current_fullscreen):
 		current_fullscreen.queue_free()
 
@@ -117,11 +121,11 @@ func show_paint(scene_path: String) -> void:
 	fullscreen_layer.visible = true
 
 	if screen.has_signal("finished"):
-		screen.finished.connect(hide_paint)
+		screen.finished.connect(hide_fullscreen)
 
 	get_tree().paused = true
 	
-func hide_paint() -> void:
+func hide_fullscreen() -> void:
 	get_tree().paused = false
 	if current_fullscreen and is_instance_valid(current_fullscreen):
 		current_fullscreen.queue_free()
