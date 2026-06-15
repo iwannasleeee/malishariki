@@ -51,7 +51,7 @@ grow_vertical = 2
 script = ExtResource("1_cgbcl")
 
 [node name="CandleSprite" type="AnimatedSprite2D" parent="." unique_id=544531846]
-scale = Vector2(1.18, 1.18)
+scale = Vector2(1.19, 1.19)
 sprite_frames = SubResource("SpriteFrames_5j12y")
 animation = &"burning"
 centered = false
@@ -60,7 +60,8 @@ centered = false
 script = ExtResource("7_r66ni")
 
 [node name="DottedLine" type="Line2D" parent="TrailPath" unique_id=1624078149]
-position = Vector2(407, 173)
+visible = false
+position = Vector2(401, 169)
 points = PackedVector2Array(0, 0, 21, 33, 51, 63, 93, 90, 132, 96, 179, 94, 224, 81, 261, 58, 285, 37, 309, 1, 302, -44, 261, -75, 236, -66, 218, -38, 209, 7, 227, 49, 285, 79, 321, 88, 369, 97, 414, 88, 438, 84, 473, 64, 495, 43, 518, 16, 540, -14)
 
 [node name="Checkpoints" type="Node2D" parent="TrailPath" unique_id=1131793861]
