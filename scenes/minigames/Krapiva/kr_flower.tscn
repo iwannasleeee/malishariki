@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://ckpubaj112duj"]
+
+[ext_resource type="Script" uid="uid://18r3soy0gr7e" path="res://scripts/kr_flower.gd" id="1_6hn6g"]
+
+[node name="KrFlower" type="Area2D" unique_id=1508303210]
+script = ExtResource("1_6hn6g")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=494669230]

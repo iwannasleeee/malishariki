@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://27q0niwff04k"]
+
+[ext_resource type="Script" uid="uid://baeeq5okiohxr" path="res://scripts/kr_nettle.gd" id="1_wka1y"]
+
+[node name="KrNettle" type="Area2D" unique_id=345565621]
+script = ExtResource("1_wka1y")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=390431536]
