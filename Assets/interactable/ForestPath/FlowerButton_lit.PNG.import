@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bjasbrmre867a"
-path="res://.godot/imported/CandleOff.png-5d33ddc0c0c953f91bc5e5fdffad2b09.ctex"
+uid="uid://brpshjuwpuhle"
+path="res://.godot/imported/FlowerButton_lit.PNG-56099cf6d75994efc6d8ab0c36a417fe.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/ui/minigames/Cake/CandleOff.png"
-dest_files=["res://.godot/imported/CandleOff.png-5d33ddc0c0c953f91bc5e5fdffad2b09.ctex"]
+source_file="res://Assets/interactable/ForestPath/FlowerButton_lit.PNG"
+dest_files=["res://.godot/imported/FlowerButton_lit.PNG-56099cf6d75994efc6d8ab0c36a417fe.ctex"]
 
 [params]
 
