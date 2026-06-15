@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://codc8srqacgcl"]
 
-[ext_resource type="Script" uid="uid://bikyr7geit3ny" path="res://scripts/lini_bedroom.gd" id="1_02jup"]
+[ext_resource type="Script" uid="uid://br5vottr4aky" path="res://scripts/lini_hallway.gd" id="1_o0hyy"]
 [ext_resource type="PackedScene" uid="uid://bh4ukbeeuyykj" path="res://scenes/core/FixedCamera.tscn" id="2_flhxk"]
 [ext_resource type="Texture2D" uid="uid://cedtaslysm3tm" path="res://Assets/Locations/LiniHallway.PNG" id="3_e6xqt"]
 [ext_resource type="PackedScene" uid="uid://bwa1eustysyww" path="res://scenes/interactable/LiniHallway/StreetDoor.tscn" id="6_o0hyy"]
@@ -13,7 +13,7 @@ polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Arr
 outlines = Array[PackedVector2Array]([PackedVector2Array(156, 616, 336, 616, 454, 631, 520, 599, 570, 620, 618, 596, 1170, 591, 1254, 695, 1033, 694, 462, 708, 230, 701, 60, 701)])
 
 [node name="LiniHallway" type="Node2D" unique_id=762996833]
-script = ExtResource("1_02jup")
+script = ExtResource("1_o0hyy")
 
 [node name="FixedCamera" parent="." unique_id=228922617 instance=ExtResource("2_flhxk")]
 
