@@ -13,15 +13,15 @@ var won: bool = false
 var elapsed_time: float = 0.0
 var player_offset_y: float
 
-@onready var platform: Sprite2D = $World/Platform
-@onready var player: Area2D = $World/Player
-@onready var player_sprite: Sprite2D = $World/Player/Sprite2D
-@onready var anim: AnimatedSprite2D = $World/Player/AnimationPlayer
-@onready var branches_container: Node2D = $World/Branches
-@onready var spawn_timer: Timer = $BranchSpawnTimer
-@onready var timer_label: Label = $UI/TimerLabel
-@onready var game_over_label: Label = $UI/GameOverLabel
-@onready var bg_sprite: Sprite2D = $BGLayer/Sprite2D
+@onready var platform: Sprite2D = $SubViewportContainer/SubViewport/World/Platform
+@onready var player: Area2D = $SubViewportContainer/SubViewport/World/Player
+@onready var player_sprite: Sprite2D = $SubViewportContainer/SubViewport/World/Player/Sprite2D
+@onready var anim: AnimatedSprite2D = $SubViewportContainer/SubViewport/World/Player/AnimationPlayer
+@onready var branches_container: Node2D = $SubViewportContainer/SubViewport/World/Branches
+@onready var spawn_timer: Timer = $SubViewportContainer/SubViewport/BranchSpawnTimer
+@onready var timer_label: Label = $SubViewportContainer/SubViewport/UI/TimerLabel
+@onready var game_over_label: Label = $SubViewportContainer/SubViewport/UI/GameOverLabel
+@onready var bg_sprite: Sprite2D = $SubViewportContainer/SubViewport/BGLayer/Sprite2D
 var bg_offset: float = 0.0
 
 var platform_size: Vector2 = Vector2(0,0)
@@ -59,8 +59,8 @@ func _process(delta):
 		return
 
 	# --- движение платформы за курсором, ограниченное границами игрока ---
-		
-	var mouse_x: float = $World.get_local_mouse_position().x
+	var mouse_x: float = get_viewport().get_mouse_position().x / scale.x
+	
 	# половина ширины спрайта игрока (с учётом масштаба)
 	var half_w: float = (player_sprite.texture.get_width() * 0.5) * player_sprite.scale.x * player.scale.x
 

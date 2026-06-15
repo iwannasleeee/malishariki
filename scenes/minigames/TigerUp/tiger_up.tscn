@@ -36,55 +36,67 @@ script = ExtResource("2_l1x7x")
 initial_branch_speed = 250.0
 branch_speed_increase = 10.0
 
-[node name="BGLayer" type="Node2D" parent="Game" index="0" unique_id=1454587954]
+[node name="SubViewportContainer" type="SubViewportContainer" parent="Game" index="0" unique_id=1796198670]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="Sprite2D" type="Sprite2D" parent="Game/BGLayer" index="0" unique_id=388826222]
+[node name="SubViewport" type="SubViewport" parent="Game/SubViewportContainer" index="0" unique_id=2057620088]
+size = Vector2i(1280, 720)
+
+[node name="BGLayer" type="Node2D" parent="Game/SubViewportContainer/SubViewport" index="0" unique_id=1454587954]
+
+[node name="Sprite2D" type="Sprite2D" parent="Game/SubViewportContainer/SubViewport/BGLayer" index="0" unique_id=388826222]
 texture = ExtResource("3_hqlw5")
 
-[node name="World" type="Node2D" parent="Game" index="1" unique_id=1685023479]
+[node name="World" type="Node2D" parent="Game/SubViewportContainer/SubViewport" index="1" unique_id=1685023479]
 
-[node name="Player" type="Area2D" parent="Game/World" index="0" unique_id=898062079]
+[node name="Player" type="Area2D" parent="Game/SubViewportContainer/SubViewport/World" index="0" unique_id=898062079]
 position = Vector2(603, 384)
 
-[node name="Sprite2D" type="Sprite2D" parent="Game/World/Player" index="0" unique_id=1178585293]
+[node name="Sprite2D" type="Sprite2D" parent="Game/SubViewportContainer/SubViewport/World/Player" index="0" unique_id=1178585293]
 position = Vector2(32.999977, 4)
 scale = Vector2(0.9297685, 0.9297685)
 texture = ExtResource("4_6n3go")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Game/World/Player" index="1" unique_id=22043778]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Game/SubViewportContainer/SubViewport/World/Player" index="1" unique_id=22043778]
 position = Vector2(10, 45)
 scale = Vector2(7.135076, 7.135076)
 shape = SubResource("CircleShape2D_6n3go")
 
-[node name="AnimationPlayer" type="AnimatedSprite2D" parent="Game/World/Player" index="2" unique_id=27855180]
+[node name="AnimationPlayer" type="AnimatedSprite2D" parent="Game/SubViewportContainer/SubViewport/World/Player" index="2" unique_id=27855180]
 position = Vector2(41, 11)
 scale = Vector2(0.93, 0.93)
 sprite_frames = SubResource("SpriteFrames_l1x7x")
 animation = &"live"
 
-[node name="Platform" type="Sprite2D" parent="Game/World" index="1" unique_id=16657184]
+[node name="Platform" type="Sprite2D" parent="Game/SubViewportContainer/SubViewport/World" index="1" unique_id=16657184]
 position = Vector2(71, 251)
 texture = ExtResource("6_1eyee")
 
-[node name="Branches" type="Node2D" parent="Game/World" index="2" unique_id=1221797406]
+[node name="Branches" type="Node2D" parent="Game/SubViewportContainer/SubViewport/World" index="2" unique_id=1221797406]
 
-[node name="UI" type="Control" parent="Game" index="2" unique_id=1042214349]
+[node name="UI" type="Control" parent="Game/SubViewportContainer/SubViewport" index="2" unique_id=1042214349]
 visible = false
+layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="TimerLabel" type="Label" parent="Game/UI" index="0" unique_id=354825295]
+[node name="TimerLabel" type="Label" parent="Game/SubViewportContainer/SubViewport/UI" index="0" unique_id=354825295]
 visible = false
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
 
-[node name="GameOverLabel" type="Label" parent="Game/UI" index="1" unique_id=1577360860]
+[node name="GameOverLabel" type="Label" parent="Game/SubViewportContainer/SubViewport/UI" index="1" unique_id=1577360860]
 visible = false
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
 
-[node name="BranchSpawnTimer" type="Timer" parent="Game" index="3" unique_id=1743812271]
+[node name="BranchSpawnTimer" type="Timer" parent="Game/SubViewportContainer/SubViewport" index="3" unique_id=1743812271]
 autostart = true
