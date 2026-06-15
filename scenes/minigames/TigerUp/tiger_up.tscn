@@ -45,6 +45,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="SubViewport" type="SubViewport" parent="Game/SubViewportContainer" index="0" unique_id=2057620088]
+physics_object_picking = true
 size = Vector2i(1280, 720)
 
 [node name="BGLayer" type="Node2D" parent="Game/SubViewportContainer/SubViewport" index="0" unique_id=1454587954]

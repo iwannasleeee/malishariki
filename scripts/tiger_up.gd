@@ -59,7 +59,7 @@ func _process(delta):
 		return
 
 	# --- движение платформы за курсором, ограниченное границами игрока ---
-	var mouse_x: float = get_viewport().get_mouse_position().x / scale.x
+	var mouse_x: float = $SubViewportContainer/SubViewport.get_mouse_position().x
 	
 	# половина ширины спрайта игрока (с учётом масштаба)
 	var half_w: float = (player_sprite.texture.get_width() * 0.5) * player_sprite.scale.x * player.scale.x
@@ -94,8 +94,8 @@ func _on_spawn_timer_timeout() -> void:
 	var branch: Area2D = branch_scene.instantiate()
 	branch.speed = branch_speed
 
-	var screen_w: float = get_viewport_rect().size.x
 	branch.position.y = -100
+	branches_container.add_child(branch)
 
 	branches_container.add_child(branch)
 
