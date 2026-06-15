@@ -21,6 +21,8 @@ var player_offset_y: float
 @onready var spawn_timer: Timer = $BranchSpawnTimer
 @onready var timer_label: Label = $UI/TimerLabel
 @onready var game_over_label: Label = $UI/GameOverLabel
+@onready var bg_sprite: Sprite2D = $BGLayer/Sprite2D
+var bg_offset: float = 0.0
 
 var platform_size: Vector2 = Vector2(0,0)
 # --- Несколько сцен веток ---
@@ -48,10 +50,11 @@ func _ready() -> void:
 	# запоминаем смещение персонажа относительно платформы по Y
 	player_offset_y = player.position.y - platform.position.y
 
-
-func _process(delta: float) -> void:
-	$ParallaxBackground/ParallaxLayer.motion_offset += Vector2(0, 10 * delta)
-
+func _process(delta):
+	bg_offset += 100 * delta  # скорость скролла
+	# motion_mirroring у тебя был Vector2(0, 1500) — повторяем вручную
+	bg_sprite.position.y = fmod(bg_offset, 1500.0)
+		
 	if game_over or won:
 		return
 

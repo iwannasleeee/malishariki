@@ -36,9 +36,7 @@ script = ExtResource("2_l1x7x")
 initial_branch_speed = 250.0
 branch_speed_increase = 10.0
 
-[node name="BGLayer" type="Node2D" parent="Game" index="0" unique_id=1454587954]
-
-[node name="Sprite2D" type="Sprite2D" parent="Game/BGLayer" index="0" unique_id=388826222]
+[node name="BGLayer" type="Sprite2D" parent="Game" index="0" unique_id=1796516168]
 texture = ExtResource("3_hqlw5")
 
 [node name="World" type="Node2D" parent="Game" index="1" unique_id=1685023479]
