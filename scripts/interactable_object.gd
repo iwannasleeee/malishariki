@@ -8,13 +8,12 @@ class_name InteractableObject
 var is_hovered := false
 
 func _ready():
-	print("ready1")
 	$Sprite2D.texture = default_texture
 	mouse_entered.connect(_on_mouse_enter)
 	mouse_exited.connect(_on_mouse_exit)
 	input_event.connect(_on_input_event)
 	EventBus.location_change_requested.connect(_on_location_load)
-
+	
 func _on_location_load():
 	print("ready2")
 	$Sprite2D.texture = default_texture
