@@ -3,9 +3,12 @@
 [ext_resource type="PackedScene" uid="uid://dusogs63f23c" path="res://scenes/interactable/InteractableObject.tscn" id="1_osgb3"]
 [ext_resource type="Texture2D" uid="uid://cr1h14kfcf37h" path="res://Assets/interactable/ForestPath/FlowerButton.PNG" id="2_ggbwi"]
 [ext_resource type="Script" uid="uid://c4e0kh5fijvvg" path="res://scripts/flowers.gd" id="2_osgb3"]
+[ext_resource type="Texture2D" uid="uid://brpshjuwpuhle" path="res://Assets/interactable/ForestPath/FlowerButton_lit.PNG" id="3_4xlos"]
 
 [node name="Flowers" unique_id=1008082527 instance=ExtResource("1_osgb3")]
 script = ExtResource("2_osgb3")
+default_texture = ExtResource("2_ggbwi")
+hover_texture = ExtResource("3_4xlos")
 
 [node name="Sprite2D" parent="." index="0" unique_id=309976985]
 texture = ExtResource("2_ggbwi")
