@@ -32,10 +32,11 @@ func _on_object_clicked() -> void:
 	
 func _process(delta: float) -> void:
 	rotation_time += rotation_speed * delta
-	rotation_d = sin(rotation_time) * rotation_amplitude
+	rotation_d = sin(rotation_time) * rotation_amplitude * 0.5
 	
 	cur_wind_speed = wind_speed * abs(cos(rotation_time*3))
 	
 	var new_rotation = rotation_d + cur_wind_speed
-	rotation = clamp(new_rotation,min_angle,max_angle)
+	#rotation = clamp(new_rotation,min_angle,max_angle)
+	rotation = new_rotation
 	#print(rotation)
