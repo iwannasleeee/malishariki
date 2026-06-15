@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://bc5cbiuxibkxj"]
+
+[ext_resource type="PackedScene" uid="uid://ckpubaj112duj" path="res://scenes/minigames/Krapiva/kr_flower.tscn" id="1_lgk5t"]
+[ext_resource type="Texture2D" uid="uid://qiflprepam07" path="res://Assets/ui/minigames/Krapiva/Tulip2.png" id="2_4qvm6"]
+
+[node name="Tulip2" unique_id=1508303210 instance=ExtResource("1_lgk5t")]
+flower_name = 2
+
+[node name="Sprite2D" parent="." index="0" unique_id=494669230]
+texture = ExtResource("2_4qvm6")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="1" unique_id=1642067477]
+polygon = PackedVector2Array(-11, -23.5, -11, -19.8, -12.5, -20.5, -19, -20.5, -22, -16.5, -22, -4.8999996, -17.2, -0.79999924, -19, 1.5, -22, 1.5, -18.8, 9.5, -19, 13.700001, 0.6000004, 23.5, 18.8, 23.5, 21.8, 20.5, 22, -0.39999962, 0, -23.3)
