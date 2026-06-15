@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://cr61qg4qkva31" path="res://scripts/krapiva.gd" id="2_igfs3"]
 [ext_resource type="Texture2D" uid="uid://wnr162mdhc44" path="res://Assets/ui/minigames/Krapiva/Trava.png" id="2_ucc1x"]
 [ext_resource type="Texture2D" uid="uid://bp2dpgpw5n6p3" path="res://Assets/ui/minigames/Krapiva/Flowers_Zaglushka.png" id="3_xpbt1"]
+[ext_resource type="PackedScene" uid="uid://bio0j02fgqu2o" path="res://scenes/minigames/Krapiva/flowers/anemone_1.tscn" id="5_i6nwi"]
 
 [node name="Krapiva" unique_id=932141857 instance=ExtResource("1_brsb5")]
 
@@ -21,5 +22,8 @@ texture = ExtResource("3_xpbt1")
 centered = false
 
 [node name="Flowers" type="Node2D" parent="Game" index="2" unique_id=1970192010]
+
+[node name="anemone1" parent="Game/Flowers" index="0" unique_id=1508303210 instance=ExtResource("5_i6nwi")]
+position = Vector2(336, 280)
 
 [node name="Nettles" type="Node2D" parent="Game" index="3" unique_id=1122051565]
