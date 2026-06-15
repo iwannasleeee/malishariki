@@ -22,6 +22,7 @@ var player_offset_y: float
 @onready var timer_label: Label = $UI/TimerLabel
 @onready var game_over_label: Label = $UI/GameOverLabel
 
+var platform_size: Vector2 = Vector2(0,0)
 # --- Несколько сцен веток ---
 const BRANCH_SCENES: Array[PackedScene] = [
 	preload("res://scenes/minigames/TigerUp/branches/branch_1.tscn"),
@@ -36,6 +37,7 @@ const BRANCH_SCENES: Array[PackedScene] = [
 
 
 func _ready() -> void:
+	platform_size = platform.texture.get_size()
 	branch_speed = initial_branch_speed
 	spawn_timer.wait_time = branch_spawn_interval
 	spawn_timer.timeout.connect(_on_spawn_timer_timeout)
@@ -62,11 +64,11 @@ func _process(delta: float) -> void:
 	var screen_w: float = get_viewport_rect().size.x
 	var target_x: float = clamp(mouse_x, half_w, screen_w - half_w)
 
-	platform.position.x = lerp(platform.position.x, target_x, platform_follow_speed * delta)
+	platform.position.x = lerp(platform.position.x, target_x - platform_size.x * 0.5 + 120, platform_follow_speed * delta)
 
 	# персонаж всегда "приклеен" к платформе в одной и той же точке
-	player.position.x = platform.position.x
-	player.position.y = platform.position.y + player_offset_y
+	player.position.x = platform.position.x + platform_size.x * 0.5 - 120 #ХАРДКОД!
+	player.position.y = platform.position.y + player_offset_y + 50
 
 	# --- нарастание сложности ---
 	branch_speed += branch_speed_increase * delta

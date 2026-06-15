@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://gaetpbug11m8" path="res://Assets/ui/minigames/TigerUp/TigerArm.png" id="6_1eyee"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_6n3go"]
-radius = 15.859567
+radius = 7.573434
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_l1x7x"]
 animations = [{
@@ -18,6 +18,14 @@ animations = [{
 }],
 "loop": true,
 "name": &"death",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_6n3go")
+}],
+"loop": true,
+"name": &"live",
 "speed": 5.0
 }]
 
@@ -43,11 +51,13 @@ texture = ExtResource("3_hqlw5")
 position = Vector2(603, 384)
 
 [node name="Sprite2D" type="Sprite2D" parent="Game/World/Player" index="0" unique_id=1178585293]
+visible = false
 position = Vector2(32.999977, 4)
 scale = Vector2(0.9297685, 0.9297685)
 texture = ExtResource("4_6n3go")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Game/World/Player" index="1" unique_id=22043778]
+position = Vector2(10, 45)
 scale = Vector2(7.135076, 7.135076)
 shape = SubResource("CircleShape2D_6n3go")
 
@@ -55,7 +65,7 @@ shape = SubResource("CircleShape2D_6n3go")
 position = Vector2(41, 11)
 scale = Vector2(0.93, 0.93)
 sprite_frames = SubResource("SpriteFrames_l1x7x")
-animation = &"death"
+animation = &"live"
 
 [node name="Platform" type="Sprite2D" parent="Game/World" index="1" unique_id=16657184]
 position = Vector2(71, 251)
