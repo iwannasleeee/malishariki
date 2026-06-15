@@ -10,6 +10,9 @@ func initialize(w: Node2D, p: CharacterBody2D) -> void:
 	player = p
 
 func change_scene(scene_path: String, spawn_name: String = "") -> void:
+	# Затемняем экран
+	await UIManager.fade_out()
+	
 	# Удаляем старую локацию
 	if current_location and is_instance_valid(current_location):
 		current_location.queue_free()
@@ -28,6 +31,14 @@ func change_scene(scene_path: String, spawn_name: String = "") -> void:
 	
 	# Переключаем камеру
 	_update_camera()
+	
+	# Один кадр паузы чтобы сцена успела отрисоваться
+	await get_tree().process_frame
+	
+	# Проявляем экран
+	await UIManager.fade_in()
+	
+	EventBus.scene_became_visible.emit() 
 
 func _update_camera() -> void:
 	var player_cam := player.get_node_or_null("Camera2D") as Camera2D

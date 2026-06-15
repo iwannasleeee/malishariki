@@ -13,13 +13,18 @@ var current_minigame_screen: Control
 var current_dialogue_screen: Control
 var current_fullscreen: Control
 const MINIGAME_TRANSITION = "res://scenes/minigames/MinigameTransition.tscn"
+var fade_overlay: ColorRect
+const FADE_DURATION := 0.4
 
-func initialize(h: Control, m: Control, mg: Control, d: Control, fsl: Control) -> void:
+func initialize(h: Control, m: Control, mg: Control, d: Control, fsl: Control, fade: ColorRect) -> void:
 	hud = h
 	main_menu = m
 	minigame = mg
 	dialogue_container = d
 	fullscreen_layer = fsl
+	fade_overlay = fade
+	fade_overlay.color = Color(0, 0, 0, 0)  # Прозрачный при старте
+	
 	
 	EventBus.minigame_started.connect(show_minigame)
 	EventBus.minigame_finished.connect(hide_minigame)
@@ -33,6 +38,25 @@ func initialize(h: Control, m: Control, mg: Control, d: Control, fsl: Control) -
 	EventBus.comic_cutscene_started.connect(show_fullscreen)
 	EventBus.comic_cutscene_finished.connect(hide_fullscreen)
 
+# --- FadeOverlay ---
+
+func fade_out() -> void:
+	await _tween_fade(1.0)
+
+func fade_in() -> void:
+	await _tween_fade(0.0)
+
+func _tween_fade(target_alpha: float) -> void:
+	var tween := create_tween()
+	tween.tween_property(
+		fade_overlay, 
+		"color:a", 
+		target_alpha, 
+		FADE_DURATION
+	).set_trans(Tween.TRANS_SINE)
+	await tween.finished
+	
+	
 # --- MainMenu ---
 func show_menu_screen(scene_path: String) -> void:
 	_swap_screen(main_menu, scene_path)

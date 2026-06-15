@@ -5,10 +5,11 @@ extends Node2D
 @onready var minigame = $UI/Minigame
 @onready var dialogue = $UI/Dialogue
 @onready var paint = $UI/FullscreenLayer
+@onready var fade = $UI/TransitionLayer/FadeOverlay
 
 func _ready() -> void:
 	SceneManager.initialize($World, $Lini)
-	UIManager.initialize(hud,main_menu,minigame,dialogue,paint)
+	UIManager.initialize(hud,main_menu,minigame,dialogue,paint, fade)
 	EventBus.menu_open_requested.connect(_on_menu_open_requested)
 	UIManager.show_menu_screen("res://scenes/ui/StartScreen.tscn")
 	UIManager.show_hud_screen("res://scenes/ui/hud.tscn")

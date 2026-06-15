@@ -61,3 +61,16 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
+
+[node name="TransitionLayer" type="CanvasLayer" parent="UI" unique_id=1625769005]
+process_mode = 3
+layer = 1000
+
+[node name="FadeOverlay" type="ColorRect" parent="UI/TransitionLayer" unique_id=1874481417]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)

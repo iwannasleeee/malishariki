@@ -19,3 +19,5 @@ signal pencil_taken(obj: PencilBase)
 
 signal comic_cutscene_started(scene: PackedScene)
 signal comic_cutscene_finished()
+
+signal scene_became_visible()
