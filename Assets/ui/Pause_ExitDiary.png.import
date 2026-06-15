@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dihob4uyht6yf"
-path="res://.godot/imported/Pause_ExitDiary.png-d5fb3993ee3564890b351d74e7bce418.ctex"
+path="res://.godot/imported/Pause_ExitDiary.png-656551ea1ac608f18a22f3ffc46ea14e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui/Pause_ExitDiary.png"
-dest_files=["res://.godot/imported/Pause_ExitDiary.png-d5fb3993ee3564890b351d74e7bce418.ctex"]
+source_file="res://Assets/ui/Pause_ExitDiary.png"
+dest_files=["res://.godot/imported/Pause_ExitDiary.png-656551ea1ac608f18a22f3ffc46ea14e.ctex"]
 
 [params]
 

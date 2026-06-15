@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b7k5g0u05ws1f"
-path="res://.godot/imported/mg3.png-a9a7d8fa2bc3370f9e2678b6248290f4.ctex"
+path="res://.godot/imported/mg3.png-55b88a22a1bc71cdaf9e9bfaee42c12b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui/minigamesLaunchAnimation/mg3.png"
-dest_files=["res://.godot/imported/mg3.png-a9a7d8fa2bc3370f9e2678b6248290f4.ctex"]
+source_file="res://Assets/ui/minigamesLaunchAnimation/mg3.png"
+dest_files=["res://.godot/imported/mg3.png-55b88a22a1bc71cdaf9e9bfaee42c12b.ctex"]
 
 [params]
 
