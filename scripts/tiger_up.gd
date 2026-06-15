@@ -43,21 +43,30 @@ func _ready() -> void:
 	branch_speed = initial_branch_speed
 	spawn_timer.wait_time = branch_spawn_interval
 	spawn_timer.timeout.connect(_on_spawn_timer_timeout)
-	player.area_entered.connect(_on_player_area_entered)
 
 	game_over_label.visible = false
 
 	# запоминаем смещение персонажа относительно платформы по Y
 	player_offset_y = player.position.y - platform.position.y
-
+	$SubViewportContainer/SubViewport.world_2d = World2D.new()
+	platform_size = platform.texture.get_size()
 func _process(delta):
-	bg_offset += 100 * delta  # скорость скролла
-	# motion_mirroring у тебя был Vector2(0, 1500) — повторяем вручную
-	bg_sprite.position.y = fmod(bg_offset, 1500.0)
-		
+	$SubViewportContainer/SubViewport/ParallaxBackground/ParallaxLayer.motion_offset.y += 300 * delta
+	#bg_offset += 300 * delta  # скорость скролла
+	 #motion_mirroring у тебя был Vector2(0, 1500) — повторяем вручную
+	#bg_sprite.position.y = fmod(bg_offset, 1500.0)
+
 	if game_over or won:
 		return
-
+	
+	if not game_over and not won:
+		var player_center: Vector2 = player.position + Vector2(10, 45)
+		for b in branches_container.get_children():
+			var branch_center: Vector2 = b.position
+			if player_center.distance_to(branch_center) < 55.0:
+				trigger_game_over()
+				return
+				
 	# --- движение платформы за курсором, ограниченное границами игрока ---
 	var mouse_x: float = $SubViewportContainer/SubViewport.get_mouse_position().x
 	
@@ -97,8 +106,6 @@ func _on_spawn_timer_timeout() -> void:
 	branch.position.y = -100
 	branches_container.add_child(branch)
 
-	branches_container.add_child(branch)
-
 
 func _on_player_area_entered(_area: Area2D) -> void:
 	if game_over or won:
@@ -131,6 +138,9 @@ func trigger_win() -> void:
 
 	for b in branches_container.get_children():
 		b.set_process(false)
-
-	game_over_label.text = "Победа!"
-	game_over_label.visible = true
+#
+	#game_over_label.text = "Победа!"
+	#game_over_label.visible = true
+	EventBus.minigame_finished.emit({})
+	UIManager.hide_minigame()
+	SceneManager.change_scene("res://scenes/locations/TigerHome.tscn","TigerEdgeSpawn")

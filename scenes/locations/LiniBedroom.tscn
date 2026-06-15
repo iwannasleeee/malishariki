@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://cwk1f885g4leg"]
 
 [ext_resource type="Script" uid="uid://bikyr7geit3ny" path="res://scripts/lini_bedroom.gd" id="1_gqgl3"]
-[ext_resource type="Texture2D" uid="uid://dmaccjhf64mro" path="res://Assets/Locations/LiniBedroom.PNG" id="1_yrgbh"]
 [ext_resource type="PackedScene" uid="uid://dmiwygqpm1rxl" path="res://scenes/interactable/LiniBedroom/pencils/black_pencil.tscn" id="2_4vbjv"]
 [ext_resource type="PackedScene" uid="uid://bh4ukbeeuyykj" path="res://scenes/core/FixedCamera.tscn" id="2_iygw6"]
+[ext_resource type="Texture2D" uid="uid://cs3mftq1i6jux" path="res://Assets/Locations/LiniBedroom.PNG.png" id="3_k8rxl"]
 [ext_resource type="PackedScene" uid="uid://bndms4igx4mim" path="res://scenes/interactable/LiniBedroom/pencils/red_pencil.tscn" id="5_0itj3"]
 [ext_resource type="PackedScene" uid="uid://nwqvur0td1dc" path="res://scenes/core/Spawn.tscn" id="5_4vbjv"]
 [ext_resource type="PackedScene" uid="uid://ceu3yxdxer72j" path="res://scenes/interactable/LiniBedroom/pencils/yellow_pencil.tscn" id="5_e75w4"]
@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://coph1k5bfkyqe" path="res://scenes/interactable/LiniBedroom/pencils/purple_pencil.tscn" id="13_8cfen"]
 [ext_resource type="PackedScene" uid="uid://dopd45d3ekhkd" path="res://scenes/interactable/LiniBedroom/shelf.tscn" id="16_e75w4"]
 [ext_resource type="PackedScene" uid="uid://b3dywi0q54qqt" path="res://scenes/interactable/LiniBedroom/box.tscn" id="17_gqgl3"]
+[ext_resource type="PackedScene" uid="uid://c356wjhqvrgxc" path="res://scenes/interactable/LiniBedroom/paint_button.tscn" id="18_k8rxl"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_4vbjv"]
 vertices = PackedVector2Array(462.04688, 697.9922, 230.9375, 691.0078, 144.97656, 676.1719, 192.92969, 641.22656, 290.10938, 647.96094, 500.4922, 673.25, 1032.4531, 684, 574.5, 641.21875, 583.8125, 603.96094, 1166.3672, 601.0078, 1233.4297, 657.3125, 1212.0313, 669.2031)
@@ -34,7 +35,7 @@ navigation_polygon = SubResource("NavigationPolygon_4vbjv")
 [node name="LiniBedroom" type="Sprite2D" parent="." unique_id=1628986829]
 position = Vector2(640.99994, 360)
 scale = Vector2(0.32000002, 0.32000002)
-texture = ExtResource("1_yrgbh")
+texture = ExtResource("3_k8rxl")
 
 [node name="Pencils" type="Node2D" parent="." unique_id=1116115965]
 
@@ -98,3 +99,7 @@ scale = Vector2(0.33, 0.33)
 [node name="box" parent="." unique_id=2061403920 instance=ExtResource("17_gqgl3")]
 position = Vector2(1051.0001, 465)
 scale = Vector2(0.33, 0.33)
+
+[node name="PaintButton" parent="." unique_id=1721608078 instance=ExtResource("18_k8rxl")]
+position = Vector2(551, 643)
+scale = Vector2(0.32, 0.32)
