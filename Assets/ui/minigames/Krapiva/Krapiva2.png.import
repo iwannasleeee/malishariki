@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bstfao7je7n3a"
-path="res://.godot/imported/Krapiva2.png-42a6c604fea5cc955dc913d508624c44.ctex"
+path="res://.godot/imported/Krapiva2.png-70b38ab1c523b2e1019a17c9e290082c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui/minigames/Krapiva/Krapiva2.png"
-dest_files=["res://.godot/imported/Krapiva2.png-42a6c604fea5cc955dc913d508624c44.ctex"]
+source_file="res://Assets/ui/minigames/Krapiva/Krapiva2.png"
+dest_files=["res://.godot/imported/Krapiva2.png-70b38ab1c523b2e1019a17c9e290082c.ctex"]
 
 [params]
 
