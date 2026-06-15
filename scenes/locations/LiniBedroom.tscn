@@ -79,7 +79,7 @@ scale = Vector2(0.32, 0.32)
 [node name="Door" parent="." unique_id=1317846438 instance=ExtResource("7_gjw2q")]
 position = Vector2(1214, 462)
 scale = Vector2(0.33, 0.33)
-spawn_point_name = "SpaSpawnLiniHousewnBedroomDoor"
+spawn_point_name = "SpawnLiniHouse"
 
 [node name="SpawnBed" parent="." unique_id=750554822 instance=ExtResource("5_4vbjv")]
 position = Vector2(292, 650)
