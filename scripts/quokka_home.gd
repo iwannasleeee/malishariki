@@ -24,7 +24,7 @@ var quokka_dialogue = [
 		{
 			"name": "Квочи",
 			"text": "Что понравится?",
-			"portrait": "res://scenes/ui/dialogue/portraits/LiniPortrait.tscn",
+			"portrait": "res://scenes/ui/dialogue/portraits/QuochiPortrait.tscn",
 			"animation": "talk"        # можно менять анимацию внутри диалога
 		},
 		{
@@ -40,7 +40,7 @@ var quokka_dialogue = [
 		{
 			"name": "Квочи",
 			"text": "Не успел, хотя бы хотелось! Что вы скрываете от меня на моем празднике?",
-			"portrait": "res://scenes/ui/dialogue/portraits/LiniPortrait.tscn",
+			"portrait": "res://scenes/ui/dialogue/portraits/QuochiPortrait.tscn",
 			"animation": "talk"        # можно менять анимацию внутри диалога
 		},
 		{
@@ -60,7 +60,7 @@ var quokka_dialogue = [
 		{
 			"name": "Квочи",
 			"text": "...Это правда мне?",
-			"portrait": "res://scenes/ui/dialogue/portraits/LiniPortrait.tscn",
+			"portrait": "res://scenes/ui/dialogue/portraits/QuochiPortrait.tscn",
 			"animation": "talk"        # можно менять анимацию внутри диалога
 		},
 		{
@@ -72,19 +72,19 @@ var quokka_dialogue = [
 		{
 			"name": "Квочи",
 			"text": "Мне очень нравится!! Спасибо!",
-			"portrait": "res://scenes/ui/dialogue/portraits/LiniPortrait.tscn",
+			"portrait": "res://scenes/ui/dialogue/portraits/QuochiPortrait.tscn",
 			"animation": "talk"        # можно менять анимацию внутри диалога
 		},
 		{
 			"name": "Квочи",
 			"text": "Так красиво нарисовано. Ты видимо долго его делал, да? Мне очень приятно.",
-			"portrait": "res://scenes/ui/dialogue/portraits/LiniPortrait.tscn",
+			"portrait": "res://scenes/ui/dialogue/portraits/QuochiPortrait.tscn",
 			"animation": "talk"        # можно менять анимацию внутри диалога
 		},
 		{
 			"name": "Квочи",
 			"text": "Спасибо вам всем, ребята!",
-			"portrait": "res://scenes/ui/dialogue/portraits/LiniPortrait.tscn",
+			"portrait": "res://scenes/ui/dialogue/portraits/QuochiPortrait.tscn",
 			"animation": "glad"        # можно менять анимацию внутри диалога
 		},
 		{

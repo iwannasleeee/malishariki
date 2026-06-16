@@ -8,9 +8,9 @@
 [ext_resource type="PackedScene" uid="uid://wnb3sy36c2oo" path="res://scenes/interactable/TigerHome/riri.tscn" id="6_cjmmn"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_cjmmn"]
-vertices = PackedVector2Array(582.4922, 609, 511.71094, 552.71875, 560.6719, 510.85938, 740.60156, 551.9375, 672.0078, 609, 1058.9375, 609.97656, 1055.0938, 569.2422, 1127.7813, 542.8672, 1100.0625, 521.4531)
-polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4), PackedInt32Array(5, 4, 3, 6), PackedInt32Array(7, 5, 6, 8)])
-outlines = Array[PackedVector2Array]([PackedVector2Array(496, 553, 579, 619, 672, 619, 1063, 620, 1143, 542, 1099, 508, 1051, 559, 742, 542, 558, 500)])
+vertices = PackedVector2Array(438.2422, 570.21875, 350.60938, 557.1328, 350.6172, 557.1328, 294.96875, 547.96875, 320.46094, 529.1172, 384.85156, 510.72656, 433.85156, 537.1328, 472.0703, 551.46094, 502.14844, 590.2031, 586.71875, 539.1719, 732, 529.6719, 732, 551.96875, 665.9375, 591.96875, 576.1875, 599.9375, 525.28125, 505.14063, 1070.25, 599.53906, 1015.6406, 618.8594, 1032.5, 552.9922, 1061.5469, 561.8672)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2), PackedInt32Array(0, 2, 3, 4, 5, 6), PackedInt32Array(0, 6, 7, 8), PackedInt32Array(9, 10, 11, 12, 13, 8), PackedInt32Array(8, 7, 14, 9), PackedInt32Array(15, 16, 12, 11, 17, 18)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(270, 554, 349, 567, 436, 580, 500, 600, 576, 610, 666, 602, 1017, 629, 1082, 606, 1070, 554, 1034, 543, 742, 542, 742, 519, 589, 529, 524, 493, 470, 540, 438, 528, 386, 500, 316, 520)])
 
 [node name="TigerHome" type="Node2D" unique_id=654133843]
 script = ExtResource("1_u6n2r")
@@ -23,18 +23,18 @@ texture = ExtResource("2_mejkl")
 centered = false
 
 [node name="TigerEdgeSpawn" parent="." unique_id=750554822 instance=ExtResource("3_u6n2r")]
-position = Vector2(545, 553)
+position = Vector2(383, 541)
 spawn_name = "TigerEdgeSpawn"
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=2110561564]
 navigation_polygon = SubResource("NavigationPolygon_cjmmn")
 
 [node name="Tigi" parent="." unique_id=1008082527 instance=ExtResource("4_mejkl")]
-position = Vector2(1061.0001, 467)
+position = Vector2(975, 438)
 scale = Vector2(0.24, 0.24)
 
 [node name="Riri" parent="." unique_id=1420837848 instance=ExtResource("6_cjmmn")]
-position = Vector2(1007, 476.99997)
+position = Vector2(870, 440)
 scale = Vector2(0.22, 0.22)
 
 [connection signal="tiger_talk" from="Tigi" to="." method="tiger_talk"]

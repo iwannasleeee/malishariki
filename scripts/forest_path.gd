@@ -15,7 +15,14 @@ var on_location_load_dialogue = [
 			"animation": "talk"        # имя анимации в SpriteFrames
 		},
 	]
-var flowers_collected_dialogue = []	
+var flowers_collected_dialogue = [
+		{
+			"name": "Киря",
+			"text": "УРА! Теперь точно можно к тигрят. Отправляюсь в лес!!",
+			"portrait": "res://scenes/ui/dialogue/portraits/LiniPortrait.tscn",
+			"animation": "talk"        # имя анимации в SpriteFrames
+		},
+	]	
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	SceneManager.player.setup_for_location({
