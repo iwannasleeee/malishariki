@@ -1,12 +1,28 @@
 [gd_scene format=3 uid="uid://c3haav5o4tttt"]
 
 [ext_resource type="Script" uid="uid://cpl3uu3bq60vy" path="res://scripts/quokka_home.gd" id="1_7uvy4"]
-[ext_resource type="Texture2D" uid="uid://d0odfhbic1bea" path="res://Assets/Locations/QuokkaHome_Zaglushka.PNG" id="2_0x5bq"]
+[ext_resource type="Texture2D" uid="uid://d3cxexn2g36md" path="res://Assets/Locations/QuokkaHome_1.PNG" id="2_0x5bq"]
+[ext_resource type="Texture2D" uid="uid://m0v4ivyo41m1" path="res://Assets/Locations/QuokkaHome_2.PNG" id="3_a1phx"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_06bla"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_0x5bq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_a1phx")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="QuokkaHome" type="Node2D" unique_id=1056659864]
 script = ExtResource("1_7uvy4")
 
-[node name="QuokkaHomeZaglushka" type="Sprite2D" parent="." unique_id=1445463974]
+[node name="Background" type="AnimatedSprite2D" parent="." unique_id=536395760]
+process_mode = 3
 scale = Vector2(0.32, 0.32)
-texture = ExtResource("2_0x5bq")
+sprite_frames = SubResource("SpriteFrames_06bla")
 centered = false

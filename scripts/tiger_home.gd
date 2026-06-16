@@ -1,6 +1,6 @@
 extends Node2D
 
-var tiger_talk_dialogue = [
+var tiger_talk_dialogue1 = [
 		{
 			"name": "Lini",
 			"text": "Привет! Рада тебя видеть.",
@@ -67,12 +67,17 @@ func _on_location_load():
 	pass
 
 func tiger_talk():
-	EventBus.dialogue_started.emit("res://scenes/ui/dialogue/Dialogue.tscn",tiger_talk_dialogue)
+	EventBus.dialogue_started.emit("res://scenes/ui/dialogue/Dialogue.tscn",tiger_talk_dialogue1)
 	await EventBus.dialogue_finished
 	EventBus.comic_cutscene_started.emit(cutscene_after_tiger_talk_comic)
 	await EventBus.comic_cutscene_finished
-	EventBus.minigame_started.emit("res://scenes/minigames/CakeIsLie/cake_is_lie.tscn")
-	UIManager.show_minigame("res://scenes/minigames/CakeIsLie/cake_is_lie.tscn")
+	EventBus.dialogue_started.emit("res://scenes/ui/dialogue/Dialogue.tscn",tiger_talk_dialogue2)
+	await EventBus.dialogue_finished
+	
+	EventBus.dialogue_started.emit("res://scenes/ui/dialogue/Dialogue.tscn",tiger_talk_dialogue3)
+	await EventBus.dialogue_finished
+	
+	SceneManager.change_scene("res://scenes/locations/QuokkaHome.tscn")
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
