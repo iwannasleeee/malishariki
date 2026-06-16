@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c5uu7nuk2743r"]
 
-[ext_resource type="Script" uid="uid://buqkaucfejq13" path="res://scripts/quest_list.gd" id="1_43p1b"]
+[ext_resource type="Script" path="res://scripts/quest_list.gd" id="1_43p1b"]
 [ext_resource type="Texture2D" uid="uid://jl1a7wqx8ljj" path="res://Assets/ui/etc/Note.png" id="2_s17l5"]
 [ext_resource type="PackedScene" uid="uid://w5t3bi2u81wy" path="res://scenes/ui/QuestList/QuestItem.tscn" id="2_sim2d"]
 
@@ -13,8 +13,8 @@ quest_item_scene = ExtResource("2_sim2d")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1609729566]
 layout_mode = 1
-offset_right = 191.78989
-offset_bottom = 186.0
+offset_right = 153.63812
+offset_bottom = 149.0
 texture = ExtResource("2_s17l5")
 expand_mode = 1
 

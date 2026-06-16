@@ -32,10 +32,11 @@ texture = ExtResource("1_0mwgc")
 
 [node name="QuestList" parent="." unique_id=593244697 instance=ExtResource("2_8qguk")]
 layout_mode = 0
-offset_left = 16.0
-offset_top = 18.000002
-offset_right = 16.0
-offset_bottom = 18.000002
+offset_left = 14.000002
+offset_top = 37.0
+offset_right = 14.000002
+offset_bottom = 37.0
+rotation = -0.14011839
 
 [node name="TextureButton" type="TextureButton" parent="." unique_id=1927907405]
 layout_mode = 0
