@@ -9,6 +9,7 @@ script = ExtResource("1_ybawt")
 
 [node name="Sprite" type="TextureRect" parent="." unique_id=129713988]
 layout_mode = 0
+expand_mode = 1
 
 [node name="Hitbox" type="ColorRect" parent="." unique_id=1576560253]
 layout_mode = 0

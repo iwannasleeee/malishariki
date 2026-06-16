@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://tedscba85p7y"]
+
+[ext_resource type="PackedScene" uid="uid://dn44st5gne2nk" path="res://scenes/minigames/TigerUp/branch_base.tscn" id="1_587kt"]
+[ext_resource type="Texture2D" uid="uid://dkwm1xe3hovlq" path="res://Assets/ui/minigames/TigerUp/Tiger_Branch2.PNG" id="2_swu32"]
+
+[node name="Branch2" unique_id=308496325 instance=ExtResource("1_587kt")]
+
+[node name="Sprite" parent="." index="0" unique_id=129713988]
+offset_left = 1.0
+offset_top = -842.0
+offset_right = 1298.0
+offset_bottom = 677.9219
+texture = ExtResource("2_swu32")
+
+[node name="Hitbox" parent="." index="1" unique_id=1576560253]
+offset_left = 795.0
+offset_top = -40.0
+offset_right = 1280.0
+offset_bottom = 0.0

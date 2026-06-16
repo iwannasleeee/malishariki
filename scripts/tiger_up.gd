@@ -30,6 +30,14 @@ var invincible_timer: float = 0.0
 
 const BRANCH_SCENES: Array[PackedScene] = [
 	preload("res://scenes/minigames/TigerUp/Branches/branch_1.tscn"),
+	preload("res://scenes/minigames/TigerUp/Branches/branch_2.tscn"),
+	preload("res://scenes/minigames/TigerUp/branches/branch_3.tscn"),
+	preload("res://scenes/minigames/TigerUp/branches/branch_4.tscn"),
+	preload("res://scenes/minigames/TigerUp/Branches/branch_5.tscn"),
+	preload("res://scenes/minigames/TigerUp/Branches/branch_6.tscn"),
+	preload("res://scenes/minigames/TigerUp/Branches/branch_7.tscn"),
+	preload("res://scenes/minigames/TigerUp/Branches/branch_8.tscn"),
+	
 ]
 
 const NATIVE_W := 1280.0

@@ -3,19 +3,19 @@
 [ext_resource type="PackedScene" uid="uid://dn44st5gne2nk" path="res://scenes/minigames/TigerUp/branch_base.tscn" id="1_64i1e"]
 [ext_resource type="Texture2D" uid="uid://byyepxpkwuwg0" path="res://Assets/ui/minigames/TigerUp/Tiger_Branch1.PNG" id="2_0frib"]
 
-[node name="branch1" unique_id=308496325 instance=ExtResource("1_64i1e")]
+[node name="Branch1" unique_id=308496325 instance=ExtResource("1_64i1e")]
 
 [node name="Sprite" parent="." index="0" unique_id=129713988]
-offset_left = 25.0
-offset_top = -65.0
-offset_right = 2585.0
-offset_bottom = 2935.0
+offset_left = 15.0
+offset_top = -230.0
+offset_right = 2575.0
+offset_bottom = 2770.0
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_0frib")
 
 [node name="Hitbox" parent="." index="1" unique_id=1576560253]
-offset_left = 698.0
-offset_top = 122.0
-offset_right = 738.0
-offset_bottom = 162.0
+offset_left = 685.0
+offset_top = -44.0
+offset_right = 725.0
+offset_bottom = -4.0
 scale = Vector2(14.882186, 1.0974201)
