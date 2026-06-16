@@ -14,6 +14,7 @@ outlines = Array[PackedVector2Array]([PackedVector2Array(496, 553, 579, 619, 672
 
 [node name="TigerHome" type="Node2D" unique_id=654133843]
 script = ExtResource("1_u6n2r")
+player_scale = null
 
 [node name="FixedCamera" parent="." unique_id=228922617 instance=ExtResource("1_4urkp")]
 
