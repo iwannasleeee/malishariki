@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://dusogs63f23c" path="res://scenes/interactable/InteractableObject.tscn" id="1_qawe8"]
 [ext_resource type="Script" uid="uid://h85j0y5qeob6" path="res://scripts/papa_tigr.gd" id="2_ktdal"]
+[ext_resource type="Texture2D" uid="uid://dhm0vnsvm5vcy" path="res://Assets/sprites/PapaTigr/PapaTigr.PNG" id="3_ktdal"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_prepl"]
 radius = 53.44
@@ -11,3 +12,8 @@ script = ExtResource("2_ktdal")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1" unique_id=507364120]
 shape = SubResource("CircleShape2D_prepl")
+
+[node name="PapaTigrSprite" type="Sprite2D" parent="." index="2" unique_id=142341707]
+position = Vector2(-435, -334)
+scale = Vector2(0.32, 0.32)
+texture = ExtResource("3_ktdal")

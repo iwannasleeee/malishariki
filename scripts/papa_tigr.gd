@@ -2,13 +2,21 @@ extends InteractableObject
 class_name Papa_Tigr
 
 @onready var papa_tigr_sprite: Sprite2D = $PapaTigrSprite
+var is_clicked = false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	super._ready()
+	EventBus.scene_became_visible.connect(_on_location_load)
+	
+func _on_location_load():
+	print("test1")
 	papa_tigr_sprite.hide()
-	
+	print("test2")
+
 func interact(player: Node):
-	
+	if is_clicked == true:
+		return
+	is_clicked = true
 		# Формируем сценарий диалога
 	var before_tigr_dialogue = [
 		{

@@ -105,8 +105,8 @@ scale = Vector2(0.33, 0.33)
 position = Vector2(551, 643)
 scale = Vector2(0.32, 0.32)
 
-[node name="PapaTigr" parent="." unique_id=1639057489 instance=ExtResource("19_2082c")]
-position = Vector2(720, 588)
+[node name="PapaTigr" parent="." unique_id=6497688 instance=ExtResource("19_2082c")]
+position = Vector2(744, 603)
 
 [connection signal="lini_wanna_go" from="Door" to="." method="_on_door_lini_wanna_go"]
 [connection signal="paint_button_click" from="PaintButton" to="." method="_on_paint_button_paint_button_click"]
