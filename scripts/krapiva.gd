@@ -41,7 +41,9 @@ func _collect_flower(flower):
 		collected_flowers[flower] += 1
 	
 	if _is_win_condition():
-		EventBus.minigame_finished.emit({})
+		EventBus.minigame_finished.emit({
+			"result":"done"
+		})
 		UIManager.hide_minigame()
 
 func _is_win_condition():
