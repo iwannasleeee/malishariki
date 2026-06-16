@@ -45,14 +45,15 @@ position = Vector2(764, 465)
 scale = Vector2(-0.21093866, 0.23602282)
 
 [node name="flower1test" parent="flowers" unique_id=1613250209 instance=ExtResource("6_jcwjh")]
+visible = false
 position = Vector2(2564.0002, 479.00003)
 scale = Vector2(1.3935826, 1.3935826)
 default_texture = ExtResource("8_spk3l")
 hover_texture = ExtResource("9_iregs")
 
 [node name="Flowers" parent="." unique_id=2124837774 instance=ExtResource("8_m5a6h")]
-position = Vector2(1069, 536)
-scale = Vector2(0.1641357, 0.1641357)
+position = Vector2(2555, 478)
+scale = Vector2(0.2573618, 0.2573618)
 monitorable = false
 
 [node name="PapaTigr" parent="." unique_id=1176860532 instance=ExtResource("11_iregs")]

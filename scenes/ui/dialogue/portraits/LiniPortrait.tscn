@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://dkx1vrk2yii2a"]
 
-[ext_resource type="Texture2D" uid="uid://0aeg85xq6de8" path="res://Assets/ui/dialogue/portraits/lini/talk1.png" id="1_u73cf"]
-[ext_resource type="Texture2D" uid="uid://bxjpsluy5rf84" path="res://Assets/ui/dialogue/portraits/lini/talk2.png" id="2_f4ph2"]
+[ext_resource type="Texture2D" uid="uid://cwi7l4j1r274t" path="res://Assets/sprites/Lini/lini_idle1.png" id="1_u73cf"]
+[ext_resource type="Texture2D" uid="uid://b8porksed0r3d" path="res://Assets/sprites/Lini/lini_idle2.PNG" id="2_f4ph2"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ms3ex"]
 animations = [{
 "frames": [{
-"duration": 1.0,
+"duration": 8.0,
 "texture": ExtResource("1_u73cf")
 }, {
 "duration": 1.0,
@@ -18,8 +18,8 @@ animations = [{
 }]
 
 [node name="LiniPortrait" type="AnimatedSprite2D" unique_id=862825752]
-position = Vector2(0, 261.00003)
-scale = Vector2(6.9705887, 7.258064)
+position = Vector2(-208, 120)
+scale = Vector2(0.7, 0.7)
 sprite_frames = SubResource("SpriteFrames_ms3ex")
 animation = &"talk"
 frame_progress = 0.81022984

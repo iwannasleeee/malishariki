@@ -16,128 +16,95 @@ var can_lini_go = false
 
 var paint_able_dialogue = [
 		{
-			"name": "Lini",
-			"text": "Привет! Рада тебя видеть.",
+			"name": "Киря",
+			"text": "Теперь можно садиться за плакат!!",
 			"portrait": "res://scenes/ui/dialogue/portraits/LiniPortrait.tscn",
 			"animation": "talk"        # имя анимации в SpriteFrames
-		},
-		{
-			"name": "Lini",
-			"text": "...",
-			"portrait": "res://scenes/ui/dialogue/portraits/LiniPortrait.tscn",
-			"animation": "talk"        # можно менять анимацию внутри диалога
-		},
-		{
-			"name": "",                # строчка без портрета
-			"text": "Где-то вдали залаяла собака.",
 		},
 	]
 var initial_dialogue = [
 		{
-			"name": "Lini",
-			"text": "Привет! Рада тебя видеть.",
+			"name": "Киря",
+			"text": "Вот и важное утро для моих важных планов!!",
 			"portrait": "res://scenes/ui/dialogue/portraits/LiniPortrait.tscn",
 			"animation": "talk"        # имя анимации в SpriteFrames
 		},
 		{
-			"name": "Lini",
-			"text": "...",
+			"name": "Киря",
+			"text": "Нужно заняться самым крутым плакатом для Квочи.",
 			"portrait": "res://scenes/ui/dialogue/portraits/LiniPortrait.tscn",
 			"animation": "talk"        # можно менять анимацию внутри диалога
 		},
 		{
-			"name": "",                # строчка без портрета
-			"text": "Где-то вдали залаяла собака.",
+			"name": "Киря",
+			"text": "Уверен Квочи будет в восторге, хе-хе. Осталось лишь…",
+			"portrait": "res://scenes/ui/dialogue/portraits/LiniPortrait.tscn",
+			"animation": "talk"        # можно менять анимацию внутри диалога
 		},
+		{
+			"name": "Киря",
+			"text": "Собрать самые крутые карандаши, скотчи и наклейки-и-и!",
+			"portrait": "res://scenes/ui/dialogue/portraits/LiniPortrait.tscn",
+			"animation": "talk"        # можно менять анимацию внутри диалога
+		},
+		
 	]
 var have_no_box_dialogue = [
 		{
-			"name": "Lini",
-			"text": "Привет! Рада тебя видеть.",
+			"name": "Киря",
+			"text": "Но как я сяду за плакат, если еще не нашел свои наклейки...",
 			"portrait": "res://scenes/ui/dialogue/portraits/LiniPortrait.tscn",
 			"animation": "talk"        # имя анимации в SpriteFrames
-		},
-		{
-			"name": "Lini",
-			"text": "...",
-			"portrait": "res://scenes/ui/dialogue/portraits/LiniPortrait.tscn",
-			"animation": "talk"        # можно менять анимацию внутри диалога
-		},
-		{
-			"name": "",                # строчка без портрета
-			"text": "Где-то вдали залаяла собака.",
 		},
 	]
 var have_no_tapes_dialogue = [
 		{
-			"name": "Lini",
-			"text": "Привет! Рада тебя видеть.",
+			"name": "Киря",
+			"text": "Без скотчей я тоже не могу начать, они мне категорически нужны!",
 			"portrait": "res://scenes/ui/dialogue/portraits/LiniPortrait.tscn",
 			"animation": "talk"        # имя анимации в SpriteFrames
-		},
-		{
-			"name": "Lini",
-			"text": "...",
-			"portrait": "res://scenes/ui/dialogue/portraits/LiniPortrait.tscn",
-			"animation": "talk"        # можно менять анимацию внутри диалога
-		},
-		{
-			"name": "",                # строчка без портрета
-			"text": "Где-то вдали залаяла собака.",
 		},
 	]
 var have_no_pencils_dialogue = [
 		{
-			"name": "Lini",
-			"text": "Привет! Рада тебя видеть.",
+			"name": "Киря",
+			"text": "Я совсем забыл про карандаши!!",
 			"portrait": "res://scenes/ui/dialogue/portraits/LiniPortrait.tscn",
 			"animation": "talk"        # имя анимации в SpriteFrames
-		},
-		{
-			"name": "Lini",
-			"text": "...",
-			"portrait": "res://scenes/ui/dialogue/portraits/LiniPortrait.tscn",
-			"animation": "talk"        # можно менять анимацию внутри диалога
-		},
-		{
-			"name": "",                # строчка без портрета
-			"text": "Где-то вдали залаяла собака.",
 		},
 	]
 var paint_done_dialogue = [
 		{
-			"name": "Lini",
-			"text": "Привет! Рада тебя видеть.",
+			"name": "Киря",
+			"text": "Ну как же я хорош.",
 			"portrait": "res://scenes/ui/dialogue/portraits/LiniPortrait.tscn",
 			"animation": "talk"        # имя анимации в SpriteFrames
 		},
 		{
-			"name": "Lini",
-			"text": "...",
+			"name": "Киря",
+			"text": "Никто не повторит мой плакат.",
 			"portrait": "res://scenes/ui/dialogue/portraits/LiniPortrait.tscn",
 			"animation": "talk"        # можно менять анимацию внутри диалога
 		},
 		{
-			"name": "",                # строчка без портрета
-			"text": "Где-то вдали залаяла собака.",
+			"name": "Киря",
+			"text": "МИР ДОЛЖЕН ЭТО УВИДЕТЬ!!!",
+			"portrait": "res://scenes/ui/dialogue/portraits/LiniPortrait.tscn",
+			"animation": "talk"        # можно менять анимацию внутри диалога
+		},
+		{
+			"name": "Киря",
+			"text": "Начну с тигрят.",
+			"portrait": "res://scenes/ui/dialogue/portraits/LiniPortrait.tscn",
+			"animation": "talk"        # можно менять анимацию внутри диалога
 		},
 	]
 var lini_wanna_go_but_he_cant_dialogue = [
 		{
-			"name": "Lini",
-			"text": "Привет! Рада тебя видеть.",
+			"name": "Киря",
+			"text": "Нет, нельзя отвлекаться. Надо скорее заняться плакатом, пока есть вдохновение!",
 			"portrait": "res://scenes/ui/dialogue/portraits/LiniPortrait.tscn",
 			"animation": "talk"        # имя анимации в SpriteFrames
-		},
-		{
-			"name": "Lini",
-			"text": "...",
-			"portrait": "res://scenes/ui/dialogue/portraits/LiniPortrait.tscn",
-			"animation": "talk"        # можно менять анимацию внутри диалога
-		},
-		{
-			"name": "",                # строчка без портрета
-			"text": "Где-то вдали залаяла собака.",
 		},
 	]
 

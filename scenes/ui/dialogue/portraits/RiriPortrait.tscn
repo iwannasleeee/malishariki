@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://dis4gyeymgr0c"]
+
+[ext_resource type="Texture2D" uid="uid://b6puwuhm0tmfy" path="res://Assets/sprites/Riri/riri_idle1.PNG" id="1_ir6v0"]
+[ext_resource type="Texture2D" uid="uid://b41wpec5xa36n" path="res://Assets/sprites/Riri/riri_idle2.PNG" id="2_cb2uy"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ms3ex"]
+animations = [{
+"frames": [{
+"duration": 8.0,
+"texture": ExtResource("1_ir6v0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_cb2uy")
+}],
+"loop": true,
+"name": &"talk",
+"speed": 10.0
+}]
+
+[node name="LiniPortrait" type="AnimatedSprite2D" unique_id=862825752]
+position = Vector2(580, 120)
+scale = Vector2(0.7, 0.7)
+sprite_frames = SubResource("SpriteFrames_ms3ex")
+animation = &"talk"
+frame = 1
+frame_progress = 0.14853911
+centered = false

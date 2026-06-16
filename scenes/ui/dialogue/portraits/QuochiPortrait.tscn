@@ -1,16 +1,16 @@
-[gd_scene format=3 uid="uid://dxcqk3xicau3"]
+[gd_scene format=3 uid="uid://bifsuq8rkeo6w"]
 
-[ext_resource type="Texture2D" uid="uid://ba0flbit6n30t" path="res://Assets/sprites/Tigi/tigi_idle1.PNG" id="1_ykigv"]
-[ext_resource type="Texture2D" uid="uid://bm42iafjp3q3x" path="res://Assets/sprites/Tigi/tigi_idle2.PNG" id="2_yyt4u"]
+[ext_resource type="Texture2D" uid="uid://do1emlygac2q2" path="res://Assets/sprites/Quochi/quochi_idle1.PNG" id="1_6mns0"]
+[ext_resource type="Texture2D" uid="uid://c8b2dxannt733" path="res://Assets/sprites/Quochi/quochi_idle2.PNG" id="2_3tiyl"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ms3ex"]
 animations = [{
 "frames": [{
 "duration": 8.0,
-"texture": ExtResource("1_ykigv")
+"texture": ExtResource("1_6mns0")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_yyt4u")
+"texture": ExtResource("2_3tiyl")
 }],
 "loop": true,
 "name": &"talk",
@@ -18,7 +18,7 @@ animations = [{
 }]
 
 [node name="LiniPortrait" type="AnimatedSprite2D" unique_id=862825752]
-position = Vector2(580, 120)
+position = Vector2(580, 110)
 scale = Vector2(0.7, 0.7)
 sprite_frames = SubResource("SpriteFrames_ms3ex")
 animation = &"talk"
