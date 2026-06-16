@@ -62,7 +62,7 @@
 [ext_resource type="Texture2D" uid="uid://cdxjww818lna4" path="res://Assets/ui/paint/Lini _Workplace/stickers/sticker1.png" id="60_d7s2u"]
 [ext_resource type="Texture2D" uid="uid://cn48gk5jy5laa" path="res://Assets/ui/paint/Lini _Workplace/stickers/sticker50.png" id="61_k6xn3"]
 [ext_resource type="Texture2D" uid="uid://k3hl0dvyng0p" path="res://Assets/ui/paint/Lini _Workplace/stickers/sticker2.png" id="61_qbdlm"]
-[ext_resource type="Texture2D" uid="uid://deyqwns7cof4u" path="res://Assets/ui/RAMA2.png" id="62_km2fh"]
+[ext_resource type="Texture2D" uid="uid://deyqwns7cof4u" path="res://Assets/ui/etc/RAMA2.png" id="62_km2fh"]
 [ext_resource type="Texture2D" uid="uid://d3e0itj8bvpeg" path="res://Assets/ui/paint/Lini _Workplace/stickers/sticker3.png" id="63_6ma6h"]
 [ext_resource type="Texture2D" uid="uid://cqss86xhx5tx6" path="res://Assets/ui/paint/Lini _Workplace/stickers/sticker4.png" id="64_sgebv"]
 [ext_resource type="Texture2D" uid="uid://cdthvkgq2kini" path="res://Assets/ui/paint/Lini _Workplace/stickers/sticker5.png" id="65_s55bs"]

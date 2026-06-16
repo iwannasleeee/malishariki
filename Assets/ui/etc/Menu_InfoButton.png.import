@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dkel31xs4x72m"
-path="res://.godot/imported/Menu_SkotchSperedi.png-57ad1e37fc30f6398ef8530bea89eae9.ctex"
+uid="uid://cygyg88wbsbsx"
+path="res://.godot/imported/Menu_InfoButton.png-cc96381d22f49d28183f1dc4d216b605.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/ui/Menu_SkotchSperedi.png"
-dest_files=["res://.godot/imported/Menu_SkotchSperedi.png-57ad1e37fc30f6398ef8530bea89eae9.ctex"]
+source_file="res://Assets/ui/etc/Menu_InfoButton.png"
+dest_files=["res://.godot/imported/Menu_InfoButton.png-cc96381d22f49d28183f1dc4d216b605.ctex"]
 
 [params]
 

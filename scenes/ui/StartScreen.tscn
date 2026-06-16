@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://qhcra578ush1"]
 
 [ext_resource type="Script" uid="uid://dbgqqa60jxpru" path="res://scripts/start_screen.gd" id="1_j8j1s"]
-[ext_resource type="Texture2D" uid="uid://krdruinq7khq" path="res://Assets/ui/startscreen_picture.PNG" id="2_75o78"]
-[ext_resource type="Texture2D" uid="uid://dk08g3x08cf4l" path="res://Assets/ui/startscreen_text.PNG" id="3_w26h4"]
+[ext_resource type="Texture2D" uid="uid://krdruinq7khq" path="res://Assets/ui/etc/startscreen_picture.PNG" id="2_75o78"]
+[ext_resource type="Texture2D" uid="uid://dk08g3x08cf4l" path="res://Assets/ui/etc/startscreen_text.PNG" id="3_w26h4"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vmn41"]
 bg_color = Color(0.6, 0.6, 0.6, 0)

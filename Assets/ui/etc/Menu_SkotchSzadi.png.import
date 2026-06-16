@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dc83v0texh0bp"
-path="res://.godot/imported/Pause_ExitButton.png-62caa3d96d05f10c3a5399aab4415654.ctex"
+uid="uid://csiq57ptd6w5j"
+path="res://.godot/imported/Menu_SkotchSzadi.png-c0269ac8ac3f4819030d7367dc800b7e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/ui/Pause_ExitButton.png"
-dest_files=["res://.godot/imported/Pause_ExitButton.png-62caa3d96d05f10c3a5399aab4415654.ctex"]
+source_file="res://Assets/ui/etc/Menu_SkotchSzadi.png"
+dest_files=["res://.godot/imported/Menu_SkotchSzadi.png-c0269ac8ac3f4819030d7367dc800b7e.ctex"]
 
 [params]
 

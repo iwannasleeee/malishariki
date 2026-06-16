@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ds1n4ug4w7ghn"
-path="res://.godot/imported/Pause_ExitZaglushka.png-d34a9ddf535412c7634c24bb4a50947e.ctex"
+uid="uid://chbklpl8mxk5q"
+path="res://.godot/imported/Pause_ExitNo.png-cc08b62e86016d192de936d9cde4d299.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/ui/Pause_ExitZaglushka.png"
-dest_files=["res://.godot/imported/Pause_ExitZaglushka.png-d34a9ddf535412c7634c24bb4a50947e.ctex"]
+source_file="res://Assets/ui/etc/Pause_ExitNo.png"
+dest_files=["res://.godot/imported/Pause_ExitNo.png-cc08b62e86016d192de936d9cde4d299.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c4cbx76pwcsmo"
-path="res://.godot/imported/Menu_StartButton.png-b7436238174dff2b8b1b8c31bf646ddf.ctex"
+uid="uid://bhcg4vkk4we2h"
+path="res://.godot/imported/RAMA.png-7f3afd856e37adc1565b719305758dc9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/ui/Menu_StartButton.png"
-dest_files=["res://.godot/imported/Menu_StartButton.png-b7436238174dff2b8b1b8c31bf646ddf.ctex"]
+source_file="res://Assets/ui/etc/RAMA.png"
+dest_files=["res://.godot/imported/RAMA.png-7f3afd856e37adc1565b719305758dc9.ctex"]
 
 [params]
 

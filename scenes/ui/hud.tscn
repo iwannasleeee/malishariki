@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://d1hneh5j5c41x"]
 
-[ext_resource type="Texture2D" uid="uid://bhcg4vkk4we2h" path="res://Assets/ui/RAMA.png" id="1_0mwgc"]
-[ext_resource type="Texture2D" uid="uid://bbrrd543sr5go" path="res://Assets/ui/ui_pause1.png" id="2_bo48s"]
-[ext_resource type="Texture2D" uid="uid://d32drqsc5qtt" path="res://Assets/ui/ui_pause2.png" id="3_8qguk"]
+[ext_resource type="Texture2D" uid="uid://bhcg4vkk4we2h" path="res://Assets/ui/etc/RAMA.png" id="1_0mwgc"]
+[ext_resource type="Texture2D" uid="uid://bbrrd543sr5go" path="res://Assets/ui/etc/ui_pause1.png" id="2_bo48s"]
+[ext_resource type="Texture2D" uid="uid://d32drqsc5qtt" path="res://Assets/ui/etc/ui_pause2.png" id="3_8qguk"]
 
 [node name="Hud" type="Control" unique_id=1099479635]
 process_mode = 3

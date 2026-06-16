@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cygyg88wbsbsx"
-path="res://.godot/imported/Menu_InfoButton.png-5a413cca0a816d16f6c447d756a851cd.ctex"
+uid="uid://dk7s8npubkwcl"
+path="res://.godot/imported/Menu_Zaglushka.png-659dc2ea6690f0adc7664a4e600a4de8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/ui/Menu_InfoButton.png"
-dest_files=["res://.godot/imported/Menu_InfoButton.png-5a413cca0a816d16f6c447d756a851cd.ctex"]
+source_file="res://Assets/ui/etc/Menu_Zaglushka.png"
+dest_files=["res://.godot/imported/Menu_Zaglushka.png-659dc2ea6690f0adc7664a4e600a4de8.ctex"]
 
 [params]
 

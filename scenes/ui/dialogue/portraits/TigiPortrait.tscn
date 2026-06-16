@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://dxcqk3xicau3"]
+
+[ext_resource type="Texture2D" uid="uid://ba0flbit6n30t" path="res://Assets/sprites/Tigi/tigi_idle1.PNG" id="1_ykigv"]
+[ext_resource type="Texture2D" uid="uid://bm42iafjp3q3x" path="res://Assets/sprites/Tigi/tigi_idle2.PNG" id="2_yyt4u"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ms3ex"]
+animations = [{
+"frames": [{
+"duration": 6.0,
+"texture": ExtResource("1_ykigv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_yyt4u")
+}],
+"loop": true,
+"name": &"talk",
+"speed": 5.0
+}]
+
+[node name="LiniPortrait" type="AnimatedSprite2D" unique_id=862825752]
+position = Vector2(392, -44)
+sprite_frames = SubResource("SpriteFrames_ms3ex")
+animation = &"talk"
+frame_progress = 0.9734087
+centered = false
