@@ -16,6 +16,7 @@ var game_over: bool = false
 var won: bool = false
 var is_hit: bool = false
 var progress: float = 0.0  # 0..1
+var invincible_timer: float = 0.0
 
 @onready var bg: TextureRect = $BG
 @onready var platform: TextureRect = $Platform
@@ -67,7 +68,10 @@ func _process(delta: float) -> void:
 	# Во время удара и после победы/поражения ничего не делаем
 	if game_over or won or is_hit:
 		return
-
+	
+	if invincible_timer > 0.0:
+		invincible_timer -= delta
+	
 	var mouse_x := get_local_mouse_position().x
 	var half_player := player.size.x * 0.5
 	var target_x: float = clamp(mouse_x - half_player, 0.0, NATIVE_W - player.size.x)
@@ -95,7 +99,11 @@ func _process(delta: float) -> void:
 			branch.hit_size
 		)
 		if player_rect.intersects(branch_rect):
-			trigger_hit()
+			if invincible_timer > 0.0:
+				pass
+			elif player_rect.intersects(branch_rect):
+				trigger_hit()
+				return
 			return
 
 func _on_spawn_timer_timeout() -> void:
@@ -137,6 +145,7 @@ func trigger_hit() -> void:
 		b.set_process(true)
 
 	spawn_timer.start()
+	invincible_timer = 0.5
 	is_hit = false
 
 func trigger_game_over() -> void:
