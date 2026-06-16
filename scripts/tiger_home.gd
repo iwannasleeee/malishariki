@@ -19,7 +19,7 @@ var tiger_talk_dialogue = [
 		},
 	]
 
-var cutscene_after_tiger_talk_comic = "res://scenes/ComicCutscenes/cutscenes/comic_cutscene_TEST.tscn"
+var cutscene_after_tiger_talk_comic = "res://scenes/ComicCutscenes/cutscenes/comic_tigers.tscn"
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	SceneManager.player.setup_for_location({

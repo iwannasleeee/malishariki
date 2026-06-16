@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://chmql4pmxebun"]
+
+[ext_resource type="PackedScene" uid="uid://gcn4lsye28q8" path="res://scenes/ComicCutscenes/ComicCutscene.tscn" id="1_lhbkn"]
+[ext_resource type="Texture2D" uid="uid://d38c50dvkbyix" path="res://Assets/ui/dialogue/Tiger_Comics1.png" id="2_2etqq"]
+[ext_resource type="Texture2D" uid="uid://dauh5auveg1yd" path="res://Assets/ui/dialogue/Tiger_Comics2.png" id="3_rg76x"]
+
+[node name="ComicTigers" unique_id=963341159 instance=ExtResource("1_lhbkn")]
+panels = Array[Texture2D]([ExtResource("2_2etqq"), ExtResource("3_rg76x")])
