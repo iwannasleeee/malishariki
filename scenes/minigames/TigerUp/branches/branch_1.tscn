@@ -1,19 +1,21 @@
-[gd_scene format=3 uid="uid://bscaxcs3v848v"]
+[gd_scene format=3 uid="uid://desvxn3v4p5nk"]
 
-[ext_resource type="PackedScene" uid="uid://n3j5jnkmsmox" path="res://scenes/minigames/TigerUp/branch.tscn" id="1_j1xxw"]
-[ext_resource type="Texture2D" uid="uid://byyepxpkwuwg0" path="res://Assets/ui/minigames/TigerUp/Tiger_Branch1.PNG" id="2_mpg5r"]
+[ext_resource type="PackedScene" uid="uid://dn44st5gne2nk" path="res://scenes/minigames/TigerUp/branch_base.tscn" id="1_64i1e"]
+[ext_resource type="Texture2D" uid="uid://byyepxpkwuwg0" path="res://Assets/ui/minigames/TigerUp/Tiger_Branch1.PNG" id="2_0frib"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_r82rp"]
-size = Vector2(539.5, 25.25)
+[node name="branch1" unique_id=308496325 instance=ExtResource("1_64i1e")]
 
-[node name="Branch1" unique_id=24776640 instance=ExtResource("1_j1xxw")]
-position = Vector2(1019, 13)
+[node name="Sprite" parent="." index="0" unique_id=129713988]
+offset_left = 25.0
+offset_top = -65.0
+offset_right = 2585.0
+offset_bottom = 2935.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_0frib")
 
-[node name="Sprite2D" parent="." index="0" unique_id=1255238891]
-position = Vector2(-297.23993, 519.4999)
-scale = Vector2(0.442, 0.495)
-texture = ExtResource("2_mpg5r")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1" unique_id=1911064781]
-position = Vector2(-7.48999, 2.375)
-shape = SubResource("RectangleShape2D_r82rp")
+[node name="Hitbox" parent="." index="1" unique_id=1576560253]
+offset_left = 698.0
+offset_top = 122.0
+offset_right = 738.0
+offset_bottom = 162.0
+scale = Vector2(14.882186, 1.0974201)

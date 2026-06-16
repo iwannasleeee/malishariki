@@ -18,6 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://dopd45d3ekhkd" path="res://scenes/interactable/LiniBedroom/shelf.tscn" id="16_e75w4"]
 [ext_resource type="PackedScene" uid="uid://b3dywi0q54qqt" path="res://scenes/interactable/LiniBedroom/box.tscn" id="17_gqgl3"]
 [ext_resource type="PackedScene" uid="uid://c356wjhqvrgxc" path="res://scenes/interactable/LiniBedroom/paint_button.tscn" id="18_k8rxl"]
+[ext_resource type="PackedScene" uid="uid://hh33tpvg86xf" path="res://scenes/interactable/ForestPath/papa_tigr.tscn" id="19_2082c"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_4vbjv"]
 vertices = PackedVector2Array(462.04688, 697.9922, 230.9375, 691.0078, 144.97656, 676.1719, 192.92969, 641.22656, 290.10938, 647.96094, 500.4922, 673.25, 1032.4531, 684, 574.5, 641.21875, 583.8125, 603.96094, 1166.3672, 601.0078, 1233.4297, 657.3125, 1212.0313, 669.2031)
@@ -103,3 +104,6 @@ scale = Vector2(0.33, 0.33)
 [node name="PaintButton" parent="." unique_id=1721608078 instance=ExtResource("18_k8rxl")]
 position = Vector2(551, 643)
 scale = Vector2(0.32, 0.32)
+
+[node name="PapaTigr" parent="." unique_id=1980351173 instance=ExtResource("19_2082c")]
+position = Vector2(685, 622)

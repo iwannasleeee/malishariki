@@ -1,8 +1,0 @@
-[gd_scene format=3 uid="uid://n3j5jnkmsmox"]
-
-[ext_resource type="Script" uid="uid://dgan3ap108equ" path="res://scripts/brunch.gd" id="1_q0vvm"]
-
-[node name="Branch" type="Area2D" unique_id=24776640]
-script = ExtResource("1_q0vvm")
-
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1255238891]

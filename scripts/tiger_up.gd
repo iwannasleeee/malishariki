@@ -1,9 +1,8 @@
 extends Control
 
-# Настройки — подбирай под свою игру
 @export var platform_follow_speed: float = 8.0
-@export var initial_branch_speed: float = 150.0
-@export var branch_speed_increase: float = 2.0   # на сколько px/sec прибавляется в секунду
+@export var initial_branch_speed: float = 250.0
+@export var branch_speed_increase: float = 10.0
 @export var branch_spawn_interval: float = 1.2
 @export var survival_time_to_win: float = 30.0
 
@@ -11,136 +10,103 @@ var branch_speed: float
 var game_over: bool = false
 var won: bool = false
 var elapsed_time: float = 0.0
-var player_offset_y: float
 
-@onready var platform: Sprite2D = $SubViewportContainer/SubViewport/World/Platform
-@onready var player: Area2D = $SubViewportContainer/SubViewport/World/Player
-@onready var player_sprite: Sprite2D = $SubViewportContainer/SubViewport/World/Player/Sprite2D
-@onready var anim: AnimatedSprite2D = $SubViewportContainer/SubViewport/World/Player/AnimationPlayer
-@onready var branches_container: Node2D = $SubViewportContainer/SubViewport/World/Branches
-@onready var spawn_timer: Timer = $SubViewportContainer/SubViewport/BranchSpawnTimer
-@onready var timer_label: Label = $SubViewportContainer/SubViewport/UI/TimerLabel
-@onready var game_over_label: Label = $SubViewportContainer/SubViewport/UI/GameOverLabel
-@onready var bg_sprite: Sprite2D = $SubViewportContainer/SubViewport/BGLayer/Sprite2D
-var bg_offset: float = 0.0
+@onready var bg: TextureRect = $BG
+@onready var platform: TextureRect = $Platform
+@onready var player: TextureRect = $Player
+@onready var player_hitbox: ColorRect = $Player/HitBox
+@onready var branches_container: Control = $Branches
+@onready var spawn_timer: Timer = $BranchSpawnTimer
+@onready var timer_label: Label = $UI/TimerLabel
+@onready var game_over_label: Label = $UI/GameOverLabel
 
-var platform_size: Vector2 = Vector2(0,0)
-# --- Несколько сцен веток ---
 const BRANCH_SCENES: Array[PackedScene] = [
-	preload("res://scenes/minigames/TigerUp/branches/branch_1.tscn"),
-	preload("res://scenes/minigames/TigerUp/branches/branch_2.tscn"),
-	preload("res://scenes/minigames/TigerUp/branches/branch_3.tscn"),
-	preload("res://scenes/minigames/TigerUp/branches/branch_4.tscn"),
-	preload("res://scenes/minigames/TigerUp/branches/branch_5.tscn"),
-	preload("res://scenes/minigames/TigerUp/branches/branch_6.tscn"),
-	preload("res://scenes/minigames/TigerUp/branches/branch_7.tscn"),
-	preload("res://scenes/minigames/TigerUp/branches/branch_8.tscn"),
+	preload("res://scenes/minigames/TigerUp/Branches/branch_1.tscn"),
 ]
 
+const NATIVE_W := 1280.0
+const NATIVE_H := 720.0
+const BG_SCROLL_SPEED := 300.0
+
+var bg_offset: float = 0.0
+var player_d: Vector2
+var player_hit_offset: Vector2
+var player_hit_size: Vector2
 
 func _ready() -> void:
-	platform_size = platform.texture.get_size()
 	branch_speed = initial_branch_speed
-	spawn_timer.wait_time = branch_spawn_interval
-	spawn_timer.timeout.connect(_on_spawn_timer_timeout)
-
 	game_over_label.visible = false
 
-	# запоминаем смещение персонажа относительно платформы по Y
-	player_offset_y = player.position.y - platform.position.y
-	$SubViewportContainer/SubViewport.world_2d = World2D.new()
-	platform_size = platform.texture.get_size()
-func _process(delta):
-	$SubViewportContainer/SubViewport/ParallaxBackground/ParallaxLayer.motion_offset.y += 300 * delta
-	#bg_offset += 300 * delta  # скорость скролла
-	 #motion_mirroring у тебя был Vector2(0, 1500) — повторяем вручную
-	#bg_sprite.position.y = fmod(bg_offset, 1500.0)
+	spawn_timer.wait_time = branch_spawn_interval
+	spawn_timer.timeout.connect(_on_spawn_timer_timeout)
+	spawn_timer.autostart = true
+	spawn_timer.start()
+
+	player_d = player.position - platform.position
+
+	player_hit_offset = player_hitbox.position
+	player_hit_size = player_hitbox.size * player_hitbox.scale
+	player_hitbox.visible = false
+
+func _process(delta: float) -> void:
+	bg_offset += BG_SCROLL_SPEED * delta
 
 	if game_over or won:
 		return
-	
-	if not game_over and not won:
-		var player_center: Vector2 = player.position + Vector2(10, 45)
-		for b in branches_container.get_children():
-			var branch_center: Vector2 = b.position
-			if player_center.distance_to(branch_center) < 55.0:
-				trigger_game_over()
-				return
-				
-	# --- движение платформы за курсором, ограниченное границами игрока ---
-	var mouse_x: float = $SubViewportContainer/SubViewport.get_mouse_position().x
-	
-	# половина ширины спрайта игрока (с учётом масштаба)
-	var half_w: float = (player_sprite.texture.get_width() * 0.5) * player_sprite.scale.x * player.scale.x
 
-	
-	var screen_w: float = 1280.0  # нативное разрешение миниигры
-	var target_x: float = clamp(mouse_x, half_w, screen_w - half_w)
+	var mouse_x := get_local_mouse_position().x
+	var half_player := player.size.x * 0.5
+	var target_x: float = clamp(mouse_x - half_player, 0.0, NATIVE_W - player.size.x)
+	player.position.x = lerp(player.position.x, target_x, platform_follow_speed * delta)
 
-	platform.position.x = lerp(platform.position.x, target_x - platform_size.x * 0.5 + 120, platform_follow_speed * delta)
+	platform.position.x = player.position.x - player_d.x
 
-	# персонаж всегда "приклеен" к платформе в одной и той же точке
-	player.position.x = platform.position.x + platform_size.x * 0.5 - 120 #ХАРДКОД!
-	player.position.y = platform.position.y + player_offset_y + 50
-
-	# --- нарастание сложности ---
 	branch_speed += branch_speed_increase * delta
 
-	# --- таймер выживания ---
 	elapsed_time += delta
 	timer_label.text = "%.1f" % elapsed_time
 
 	if elapsed_time >= survival_time_to_win:
 		trigger_win()
+		return
 
+	# Хитбокс игрока — player.position + смещение Hitbox внутри Player
+	var player_rect := Rect2(
+		player.position + player_hit_offset,
+		player_hit_size
+	)
+
+	for branch in branches_container.get_children():
+		var branch_rect := Rect2(
+			branch.position + branch.hit_offset,
+			branch.hit_size
+		)
+		if player_rect.intersects(branch_rect):
+			trigger_game_over()
+			return
 
 func _on_spawn_timer_timeout() -> void:
 	if game_over or won:
 		return
-
-	# случайная сцена ветки из массива
 	var branch_scene: PackedScene = BRANCH_SCENES[randi() % BRANCH_SCENES.size()]
-	var branch: Area2D = branch_scene.instantiate()
+	var branch = branch_scene.instantiate()
 	branch.speed = branch_speed
-
-	branch.position.y = -100
+	branch.position.y = -400
 	branches_container.add_child(branch)
-
-
-func _on_player_area_entered(_area: Area2D) -> void:
-	if game_over or won:
-		return
-	trigger_game_over()
-
 
 func trigger_game_over() -> void:
 	game_over = true
 	spawn_timer.stop()
-
-	# останавливаем все ветки
 	for b in branches_container.get_children():
 		b.set_process(false)
-
-	# анимация смерти персонажа
-	anim.play("death")
-
-	# платформа чуть проседает вниз
-	var tween := create_tween()
-	tween.tween_property(platform, "position:y", platform.position.y + 30, 0.3)
-
 	game_over_label.text = "Game Over\nВремя: %.1f сек" % elapsed_time
 	game_over_label.visible = true
-
 
 func trigger_win() -> void:
 	won = true
 	spawn_timer.stop()
-
 	for b in branches_container.get_children():
 		b.set_process(false)
-#
-	#game_over_label.text = "Победа!"
-	#game_over_label.visible = true
 	EventBus.minigame_finished.emit({})
 	UIManager.hide_minigame()
-	SceneManager.change_scene("res://scenes/locations/TigerHome.tscn","TigerEdgeSpawn")
+	SceneManager.change_scene("res://scenes/locations/TigerHome.tscn", "TigerEdgeSpawn")
