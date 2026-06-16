@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://dlshn3h2vxjwf" path="res://scripts/dialogue.gd" id="1_gpble"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_gpble"]
+font_size = 20
 
 [node name="Dialogue" type="Control" unique_id=108227513]
 layout_mode = 3
@@ -40,10 +41,11 @@ text = "ASDASDASD"
 label_settings = SubResource("LabelSettings_gpble")
 
 [node name="DialogueText" type="RichTextLabel" parent="Panel/MarginContainer/VBoxContainer" unique_id=1491357210]
-custom_minimum_size = Vector2(500, 200)
+custom_minimum_size = Vector2(380, 200)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+theme_override_font_sizes/normal_font_size = 20
 text = "asaSAsASDASD"
 
 [node name="ContinueButton" type="Button" parent="." unique_id=335581947]
