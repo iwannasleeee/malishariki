@@ -39,7 +39,7 @@ func _ready() -> void:
 
 	EventBus.dialogue_started.emit("res://scenes/ui/dialogue/Dialogue.tscn",dialogue)
 	await EventBus.dialogue_finished
-	get_tree().paused
+	get_tree().paused = true
 
 	for r in 3:
 		for child in rows[r].get_children():
