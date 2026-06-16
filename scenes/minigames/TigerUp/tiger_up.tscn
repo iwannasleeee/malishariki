@@ -4,12 +4,15 @@
 [ext_resource type="Script" uid="uid://cb4t6tjrvbl6j" path="res://scripts/tiger_up.gd" id="2_l1x7x"]
 [ext_resource type="Texture2D" uid="uid://cuo71ht6qwcgy" path="res://Assets/ui/minigames/TigerUp/Tiger_Background.PNG" id="3_hqlw5"]
 [ext_resource type="Texture2D" uid="uid://b5rwh4vo6vhp4" path="res://Assets/ui/minigames/TigerUp/Tiger_Lini1.png" id="4_6n3go"]
+[ext_resource type="Texture2D" uid="uid://dokgdsavsl7bt" path="res://Assets/ui/minigames/TigerUp/Tiger_Lini2.png" id="5_r0cr7"]
 [ext_resource type="Texture2D" uid="uid://gaetpbug11m8" path="res://Assets/ui/minigames/TigerUp/TigerArm.png" id="6_1eyee"]
 
 [node name="TigerUp" unique_id=932141857 instance=ExtResource("1_22xpy")]
 
 [node name="Game" parent="." index="0" unique_id=407440309]
 script = ExtResource("2_l1x7x")
+texture_normal = ExtResource("4_6n3go")
+texture_hit = ExtResource("5_r0cr7")
 
 [node name="BG" type="TextureRect" parent="Game" index="0" unique_id=296858252]
 layout_mode = 0
@@ -45,9 +48,12 @@ offset_bottom = 721.0
 texture = ExtResource("6_1eyee")
 
 [node name="UI" type="Control" parent="Game" index="4" unique_id=2001392317]
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="GameOverLabel" type="Label" parent="Game/UI" index="0" unique_id=1499512883]
 layout_mode = 0
@@ -58,5 +64,12 @@ offset_bottom = 16.0
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 16.0
+
+[node name="ProgressBar" type="ProgressBar" parent="Game/UI" index="2" unique_id=986257895]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 20.0
+grow_horizontal = 2
 
 [node name="BranchSpawnTimer" type="Timer" parent="Game" index="5" unique_id=1760943973]
