@@ -83,7 +83,7 @@ func show_minigame(scene_path: String) -> void:
 	transition.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	minigame.add_child(transition)
 
-	await transition.transition_finished  # ждём конца анимации
+	await EventBus.transition_finished  # ждём конца анимации
 
 	transition.queue_free()
 	
