@@ -87,7 +87,6 @@ func show_minigame(scene_path: String) -> void:
 	transition.queue_free()
 	
 	var screen: Node = (load(scene_path) as PackedScene).instantiate()
-	minigame.add_child(screen)
 
 	var native: Vector2 = Vector2(1280, 720)
 	var target: Vector2 = minigame.size
@@ -101,6 +100,8 @@ func show_minigame(scene_path: String) -> void:
 	screen.set_anchors_and_offsets_preset(Control.PRESET_TOP_LEFT)
 	screen.custom_minimum_size = native
 	screen.size = native
+	
+	minigame.add_child(screen)
 
 	current_minigame_screen = screen
 	minigame.visible = true

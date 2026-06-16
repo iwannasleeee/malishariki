@@ -1,5 +1,7 @@
 extends InteractableObject
 
+signal tiger_talk()
+
 func _ready() -> void:
 	super._ready()
 	$AnimatedSprite2D.play("idle")
@@ -8,4 +10,4 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 func interact(player: Node):
-	print("test")
+	tiger_talk.emit()

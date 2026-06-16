@@ -1,0 +1,87 @@
+[gd_scene format=3 uid="uid://cymq0a5ncierw"]
+
+[ext_resource type="PackedScene" uid="uid://khyulkrrsf0r" path="res://scenes/minigames/MinigameBase.tscn" id="1_q5m4u"]
+[ext_resource type="Script" uid="uid://bujxbiyxa3bky" path="res://scripts/birthday_scene.gd" id="2_0htry"]
+[ext_resource type="Texture2D" uid="uid://gnx3rp0uexg4" path="res://Assets/ui/minigames/Cake/Cake1.png" id="3_hr8jj"]
+[ext_resource type="Texture2D" uid="uid://pr3o6c67nd1s" path="res://Assets/ui/minigames/Cake/Cake2.png" id="4_sv4ui"]
+[ext_resource type="Texture2D" uid="uid://cyydh8lc5aji5" path="res://Assets/ui/minigames/Cake/Cake3.png" id="5_ptgh1"]
+[ext_resource type="Texture2D" uid="uid://c2rdi7e6pt4ii" path="res://Assets/ui/minigames/Cake/Cake4.png" id="6_v1eb2"]
+[ext_resource type="Texture2D" uid="uid://bjasbrmre867a" path="res://Assets/ui/minigames/Cake/CandleOff.PNG" id="7_745hp"]
+[ext_resource type="Script" uid="uid://lg57f8107yq6" path="res://scripts/trail_path.gd" id="8_5iyfb"]
+[ext_resource type="FontFile" uid="uid://ckycuhf4ii5m0" path="res://fonts/RUSAvas.ttf" id="9_0opee"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ybn1u"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_hr8jj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_sv4ui")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ptgh1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_v1eb2")
+}],
+"loop": true,
+"name": &"burning",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_745hp")
+}],
+"loop": true,
+"name": &"off",
+"speed": 5.0
+}]
+
+[sub_resource type="LabelSettings" id="LabelSettings_e181v"]
+font = ExtResource("9_0opee")
+font_size = 32
+
+[node name="CakeIsLie" unique_id=932141857 instance=ExtResource("1_q5m4u")]
+
+[node name="Game" parent="." index="0" unique_id=407440309]
+script = ExtResource("2_0htry")
+
+[node name="CandleSprite" type="AnimatedSprite2D" parent="Game" index="0" unique_id=828487584]
+scale = Vector2(1.19, 1.19)
+sprite_frames = SubResource("SpriteFrames_ybn1u")
+animation = &"burning"
+centered = false
+
+[node name="TrailPath" type="Node2D" parent="Game" index="1" unique_id=809065697]
+script = ExtResource("8_5iyfb")
+
+[node name="DottedLine" type="Line2D" parent="Game/TrailPath" index="0" unique_id=709897887]
+position = Vector2(401, 169)
+points = PackedVector2Array(0, 0, 21, 33, 51, 63, 93, 90, 132, 96, 179, 94, 224, 81, 261, 58, 285, 37, 309, 1, 302, -44, 261, -75, 236, -66, 218, -38, 209, 7, 227, 49, 285, 79, 321, 88, 369, 97, 414, 88, 438, 84, 473, 64, 495, 43, 518, 16, 540, -14)
+
+[node name="Checkpoints" type="Node2D" parent="Game/TrailPath" index="1" unique_id=728940272]
+
+[node name="OverlayRect" type="ColorRect" parent="Game" index="2" unique_id=1286427961]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="BirthdayLabel" type="Label" parent="Game" index="3" unique_id=879125294]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "	С днём рождения, Квоччи!"
+label_settings = SubResource("LabelSettings_e181v")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SceneTimer" type="Timer" parent="Game" index="4" unique_id=1522040268]
