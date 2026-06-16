@@ -8,5 +8,5 @@ func _ready() -> void:
 		"id": "pencils",
 		"title": "Собери карандаши сын собаки",
 		"description": "Собрано: 0/10",
-		"completed": true
+		"completed": false
 		})
