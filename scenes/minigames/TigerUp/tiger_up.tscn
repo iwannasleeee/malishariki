@@ -11,6 +11,7 @@
 
 [node name="Game" parent="." index="0" unique_id=407440309]
 script = ExtResource("2_l1x7x")
+branch_speed_increase = 30.0
 texture_normal = ExtResource("4_6n3go")
 texture_hit = ExtResource("5_r0cr7")
 
@@ -37,12 +38,7 @@ offset_bottom = 40.0
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("3_hqlw5")
 
-[node name="Branches" type="Control" parent="Game" index="1" unique_id=888951461]
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="Player" type="TextureRect" parent="Game" index="2" unique_id=773452046]
+[node name="Player" type="TextureRect" parent="Game" index="1" unique_id=773452046]
 layout_mode = 0
 offset_left = 1045.0
 offset_top = 395.0
@@ -58,13 +54,18 @@ offset_right = 102.0
 offset_bottom = 174.0
 color = Color(0.84705883, 0.5019608, 0.4745098, 0.68235296)
 
-[node name="Platform" type="TextureRect" parent="Game" index="3" unique_id=1378714241]
+[node name="Platform" type="TextureRect" parent="Game" index="2" unique_id=1378714241]
 layout_mode = 0
 offset_left = -106.0
 offset_top = -83.0
 offset_right = 1158.0
 offset_bottom = 710.0
 texture = ExtResource("6_1eyee")
+
+[node name="Branches" type="Control" parent="Game" index="3" unique_id=888951461]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
 
 [node name="UI" type="Control" parent="Game" index="4" unique_id=2001392317]
 layout_mode = 1
