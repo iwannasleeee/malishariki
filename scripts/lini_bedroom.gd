@@ -129,8 +129,9 @@ func _on_location_loaded():
 
 func check_for_able_paint():
 	if is_box_completed and is_tumba_completed and is_pencils_collected:
-		EventBus.dialogue_started.emit(paint_able_dialogue)
-	
+		EventBus.dialogue_started.emit("res://scenes/ui/dialogue/Dialogue.tscn",paint_able_dialogue)
+		is_paint_able = true
+
 func _pencil_taken_handler(obj: PencilBase):
 	if !GameManager.collected_pencils.has(obj.color_name):
 		GameManager.collected_pencils.append(obj.color_name)
@@ -150,26 +151,29 @@ func _pencil_taken_handler(obj: PencilBase):
 			"completed": true,
 		})
 		is_pencils_collected = true
+		check_for_able_paint()
 
 func _minigame_finished_handler(result: Dictionary):
 	if result.has("id"):
 		if result["id"] == "tumba":
 			is_tumba_completed = true
 			shelf.hide()
+			check_for_able_paint()
 		if result["id"] == "books":
 			is_box_completed = true
 			box.hide()
+			check_for_able_paint()
 
 
 func _on_paint_button_paint_button_click() -> void:
 	if not is_box_completed:
-		EventBus.dialogue_started.emit(have_no_box_dialogue)
+		EventBus.dialogue_started.emit("res://scenes/ui/dialogue/Dialogue.tscn",have_no_box_dialogue)
 		return
 	if not is_tumba_completed:
-		EventBus.dialogue_started.emit(have_no_tapes_dialogue)
+		EventBus.dialogue_started.emit("res://scenes/ui/dialogue/Dialogue.tscn",have_no_tapes_dialogue)
 		return
-	if not is_box_completed:
-		EventBus.dialogue_started.emit(have_no_pencils_dialogue)
+	if not is_pencils_collected:
+		EventBus.dialogue_started.emit("res://scenes/ui/dialogue/Dialogue.tscn",have_no_pencils_dialogue)
 		return
 
 	EventBus.paint_started.emit("res://scenes/minigames/Paint/Paint.tscn")
@@ -179,7 +183,7 @@ func _paint_finished_handler(result: Dictionary) -> void:
 		if result.has("result"):
 			if result["result"] == "done":
 				can_lini_go = true
-		EventBus.dialogue_started.emit(paint_done_dialogue)
+		EventBus.dialogue_started.emit("res://scenes/ui/dialogue/Dialogue.tscn",paint_done_dialogue)
 
 
 func _on_door_lini_wanna_go(door) -> void:
@@ -188,4 +192,4 @@ func _on_door_lini_wanna_go(door) -> void:
 	if can_lini_go:
 		SceneManager.change_scene(target_scene, spawn_point_name)
 		return
-	EventBus.dialogue_started.emit(lini_wanna_go_but_he_cant_dialogue)
+	EventBus.dialogue_started.emit("res://scenes/ui/dialogue/Dialogue.tscn",lini_wanna_go_but_he_cant_dialogue)

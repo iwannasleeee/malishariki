@@ -37,6 +37,10 @@ var dialogue = [
 func _ready() -> void:
 	await get_tree().process_frame   # ждём финальный размер Control
 
+	EventBus.dialogue_started.emit("res://scenes/ui/dialogue/Dialogue.tscn",dialogue)
+	await EventBus.dialogue_finished
+	get_tree().paused
+
 	for r in 3:
 		for child in rows[r].get_children():
 			if child is TextureRect:
@@ -50,9 +54,6 @@ func _ready() -> void:
 	fin_timer.one_shot  = true
 	fin_timer.wait_time = 1.0
 	fin_timer.timeout.connect(_on_complete)
-	EventBus.dialogue_started.emit(dialogue)
-	await EventBus.dialogue_finished
-	get_tree().paused
 func _sort_row(r: int) -> void:
 	row_books[r].sort_custom(func(a: TextureRect, b: TextureRect) -> bool:
 		return a.position.x < b.position.x
