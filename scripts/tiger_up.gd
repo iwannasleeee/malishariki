@@ -10,6 +10,7 @@ extends Control
 @export var branch_shift_on_hit: float = 200.0 # на сколько пикселей ветки уходят вверх
 @export var texture_normal: Texture2D
 @export var texture_hit: Texture2D
+@export var bg_speed_factor: float = 0.8
 
 var branch_speed: float
 var game_over: bool = false
@@ -44,6 +45,7 @@ const BRANCH_SCENES: Array[PackedScene] = [
 
 const NATIVE_W := 1280.0
 const NATIVE_H := 720.0
+const BRANCH_DESPAWN_Y := 1600.0
 
 var player_d: Vector2
 var player_hit_offset: Vector2
@@ -107,6 +109,12 @@ func _process(delta: float) -> void:
 	)
 
 	for branch in branches_container.get_children():
+		branch.position.y += branch_speed * delta
+
+		if branch.position.y > BRANCH_DESPAWN_Y:
+			branch.queue_free()
+			continue
+
 		var branch_rect := Rect2(
 			branch.position + branch.hit_offset,
 			branch.hit_size
@@ -121,7 +129,7 @@ func _process(delta: float) -> void:
 
 # NEW: бесшовная вертикальная прокрутка фона двумя тайлами
 func _scroll_background(delta: float) -> void:
-	var move := branch_speed * delta
+	var move := branch_speed * bg_speed_factor * delta
 	bg_tile_1.position.y += move
 	bg_tile_2.position.y += move
 	if bg_tile_1.position.y >= bg_tile_height:
@@ -134,7 +142,6 @@ func _on_spawn_timer_timeout() -> void:
 		return
 	var branch_scene: PackedScene = BRANCH_SCENES[randi() % BRANCH_SCENES.size()]
 	var branch = branch_scene.instantiate()
-	branch.speed = branch_speed
 	branch.position.y = -400
 	branches_container.add_child(branch)
 
@@ -148,13 +155,10 @@ func trigger_hit() -> void:
 	progress = clamp(progress - hit_penalty, 0.0, 1.0)
 	progress_bar.value = progress
 
-	# Сдвигаем все ветки вверх и останавливаем
 	var tween := create_tween()
 	for b in branches_container.get_children():
-		b.set_process(false)
 		tween.parallel().tween_property(b, "position:y", b.position.y - branch_shift_on_hit, 0.3)
 
-	# NEW: фон тоже "вздрагивает" вместе с ветками
 	tween.parallel().tween_property(bg_tile_1, "position:y", bg_tile_1.position.y - branch_shift_on_hit, 0.3)
 	tween.parallel().tween_property(bg_tile_2, "position:y", bg_tile_2.position.y - branch_shift_on_hit, 0.3)
 
@@ -163,9 +167,6 @@ func trigger_hit() -> void:
 
 	if texture_normal:
 		player.texture = texture_normal
-
-	for b in branches_container.get_children():
-		b.set_process(true)
 
 	spawn_timer.start()
 	invincible_timer = 0.5
