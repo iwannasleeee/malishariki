@@ -55,8 +55,15 @@ func remove_quest(quest_id) -> void:
 func refresh() -> void:
 	for child in quest_container.get_children():
 		child.queue_free()
-
+	
+	if quests.size() == 0:
+		hide()
+		return
+	else:
+		show()
+	
 	for quest in quests:
 		var item := quest_item_scene.instantiate()
 		quest_container.add_child(item)
 		item.set_data(quest)
+	

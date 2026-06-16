@@ -14,8 +14,10 @@ signal paint_finished(result: Dictionary)
 signal menu_open_requested()
 signal interactable_interact()
 
+signal transition_finished()
+
 #Bedroom
-signal pencil_taken(obj: PencilBase)
+signal linibedroom_pencil_taken(obj: PencilBase)
 
 signal comic_cutscene_started(scene: PackedScene)
 signal comic_cutscene_finished()

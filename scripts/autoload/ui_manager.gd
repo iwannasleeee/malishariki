@@ -120,7 +120,9 @@ func hide_minigame() -> void:
 
 # --- Dialogue ---
 func show_dialogue(scene_path: String, dialogue_data: Array) -> void:
-	# Метод _swap_screen адаптирован под базовую логику
+#func show_dialogue(dialogue_data: Array) -> void:
+	print("show dialoge")
+	#var scene_path = load("res://scenes/ui/dialogue/Dialogue.tscn") 
 	_swap_screen(dialogue_container, scene_path)
 	
 	# Передаем данные в созданный UI-скрипт диалога

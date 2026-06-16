@@ -13,7 +13,7 @@ var flags: Dictionary = {
 }
 
 func _ready() -> void:
-	EventBus.pencil_taken.connect(_pencil_taken_handler)
+	EventBus.linibedroom_pencil_taken.connect(_pencil_taken_handler)
 
 func set_flag(flag: String, value: bool) -> void:
 	flags[flag] = value
@@ -50,3 +50,5 @@ func _pencil_taken_handler(obj: PencilBase):
 			"к2": pencils_goal_count
 			})
 		})
+	if collected_pencils.size() == 10:
+		EventBus.remove_quest.emit("pencils")

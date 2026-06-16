@@ -1,8 +1,6 @@
 # ui/minigame_transition.gd
 extends Control
 
-signal transition_finished
-
 @onready var sprite: AnimatedSprite2D = $CenterContainer/AnimatedSprite2D
 
 func _ready() -> void:
@@ -10,4 +8,4 @@ func _ready() -> void:
 	sprite.play("MinigameTransition")  # запускает покадровую анимацию
 
 func _on_animation_finished() -> void:
-	transition_finished.emit()
+	EventBus.transition_finished.emit()
