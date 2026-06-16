@@ -2,57 +2,113 @@ extends Node2D
 
 var tiger_talk_dialogue1 = [
 		{
-			"name": "Lini",
-			"text": "Привет! Рада тебя видеть.",
+			"name": "Киря",
+			"text": "Ребята!! Представляете, меня сюда поднял ваш папа! ",
 			"portrait": "res://scenes/ui/dialogue/portraits/LiniPortrait.tscn",
 			"animation": "talk"        # имя анимации в SpriteFrames
 		},
 		{
-			"name": "Lini",
-			"text": "...",
+			"name": "Киря",
+			"text": "У него такие сильные лапы..",
 			"portrait": "res://scenes/ui/dialogue/portraits/LiniPortrait.tscn",
-			"animation": "talk"        # можно менять анимацию внутри диалога
+			"animation": "talk"        # имя анимации в SpriteFrames
 		},
 		{
-			"name": "",                # строчка без портрета
-			"text": "Где-то вдали залаяла собака.",
+			"name": "Киря",
+			"text": "Но не в этом суть, я пришел показать свой обещанный плакат!!",
+			"portrait": "res://scenes/ui/dialogue/portraits/LiniPortrait.tscn",
+			"animation": "talk"        # имя анимации в SpriteFrames
+		},
+		{
+			"name": "Рири",
+			"text": "Ты уже нарисовал его?",
+			"portrait": "res://scenes/ui/dialogue/portraits/RiriPortrait.tscn",
+			"animation": "talk"        # имя анимации в SpriteFrames
+		},
+		{
+			"name": "Рири",
+			"text": "Так быстро?",
+			"portrait": "res://scenes/ui/dialogue/portraits/RiriPortrait.tscn",
+			"animation": "talk"        # имя анимации в SpriteFrames
+		},
+		{
+			"name": "Тиги",
+			"text": "Ну-ка, покажи че там.",
+			"portrait": "res://scenes/ui/dialogue/portraits/TigiPortrait.tscn",
+			"animation": "talk"        # имя анимации в SpriteFrames
 		},
 	]
 var cutscene_after_tiger_talk_comic = "res://scenes/ComicCutscenes/cutscenes/comic_tigers.tscn"
 var tiger_talk_dialogue2 = [
 		{
-			"name": "Lini",
-			"text": "Привет! Рада тебя видеть.",
+			"name": "Киря",
+			"text": "ААААААААААААААААААААААААААА!!!",
 			"portrait": "res://scenes/ui/dialogue/portraits/LiniPortrait.tscn",
 			"animation": "talk"        # имя анимации в SpriteFrames
 		},
 		{
-			"name": "Lini",
-			"text": "...",
+			"name": "Киря",
+			"text": "Что ты надела-а-а-ал!",
 			"portrait": "res://scenes/ui/dialogue/portraits/LiniPortrait.tscn",
-			"animation": "talk"        # можно менять анимацию внутри диалога
+			"animation": "talk"        # имя анимации в SpriteFrames
 		},
 		{
-			"name": "",                # строчка без портрета
-			"text": "Где-то вдали залаяла собака.",
+			"name": "Тиги",
+			"text": "Ой-йёй. Ну я правда не специально. ",
+			"portrait": "res://scenes/ui/dialogue/portraits/TigiPortrait.tscn",
+			"animation": "talk"        # имя анимации в SpriteFrames
+		},
+		{
+			"name": "Киря",
+			"text": "Ты всегда так!",
+			"portrait": "res://scenes/ui/dialogue/portraits/LiniPortrait.tscn",
+			"animation": "talk"        # имя анимации в SpriteFrames
+		},
+		{
+			"name": "Тиги",
+			"text": "Ну я всегда потом ещё исправляю. Вот дай уже сюда свой плакат и смотри.",
+			"portrait": "res://scenes/ui/dialogue/portraits/TigiPortrait.tscn",
+			"animation": "talk"        # имя анимации в SpriteFrames
 		},
 	]
 var tiger_talk_dialogue3 = [
 		{
-			"name": "Lini",
-			"text": "Привет! Рада тебя видеть.",
+			"name": "Киря",
+			"text": "Я не уверен, что это все исправило... ",
 			"portrait": "res://scenes/ui/dialogue/portraits/LiniPortrait.tscn",
 			"animation": "talk"        # имя анимации в SpriteFrames
 		},
 		{
-			"name": "Lini",
-			"text": "...",
+			"name": "Киря",
+			"text": "Со стороны рисунка все равно видно, что он порван!",
 			"portrait": "res://scenes/ui/dialogue/portraits/LiniPortrait.tscn",
-			"animation": "talk"        # можно менять анимацию внутри диалога
+			"animation": "talk"        # имя анимации в SpriteFrames
+		},
+		{
+			"name": "Тиги",
+			"text": "Хм. Даже не знаю, что еще сделать.",
+			"portrait": "res://scenes/ui/dialogue/portraits/TigiPortrait.tscn",
+			"animation": "talk"        # имя анимации в SpriteFrames
+		},
+		{
+			"name": "Рири",
+			"text": "Я знаю!",
+			"portrait": "res://scenes/ui/dialogue/portraits/RiriPortrait.tscn",
+			"animation": "talk"        # имя анимации в SpriteFrames
 		},
 		{
 			"name": "",                # строчка без портрета
-			"text": "Где-то вдали залаяла собака.",
+			"text": "Рири показывает руки из-за спины, в которых она держит полароиды с ними с разных годов.",
+		},
+		{
+			"name": "",                # строчка без портрета
+			"text": "На всех них есть Квочи.",
+		},
+		{
+			"name": "Рири",
+			"text": "Давайте наклеим туда общие фотки!",
+			"portrait": "res://scenes/ui/dialogue/portraits/RiriPortrait.tscn",
+			"animation": "talk"        # имя анимации в SpriteFrames
 		},
 	]
 

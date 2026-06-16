@@ -18,8 +18,8 @@ animations = [{
 }]
 
 [node name="LiniPortrait" type="AnimatedSprite2D" unique_id=862825752]
-position = Vector2(-208, 120)
-scale = Vector2(0.7, 0.7)
+position = Vector2(-67.48337, 199.99998)
+scale = Vector2(0.5838709, 0.583871)
 sprite_frames = SubResource("SpriteFrames_ms3ex")
 animation = &"talk"
 frame_progress = 0.81022984

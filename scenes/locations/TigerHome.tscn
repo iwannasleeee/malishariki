@@ -30,10 +30,12 @@ spawn_name = "TigerEdgeSpawn"
 navigation_polygon = SubResource("NavigationPolygon_cjmmn")
 
 [node name="Tigi" parent="." unique_id=1008082527 instance=ExtResource("4_mejkl")]
-position = Vector2(1045, 202)
+position = Vector2(1061.0001, 467)
+scale = Vector2(0.24, 0.24)
 
 [node name="Riri" parent="." unique_id=1420837848 instance=ExtResource("6_cjmmn")]
-position = Vector2(799, 223)
+position = Vector2(1007, 476.99997)
+scale = Vector2(0.22, 0.22)
 
 [connection signal="tiger_talk" from="Tigi" to="." method="tiger_talk"]
 [connection signal="tiger_talk" from="Riri" to="." method="tiger_talk"]
