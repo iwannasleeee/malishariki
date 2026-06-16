@@ -61,6 +61,7 @@ offset_right = 40.0
 offset_bottom = 16.0
 
 [node name="TimerLabel" type="Label" parent="Game/UI" index="1" unique_id=282738999]
+visible = false
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 16.0
@@ -71,5 +72,6 @@ anchors_preset = 10
 anchor_right = 1.0
 offset_bottom = 20.0
 grow_horizontal = 2
+show_percentage = false
 
 [node name="BranchSpawnTimer" type="Timer" parent="Game" index="5" unique_id=1760943973]

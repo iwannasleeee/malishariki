@@ -6,7 +6,7 @@ extends Control
 @export var branch_spawn_interval: float = 1.2
 @export var survival_time_to_win: float = 30.0
 @export var hit_penalty: float = 0.2           # на сколько уменьшается прогресс (0..1)
-@export var hit_pause_duration: float = 1.5    # секунд паузы после удара
+@export var hit_pause_duration: float = 0.6    # секунд паузы после удара
 @export var branch_shift_on_hit: float = 200.0 # на сколько пикселей ветки уходят вверх
 @export var texture_normal: Texture2D
 @export var texture_hit: Texture2D
@@ -125,9 +125,9 @@ func trigger_hit() -> void:
 	progress = clamp(progress - hit_penalty, 0.0, 1.0)
 	progress_bar.value = progress
 
-	if progress <= 0.0:
-		trigger_game_over()
-		return
+	#if progress <= 0.0:
+		#trigger_game_over()
+		#return
 
 	# Сдвигаем все ветки вверх и останавливаем
 	var tween := create_tween()
