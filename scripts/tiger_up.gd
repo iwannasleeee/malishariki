@@ -17,8 +17,10 @@ var won: bool = false
 var is_hit: bool = false
 var progress: float = 0.0  # 0..1
 var invincible_timer: float = 0.0
+var bg_tile_height: float = 0.0   # NEW: высота одного тайла фона с учётом scale
 
-@onready var bg: TextureRect = $BG
+@onready var bg_tile_1: TextureRect = $BGLayer/BGTile1   # NEW
+@onready var bg_tile_2: TextureRect = $BGLayer/BGTile2   # NEW
 @onready var platform: TextureRect = $Platform
 @onready var player: TextureRect = $Player
 @onready var player_hitbox: ColorRect = $Player/HitBox
@@ -42,9 +44,7 @@ const BRANCH_SCENES: Array[PackedScene] = [
 
 const NATIVE_W := 1280.0
 const NATIVE_H := 720.0
-const BG_SCROLL_SPEED := 300.0
 
-var bg_offset: float = 0.0
 var player_d: Vector2
 var player_hit_offset: Vector2
 var player_hit_size: Vector2
@@ -70,16 +70,19 @@ func _ready() -> void:
 	if texture_normal:
 		player.texture = texture_normal
 
-func _process(delta: float) -> void:
-	bg_offset += BG_SCROLL_SPEED * delta
+	# NEW: расставляем два тайла фона друг над другом
+	bg_tile_height = bg_tile_1.texture.get_size().y * bg_tile_1.scale.y
+	bg_tile_1.position = Vector2.ZERO
+	bg_tile_2.position = Vector2(0.0, -bg_tile_height)
 
+func _process(delta: float) -> void:
 	# Во время удара и после победы/поражения ничего не делаем
 	if game_over or won or is_hit:
 		return
-	
+
 	if invincible_timer > 0.0:
 		invincible_timer -= delta
-	
+
 	var mouse_x := get_local_mouse_position().x
 	var half_player := player.size.x * 0.5
 	var target_x: float = clamp(mouse_x - half_player, 0.0, NATIVE_W - player.size.x)
@@ -87,6 +90,8 @@ func _process(delta: float) -> void:
 	platform.position.x = player.position.x - player_d.x
 
 	branch_speed += branch_speed_increase * delta
+
+	_scroll_background(delta)   # NEW
 
 	# Прогресс растёт со временем
 	progress = clamp(progress + delta / survival_time_to_win, 0.0, 1.0)
@@ -114,6 +119,16 @@ func _process(delta: float) -> void:
 				return
 			return
 
+# NEW: бесшовная вертикальная прокрутка фона двумя тайлами
+func _scroll_background(delta: float) -> void:
+	var move := branch_speed * delta
+	bg_tile_1.position.y += move
+	bg_tile_2.position.y += move
+	if bg_tile_1.position.y >= bg_tile_height:
+		bg_tile_1.position.y -= bg_tile_height * 2.0
+	if bg_tile_2.position.y >= bg_tile_height:
+		bg_tile_2.position.y -= bg_tile_height * 2.0
+
 func _on_spawn_timer_timeout() -> void:
 	if game_over or won:
 		return
@@ -133,15 +148,15 @@ func trigger_hit() -> void:
 	progress = clamp(progress - hit_penalty, 0.0, 1.0)
 	progress_bar.value = progress
 
-	#if progress <= 0.0:
-		#trigger_game_over()
-		#return
-
 	# Сдвигаем все ветки вверх и останавливаем
 	var tween := create_tween()
 	for b in branches_container.get_children():
 		b.set_process(false)
 		tween.parallel().tween_property(b, "position:y", b.position.y - branch_shift_on_hit, 0.3)
+
+	# NEW: фон тоже "вздрагивает" вместе с ветками
+	tween.parallel().tween_property(bg_tile_1, "position:y", bg_tile_1.position.y - branch_shift_on_hit, 0.3)
+	tween.parallel().tween_property(bg_tile_2, "position:y", bg_tile_2.position.y - branch_shift_on_hit, 0.3)
 
 	await tween.finished
 	await get_tree().create_timer(hit_pause_duration).timeout

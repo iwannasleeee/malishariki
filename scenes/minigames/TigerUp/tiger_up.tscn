@@ -14,10 +14,27 @@ script = ExtResource("2_l1x7x")
 texture_normal = ExtResource("4_6n3go")
 texture_hit = ExtResource("5_r0cr7")
 
-[node name="BG" type="TextureRect" parent="Game" index="0" unique_id=296858252]
+[node name="BGLayer" type="Control" parent="Game" index="0" unique_id=1137056403]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BGTile1" type="TextureRect" parent="Game/BGLayer" index="0" unique_id=1507532975]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_hqlw5")
+
+[node name="BGTile2" type="TextureRect" parent="Game/BGLayer" index="1" unique_id=330593759]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("3_hqlw5")
 
 [node name="Branches" type="Control" parent="Game" index="1" unique_id=888951461]
