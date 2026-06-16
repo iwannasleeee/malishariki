@@ -78,7 +78,6 @@ func show_minigame(scene_path: String) -> void:
 
 	minigame.visible = true
 	get_tree().paused = true
-	
 	var transition: Control = (load(MINIGAME_TRANSITION) as PackedScene).instantiate()
 	transition.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	minigame.add_child(transition)

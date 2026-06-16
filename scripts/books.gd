@@ -12,6 +12,26 @@ var drag_row_idx       : int         = -1
 var drag_start_mouse_x : float       = 0.0
 var drag_start_book_x  : float       = 0.0
 
+var dialogue = [
+		{
+			"name": "Lini",
+			"text": "Привет! Рада тебя видеть.",
+			"portrait": "res://scenes/ui/dialogue/portraits/LiniPortrait.tscn",
+			"animation": "talk"        # имя анимации в SpriteFrames
+		},
+		{
+			"name": "Lini",
+			"text": "...",
+			"portrait": "res://scenes/ui/dialogue/portraits/LiniPortrait.tscn",
+			"animation": "talk"        # можно менять анимацию внутри диалога
+		},
+		{
+			"name": "",                # строчка без портрета
+			"text": "Где-то вдали залаяла собака.",
+		},
+	]
+
+
 # ── Инициализация ─────────────────────────────────────────────────────────────
 
 func _ready() -> void:
@@ -30,7 +50,9 @@ func _ready() -> void:
 	fin_timer.one_shot  = true
 	fin_timer.wait_time = 1.0
 	fin_timer.timeout.connect(_on_complete)
-
+	EventBus.dialogue_started.emit(dialogue)
+	await EventBus.dialogue_finished
+	get_tree().paused
 func _sort_row(r: int) -> void:
 	row_books[r].sort_custom(func(a: TextureRect, b: TextureRect) -> bool:
 		return a.position.x < b.position.x
@@ -132,5 +154,7 @@ func _process(delta: float) -> void:
 	#else:
 		#print("ny")
 func _on_complete() -> void:
-	EventBus.minigame_finished.emit({})
+	EventBus.minigame_finished.emit({
+		"id":"books"
+	})
 	UIManager.hide_minigame()

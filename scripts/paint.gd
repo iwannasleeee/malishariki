@@ -660,12 +660,12 @@ func _on_small_size_pressed() -> void:
 
 
 func _on_exit_pressed() -> void:
-	EventBus.paint_finished.emit({})
+	EventBus.paint_finished.emit({"result":"pudge"})
 	UIManager.hide_paint()
 
 
 func _on_finish_pressed() -> void:
 	flush_texture()
 	GameManager.save_paint_drawing(image)
-	EventBus.paint_finished.emit({})
+	EventBus.paint_finished.emit({"result":"done"})
 	UIManager.hide_paint()

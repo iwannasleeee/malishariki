@@ -88,7 +88,30 @@ func _ready() -> void:
 	rope.points = PackedVector2Array()
 	win_label.visible = false
 	_update_status_label()
-
+	
+	
+	var dialogue = [
+		{
+			"name": "Lini",
+			"text": "Привет! Рада тебя видеть.",
+			"portrait": "res://scenes/ui/dialogue/portraits/LiniPortrait.tscn",
+			"animation": "talk"        # имя анимации в SpriteFrames
+		},
+		{
+			"name": "Lini",
+			"text": "...",
+			"portrait": "res://scenes/ui/dialogue/portraits/LiniPortrait.tscn",
+			"animation": "talk"        # можно менять анимацию внутри диалога
+		},
+		{
+			"name": "",                # строчка без портрета
+			"text": "Где-то вдали залаяла собака.",
+		},
+	]
+	
+	EventBus.dialogue_started.emit("res://scenes/ui/dialogue/Dialogue.tscn",dialogue)
+	await EventBus.dialogue_finished
+	get_tree().paused = true
 
 ## Собирает все рёбра всех CollisionPolygon2D, лежащих под MazeWalls,
 ## в глобальных координатах. Вызывайте _build_wall_segments() повторно,
@@ -119,13 +142,6 @@ func _input(event: InputEvent) -> void:
 		else:
 			if dragging:
 				_end_drag()
-
-	#elif event is InputEventMouseMotion and dragging:
-		#var pos: Vector2 = get_global_mouse_position()
-		## Не даём ладони выйти за пределы игрового поля
-		#pos.x = clamp(pos.x, 0.0, size.x)
-		#pos.y = clamp(pos.y, 0.0, size.y)
-		#palm.global_position = pos
 
 
 func _process(_delta: float) -> void:
@@ -291,7 +307,9 @@ func _collect_item(item: Node2D) -> void:
 	if collected_count >= total_items:
 		maze_completed.emit()
 		win_label.visible = true
-		EventBus.minigame_finished.emit({})
+		EventBus.minigame_finished.emit({
+			"id":"tumba"
+		})
 		UIManager.hide_minigame()
 
 func _update_status_label() -> void:
