@@ -4,9 +4,8 @@ class_name PencilBase
 var is_taken = false
 
 func interact(player: Node) -> void:
-	if !GameManager.collected_pencils.has(color_name):
-		is_taken = true
-		GameManager.collected_pencils.append(color_name)
-		print(GameManager.collected_pencils)
-		$"."._on_mouse_exit()
-		$".".queue_free()
+	EventBus.pencil_taken.emit(self)
+	is_taken = true
+	print(GameManager.collected_pencils)
+	$"."._on_mouse_exit()
+	$".".queue_free()

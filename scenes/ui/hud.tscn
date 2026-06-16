@@ -1,18 +1,41 @@
 [gd_scene format=3 uid="uid://d1hneh5j5c41x"]
 
 [ext_resource type="Texture2D" uid="uid://bhcg4vkk4we2h" path="res://Assets/ui/etc/RAMA.png" id="1_0mwgc"]
+[ext_resource type="PackedScene" uid="uid://c5uu7nuk2743r" path="res://scenes/ui/QuestList/QuestList.tscn" id="2_8qguk"]
 [ext_resource type="Texture2D" uid="uid://bbrrd543sr5go" path="res://Assets/ui/etc/ui_pause1.png" id="2_bo48s"]
 [ext_resource type="Texture2D" uid="uid://d32drqsc5qtt" path="res://Assets/ui/etc/ui_pause2.png" id="3_8qguk"]
+
+[sub_resource type="GDScript" id="GDScript_8qguk"]
+script/source = "extends Control
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
 
 [node name="Hud" type="Control" unique_id=1099479635]
 process_mode = 3
 layout_mode = 3
 anchors_preset = 0
+script = SubResource("GDScript_8qguk")
 
 [node name="Rama" type="Sprite2D" parent="." unique_id=1440989873]
 position = Vector2(639, 360)
 scale = Vector2(0.32, 0.32)
 texture = ExtResource("1_0mwgc")
+
+[node name="QuestList" parent="." unique_id=593244697 instance=ExtResource("2_8qguk")]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 18.000002
+offset_right = 16.0
+offset_bottom = 18.000002
 
 [node name="TextureButton" type="TextureButton" parent="." unique_id=1927907405]
 layout_mode = 0

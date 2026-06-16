@@ -27,8 +27,6 @@ var bg_tile_height: float = 0.0   # NEW: высота одного тайла ф
 @onready var player_hitbox: ColorRect = $Player/HitBox
 @onready var branches_container: Control = $Branches
 @onready var spawn_timer: Timer = $BranchSpawnTimer
-@onready var timer_label: Label = $UI/TimerLabel
-@onready var game_over_label: Label = $UI/GameOverLabel
 @onready var progress_bar: ProgressBar = $UI/ProgressBar
 
 const BRANCH_SCENES: Array[PackedScene] = [
@@ -53,7 +51,6 @@ var player_hit_size: Vector2
 
 func _ready() -> void:
 	branch_speed = initial_branch_speed
-	game_over_label.visible = false
 
 	progress_bar.min_value = 0.0
 	progress_bar.max_value = 1.0
@@ -177,8 +174,6 @@ func trigger_game_over() -> void:
 	spawn_timer.stop()
 	for b in branches_container.get_children():
 		b.set_process(false)
-	game_over_label.text = "Game Over"
-	game_over_label.visible = true
 
 func trigger_win() -> void:
 	won = true

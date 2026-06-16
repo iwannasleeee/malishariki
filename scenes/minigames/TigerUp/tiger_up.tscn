@@ -75,18 +75,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="GameOverLabel" type="Label" parent="Game/UI" index="0" unique_id=1499512883]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 16.0
-
-[node name="TimerLabel" type="Label" parent="Game/UI" index="1" unique_id=282738999]
-visible = false
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 16.0
-
-[node name="ProgressBar" type="ProgressBar" parent="Game/UI" index="2" unique_id=986257895]
+[node name="ProgressBar" type="ProgressBar" parent="Game/UI" index="0" unique_id=986257895]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0

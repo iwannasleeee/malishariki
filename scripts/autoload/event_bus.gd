@@ -21,3 +21,10 @@ signal comic_cutscene_started(scene: PackedScene)
 signal comic_cutscene_finished()
 
 signal scene_became_visible()
+
+#quests
+signal add_quest(data: Dictionary)
+signal set_quests(quests: Array)
+signal complete_quest(quest_id: String)
+signal remove_quest(quest_id:String)
+signal update_quest(quest: Dictionary)

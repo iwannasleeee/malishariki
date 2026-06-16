@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://c5uu7nuk2743r"]
+
+[ext_resource type="Script" uid="uid://buqkaucfejq13" path="res://scripts/quest_list.gd" id="1_43p1b"]
+[ext_resource type="Texture2D" uid="uid://jl1a7wqx8ljj" path="res://Assets/ui/etc/Note.png" id="2_s17l5"]
+[ext_resource type="PackedScene" uid="uid://w5t3bi2u81wy" path="res://scenes/ui/QuestList/QuestItem.tscn" id="2_sim2d"]
+
+[node name="QuestList" type="Control" unique_id=593244697]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_43p1b")
+quest_item_scene = ExtResource("2_sim2d")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1609729566]
+layout_mode = 1
+offset_right = 191.78989
+offset_bottom = 186.0
+texture = ExtResource("2_s17l5")
+expand_mode = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="TextureRect" unique_id=1858515207]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="TextureRect/MarginContainer" unique_id=450225181]
+layout_mode = 2
+
+[node name="QuestContainer" type="VBoxContainer" parent="TextureRect/MarginContainer/ScrollContainer" unique_id=115618662]
+layout_mode = 2
+size_flags_vertical = 3

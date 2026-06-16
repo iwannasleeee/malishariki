@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://w5t3bi2u81wy"]
+
+[ext_resource type="Script" uid="uid://1mhdpk03uac4" path="res://scripts/quest_item.gd" id="1_2v1b0"]
+[ext_resource type="FontFile" uid="uid://ckycuhf4ii5m0" path="res://fonts/RUSAvas.ttf" id="2_sm1a2"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_xyghn"]
+font = ExtResource("2_sm1a2")
+font_size = 32
+
+[node name="QuestItem" type="PanelContainer" unique_id=429880037]
+offset_right = 29.0
+offset_bottom = 36.0
+script = ExtResource("1_2v1b0")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1537022870]
+layout_mode = 2
+
+[node name="CheckBox" type="CheckBox" parent="HBoxContainer" unique_id=1579507513]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer" unique_id=1424721212]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="HBoxContainer/VBoxContainer" unique_id=1138905151]
+layout_mode = 2
+label_settings = SubResource("LabelSettings_xyghn")
+
+[node name="Description" type="Label" parent="HBoxContainer/VBoxContainer" unique_id=811933321]
+layout_mode = 2
