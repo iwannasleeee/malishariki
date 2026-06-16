@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://w5t3bi2u81wy"]
 
-[ext_resource type="Script" uid="uid://1mhdpk03uac4" path="res://scripts/quest_item.gd" id="1_2v1b0"]
+[ext_resource type="Script" path="res://scripts/quest_item.gd" id="1_2v1b0"]
 [ext_resource type="FontFile" uid="uid://ckycuhf4ii5m0" path="res://fonts/RUSAvas.ttf" id="2_sm1a2"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xyghn"]
@@ -12,6 +12,7 @@ font_color = Color(0.068, 0.08, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_sm1a2"]
 font = ExtResource("2_sm1a2")
+font_color = Color(0.06666667, 0.078431375, 0, 1)
 
 [node name="QuestItem" type="PanelContainer" unique_id=429880037]
 anchors_preset = 10
