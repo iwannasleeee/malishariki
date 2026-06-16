@@ -57,6 +57,7 @@ centered = false
 script = ExtResource("8_5iyfb")
 
 [node name="DottedLine" type="Line2D" parent="Game/TrailPath" index="0" unique_id=709897887]
+visible = false
 position = Vector2(401, 169)
 points = PackedVector2Array(0, 0, 21, 33, 51, 63, 93, 90, 132, 96, 179, 94, 224, 81, 261, 58, 285, 37, 309, 1, 302, -44, 261, -75, 236, -66, 218, -38, 209, 7, 227, 49, 285, 79, 321, 88, 369, 97, 414, 88, 438, 84, 473, 64, 495, 43, 518, 16, 540, -14)
 

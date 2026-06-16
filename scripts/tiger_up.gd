@@ -38,7 +38,6 @@ const BRANCH_SCENES: Array[PackedScene] = [
 	preload("res://scenes/minigames/TigerUp/Branches/branch_6.tscn"),
 	preload("res://scenes/minigames/TigerUp/Branches/branch_7.tscn"),
 	preload("res://scenes/minigames/TigerUp/Branches/branch_8.tscn"),
-	
 ]
 
 const NATIVE_W := 1280.0

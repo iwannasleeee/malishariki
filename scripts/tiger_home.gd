@@ -18,8 +18,44 @@ var tiger_talk_dialogue = [
 			"text": "Где-то вдали залаяла собака.",
 		},
 	]
-
 var cutscene_after_tiger_talk_comic = "res://scenes/ComicCutscenes/cutscenes/comic_tigers.tscn"
+var tiger_talk_dialogue2 = [
+		{
+			"name": "Lini",
+			"text": "Привет! Рада тебя видеть.",
+			"portrait": "res://scenes/ui/dialogue/portraits/LiniPortrait.tscn",
+			"animation": "talk"        # имя анимации в SpriteFrames
+		},
+		{
+			"name": "Lini",
+			"text": "...",
+			"portrait": "res://scenes/ui/dialogue/portraits/LiniPortrait.tscn",
+			"animation": "talk"        # можно менять анимацию внутри диалога
+		},
+		{
+			"name": "",                # строчка без портрета
+			"text": "Где-то вдали залаяла собака.",
+		},
+	]
+var tiger_talk_dialogue3 = [
+		{
+			"name": "Lini",
+			"text": "Привет! Рада тебя видеть.",
+			"portrait": "res://scenes/ui/dialogue/portraits/LiniPortrait.tscn",
+			"animation": "talk"        # имя анимации в SpriteFrames
+		},
+		{
+			"name": "Lini",
+			"text": "...",
+			"portrait": "res://scenes/ui/dialogue/portraits/LiniPortrait.tscn",
+			"animation": "talk"        # можно менять анимацию внутри диалога
+		},
+		{
+			"name": "",                # строчка без портрета
+			"text": "Где-то вдали залаяла собака.",
+		},
+	]
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	SceneManager.player.setup_for_location({
