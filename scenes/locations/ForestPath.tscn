@@ -10,12 +10,16 @@
 [ext_resource type="PackedScene" uid="uid://cdvbyqvee4csd" path="res://scenes/interactable/ForestPath/flowers.tscn" id="8_m5a6h"]
 [ext_resource type="Texture2D" uid="uid://cr1h14kfcf37h" path="res://Assets/interactable/ForestPath/FlowerButton.PNG" id="8_spk3l"]
 [ext_resource type="Texture2D" uid="uid://brpshjuwpuhle" path="res://Assets/interactable/ForestPath/FlowerButton_lit.PNG" id="9_iregs"]
-[ext_resource type="PackedScene" uid="uid://hh33tpvg86xf" path="res://scenes/interactable/ForestPath/papa_tigr.tscn" id="11_iregs"]
+[ext_resource type="Script" uid="uid://h85j0y5qeob6" path="res://scripts/papa_tigr.gd" id="11_pi80u"]
+[ext_resource type="Texture2D" uid="uid://dhm0vnsvm5vcy" path="res://Assets/sprites/PapaTigr/PapaTigr.PNG" id="12_pi80u"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_iregs"]
 vertices = PackedVector2Array(2464.6328, 677.97656, 2376.4063, 647.25, 2194.3125, 572, 2194.2969, 571.9922, 2447.8594, 568, 2588.7422, 576.0625, 5363.2188, 610.28125, 5409.6016, 625.9531, 5380.922, 637.8672, 260.8672, 624.7578, 241.17969, 604.4297, 288.32813, 592.4531, 5227.7266, 634.02344, 5265.6875, 693.0078, 5102.133, 693.9922, 4893.8203, 651.0625, 5118.2734, 631.0078, 4649.1016, 685.0078, 4748.367, 632.75, 4624.2266, 580.1094, 4439, 642.2031, 4514.617, 586.09375, 4384.4297, 542.02344, 4217.711, 593.7031, 4142.9063, 545.97656, 4045.7422, 562.0078, 4093.7188, 628.25, 3770.3594, 689.9375, 3489.5, 553.9922, 3789.8438, 558, 3258.9766, 659.03906, 3789.8438, 557.9922, 3100.75, 560.0078, 3259.3906, 534.0625, 3044.6094, 628.9922, 2852.1719, 557, 2864.1172, 632.03125, 2652.1172, 562.96875, 2748.1406, 675.0078, 2206.0781, 621.75, 2115.3281, 652.6875, 2034.3516, 576.89844, 2036.9922, 687.9297, 2002.9531, 599.47656, 1815.7578, 631.0078, 1438.9688, 671, 1746.9375, 629.9922, 1691.4219, 618.8828, 1611.7891, 621.2578, 388.27344, 677.9922, 342.32813, 674.0781, 286.04688, 663.9297, 386.52344, 578.90625, 397.46094, 590.84375, 441.97656, 677, 294.64063, 577.1328, 429.21094, 591.96875, 474.3672, 596.9922, 571.85156, 678.9922, 540.40625, 598.02344, 562.60156, 591.27344, 666.3281, 610.03906, 787.8906, 668.9922, 1203.0703, 678.9922, 755.59375, 606.02344, 795.78906, 610.9297, 836.02344, 616.96875, 881.1328, 619.0625, 911.8203, 610.60156, 925.1172, 606.46094, 955.3125, 597.0625, 1118.5, 604.03125, 1259.8594, 583.84375, 1293.1406, 576, 1333.0469, 576, 1373.6094, 583.9219, 1453.4922, 590.72656, 1479.8828, 609, 1617.5625, 610.6797, 1578.0938, 619.7969, 1569.2578, 609)
 polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4, 5), PackedInt32Array(6, 7, 8), PackedInt32Array(9, 10, 11), PackedInt32Array(12, 6, 8, 13, 14), PackedInt32Array(15, 16, 12, 14, 17), PackedInt32Array(18, 15, 17), PackedInt32Array(19, 18, 17, 20, 21), PackedInt32Array(22, 21, 20, 23, 24), PackedInt32Array(25, 24, 23, 26, 27), PackedInt32Array(28, 29, 25, 27, 30), PackedInt32Array(28, 31, 29), PackedInt32Array(32, 33, 28, 30, 34), PackedInt32Array(35, 32, 34, 36, 37), PackedInt32Array(37, 36, 38, 0, 5), PackedInt32Array(2, 1, 39), PackedInt32Array(2, 39, 40, 41), PackedInt32Array(41, 40, 42, 43), PackedInt32Array(44, 43, 42), PackedInt32Array(44, 42, 45, 46), PackedInt32Array(47, 46, 45, 48), PackedInt32Array(49, 50, 51, 9, 11, 52, 53, 54), PackedInt32Array(11, 55, 52), PackedInt32Array(54, 53, 56, 57, 58), PackedInt32Array(58, 57, 59), PackedInt32Array(58, 59, 60, 61, 62), PackedInt32Array(63, 62, 61, 64, 65, 66), PackedInt32Array(63, 66, 67), PackedInt32Array(63, 67, 68), PackedInt32Array(63, 68, 69, 70, 71), PackedInt32Array(63, 71, 72, 45), PackedInt32Array(45, 72, 73, 74, 75), PackedInt32Array(45, 75, 76, 77), PackedInt32Array(48, 78, 47), PackedInt32Array(79, 48, 45), PackedInt32Array(79, 45, 77, 80)])
 outlines = Array[PackedVector2Array]([PackedVector2Array(281, 584, 222, 599, 253, 631, 280, 673, 341, 684, 388, 688, 442, 687, 572, 689, 788, 679, 1203, 689, 1439, 681, 2039, 698, 2119, 662, 2207, 632, 2374, 657, 2463, 688, 2750, 685, 2866, 642, 3044, 639, 3258, 669, 3771, 700, 4096, 638, 4218, 604, 4437, 652, 4648, 695, 5102, 704, 5268, 703, 5385, 647, 5438, 625, 5364, 600, 5227, 624, 5118, 621, 4894, 641, 4751, 623, 4626, 570, 4516, 576, 4386, 532, 4142, 536, 4045, 552, 3790, 548, 3490, 544, 3259, 524, 3100, 550, 2852, 547, 2651, 553, 2588, 566, 2448, 558, 2194, 562, 2031, 567, 1999, 590, 1815, 621, 1748, 620, 1693, 609, 1612, 600, 1606, 611, 1583, 610, 1574, 599, 1483, 599, 1457, 581, 1375, 574, 1334, 566, 1292, 566, 1258, 574, 1118, 594, 954, 587, 922.1453, 596.91034, 909, 601, 880, 609, 837, 607, 797, 601, 756, 596, 667, 600, 562, 581, 539, 588, 475, 587, 430, 582, 402, 581, 391, 569, 288, 567)])
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_prepl"]
+radius = 53.44
 
 [node name="ForestPath" type="Node2D" unique_id=1384249519]
 script = ExtResource("1_m7vo0")
@@ -25,10 +29,8 @@ position = Vector2(0, -26)
 navigation_polygon = SubResource("NavigationPolygon_iregs")
 
 [node name="ParallaxBackground" parent="." unique_id=1892395260 instance=ExtResource("2_va8tf")]
-visible = false
 
 [node name="ParallaxFrountground" parent="." unique_id=333348341 instance=ExtResource("3_dl70t")]
-visible = false
 
 [node name="Trolley" type="Sprite2D" parent="." unique_id=2102250415]
 position = Vector2(1345, 551)
@@ -58,5 +60,19 @@ position = Vector2(2555, 478)
 scale = Vector2(0.2573618, 0.2573618)
 monitorable = false
 
-[node name="PapaTigr" parent="." unique_id=1176860532 instance=ExtResource("11_iregs")]
-position = Vector2(5258, 618)
+[node name="PapaTigr" type="Area2D" parent="." unique_id=1176860532]
+position = Vector2(5283, 522)
+scale = Vector2(0.75090617, 0.75090617)
+script = ExtResource("11_pi80u")
+
+[node name="Sprite2D" type="Sprite2D" parent="PapaTigr" unique_id=309976985]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PapaTigr" unique_id=507364120]
+position = Vector2(25.302746, -102.542786)
+scale = Vector2(13.541919, -13.292989)
+shape = SubResource("CircleShape2D_prepl")
+
+[node name="PapaTigrSprite" type="Sprite2D" parent="PapaTigr" unique_id=142341707]
+position = Vector2(-435, -334)
+scale = Vector2(0.32, 0.32)
+texture = ExtResource("12_pi80u")

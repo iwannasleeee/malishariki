@@ -20,38 +20,44 @@ func interact(player: Node):
 		# Формируем сценарий диалога
 	var before_tigr_dialogue = [
 		{
-			"name": "Lini",
-			"text": "Привет! Рада тебя видеть.",
+			"name": "Киря",
+			"text": "Вот я и добрался...Но как мне к ним подняться...Я еще не был у них в гостях.",
 			"portrait": "res://scenes/ui/dialogue/portraits/LiniPortrait.tscn",
 			"animation": "talk"        # имя анимации в SpriteFrames
 		},
 		{
-			"name": "Lini",
-			"text": "...",
+			"name": "Киря",
+			"text": "Тиги!!",
 			"portrait": "res://scenes/ui/dialogue/portraits/LiniPortrait.tscn",
-			"animation": "talk"        # можно менять анимацию внутри диалога
+			"animation": "talk"        # имя анимации в SpriteFrames
+		},
+		{
+			"name": "Киря",
+			"text": "Рири-и-и!!",
+			"portrait": "res://scenes/ui/dialogue/portraits/LiniPortrait.tscn",
+			"animation": "talk"        # имя анимации в SpriteFrames
 		},
 		{
 			"name": "",                # строчка без портрета
-			"text": "Где-то вдали залаяла собака.",
+			"text": "Из ниоткуда возникает топот больших ног.",
 		},
 	]
 	var after_tigr_dialogue = [
 		{
-			"name": "Lini",
-			"text": "Привет! Рада тебя видеть.",
+			"name": "Киря",
+			"text": "Ой, здравствуйте, мистер Тигр...В-вы бы смогли позвать Тиги и Рири?...",
 			"portrait": "res://scenes/ui/dialogue/portraits/LiniPortrait.tscn",
 			"animation": "talk"        # имя анимации в SpriteFrames
 		},
 		{
-			"name": "Lini",
+			"name": "",                # строчка без портрета
 			"text": "...",
-			"portrait": "res://scenes/ui/dialogue/portraits/LiniPortrait.tscn",
-			"animation": "talk"        # можно менять анимацию внутри диалога
 		},
 		{
-			"name": "",                # строчка без портрета
-			"text": "Где-то вдали залаяла собака.",
+			"name": "Киря",
+			"text": "П-пожалуйста...",
+			"portrait": "res://scenes/ui/dialogue/portraits/LiniPortrait.tscn",
+			"animation": "talk"        # имя анимации в SpriteFrames
 		},
 	]
 	# Генерируем событие. Укажите точный путь к вашей сцене диалога
