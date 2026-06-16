@@ -4,7 +4,13 @@ extends Node2D
 var on_location_load_dialogue = [
 		{
 			"name": "Киря",
-			"text": "Теперь можно садиться за плакат!!",
+			"text": "Ой, а вокруг выросло так много цветов! ",
+			"portrait": "res://scenes/ui/dialogue/portraits/LiniPortrait.tscn",
+			"animation": "talk"        # имя анимации в SpriteFrames
+		},
+		{
+			"name": "Киря",
+			"text": "Может собрать немного в букетик? На лугу особенно красивые выросли.",
 			"portrait": "res://scenes/ui/dialogue/portraits/LiniPortrait.tscn",
 			"animation": "talk"        # имя анимации в SpriteFrames
 		},
