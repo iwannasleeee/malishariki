@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://hh33tpvg86xf"]
+[gd_scene format=3 uid="uid://dvb8bkffnl2ti"]
 
 [ext_resource type="PackedScene" uid="uid://dusogs63f23c" path="res://scenes/interactable/InteractableObject.tscn" id="1_qawe8"]
 [ext_resource type="Script" uid="uid://h85j0y5qeob6" path="res://scripts/papa_tigr.gd" id="2_ktdal"]
