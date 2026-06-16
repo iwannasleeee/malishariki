@@ -104,8 +104,42 @@ var have_no_pencils_dialogue = [
 			"text": "Где-то вдали залаяла собака.",
 		},
 	]
-var paint_done_dialogue = [] #ну ты пон
-var lini_wanna_go_but_he_cant_dialogue = []
+var paint_done_dialogue = [
+		{
+			"name": "Lini",
+			"text": "Привет! Рада тебя видеть.",
+			"portrait": "res://scenes/ui/dialogue/portraits/LiniPortrait.tscn",
+			"animation": "talk"        # имя анимации в SpriteFrames
+		},
+		{
+			"name": "Lini",
+			"text": "...",
+			"portrait": "res://scenes/ui/dialogue/portraits/LiniPortrait.tscn",
+			"animation": "talk"        # можно менять анимацию внутри диалога
+		},
+		{
+			"name": "",                # строчка без портрета
+			"text": "Где-то вдали залаяла собака.",
+		},
+	]
+var lini_wanna_go_but_he_cant_dialogue = [
+		{
+			"name": "Lini",
+			"text": "Привет! Рада тебя видеть.",
+			"portrait": "res://scenes/ui/dialogue/portraits/LiniPortrait.tscn",
+			"animation": "talk"        # имя анимации в SpriteFrames
+		},
+		{
+			"name": "Lini",
+			"text": "...",
+			"portrait": "res://scenes/ui/dialogue/portraits/LiniPortrait.tscn",
+			"animation": "talk"        # можно менять анимацию внутри диалога
+		},
+		{
+			"name": "",                # строчка без портрета
+			"text": "Где-то вдали залаяла собака.",
+		},
+	]
 
 func _ready() -> void:
 	total_pencils_count = pencils.get_children().size()
