@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://dax5ilgidu5y4"]
+
+[ext_resource type="PackedScene" uid="uid://dusogs63f23c" path="res://scenes/interactable/InteractableObject.tscn" id="1_ou5u4"]
+[ext_resource type="Script" uid="uid://djct76paa3mg3" path="res://scripts/quokka_home_interactable.gd" id="2_bxoi0"]
+[ext_resource type="Texture2D" uid="uid://dnjvqkxvg3jfv" path="res://Assets/interactable/QuokkaHome/QuokkaHome_LIT.PNG" id="3_sotiw"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_sotiw"]
+radius = 565.4167
+
+[node name="QuokkaHome" unique_id=1008082527 instance=ExtResource("1_ou5u4")]
+script = ExtResource("2_bxoi0")
+hover_texture = ExtResource("3_sotiw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1" unique_id=677134213]
+position = Vector2(-25, -5)
+shape = SubResource("CircleShape2D_sotiw")

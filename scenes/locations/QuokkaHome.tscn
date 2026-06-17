@@ -5,6 +5,8 @@
 [ext_resource type="Texture2D" uid="uid://m0v4ivyo41m1" path="res://Assets/Locations/QuokkaHome_2.PNG" id="3_a1phx"]
 [ext_resource type="PackedScene" uid="uid://bh4ukbeeuyykj" path="res://scenes/core/FixedCamera.tscn" id="4_a1phx"]
 [ext_resource type="FontFile" uid="uid://ckycuhf4ii5m0" path="res://fonts/RUSAvas.ttf" id="5_06bla"]
+[ext_resource type="Texture2D" uid="uid://dnjvqkxvg3jfv" path="res://Assets/interactable/QuokkaHome/QuokkaHome_LIT.PNG" id="5_kb6vc"]
+[ext_resource type="Script" uid="uid://d2e3fh25jdpmo" path="res://scripts/hover_sprite.gd" id="6_kb6vc"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_06bla"]
 animations = [{
@@ -24,7 +26,7 @@ animations = [{
 font = ExtResource("5_06bla")
 font_size = 32
 
-[node name="QuokkaHome" type="Node2D" unique_id=1056659864]
+[node name="QuokkaHome2" type="Node2D" unique_id=1056659864]
 script = ExtResource("1_7uvy4")
 
 [node name="Background" type="AnimatedSprite2D" parent="." unique_id=536395760]
@@ -32,8 +34,6 @@ process_mode = 3
 scale = Vector2(0.32, 0.32)
 sprite_frames = SubResource("SpriteFrames_06bla")
 centered = false
-
-[node name="FixedCamera" parent="." unique_id=228922617 instance=ExtResource("4_a1phx")]
 
 [node name="OverlayRect" type="ColorRect" parent="." unique_id=889927735]
 custom_minimum_size = Vector2(1280, 720)
@@ -43,7 +43,6 @@ mouse_filter = 2
 color = Color(0, 0, 0, 1)
 
 [node name="BirthdayLabel" type="Label" parent="OverlayRect" unique_id=823521182]
-visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -60,3 +59,22 @@ text = "	С днём рождения, Квоччи!"
 label_settings = SubResource("LabelSettings_06bla")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="HoverSprite" type="Control" parent="." unique_id=1889143528]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 975.0
+offset_top = 349.0
+offset_right = 1217.0
+offset_bottom = 490.0
+mouse_default_cursor_shape = 2
+script = ExtResource("6_kb6vc")
+
+[node name="HoverSprite" type="Sprite2D" parent="HoverSprite" unique_id=606433127]
+position = Vector2(103.00003, 58.000015)
+scale = Vector2(0.18, 0.18)
+texture = ExtResource("5_kb6vc")
+
+[node name="FixedCamera" parent="." unique_id=228922617 instance=ExtResource("4_a1phx")]
+
+[connection signal="table_clicked" from="HoverSprite" to="." method="_on_hover_sprite_table_clicked"]

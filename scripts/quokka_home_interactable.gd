@@ -1,8 +1,5 @@
-extends Node2D
+extends InteractableObject
 
-@onready var bg: AnimatedSprite2D = $Background
-@onready var overlay: ColorRect = $OverlayRect
-@onready var label: Label = $OverlayRect/BirthdayLabel
 var quokka_dialogue = [
 		{
 			"name": "Киря",
@@ -100,33 +97,11 @@ var quokka_dialogue = [
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	EventBus.scene_became_visible.connect(_on_location_load)
-	SceneManager.player.hide()
-	overlay.modulate.a = 0.0
-	label.visible = false
+	super._ready()
 
-func _on_location_load():
-	bg.play("default")
-	EventBus.show_birthday_label.connect(_start_fadeout)
-
-func _start_fadeout():
-	var tween = create_tween()
-	tween.tween_property(overlay, "modulate:a", 1.0, 1.0)
-	tween.tween_callback(_show_label)
-
-func _show_label():
-	label.visible = true
-
-func _input(event):
-	if label.visible:
-		if event is InputEventMouseButton \
-		and event.button_index == MOUSE_BUTTON_RIGHT \
-		and event.pressed:
-			get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
-
-func _on_hover_sprite_table_clicked() -> void:
-	await get_tree().create_timer(1.0).timeout
+func interact(player: Node):
 	EventBus.dialogue_started.emit("res://scenes/ui/dialogue/Dialogue.tscn",quokka_dialogue)
 	await EventBus.dialogue_finished
 	EventBus.minigame_started.emit("res://scenes/minigames/CakeIsLie/cake_is_lie.tscn")
 	UIManager.show_minigame("res://scenes/minigames/CakeIsLie/cake_is_lie.tscn")
+	
