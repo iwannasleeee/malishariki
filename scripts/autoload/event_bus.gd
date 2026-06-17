@@ -30,3 +30,6 @@ signal set_quests(quests: Array)
 signal complete_quest(quest_id: String)
 signal remove_quest(quest_id:String)
 signal update_quest(quest: Dictionary)
+
+#END
+signal show_birthday_label()

@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://d3cxexn2g36md" path="res://Assets/Locations/QuokkaHome_1.PNG" id="2_0x5bq"]
 [ext_resource type="Texture2D" uid="uid://m0v4ivyo41m1" path="res://Assets/Locations/QuokkaHome_2.PNG" id="3_a1phx"]
 [ext_resource type="PackedScene" uid="uid://bh4ukbeeuyykj" path="res://scenes/core/FixedCamera.tscn" id="4_a1phx"]
+[ext_resource type="FontFile" uid="uid://ckycuhf4ii5m0" path="res://fonts/RUSAvas.ttf" id="5_06bla"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_06bla"]
 animations = [{
@@ -19,6 +20,10 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="LabelSettings" id="LabelSettings_06bla"]
+font = ExtResource("5_06bla")
+font_size = 32
+
 [node name="QuokkaHome" type="Node2D" unique_id=1056659864]
 script = ExtResource("1_7uvy4")
 
@@ -29,3 +34,28 @@ sprite_frames = SubResource("SpriteFrames_06bla")
 centered = false
 
 [node name="FixedCamera" parent="." unique_id=228922617 instance=ExtResource("4_a1phx")]
+
+[node name="OverlayRect" type="ColorRect" parent="." unique_id=889927735]
+custom_minimum_size = Vector2(1280, 720)
+offset_right = 1280.0
+offset_bottom = 720.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="BirthdayLabel" type="Label" parent="OverlayRect" unique_id=823521182]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -129.5
+offset_top = -16.0
+offset_right = 129.5
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "	С днём рождения, Квоччи!"
+label_settings = SubResource("LabelSettings_06bla")
+horizontal_alignment = 1
+vertical_alignment = 1

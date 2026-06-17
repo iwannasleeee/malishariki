@@ -1,7 +1,8 @@
 extends Node2D
 
 @onready var bg: AnimatedSprite2D = $Background
-
+@onready var overlay: ColorRect = $OverlayRect
+@onready var label: Label = $OverlayRect/BirthdayLabel
 var quokka_dialogue = [
 		{
 			"name": "Киря",
@@ -109,6 +110,12 @@ func _on_location_load():
 	await EventBus.dialogue_finished
 	EventBus.minigame_started.emit("res://scenes/minigames/CakeIsLie/cake_is_lie.tscn")
 	UIManager.show_minigame("res://scenes/minigames/CakeIsLie/cake_is_lie.tscn")
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+	EventBus.show_birthday_label.connect(_start_fadeout)
+
+func _start_fadeout():
+	var tween = create_tween()
+	tween.tween_property(overlay, "modulate:a", 1.0, 1.0)
+	tween.tween_callback(_show_label)
+
+func _show_label():
+	label.visible = true

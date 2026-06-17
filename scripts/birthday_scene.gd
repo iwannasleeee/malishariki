@@ -24,12 +24,9 @@ func _on_trail_done():
 	timer.start()
 
 func _start_fadeout():
-	var tween = create_tween()
-	tween.tween_property(overlay, "modulate:a", 1.0, 1.0)
-	tween.tween_callback(_show_label)
-
-func _show_label():
-	label.visible = true
+	EventBus.minigame_finished.emit({})
+	UIManager.hide_minigame()
+	EventBus.show_birthday_label.emit()
 
 func _input(event):
 	if label.visible:

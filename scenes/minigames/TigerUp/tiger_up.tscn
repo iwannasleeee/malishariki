@@ -12,7 +12,6 @@
 [node name="Game" parent="." index="0" unique_id=407440309]
 script = ExtResource("2_l1x7x")
 branch_speed_increase = 30.0
-survival_time_to_win = 0.0
 texture_normal = ExtResource("4_6n3go")
 texture_hit = ExtResource("5_r0cr7")
 
