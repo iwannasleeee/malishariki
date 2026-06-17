@@ -190,7 +190,7 @@ func _paint_finished_handler(result: Dictionary) -> void:
 func _on_door_lini_wanna_go(door) -> void:
 	var target_scene = door.target_scene
 	var spawn_point_name = door.spawn_point_name
-	if true or can_lini_go:
+	if can_lini_go:
 		SceneManager.change_scene(target_scene, spawn_point_name)
 		return
 	EventBus.dialogue_started.emit("res://scenes/ui/dialogue/Dialogue.tscn",lini_wanna_go_but_he_cant_dialogue)
