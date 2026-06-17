@@ -120,9 +120,15 @@ func _show_label():
 func _input(event):
 	if label.visible:
 		if event is InputEventMouseButton \
-		and event.button_index == MOUSE_BUTTON_RIGHT \
+		and event.button_index == MOUSE_BUTTON_LEFT \
 		and event.pressed:
-			get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
+			var current_location = SceneManager.current_location
+			if current_location and is_instance_valid(current_location):
+				current_location.queue_free()
+				await current_location.tree_exited
+			UIManager.show_menu_screen("res://scenes/ui/StartScreen.tscn")
+			UIManager.show_hud_screen("res://scenes/ui/hud.tscn")
+			SceneManager.player.show()
 
 func _on_hover_sprite_table_clicked() -> void:
 	await get_tree().create_timer(1.0).timeout

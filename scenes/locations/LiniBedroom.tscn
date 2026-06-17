@@ -26,6 +26,7 @@ outlines = Array[PackedVector2Array]([PackedVector2Array(190, 631, 291, 638, 499
 
 [node name="LiniBedroom" type="Node2D" unique_id=762996833]
 script = ExtResource("1_gqgl3")
+is_test = true
 
 [node name="FixedCamera" parent="." unique_id=228922617 instance=ExtResource("2_iygw6")]
 
@@ -82,6 +83,7 @@ scale = Vector2(0.32, 0.32)
 [node name="Door" parent="." unique_id=1317846438 instance=ExtResource("7_gjw2q")]
 position = Vector2(1214.0001, 459.00003)
 scale = Vector2(0.33, 0.33)
+target_scene = "uid://c36h4pnwm1xy"
 spawn_point_name = "SpawnLiniHouse"
 
 [node name="SpawnBed" parent="." unique_id=750554822 instance=ExtResource("5_4vbjv")]

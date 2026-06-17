@@ -1,6 +1,6 @@
 extends Control
 
-@export_file("ForestPath.tscn") var game_scene_path: String
+@export_file("res://scenes/locations/LiniBedroom.tscn") var game_scene_path: String
 @export var spawn_point_name: String = "SpawnBed"
 @onready var play_button: Button = $CenterContainer/VBoxContainer/PlayButton
 @onready var settings_button: Button = $CenterContainer/VBoxContainer/SettingsButton
