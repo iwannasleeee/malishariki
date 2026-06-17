@@ -47,6 +47,12 @@
 [ext_resource type="PackedScene" uid="uid://cwyv10bn00eq5" path="res://scenes/minigames/Krapiva/krapiva/kr_nettle_2.tscn" id="45_u7ugr"]
 [ext_resource type="PackedScene" uid="uid://bdynsoduc4w30" path="res://scenes/minigames/Krapiva/krapiva/kr_nettle_3.tscn" id="46_6gqyb"]
 [ext_resource type="PackedScene" uid="uid://8gvkeieuiocp" path="res://scenes/minigames/Krapiva/krapiva/kr_nettle_4.tscn" id="47_mcr3h"]
+[ext_resource type="FontFile" uid="uid://ckycuhf4ii5m0" path="res://fonts/RUSAvas.ttf" id="48_u7ugr"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_6gqyb"]
+font = ExtResource("48_u7ugr")
+font_size = 96
+shadow_color = Color(0, 0, 0, 0.44313726)
 
 [node name="Krapiva" unique_id=932141857 instance=ExtResource("1_brsb5")]
 
@@ -200,3 +206,16 @@ rotation_speed = 1.4
 [node name="KrNettle4" parent="Game/Nettles" index="3" unique_id=469610427 instance=ExtResource("47_mcr3h")]
 position = Vector2(292, 897)
 rotation_speed = 1.2
+
+[node name="CenterContainer" type="CenterContainer" parent="Game" index="4" unique_id=70222224]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Game/CenterContainer" index="0" unique_id=2123946426]
+layout_mode = 2
+text = "АЙ!"
+label_settings = SubResource("LabelSettings_6gqyb")

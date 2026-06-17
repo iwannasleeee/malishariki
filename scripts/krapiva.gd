@@ -3,6 +3,9 @@ extends Control
 enum FLOWERS_NAME {ANEMONE, LUTIK, TULIP, VASILEK}
 @onready var flowers = $Flowers
 @onready var nettles = $Nettles
+@onready var label = $CenterContainer/Label
+
+var label_timer: SceneTreeTimer = null
 
 var win_condition: Dictionary = {
 	FLOWERS_NAME.ANEMONE: 4,
@@ -23,9 +26,21 @@ var nettle_count = 0
 func _ready() -> void:
 	flowers_connect()
 	krapiva_connect()
+	label.visible = false
+	# Подключаем сигнал nettle_toched от каждого потомка Nettles
+	for nettle in nettles.get_children():
+		if nettle.has_signal("nettle_toched"):
+			nettle.nettle_toched.connect(_on_nettle_touched)
+
+func _on_nettle_touched() -> void:
+	label.visible = true
+	# Если уже висит таймер — сбрасываем
+	if label_timer != null:
+		label_timer = null
+	label_timer = get_tree().create_timer(1.0)
+	label_timer.timeout.connect(func(): label.visible = false)
 
 func flowers_connect():
-	print("yes")
 	for child in flowers.get_children():
 		if child.has_signal("pick_me"):
 			child.pick_me.connect(_collect_flower)
