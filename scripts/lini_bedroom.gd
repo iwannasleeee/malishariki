@@ -121,18 +121,18 @@ func _on_location_loaded():
 	EventBus.dialogue_started.emit("res://scenes/ui/dialogue/Dialogue.tscn",initial_dialogue)
 	await EventBus.dialogue_finished
 	EventBus.add_quest.emit({
-		"id": "pencils",
-		"title": "Достань коробку со стикерами",
+		"id": "stickers",
+		"title": "наклеячки",
+		"completed": false
+		})
+	EventBus.add_quest.emit({
+		"id": "tapes",
+		"title": "скот чи",
 		"completed": false
 		})
 	EventBus.add_quest.emit({
 		"id": "pencils",
-		"title": "Достань скотчи",
-		"completed": false
-		})
-	EventBus.add_quest.emit({
-		"id": "pencils",
-		"title": "Собери карандаши 0/10",
+		"title": "карандашы 0/10",
 		"completed": false
 		})
 	EventBus.minigame_finished.connect(_minigame_finished_handler)
@@ -140,6 +140,21 @@ func _on_location_loaded():
 func check_for_able_paint():
 	if is_box_completed and is_tumba_completed and is_pencils_collected:
 		EventBus.dialogue_started.emit("res://scenes/ui/dialogue/Dialogue.tscn",paint_able_dialogue)
+		await EventBus.dialogue_finished
+		await get_tree().create_timer(1.0).timeout
+		EventBus.set_quests.emit([])
+		await get_tree().create_timer(1.0).timeout
+		EventBus.add_quest.emit({
+			"id": "paint",
+			"title": "Нарисовать плакат",
+			"completed": false
+		})
+		EventBus.add_quest.emit({
+			"id": "road",
+			"title": "Отправиться с плакатом в путь",
+			"completed": false
+		})
+		
 		is_paint_able = true
 
 func _pencil_taken_handler(obj: PencilBase):
@@ -148,7 +163,7 @@ func _pencil_taken_handler(obj: PencilBase):
 	#var collected_pencils_count = collected_pencils.
 	EventBus.update_quest.emit({
 		"id":"pencils",
-		"description": "Собрано карандашей: {к1}/{к2}"
+		"title": "карандашы {к1}/{к2}"
 		.format({
 			"к1": GameManager.collected_pencils.size(),
 			"к2": total_pencils_count
@@ -167,10 +182,18 @@ func _minigame_finished_handler(result: Dictionary):
 	if result.has("id"):
 		if result["id"] == "tumba":
 			is_tumba_completed = true
+			EventBus.update_quest.emit({
+			"id":"tapes",
+			"completed": true,
+		})
 			shelf.hide()
 			check_for_able_paint()
 		if result["id"] == "books":
-			is_box_completed = true
+			is_box_completed = true	
+			EventBus.update_quest.emit({
+			"id":"stickers",
+			"completed": true,
+		})
 			box.hide()
 			check_for_able_paint()
 
@@ -193,7 +216,13 @@ func _paint_finished_handler(result: Dictionary) -> void:
 		if result.has("result"):
 			if result["result"] == "done":
 				can_lini_go = true
-		EventBus.dialogue_started.emit("res://scenes/ui/dialogue/Dialogue.tscn",paint_done_dialogue)
+				EventBus.dialogue_started.emit("res://scenes/ui/dialogue/Dialogue.tscn",paint_done_dialogue)
+				await EventBus.dialogue_finished
+				EventBus.update_quest.emit({
+					"id": "paint",
+					#"title": "Нарисовать шедевр",
+					"completed": true
+				})
 
 
 func _on_door_lini_wanna_go(door) -> void:

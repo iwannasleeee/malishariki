@@ -20,6 +20,7 @@ func _ready() -> void:
 
 ## Полностью заменить список (например, при загрузке сохранения)
 func set_quests(new_quests: Array) -> void:
+	print(new_quests)
 	quests = new_quests
 	refresh()
 
