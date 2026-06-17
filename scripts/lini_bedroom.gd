@@ -114,18 +114,27 @@ func _ready() -> void:
 	#EventBus.location_change_requested.emit()
 	EventBus.scene_became_visible.connect(_on_location_loaded)
 	
-	EventBus.add_quest.emit({
-		"id": "pencils",
-		"title": "Собери карандаши сын собаки",
-		"description": "Собрано: 0/10",
-		"completed": false
-		})
-	
 	EventBus.linibedroom_pencil_taken.connect(_pencil_taken_handler)
 	EventBus.paint_finished.connect(_paint_finished_handler)
 
 func _on_location_loaded():	
 	EventBus.dialogue_started.emit("res://scenes/ui/dialogue/Dialogue.tscn",initial_dialogue)
+	await EventBus.dialogue_finished
+	EventBus.add_quest.emit({
+		"id": "pencils",
+		"title": "Достань коробку со стикерами",
+		"completed": false
+		})
+	EventBus.add_quest.emit({
+		"id": "pencils",
+		"title": "Достань скотчи",
+		"completed": false
+		})
+	EventBus.add_quest.emit({
+		"id": "pencils",
+		"title": "Собери карандаши 0/10",
+		"completed": false
+		})
 	EventBus.minigame_finished.connect(_minigame_finished_handler)
 
 func check_for_able_paint():
