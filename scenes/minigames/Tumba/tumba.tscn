@@ -25,6 +25,7 @@ offset_right = 3.0
 
 [node name="Game" parent="." index="0" unique_id=407440309]
 script = ExtResource("2_4s460")
+rope_width = 22.0
 
 [node name="Background" type="Sprite2D" parent="Game" index="0" unique_id=2145749733]
 position = Vector2(636.0001, 367.75003)

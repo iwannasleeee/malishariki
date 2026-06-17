@@ -14,20 +14,22 @@ var drag_start_book_x  : float       = 0.0
 
 var dialogue = [
 		{
-			"name": "Lini",
-			"text": "Привет! Рада тебя видеть.",
+			"name": "Киря",
+			"text": "Ой, что-то я не думал, что коробка находится НАСТОЛЬКО далеко за книжками.",
 			"portrait": "res://scenes/ui/dialogue/portraits/LiniPortrait.tscn",
 			"animation": "talk"        # имя анимации в SpriteFrames
 		},
 		{
-			"name": "Lini",
-			"text": "...",
+			"name": "Киря",
+			"text": "Тут несколько рядов перед ней...",
 			"portrait": "res://scenes/ui/dialogue/portraits/LiniPortrait.tscn",
-			"animation": "talk"        # можно менять анимацию внутри диалога
+			"animation": "talk"        # имя анимации в SpriteFrames
 		},
 		{
-			"name": "",                # строчка без портрета
-			"text": "Где-то вдали залаяла собака.",
+			"name": "Киря",
+			"text": "Надо бы их как-то подвинуть в стороны...Ух. ничего не видно.",
+			"portrait": "res://scenes/ui/dialogue/portraits/LiniPortrait.tscn",
+			"animation": "talk"        # имя анимации в SpriteFrames
 		},
 	]
 

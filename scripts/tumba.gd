@@ -92,20 +92,22 @@ func _ready() -> void:
 	
 	var dialogue = [
 		{
-			"name": "Lini",
-			"text": "Привет! Рада тебя видеть.",
+			"name": "Киря",
+			"text": "Полка совсем забилась! Скотчи в каких-то углах разбросались.",
 			"portrait": "res://scenes/ui/dialogue/portraits/LiniPortrait.tscn",
 			"animation": "talk"        # имя анимации в SpriteFrames
 		},
 		{
-			"name": "Lini",
-			"text": "...",
+			"name": "Киря",
+			"text": "Как бы туда протиснуть руку, чтобы ниче лишнего не задеть...",
 			"portrait": "res://scenes/ui/dialogue/portraits/LiniPortrait.tscn",
-			"animation": "talk"        # можно менять анимацию внутри диалога
+			"animation": "talk"        # имя анимации в SpriteFrames
 		},
 		{
-			"name": "",                # строчка без портрета
-			"text": "Где-то вдали залаяла собака.",
+			"name": "Киря",
+			"text": "Такс, попробуем!",
+			"portrait": "res://scenes/ui/dialogue/portraits/LiniPortrait.tscn",
+			"animation": "talk"        # имя анимации в SpriteFrames
 		},
 	]
 	
