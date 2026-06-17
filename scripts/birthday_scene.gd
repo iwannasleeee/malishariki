@@ -7,9 +7,6 @@ extends Control
 @onready var timer: Timer = $SceneTimer
 
 func _ready():
-	overlay.modulate.a = 0.0
-	label.visible = false
-
 	candle.play("burning")
 	trail.trail_completed.connect(_on_trail_done)
 
@@ -27,10 +24,3 @@ func _start_fadeout():
 	EventBus.minigame_finished.emit({})
 	UIManager.hide_minigame()
 	EventBus.show_birthday_label.emit()
-
-func _input(event):
-	if label.visible:
-		if event is InputEventMouseButton \
-		and event.button_index == MOUSE_BUTTON_RIGHT \
-		and event.pressed:
-			get_tree().change_scene_to_file("res://scenes/main_menu.tscn")

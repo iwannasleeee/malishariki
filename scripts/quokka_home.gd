@@ -102,6 +102,8 @@ var quokka_dialogue = [
 func _ready() -> void:
 	EventBus.scene_became_visible.connect(_on_location_load)
 	SceneManager.player.hide()
+	overlay.modulate.a = 0.0
+	label.visible = false
 
 func _on_location_load():
 	bg.play("default")
@@ -119,3 +121,10 @@ func _start_fadeout():
 
 func _show_label():
 	label.visible = true
+
+func _input(event):
+	if label.visible:
+		if event is InputEventMouseButton \
+		and event.button_index == MOUSE_BUTTON_RIGHT \
+		and event.pressed:
+			get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
