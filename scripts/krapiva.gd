@@ -45,7 +45,6 @@ func _collect_flower(flower):
 			"result":"done"
 		})
 		UIManager.hide_minigame()
-
 func _is_win_condition():
 	for flower in win_condition:
 		if win_condition[flower] > collected_flowers[flower]:

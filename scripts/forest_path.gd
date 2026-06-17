@@ -34,11 +34,30 @@ func _ready() -> void:
 	
 func _on_minigame_finished(result: Dictionary):
 	if result.has("result"):
-		if result["result"] == "done":
+		if result["result"] == "done":			
+			EventBus.update_quest.emit({
+				"id": "flowers",
+				"title": "Собрать букет на лугу 1/1",
+				"completed": true
+			})
 			EventBus.dialogue_started.emit("res://scenes/ui/dialogue/Dialogue.tscn", flowers_collected_dialogue)
-
+			await EventBus.dialogue_finished
+			await get_tree().create_timer(5.0).timeout
+			EventBus.set_quests.emit([])
 func _on_location_load():
+	EventBus.remove_quest.emit("paint")
+	EventBus.update_quest.emit({
+		"id": "road",
+		"completed": true
+	})
 	EventBus.dialogue_started.emit("res://scenes/ui/dialogue/Dialogue.tscn", on_location_load_dialogue)
+	await EventBus.dialogue_finished
+	EventBus.add_quest.emit({
+		"id": "flowers",
+		"title": "Собрать букет на лугу 0/1",
+		"completed": false
+	})
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass

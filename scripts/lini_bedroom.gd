@@ -5,6 +5,8 @@ extends Node2D
 @onready var shelf: InteractableObject = $shelf
 @onready var box: InteractableObject = $box
 
+@export var is_test = false
+
 var total_pencils_count = 10
 # Called when the node enters the scene tree for the first time.
 var is_paint_able = false
@@ -122,12 +124,12 @@ func _on_location_loaded():
 	await EventBus.dialogue_finished
 	EventBus.add_quest.emit({
 		"id": "stickers",
-		"title": "наклеячки",
+		"title": "наклеячки 0/1",
 		"completed": false
 		})
 	EventBus.add_quest.emit({
 		"id": "tapes",
-		"title": "скот чи",
+		"title": "скот чи 0/7",
 		"completed": false
 		})
 	EventBus.add_quest.emit({
@@ -184,6 +186,7 @@ func _minigame_finished_handler(result: Dictionary):
 			is_tumba_completed = true
 			EventBus.update_quest.emit({
 			"id":"tapes",
+			"title": "скот чи 7/7",
 			"completed": true,
 		})
 			shelf.hide()
@@ -192,6 +195,7 @@ func _minigame_finished_handler(result: Dictionary):
 			is_box_completed = true	
 			EventBus.update_quest.emit({
 			"id":"stickers",
+			"title": "наклеячки 1/1",
 			"completed": true,
 		})
 			box.hide()
@@ -228,7 +232,7 @@ func _paint_finished_handler(result: Dictionary) -> void:
 func _on_door_lini_wanna_go(door) -> void:
 	var target_scene = door.target_scene
 	var spawn_point_name = door.spawn_point_name
-	if can_lini_go:
+	if is_test or can_lini_go:
 		SceneManager.change_scene(target_scene, spawn_point_name)
 		return
 	EventBus.dialogue_started.emit("res://scenes/ui/dialogue/Dialogue.tscn",lini_wanna_go_but_he_cant_dialogue)
